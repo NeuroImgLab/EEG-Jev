@@ -1,0 +1,349 @@
+{
+ "schema": "eegjev.demo.windows.v1",
+ "task": "sleep",
+ "data_sha256": "bc327b2d69e0334b76d195ef7936d432c0056abdb6d2b2470d47e7b7254760dc",
+ "layout": "per item: channel-major samples at offset_floats (sample index, not bytes)",
+ "selection_rule": "For each of the five stages, the epochs whose saved top answer equals the hypnogram label, ranked by the saved probability of that stage; the top 2 from different people (one epoch per person). Clear, correctly answered epochs by construction: not a sample of accuracy.",
+ "items": [
+  {
+   "window_id": "sleep_stage--core:shard-00043-r299",
+   "start_s": 61470.0,
+   "end_s": 61500.0,
+   "label": "W",
+   "probabilities": {
+    "W": 0.9981535,
+    "N1": 0.0017933,
+    "N2": 3.23e-05,
+    "N3": 1.42e-05,
+    "REM": 6.6e-06
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-01",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC417",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=2,subject=17,suffix=E0",
+   "record_label": "SC4172E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4172E0-PSG.edf",
+   "psg_sha256": "16bc7ac608ec6c3ee0525f8edae17ecb79a940a0734031312712bd0feafc1755",
+   "alignment": {
+    "n_lead_windows": 2,
+    "min_corr": 0.99197
+   },
+   "offset_floats": 0
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00019-r550",
+   "start_s": 29610.0,
+   "end_s": 29640.0,
+   "label": "N1",
+   "probabilities": {
+    "W": 0.01648,
+    "N1": 0.9529595,
+    "N2": 0.0151882,
+    "N3": 0.0002824,
+    "REM": 0.01509
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-02",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC421",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=1,subject=21,suffix=E0",
+   "record_label": "SC4211E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4211E0-PSG.edf",
+   "psg_sha256": "f854dbcd3d3b2aeed57f41b5eedd75d559e29b0cde7155e71bf4e72eeb24d7e6",
+   "alignment": {
+    "n_lead_windows": 2,
+    "min_corr": 0.99497
+   },
+   "offset_floats": 6000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00014-r374",
+   "start_s": 44940.0,
+   "end_s": 44970.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 6.8e-06,
+    "N1": 0.0103051,
+    "N2": 0.9844193,
+    "N3": 0.004194,
+    "REM": 0.0010747
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-03",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC413",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=1,subject=13,suffix=E0",
+   "record_label": "SC4131E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4131E0-PSG.edf",
+   "psg_sha256": "443586b0f2c620d073405b938314357eb33ef1a03eb0eca36b6d1861f31d8665",
+   "alignment": {
+    "n_lead_windows": 0,
+    "min_corr": null
+   },
+   "offset_floats": 12000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00017-r159",
+   "start_s": 34950.0,
+   "end_s": 34980.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 8.8e-06,
+    "N1": 2.92e-05,
+    "N2": 0.0018655,
+    "N3": 0.9980958,
+    "REM": 7e-07
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-04",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC418",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=1,subject=18,suffix=E0",
+   "record_label": "SC4181E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4181E0-PSG.edf",
+   "psg_sha256": "f98d5e2c97aa99c57adc886445c23d52dc97541f2b2f84efbc08afb86b7adba5",
+   "alignment": {
+    "n_lead_windows": 0,
+    "min_corr": null
+   },
+   "offset_floats": 18000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r769",
+   "start_s": 46260.0,
+   "end_s": 46290.0,
+   "label": "REM",
+   "probabilities": {
+    "W": 0.0007611,
+    "N1": 0.003479,
+    "N2": 9.95e-05,
+    "N3": 1.1e-06,
+    "REM": 0.9956593
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-05",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC422",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=2,subject=22,suffix=E0",
+   "record_label": "SC4222E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4222E0-PSG.edf",
+   "psg_sha256": "1057fe3cacf499d1b8918e2532296fb282cb0c81a5fafd907ef2a3fcee3cc6ee",
+   "alignment": {
+    "n_lead_windows": 2,
+    "min_corr": 0.99793
+   },
+   "offset_floats": 24000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00083-r885",
+   "start_s": 57360.0,
+   "end_s": 57390.0,
+   "label": "W",
+   "probabilities": {
+    "W": 0.9985545,
+    "N1": 0.0014168,
+    "N2": 1.6e-05,
+    "N3": 6.8e-06,
+    "REM": 5.9e-06
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-06",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC464",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EP,session=2,subject=64,suffix=E0",
+   "record_label": "SC4642E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4642E0-PSG.edf",
+   "psg_sha256": "dff8e369a6cf1ec41c8bfe53b152ec8ec4a3a2f6e33545bfebf170b2d2052a85",
+   "alignment": {
+    "n_lead_windows": 2,
+    "min_corr": 0.99624
+   },
+   "offset_floats": 30000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00143-r660",
+   "start_s": 27090.0,
+   "end_s": 27120.0,
+   "label": "N1",
+   "probabilities": {
+    "W": 0.0119959,
+    "N1": 0.9620519,
+    "N2": 0.0158788,
+    "N3": 0.000287,
+    "REM": 0.0097863
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-07",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC458",
+   "record_id": "Kemp2000Analysis:hypno_suffix=GM,session=1,subject=58,suffix=G0",
+   "record_label": "SC4581G0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4581G0-PSG.edf",
+   "psg_sha256": "23f3465f2b6fef1c7fdcc0552bd88453a38fd08516fec3b556689a3bde7c862e",
+   "alignment": {
+    "n_lead_windows": 0,
+    "min_corr": null
+   },
+   "offset_floats": 36000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00110-r861",
+   "start_s": 49620.0,
+   "end_s": 49650.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 2e-05,
+    "N1": 0.0193767,
+    "N2": 0.9707537,
+    "N3": 0.0082165,
+    "REM": 0.0016331
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-08",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC436",
+   "record_id": "Kemp2000Analysis:hypno_suffix=FC,session=2,subject=36,suffix=F0",
+   "record_label": "SC4362F0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4362F0-PSG.edf",
+   "psg_sha256": "e9b67e13606abf693138bad8f236e6781de45100b1cdf9b2ce1745a4eed33a44",
+   "alignment": {
+    "n_lead_windows": 0,
+    "min_corr": null
+   },
+   "offset_floats": 42000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00026-r156",
+   "start_s": 25290.0,
+   "end_s": 25320.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 8.8e-06,
+    "N1": 7.15e-05,
+    "N2": 0.0035243,
+    "N3": 0.9963928,
+    "REM": 2.6e-06
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-09",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC460",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=1,subject=60,suffix=E0",
+   "record_label": "SC4601E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4601E0-PSG.edf",
+   "psg_sha256": "159514acb5f9dcbba33e40ab781d4d71e19a5f5cae930846957aa48bd4ff19f4",
+   "alignment": {
+    "n_lead_windows": 2,
+    "min_corr": 0.99823
+   },
+   "offset_floats": 48000
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00070-r739",
+   "start_s": 49050.0,
+   "end_s": 49080.0,
+   "label": "REM",
+   "probabilities": {
+    "W": 0.0004266,
+    "N1": 0.0044432,
+    "N2": 0.0013107,
+    "N3": 7.9e-06,
+    "REM": 0.9938116
+   },
+   "phrasing_id": "sleep-train-0",
+   "item_id": "sl-10",
+   "source": "sleep-edf-expanded",
+   "split": "val",
+   "subject_id": "SC443",
+   "record_id": "Kemp2000Analysis:hypno_suffix=EM,session=2,subject=43,suffix=E0",
+   "record_label": "SC4432E0",
+   "channels": [
+    "FPZ-CZ",
+    "PZ-OZ"
+   ],
+   "sample_rate_hz": 100,
+   "n_samples": 3000,
+   "amplitude_unit": "uV",
+   "psg_file": "SC4432E0-PSG.edf",
+   "psg_sha256": "7cfa851e5319a4c7fbea24b8e605630524e42ee327a9b924e3c14bf72a4b99db",
+   "alignment": {
+    "n_lead_windows": 0,
+    "min_corr": null
+   },
+   "offset_floats": 54000
+  }
+ ]
+}

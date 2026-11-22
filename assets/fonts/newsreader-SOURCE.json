@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/google/fonts/tree/main/ofl/newsreader",
+  "files": [
+    {
+      "name": "Newsreader-Italic[opsz,wght].ttf",
+      "sha": "d25879656a601d44c49836f9e773d100190c62e1",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader-Italic%5Bopsz%2Cwght%5D.ttf"
+    },
+    {
+      "name": "Newsreader[opsz,wght].ttf",
+      "sha": "ad4a9a8c44ec328c80b61c773f1ba02f6b5ed292",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader%5Bopsz%2Cwght%5D.ttf"
+    },
+    {
+      "name": "OFL.txt",
+      "sha": "d2d4f407109e9c74b8ab502fc79b912408ab8e41",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/OFL.txt"
+    }
+  ]
+}

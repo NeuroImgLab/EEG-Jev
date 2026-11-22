@@ -1,0 +1,61 @@
+.single-detail[hidden], #sd-body[hidden], #sd-ref-figure[hidden] { display:none!important; }
+.single-detail { min-width:0;max-width:100%;box-sizing:border-box; margin:18px 0 24px; padding:18px; border:1px solid rgba(185,166,255,.4); border-radius:12px; background:var(--scr-2); color:var(--scr-text); }
+.sd-heading { display:flex; flex-wrap:wrap; gap:8px 18px; align-items:baseline; justify-content:space-between; }
+.sd-heading h3 { margin:0;font:500 22px var(--serif); }.sd-heading span {font:11px var(--mono);color:var(--scr-dim);}
+.sd-values { border-left:3px solid var(--teal);padding-left:10px;font-size:13px;line-height:1.5; }
+.sd-controls { display:flex;flex-wrap:wrap;gap:14px;margin:14px 0; }
+.sd-controls label { display:flex;align-items:center;gap:8px;font-size:12px;flex-wrap:wrap; }.sd-controls select {background:var(--scr);color:var(--scr-text);border:1px solid var(--scr-line);border-radius:5px;padding:5px;}
+.sd-controls input {max-width:150px;}.sd-controls span {font:11px var(--mono);color:var(--scr-dim);}
+.sd-charts {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}.sd-charts figure {margin:0;min-width:0;}.sd-charts figcaption {font-size:13px;}.sd-charts small {display:block;color:var(--scr-dim);font:10px var(--mono);margin:5px 0;}
+.sd-charts canvas {display:block;width:100%;height:145px;background:rgba(9,13,18,.45);border:1px solid var(--scr-line);border-radius:6px;}
+.single-detail p,.single-detail details {font-size:12px;line-height:1.6;}.single-detail summary {cursor:pointer;}.single-detail a {color:inherit;}.sd-source-note {display:block;font:11px var(--mono);color:var(--scr-dim);}
+@media(max-width:760px){.sd-charts{grid-template-columns:minmax(0,1fr)}.single-detail{padding:12px;}}
+
+.console[data-task="chb"] .color-key i { background:linear-gradient(90deg,#090d12,#152b49,#254e7a,#397fa9,#71b7d1,#d6eef8); }
+
+.sd-charts,.sd-charts figure,.sd-charts canvas {min-width:0;max-width:100%;box-sizing:border-box;}
+
+/* Keep selected detail next to the EEG, at the top of the reading column. */
+.console[data-task="chb"] #monitor {grid-template-areas:"scope decide" "ref decide" "analysis analysis";grid-template-rows:auto auto auto;}
+#monitor .decide > #single-detail {width:100%;margin:0;order:-1;border-width:0 0 1px;border-color:rgba(185,166,255,.5);border-radius:0;}
+#single-detail .sd-charts {grid-template-columns:minmax(0,1fr);gap:10px;}
+#single-detail .sd-charts canvas {height:115px;}
+#single-detail .sd-heading h3 {font-size:20px;}
+#single-detail .sd-controls {gap:8px;margin:10px 0;}
+.sd-link {color:#c8b8ff;font:500 12px var(--mono);margin:10px 0;}
+.sd-link::before {content:"";display:inline-block;width:22px;height:10px;border:1.5px dashed #b9a6ff;margin-right:7px;vertical-align:middle;}
+@media(min-width:760px) and (max-width:1180px){.console[data-task="chb"] #monitor {grid-template-areas:"scope" "decide" "ref" "analysis";}.console[data-task="chb"] #monitor .decide {grid-template-areas:"detail detail" "q q" "w w" "ans gate" "probe probe";}.console[data-task="chb"] #single-detail {grid-area:detail;}}
+@media(max-width:759px){.console[data-task="chb"] #monitor {grid-template-areas:"scope" "decide" "ref" "analysis";}.console[data-task="chb"] #monitor .decide > #single-detail {order:-1;}}
+
+/* Independent columns keep new answer content from stretching the signal cards. */
+.monitor-main { min-width:0; display:flex; flex-direction:column; gap:14px; }
+.monitor-main > .scope, .monitor-main > .expert-comparison,
+.monitor-main > #analysis-details { flex:none; margin:0; align-self:auto; }
+.monitor-main > .expert-comparison { background:var(--scr-2); border:1px solid var(--scr-line); border-radius:var(--r); padding:16px 20px; }
+@media(min-width:1181px) {
+  .console[data-task] #monitor { grid-template-areas:"main decide"; grid-template-rows:auto; }
+  #monitor > .monitor-main { grid-area:main; }
+}
+@media(max-width:1180px) {
+  .monitor-main { display:contents; }
+  .monitor-main > .scope { grid-area:scope; }
+  .monitor-main > .expert-comparison { grid-area:ref; }
+  .monitor-main > #analysis-details { grid-area:analysis; }
+}
+@media(max-width:759px) {
+  .monitor-main > .expert-comparison { order:5; }
+  .monitor-main > #analysis-details { order:6; }
+}
+/* Explicit arrows also work when a summary uses flex and hides the native marker. */
+#analysis-details > summary, #activity-details > summary {
+  position:relative; list-style:none; padding-left:38px;
+}
+#analysis-details > summary::-webkit-details-marker,
+#activity-details > summary::-webkit-details-marker { display:none; }
+#analysis-details > summary::before, #activity-details > summary::before {
+  content:""; position:absolute; left:17px; top:20px;
+  width:7px; height:7px; border-right:2px solid currentColor; border-bottom:2px solid currentColor;
+  transform:rotate(-45deg);
+}
+#analysis-details[open] > summary::before, #activity-details[open] > summary::before { transform:rotate(45deg); top:18px; }
+#analysis-details > summary small, #activity-details > summary small { margin-left:0; }

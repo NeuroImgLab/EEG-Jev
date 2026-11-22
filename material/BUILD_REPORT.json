@@ -1,0 +1,787 @@
+{
+ "checks": [
+  {
+   "name": "sleep labels equal the hypnogram file: sc4222-n2-n3-w-n1",
+   "ok": true,
+   "epochs": 20,
+   "mismatches": []
+  },
+  {
+   "name": "sleep waveform matches model-input windows: sc4222-n2-n3-w-n1",
+   "ok": true,
+   "n": 39,
+   "min": 0.99542
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00014-r374",
+   "ok": true
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00017-r159",
+   "ok": true
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00019-r550",
+   "ok": true
+  },
+  {
+   "name": "sleep waveform matches model-input windows: example sleep_stage--core:shard-00019-r550",
+   "ok": true,
+   "n": 2,
+   "min": 0.99497
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00026-r156",
+   "ok": true
+  },
+  {
+   "name": "sleep waveform matches model-input windows: example sleep_stage--core:shard-00026-r156",
+   "ok": true,
+   "n": 2,
+   "min": 0.99823
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00043-r299",
+   "ok": true
+  },
+  {
+   "name": "sleep waveform matches model-input windows: example sleep_stage--core:shard-00043-r299",
+   "ok": true,
+   "n": 2,
+   "min": 0.99197
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00046-r769",
+   "ok": true
+  },
+  {
+   "name": "sleep waveform matches model-input windows: example sleep_stage--core:shard-00046-r769",
+   "ok": true,
+   "n": 2,
+   "min": 0.99793
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00070-r739",
+   "ok": true
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00083-r885",
+   "ok": true
+  },
+  {
+   "name": "sleep waveform matches model-input windows: example sleep_stage--core:shard-00083-r885",
+   "ok": true,
+   "n": 2,
+   "min": 0.99624
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00110-r861",
+   "ok": true
+  },
+  {
+   "name": "sleep example label equals hypnogram: sleep_stage--core:shard-00143-r660",
+   "ok": true
+  },
+  {
+   "name": "seizure labels equal overlap rule on events.tsv: chb01-run25",
+   "ok": true,
+   "windows": 465,
+   "mismatches": 0,
+   "events": [
+    {
+     "onset_s": 1862.0,
+     "offset_s": 1963.0,
+     "event_type": "sz"
+    }
+   ]
+  },
+  {
+   "name": "seizure waveform matches model-input windows: chb01-run25",
+   "ok": true,
+   "n": 1296,
+   "min": 0.98553,
+   "median": 0.99982
+  },
+  {
+   "name": "seizure waveform matches model-input windows: example seizure--core:shard-00189-r746",
+   "ok": true,
+   "n": 35,
+   "min": 0.99916,
+   "median": 0.999883
+  },
+  {
+   "name": "seizure waveform matches model-input windows: example seizure--core:shard-00201-r364",
+   "ok": true,
+   "n": 36,
+   "min": 0.99897,
+   "median": 0.999948
+  },
+  {
+   "name": "seizure waveform matches model-input windows: example seizure--core:shard-00001-r1019",
+   "ok": true,
+   "n": 36,
+   "min": 0.99495,
+   "median": 0.999737
+  },
+  {
+   "name": "seizure waveform matches model-input windows: example seizure--core:shard-00528-r21",
+   "ok": true,
+   "n": 36,
+   "min": 0.99757,
+   "median": 0.999552
+  },
+  {
+   "name": "seizure waveform matches model-input windows: example seizure--core:shard-00013-r974",
+   "ok": true,
+   "n": 36,
+   "min": 0.99926,
+   "median": 0.999896
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r423",
+   "ok": true,
+   "median": 0.98986,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r424",
+   "ok": true,
+   "median": 0.99442,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r425",
+   "ok": true,
+   "median": 0.98977,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r426",
+   "ok": true,
+   "median": 0.99548,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r427",
+   "ok": true,
+   "median": 0.99429,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r428",
+   "ok": true,
+   "median": 0.99121,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r429",
+   "ok": true,
+   "median": 0.98994,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r430",
+   "ok": true,
+   "median": 0.99407,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r431",
+   "ok": true,
+   "median": 0.99108,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r432",
+   "ok": true,
+   "median": 0.99284,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r433",
+   "ok": true,
+   "median": 0.99495,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r434",
+   "ok": true,
+   "median": 0.99291,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r435",
+   "ok": true,
+   "median": 0.99509,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r436",
+   "ok": true,
+   "median": 0.99627,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r437",
+   "ok": true,
+   "median": 0.99303,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r438",
+   "ok": true,
+   "median": 0.99602,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r439",
+   "ok": true,
+   "median": 0.99529,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r440",
+   "ok": true,
+   "median": 0.99474,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r441",
+   "ok": true,
+   "median": 0.99338,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r442",
+   "ok": true,
+   "median": 0.99551,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r443",
+   "ok": true,
+   "median": 0.99532,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r444",
+   "ok": true,
+   "median": 0.99424,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r445",
+   "ok": true,
+   "median": 0.99586,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r446",
+   "ok": true,
+   "median": 0.99554,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00007-r900",
+   "ok": true,
+   "median": 0.98462,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00077-r552",
+   "ok": true,
+   "median": 0.9825,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00082-r624",
+   "ok": true,
+   "median": 0.99023,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00013-r722",
+   "ok": true,
+   "median": 0.97364,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00066-r529",
+   "ok": true,
+   "median": 0.99022,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00062-r152",
+   "ok": true,
+   "median": 0.99372,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00053-r687",
+   "ok": true,
+   "median": 0.97105,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "motor-imagery waveform matches model-input window: motor_imagery--core:shard-00071-r128",
+   "ok": true,
+   "median": 0.99212,
+   "best_lag_samples": 0,
+   "leads": 60
+  },
+  {
+   "name": "pain distributions sum to 1 (11 support points)",
+   "ok": true,
+   "events": 742
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r90",
+   "ok": true,
+   "median": 0.99597,
+   "best_lag_samples": 0,
+   "min": 0.9166
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r91",
+   "ok": true,
+   "median": 0.99456,
+   "best_lag_samples": 0,
+   "min": 0.9165
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r92",
+   "ok": true,
+   "median": 0.99348,
+   "best_lag_samples": 0,
+   "min": 0.9274
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r93",
+   "ok": true,
+   "median": 0.9943,
+   "best_lag_samples": 0,
+   "min": 0.9691
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r94",
+   "ok": true,
+   "median": 0.99557,
+   "best_lag_samples": 0,
+   "min": 0.9321
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r95",
+   "ok": true,
+   "median": 0.99306,
+   "best_lag_samples": 0,
+   "min": 0.9178
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r96",
+   "ok": true,
+   "median": 0.99726,
+   "best_lag_samples": 0,
+   "min": 0.9636
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r97",
+   "ok": true,
+   "median": 0.99681,
+   "best_lag_samples": 0,
+   "min": 0.9717
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r98",
+   "ok": true,
+   "median": 0.99148,
+   "best_lag_samples": 0,
+   "min": 0.8892
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r99",
+   "ok": true,
+   "median": 0.99105,
+   "best_lag_samples": 0,
+   "min": 0.9559
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r100",
+   "ok": true,
+   "median": 0.98797,
+   "best_lag_samples": 0,
+   "min": 0.8622
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r101",
+   "ok": true,
+   "median": 0.99614,
+   "best_lag_samples": 0,
+   "min": 0.9579
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r102",
+   "ok": true,
+   "median": 0.99516,
+   "best_lag_samples": 0,
+   "min": 0.9431
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r103",
+   "ok": true,
+   "median": 0.99328,
+   "best_lag_samples": 0,
+   "min": 0.9676
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r104",
+   "ok": true,
+   "median": 0.99343,
+   "best_lag_samples": 0,
+   "min": 0.9418
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r105",
+   "ok": true,
+   "median": 0.99671,
+   "best_lag_samples": 0,
+   "min": 0.9818
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r106",
+   "ok": true,
+   "median": 0.99351,
+   "best_lag_samples": 0,
+   "min": 0.894
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r107",
+   "ok": true,
+   "median": 0.99359,
+   "best_lag_samples": 0,
+   "min": 0.9585
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r108",
+   "ok": true,
+   "median": 0.99651,
+   "best_lag_samples": 0,
+   "min": 0.9762
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r109",
+   "ok": true,
+   "median": 0.9969,
+   "best_lag_samples": 0,
+   "min": 0.9573
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r110",
+   "ok": true,
+   "median": 0.99668,
+   "best_lag_samples": 0,
+   "min": 0.9457
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r111",
+   "ok": true,
+   "median": 0.98657,
+   "best_lag_samples": 0,
+   "min": 0.9066
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r112",
+   "ok": true,
+   "median": 0.99135,
+   "best_lag_samples": 0,
+   "min": 0.9338
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r113",
+   "ok": true,
+   "median": 0.99137,
+   "best_lag_samples": 0,
+   "min": 0.9124
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r114",
+   "ok": true,
+   "median": 0.99303,
+   "best_lag_samples": 0,
+   "min": 0.9592
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r115",
+   "ok": true,
+   "median": 0.99489,
+   "best_lag_samples": 0,
+   "min": 0.9349
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r116",
+   "ok": true,
+   "median": 0.99079,
+   "best_lag_samples": 0,
+   "min": 0.8474
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r117",
+   "ok": true,
+   "median": 0.99302,
+   "best_lag_samples": 0,
+   "min": 0.8882
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r118",
+   "ok": true,
+   "median": 0.99388,
+   "best_lag_samples": 0,
+   "min": 0.956
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r119",
+   "ok": true,
+   "median": 0.99314,
+   "best_lag_samples": 0,
+   "min": 0.9302
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r118",
+   "ok": true,
+   "median": 0.99388,
+   "best_lag_samples": 0,
+   "min": 0.956
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r206",
+   "ok": true,
+   "median": 0.97813,
+   "best_lag_samples": 0,
+   "min": 0.786
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r377",
+   "ok": true,
+   "median": 0.99546,
+   "best_lag_samples": 0,
+   "min": 0.9036
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00000-r470",
+   "ok": true,
+   "median": 0.98611,
+   "best_lag_samples": 0,
+   "min": 0.8538
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00001-r22",
+   "ok": true,
+   "median": 0.99109,
+   "best_lag_samples": 0,
+   "min": 0.5954
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00001-r80",
+   "ok": true,
+   "median": 0.98433,
+   "best_lag_samples": 0,
+   "min": 0.8897
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00001-r283",
+   "ok": true,
+   "median": 0.98351,
+   "best_lag_samples": 0,
+   "min": 0.6015
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00001-r899",
+   "ok": true,
+   "median": 0.95408,
+   "best_lag_samples": 0,
+   "min": 0.9133
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00002-r7",
+   "ok": true,
+   "median": 0.99092,
+   "best_lag_samples": 0,
+   "min": 0.9515
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00002-r62",
+   "ok": true,
+   "median": 0.96602,
+   "best_lag_samples": 0,
+   "min": 0.5595
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00002-r364",
+   "ok": true,
+   "median": 0.91386,
+   "best_lag_samples": 0,
+   "min": 0.127
+  },
+  {
+   "name": "pain waveform matches model-input window: pain_rating--ds005292:shard-00002-r382",
+   "ok": true,
+   "median": 0.99469,
+   "best_lag_samples": 0,
+   "min": 0.9412
+  },
+  {
+   "name": "input channels of sleep-edf-expanded: one stored position per channel, equal to the position bank entry of the lead (first electrode of a bipolar lead)",
+   "ok": true,
+   "channels": 2,
+   "matched": 2
+  },
+  {
+   "name": "channel coverage (sleep): replay and single windows hold every recorded model-input lead; empty slots are zero in the model input",
+   "ok": true,
+   "input": 2,
+   "recorded": 2,
+   "empty": [],
+   "default": 2,
+   "replay": 2,
+   "items": 10
+  },
+  {
+   "name": "input channels of dan2023bids: one stored position per channel, equal to the position bank entry of the lead (first electrode of a bipolar lead)",
+   "ok": true,
+   "channels": 24,
+   "matched": 24
+  },
+  {
+   "name": "channel coverage (seizure): replay and single windows hold every recorded model-input lead; empty slots are zero in the model input",
+   "ok": true,
+   "input": 24,
+   "recorded": 18,
+   "empty": [
+    "F7-T3",
+    "T3-T5",
+    "T5-O1",
+    "F8-T4",
+    "T4-T6",
+    "T6-O2"
+   ],
+   "default": 18,
+   "replay": 18,
+   "items": 12
+  },
+  {
+   "name": "input channels of stieger2021: one stored position per channel, equal to the position bank entry of the lead (first electrode of a bipolar lead)",
+   "ok": true,
+   "channels": 60,
+   "matched": 60
+  },
+  {
+   "name": "channel coverage (motor_imagery): replay and single windows hold every recorded model-input lead; empty slots are zero in the model input",
+   "ok": true,
+   "input": 60,
+   "recorded": 60,
+   "empty": [],
+   "default": 13,
+   "replay": 60,
+   "items": 8
+  },
+  {
+   "name": "input channels of ds005292: one stored position per channel, equal to the position bank entry of the lead (first electrode of a bipolar lead)",
+   "ok": true,
+   "channels": 63,
+   "matched": 63
+  },
+  {
+   "name": "channel coverage (pain): replay and single windows hold every recorded model-input lead; empty slots are zero in the model input",
+   "ok": true,
+   "input": 63,
+   "recorded": 63,
+   "empty": [],
+   "default": 9,
+   "replay": 63,
+   "items": 12
+  },
+  {
+   "name": "sources by protocol: 35 sources, 21 with NeuralBench processing and partitions, 14 supplementary",
+   "ok": true,
+   "sources": 35,
+   "neuralbench": 21
+  }
+ ],
+ "inputs": {
+  "sleep.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "df764d7f87ccecf4e52f692318f22aea1f28e0dace10f90dd7798f73786a1c5e"
+  },
+  "sleep.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "8e9369d03925c2fc840011ae35cbb97c1270503149d3e04dc2f156f48bf7b221"
+  },
+  "seizure.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "8fc343df5d78c3ab749d4e51961fb2aa790817a3ee9823f0de0c0bc429184e82"
+  },
+  "seizure.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "4ae37a83912f2205a495c4247ca212086f1d6639b90ff89edcf21f208d45c07d"
+  },
+  "motor_imagery.registry": {
+   "role": "source registry of the training run",
+   "sha256": "2ebdbace122b139d8053ad42dab43ff15fbdcd4fe481de6eb1271899127cdfe8"
+  },
+  "motor_imagery.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "5f8e014df6726f6fb8d1229dfefc9885edf3f1ec54cc2274517fac8543696722"
+  },
+  "motor_imagery.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "875d34b5aeb0374529231a0bf86ec7e8d09ba50fc2e7d28585ed6cef918f771d"
+  },
+  "pain.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "b05ef2dda0bd7fe4f6eab3eedc88938dee38a6acf59c2ce00c9c0dfc82a10c58"
+  },
+  "pain.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "f9839d7229b321728e370290c917ab48827b5e740e1786fabc0f872f23efe9d7"
+  },
+  "source.registry": {
+   "role": "source registry of the training run",
+   "sha256": "2ebdbace122b139d8053ad42dab43ff15fbdcd4fe481de6eb1271899127cdfe8"
+  }
+ },
+ "started": "2026-11-11T15:44:12+0800",
+ "finished": "2026-11-11T15:48:27+0800",
+ "all_ok": true,
+ "publication": "Report of the material build. Input paths of the build server are replaced by their role; checks and results are unchanged."
+}

@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EEG-Jev: A Unified Single-Pass Decision Model for EEG</title>
+<meta name="description" content="EEG-Jev is a unified single-pass decision model for EEG. It reads an EEG window, a natural-language question and an answer specification, and returns typed probabilities: Choice, Noul or Score. Recorded replay of EEG with saved outputs of one checkpoint.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/story.css">
+<link rel="stylesheet" href="assets/css/replay-layout.css">
+<link rel="stylesheet" href="assets/css/signal-panels.css">
+<link rel="stylesheet" href="assets/css/continuous-replay.css">
+<link rel="stylesheet" href="assets/css/readout-layout.css">
+<link rel="stylesheet" href="assets/css/single-window-detail.css">
+<link rel="stylesheet" href="assets/css/waveform-comparison.css">
+<link rel="stylesheet" href="assets/css/demo.css">
+<link rel="stylesheet" href="assets/css/landing.css">
+<script defer src="assets/js/checksum.js"></script>
+<script defer src="assets/js/signal.js"></script>
+<script defer src="assets/js/replay.js"></script>
+<script defer src="assets/js/cues.js"></script>
+<script defer src="data/site-config.js"></script>
+<script defer src="assets/js/core.js"></script>
+<script defer src="assets/js/channels.js"></script>
+<script defer src="assets/js/answers.js"></script>
+<script defer src="assets/js/analysis.js"></script>
+<script defer src="assets/js/hero.js"></script>
+<script defer src="assets/js/stage.js"></script>
+<script defer src="assets/js/console.js"></script>
+<script defer src="assets/js/nav.js"></script>
+<script defer src="assets/js/page-content.js"></script>
+</head>
+<body data-site="eeg-jev-demo">
+<a class="skip" href="#stage">Skip to the replay</a>
+<nav class="site-nav" id="site-nav" aria-label="Sections">
+  <div class="sn-in">
+    <a class="sn-brand" href="#top"><svg class="jev-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M7 7.5A15 15 0 1 1 7 28.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 18h3c2.5 0 2.5-7 5-7s2.5 14 5 14 2.5-14 5-14 2.5 7 5 7h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>EEG-Jev</span></a>
+    <ol class="sn-links">
+      <li><a href="#stage" data-sec="replay"><span class="sn-n mono">01</span>Replay</a></li>
+      <li><a href="#windows" data-sec="windows" aria-label="Window by window"><span class="sn-n mono">02</span><span class="sn-l">Window by window</span><span class="sn-s" aria-hidden="true">Windows</span></a></li>
+      <li><a href="#how" data-sec="how" aria-label="How it works"><span class="sn-n mono">03</span><span class="sn-l">How it works</span><span class="sn-s" aria-hidden="true">How</span></a></li>
+      <li><a href="#resources" data-sec="resources"><span class="sn-n mono">04</span>Paper</a></li>
+    </ol>
+  </div>
+</nav>
+
+<header class="hero hero-stage hero-replay" id="top" data-sec="replay">
+  <div class="hero-copy">
+    <p class="eyebrow">A Unified Single-Pass Decision Model for EEG</p>
+    <h1>EEG-Jev</h1>
+    <p class="lede">Ask an EEG window a question in plain language. One shared model returns a <em>typed answer</em> with probabilities: a choice among candidates, the probability that a statement holds, or a score on an ordered scale.</p>
+    <p class="hero-how" id="hero-how">Four trained questions play below on recorded EEG. Dashed cards are the next questions.</p>
+    <div class="hero-entries">
+<a class="hero-cta" href="#stage"><span>Play recording</span><svg class="entry-arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
+<a class="hero-cta2" href="#windows"><span>Explore windows</span><svg class="entry-arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
+<a class="hero-cta3" href="#resources"><span>Paper &amp; results</span><svg class="entry-arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14m-5-5 5 5 5-5"/></svg></a>
+</div>
+  </div>
+  <div class="constellation" id="constellation" aria-label="One EEG window, several typed questions">
+    <svg class="links" id="links" aria-hidden="true"></svg>
+    <figure class="state">
+      <canvas id="cv-hero" aria-hidden="true"></canvas>
+      <figcaption><b>Recorded EEG</b> <span id="hero-src" class="mono">one recorded EEG window</span></figcaption>
+    </figure>
+    <button class="qcard live" data-go="sleep" data-slot="a" type="button" aria-describedby="hero-sleep">
+      <span class="qc-top"><span class="tag tag-choice">Choice</span><span class="qc-live">Trained</span></span>
+      <span class="qc-q" data-q="sleep">Which sleep stage is assigned to this 30-second EEG epoch under the dataset annotation protocol?</span>
+      <span class="qc-a mono" id="hero-sleep">Sleep-EDF · play below</span>
+    </button>
+    <button class="qcard live" data-go="chb" data-slot="b" type="button" aria-describedby="hero-chb">
+      <span class="qc-top"><span class="tag tag-noul">Noul</span><span class="qc-live">Trained</span></span>
+      <span class="qc-q" data-q="chb">Does any annotated seizure interval overlap this 5-second EEG window with positive duration?</span>
+      <span class="qc-a mono" id="hero-chb">CHB-MIT · play below</span>
+    </button>
+    <button class="qcard live" data-go="mi" data-slot="c" type="button" aria-describedby="hero-mi">
+      <span class="qc-top"><span class="tag tag-choice">Choice</span><span class="qc-live">Trained</span></span>
+      <span class="qc-q" data-q="mi">Which motor-imagery task was the participant cued to perform in this trial?</span>
+      <span class="qc-a mono" id="hero-mi">Stieger 2021 · play below</span>
+    </button>
+    <div class="qcard vision" data-slot="d">
+      <span class="qc-top"><span class="tag tag-noul">Noul</span><span class="qc-vis">Vision</span></span>
+      <span class="qc-q">Does this recording contain abnormal activity?</span>
+      <span class="qc-a">→ one probability</span>
+    </div>
+    <button class="qcard live" data-go="pain" data-slot="e" type="button" aria-describedby="hero-pain">
+      <span class="qc-top"><span class="tag tag-score">Score</span><span class="qc-live">Trained</span></span>
+      <span class="qc-q" data-q="pain">What pain intensity did the participant report for this laser-stimulation trial on the 0-to-10 rating scale?</span>
+      <span class="qc-a mono" id="hero-pain">Laser pain (ds005292) · play below</span>
+    </button>
+    <div class="qcard vision" data-slot="f">
+      <span class="qc-top"><span class="tag tag-choice">Choice</span><span class="qc-vis">Vision</span></span>
+      <span class="qc-q">Which artifact is this: eye blink, muscle, electrode pop, or none?</span>
+      <span class="qc-a">→ one label per window</span>
+    </div>
+    <p class="vision-tags"><span class="vt-k"><b>Vision</b> · next questions, not yet trained</span><span class="vt">Abnormal activity</span><span class="vt">Artifact type</span></p>
+    <ul class="vision-note src-key" aria-label="What the constellation shows">
+      <li class="k-rec"><i aria-hidden="true"></i><span><b>Recorded EEG</b><span class="k-more" id="hero-split"> · recorded replay</span></span></li>
+      <li class="k-out"><i aria-hidden="true"></i><span><b>Saved model output</b><span class="k-more"> · one per window</span></span></li>
+      <li class="k-vis"><i aria-hidden="true"></i><span><b>Vision</b>: next questions, not yet trained</span></li>
+    </ul>
+  </div>
+  <section class="stage" id="stage" aria-label="Recorded EEG played back with saved answers" data-task="sleep" data-mode="record">
+    <div class="stage-head">
+      <div class="stage-mode"><span class="sm-on" id="st-mode">Continuous replay</span></div>
+      <div class="stage-tabs" role="tablist" aria-label="Question type">
+        <button role="tab" id="st-tab-sleep" aria-selected="true" data-task="sleep" aria-label="Sleep stage"><span class="tab-l">Sleep stage</span><span class="tab-s" aria-hidden="true">Sleep</span></button>
+        <button role="tab" id="st-tab-chb" aria-selected="false" data-task="chb" tabindex="-1" aria-label="Seizure activity"><span class="tab-l">Seizure activity</span><span class="tab-s" aria-hidden="true">Seizure</span></button>
+        <button role="tab" id="st-tab-mi" aria-selected="false" data-task="mi" tabindex="-1" aria-label="Motor imagery"><span class="tab-l">Motor imagery</span><span class="tab-s" aria-hidden="true">Motor</span></button>
+        <button role="tab" id="st-tab-pain" aria-selected="false" data-task="pain" tabindex="-1" aria-label="Pain rating"><span class="tab-l">Pain rating</span><span class="tab-s" aria-hidden="true">Pain</span></button>
+      </div>
+      <p class="stage-mode-note"><span class="note-record" id="st-mode-note">One recording, end to end, with a saved answer for every window.</span></p>
+      <span class="stage-rec mono" id="st-rec"></span>
+    </div>
+    <p class="stage-q"><span class="st-k">Question</span><span id="st-q"></span></p>
+    <p class="stage-sem">
+      <span class="sem-sleep"><b>Choice answer</b> · a probability for each of the five sleep stages in this 30-s epoch.</span>
+      <span class="sem-chb"><b>Noul answer</b> · Model P(seizure overlap): the probability that an annotated seizure overlaps this 5-s window.</span>
+      <span class="sem-mi"><b>Choice answer</b> · a probability for each motor-imagery task offered in the question.</span>
+      <span class="sem-pain"><b>Score answer</b> · a probability for each rating from 0 to 10; the expected value is read from it.</span>
+    </p>
+    <div class="stage-body">
+      <div class="stage-main">
+        <div class="stage-plot"><canvas id="cv-stage" role="img" aria-label="Recorded EEG"></canvas><div class="row-scroll" id="st-scroll" tabindex="0" role="group" aria-label="Channel rows: point at a row to trace it, click to pin it, arrow keys step through the rows"><div></div></div></div>
+        <div class="st-phases mono" id="st-phases" role="group" aria-label="Phases of the original experiment in the span on screen" hidden></div>
+        <div class="stage-over"><canvas id="cv-over-st" role="img" tabindex="0" aria-label="Whole stretch: EEG, dataset annotation and saved answers so far; click or drag to move, arrow keys step one window"></canvas></div>
+        <div class="stage-transport">
+          <button class="st-btn st-play" id="st-play" type="button" aria-label="Pause"><svg viewBox="0 0 20 20" aria-hidden="true" class="i-pause"><path d="M7 4.5v11M13 4.5v11"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" class="i-play"><path d="M6.5 4.2v11.6L16 10z"/></svg></button>
+          <button class="st-btn st-replay" id="st-replay" type="button" aria-label="Replay from the start" title="Replay from the start"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10a5.5 5.5 0 1 0 1.8-4.1M4.2 3.6v3.2h3.2"/></svg></button>
+          <input type="range" id="st-scrub" min="0" max="1000" step="1" value="0" aria-label="Position in the replay">
+          <span class="st-time mono" id="st-time"></span>
+          
+        </div>
+        <div class="st-ctl">
+          <p class="st-where" id="st-where"></p>
+          <div class="st-ctl-row">
+            <div class="st-gainbox"><label for="st-gain">Gain</label><select id="st-gain" class="mono" aria-label="Display gain in microvolts per channel row; display only"></select><button type="button" class="st-fit" id="st-fit" title="Choose the gain at which no shown lead leaves its row in the span on screen">Fit amplitude</button><span class="st-clipkey mono" id="st-clipkey" title="The trace is cut at its row edge where it exceeds the display range set by the gain. It is not an event in the recording." hidden>▲▼ outside display range</span></div>
+            <div class="st-speedbox" role="group" aria-label="Playback speed"><label for="st-rate">Speed</label><input type="range" id="st-rate" min="1" max="16" step="0.1" value="4" aria-label="Playback speed, in multiples of recording speed"><output class="mono" id="st-rate-val" for="st-rate">4×</output><div class="st-speed" role="group" aria-label="Speed presets"><button type="button" data-sp="1" aria-pressed="false" aria-label="1 times recording speed">1×</button><button type="button" data-sp="4" aria-pressed="false" aria-label="4 times recording speed">4×</button><button type="button" data-sp="8" aria-pressed="false" aria-label="8 times recording speed">8×</button><button type="button" data-sp="16" aria-pressed="false" aria-label="16 times recording speed">16×</button></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="stage-read" aria-live="polite">
+        <div class="sr-card sr-ans"><span class="st-k"><i class="dot dot-model"></i>Model’s answer <small>saved output</small></span><b class="sr-v" id="st-ans"></b><span class="sr-sub" id="st-ans-sub"></span><div class="st-meter" id="st-meter"></div><span class="sr-gate mono" id="st-gate"></span><span class="sr-next mono" id="st-next-at"></span></div>
+        <div class="sr-card sr-cue"><span class="st-k"><i class="dot dot-cue"></i><span id="st-cue-title">Signal cue</span> <small id="st-cue-source">rule-based measurement</small></span><div class="sr-cue-txt" id="st-cue"></div><div id="st-comparison" hidden>
+          <label class="wc-lead" for="wc-lead">View lead <select id="wc-lead" aria-label="Waveform detail lead"></select></label>
+          <figure class="wc-frame"><figcaption>Current continuous excerpt <span id="wc-onset-time"></span></figcaption><canvas id="wc-onset" role="img" aria-label="Current continuous EEG excerpt, following playback"></canvas></figure>
+          <p class="wc-key">Amber line: annotated onset · purple box: detail selection · purple trace: selected lead<br>Unplayed signal stays hidden.</p>
+          <p id="wc-text" class="wc-text"></p>
+          <details class="wc-method"><summary>Source &amp; view</summary><p>A continuous excerpt of up to the last 20 seconds, following playback. The purple box on the main chart marks the same lead and time range. The onset line appears only while its time is in this excerpt. All displayed leads are available in recording order; no lead is designated as the seizure focus. One voltage scale is shared across leads.</p><p>The dataset provides seizure start and end times, not labels for individual waves or onset channels. This replay uses saved model answers; an answer appears only after its full 5-s window has played.</p></details>
+        </div><canvas id="cv-zoom" class="st-zoom" hidden aria-hidden="true"></canvas></div>
+        <div class="sr-card sr-ref"><span class="st-k"><i class="dot dot-ref"></i>Dataset label <small>from the dataset</small></span><b class="sr-v sr-v-ref" id="st-ref"></b><span class="st-agree" id="st-agree"></span></div>
+      </div>
+    </div>
+    <div class="st-chp" id="st-chp" hidden><div id="ch-stage" aria-label="Channels of the replay"></div></div>
+    <div class="stage-foot">
+      <div class="st-nav"><button class="st-btn" id="st-prev" type="button" aria-label="Previous window"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg></button><span class="mono" id="st-count"></span><button class="st-btn" id="st-next" type="button" aria-label="Next window"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button></div>
+      <p class="st-context" id="st-context"></p>
+      <div class="st-acts"><button class="st-more st-chbtn" id="st-chbtn" type="button" aria-expanded="false" aria-controls="st-chp">Channels <span class="mono" id="st-chcount"></span> <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></button><button class="st-more" id="st-more" type="button" aria-expanded="false" aria-controls="continuous">Every lead <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5"/></svg></button><a class="st-open" id="st-open" href="#console">Window by window ↓</a></div>
+    </div>
+    <section class="stage-more contin contin-panel" id="continuous" data-task="sleep" aria-label="Every lead of the recording and the saved answers around the playhead" hidden>
+      <div class="contin-eeg"><canvas id="cv-cont" role="img" aria-label="Recorded EEG, every lead"></canvas><p class="contin-gain mono" id="c-gain"></p></div>
+      <ol class="contin-ans" id="c-ans" aria-label="Saved answers around the playhead"></ol>
+    </section>
+    <p class="stage-note"><span class="tag-rec">Recorded replay</span><span class="tag-out">Saved model output</span><span class="data-status" id="data-status" hidden></span><a href="methods.html">Data &amp; methods <span aria-hidden="true">↗</span></a></p>
+  </section>
+</header>
+
+<section id="console" class="console-wrap" aria-labelledby="console-h" data-sec="windows">
+  <span id="windows" class="anchor" aria-hidden="true"></span>
+  <div class="console-title"><p class="eyebrow-l mono">02 · Window by window</p><h2 id="console-h">Explore individual EEG windows</h2><p id="console-sub">Curated examples from other recordings, with EEG traces, dataset annotations and saved model answers.</p></div>
+  <div class="console" data-task="sleep">
+    <div class="bar">
+      <div class="types" role="tablist" aria-label="Answer type">
+        <button role="tab" id="tab-sleep" aria-selected="true" aria-controls="monitor" data-task="sleep"><span class="t1">Sleep staging</span><span class="t2">Choice · stage probabilities</span></button>
+        <button role="tab" id="tab-chb" aria-selected="false" aria-controls="monitor" data-task="chb" tabindex="-1"><span class="t1">Seizure activity</span><span class="t2">Noul · one probability</span></button>
+        <button role="tab" id="tab-mi" aria-selected="false" aria-controls="monitor" data-task="mi" tabindex="-1"><span class="t1">Motor imagery</span><span class="t2">Choice · task probabilities</span></button>
+        <button role="tab" id="tab-pain" aria-selected="false" aria-controls="monitor" data-task="pain" tabindex="-1"><span class="t1">Pain rating</span><span class="t2">Score · rating distribution</span></button>
+      </div>
+      <div class="transport">
+        <button class="ctl" id="prev" aria-label="Previous example" title="Previous (←)"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg></button>
+        <button class="ctl ctl-play" id="play" aria-label="Pause replay" title="Play / pause (Space)"><svg viewBox="0 0 20 20" aria-hidden="true" class="i-pause"><path d="M7 4.5v11M13 4.5v11"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" class="i-play"><path d="M6.5 4.2v11.6L16 10z"/></svg></button>
+        <button class="ctl" id="next" aria-label="Next example" title="Next (→)"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button>
+        <span class="counter mono" id="counter" aria-live="polite">01 / 10</span>
+        <label class="gain">
+          <span title="Display gain only: microvolts per channel row. Saved probabilities do not change.">Gain</span>
+          <select id="gain" class="mono" aria-label="Display gain in microvolts per channel row"></select>
+        </label>
+        <button class="btn-ghost fit-amp" id="fit-amp" type="button" title="Choose the gain at which no sample of this window leaves its row">Fit amplitude</button>
+      </div>
+    </div>
+
+    <div class="replay-tools" aria-label="Recorded playback controls">
+      <p class="play-status" id="play-status"><i aria-hidden="true"></i><span id="replay-state" role="status"></span></p>
+      <div class="replay-actions">
+        <button class="btn-ghost" id="replay-window" type="button">Replay this window</button>
+        <button class="btn-ghost" id="show-full" type="button">Show full window</button>
+        <button class="text-btn" id="guide-start" type="button" aria-expanded="false" aria-controls="guide-card">Understand this example</button>
+      </div>
+    </div>
+
+    <section class="guide-card" id="guide-card" aria-labelledby="guide-title" hidden>
+      <div class="guide-heading"><span class="mono" id="guide-step">1 / 4</span><h3 id="guide-title"></h3></div>
+      <p id="guide-copy" aria-live="polite"></p>
+      <div class="guide-actions"><button class="btn-ghost" id="guide-prev" type="button">Previous step</button><button class="btn-ghost" id="guide-next" type="button">Next step</button><button class="text-btn" id="guide-exit" type="button">Exit guide</button></div>
+      <small>Playback pauses during the guide and the full window is shown.</small>
+    </section>
+
+    <div class="case-filter" id="case-filter" role="group" aria-label="Show trials of one cued task" hidden></div>
+    <div class="case-strip" id="case-strip" role="listbox" aria-label="Curated examples" tabindex="0"></div>
+
+    <div class="scope-head record-head">
+      <div class="src-wrap"><span class="step"><i>1</i>EEG window</span><div class="src mono" id="src">—</div></div>
+      <ul class="source-key" aria-label="Three separate sources on this console">
+        <li class="sk-ref"><i aria-hidden="true"></i>Reference label <small>dataset</small></li>
+        <li class="sk-obs"><i aria-hidden="true"></i>Signal view <small>computed in your browser</small></li>
+        <li class="sk-model"><i aria-hidden="true"></i>Saved model answer <small>recorded output</small></li>
+      </ul>
+    </div>
+    <div class="timescale" id="continuous-status" aria-label="Time scales in this replay">
+      <div class="ts-item"><span class="ts-k">Prediction window</span><b class="mono" id="ts-window">30 s</b><small>one saved answer per window</small></div>
+      <div class="ts-item"><span class="ts-k">Playback</span><b class="mono" id="ts-play">≈4 s per window</b><small>drawing speed, not inference time</small></div>
+      <div class="ts-item ts-range"><span class="ts-k">Displayed range</span><b class="mono" id="ts-range">this window only</b><small id="ts-range-note">Single windows · full recording in the <a href="#stage">replay</a></small></div>
+    </div>
+    <div class="monitor" id="monitor" role="tabpanel" aria-labelledby="tab-sleep">
+      <div class="monitor-main">
+      <div class="scope">
+        <div class="scalp" id="ch-console" aria-label="Channels of this window"></div>
+        <div class="tracks" id="tracks">
+          <div class="track track-eeg">
+            <span class="track-label">EEG <small id="montage-label">bipolar</small></span>
+            <canvas id="cv-eeg" aria-label="EEG waveform" role="img"></canvas>
+            <div class="row-scroll" id="eeg-scroll" tabindex="0" role="group" aria-label="Channel rows: point at a row to trace it, click to pin it, arrow keys step through the rows"><div></div></div>
+          </div>
+          <div class="track track-axis"><canvas id="cv-axis" aria-hidden="true"></canvas></div>
+          <p class="read-guide eeg-guide" id="eeg-guide">EEG: voltage (µV) over time. The axis is seconds within this window.</p>
+          <div class="legend" id="legend"></div>
+        </div>
+      </div>
+
+      <section class="pair" id="pair" hidden aria-labelledby="pair-h">
+        <div class="pair-head"><h3 id="pair-h">Same lead, same scale</h3><label>Lead <select id="pair-lead" aria-label="Lead for the comparison"></select></label></div>
+        <div class="pair-charts">
+          <figure><figcaption><span id="pair-a-label">This window</span> <small id="pair-a-time"></small></figcaption><canvas id="pair-a" role="img" aria-label="Selected lead of this window"></canvas></figure>
+          <figure><figcaption><span id="pair-b-label">Same record, background</span> <small id="pair-b-time"></small></figcaption><canvas id="pair-b" role="img" aria-label="Selected lead of the paired window from the same record"></canvas></figure>
+        </div>
+        <p class="pair-note" id="pair-note"></p>
+      </section>
+
+      <details class="disclosure" id="analysis-details" data-reading-detail open>
+        <summary>Signal analysis <small>Measurements of this window, computed in your browser · not the model’s reasons</small></summary>
+        <div class="detail-body">
+          <div class="an-bar"><label class="an-lead">Analysed lead <select id="an-lead" aria-label="Lead used for the signal analysis"></select></label><p class="an-read mono" id="an-read" aria-live="polite">Point at a picture to read a value.</p></div>
+          <div class="track track-spec">
+            <span class="track-label">Spectrogram <small>which rhythms are strong, and when</small></span>
+            <ul class="axis-key">
+              <li><b>Across</b><span>time within this window, on the same axis as the traces above.</span></li>
+              <li><b>Up</b><span>frequency, from slow to fast (Hz).</span></li>
+              <li><b>Colour</b><span>power spectral density in dB; one scale for every example of this task.</span></li>
+              <li id="spec-lead"></li>
+            </ul>
+            <canvas id="cv-spec" role="img" aria-label="Spectrogram"></canvas>
+            <div class="color-key"><span class="ck-w">weaker</span><span id="spec-low"></span><i aria-hidden="true"></i><span id="spec-high"></span><span class="ck-w">stronger</span></div>
+          </div>
+          <div class="track track-feat" id="feat-wrap">
+            <span class="track-label" id="feat-label">Measurement</span>
+            <ul class="axis-key" id="feat-key"></ul>
+            <canvas id="cv-feat" role="img" aria-label="Signal measurement over time"></canvas>
+            <dl class="pain-stats" id="pain-stats"></dl>
+            <div class="an-legend" id="feat-legend"></div>
+            <p class="an-sum" id="feat-sum"></p>
+          </div>
+          <p class="read-guide fine an-foot" id="an-params"></p>
+        </div>
+      </details>
+
+      </div>
+      <div class="decide-rail">
+      <aside class="decide" aria-label="Question and answer">
+        <div class="q">
+          <span class="step"><i>2</i>Question</span>
+          <div class="q-meta"><span class="pill" id="q-lang">EN</span><span id="q-kind">Training wording</span></div>
+          <div class="q-body" id="q-body">
+            <p class="q-text" id="q-text" lang="en">—</p>
+            <p class="q-gloss" id="q-gloss"></p>
+          </div>
+        </div>
+        <div class="ans" id="ans" aria-live="polite">
+          <div class="ans-head"><span class="step"><i>3</i>Typed answer <span class="src-tag tag-model">Model</span></span><span class="ans-status mono" id="ans-status">reading…</span></div>
+          <div class="ans-body" id="ans-body"></div>
+          <div class="task-key tk-sleep">
+            <p class="tk-h"><span class="tag tag-choice">Choice</span> The five stages</p>
+            <ul class="stages" role="list">
+              <li data-stage="W"><b>W</b><span>Awake. Fast, low-voltage activity; alpha rhythm (8–12&nbsp;Hz) when the eyes are closed.</span></li>
+              <li data-stage="N1"><b>N1</b><span>Drifting off. The lightest sleep; alpha fades into slower theta (4–7&nbsp;Hz).</span></li>
+              <li data-stage="N2"><b>N2</b><span>Stable light sleep. Marked by <i>sleep spindles</i>: short 11–16&nbsp;Hz bursts.</span></li>
+              <li data-stage="N3"><b>N3</b><span>Deep, slow-wave sleep. Large slow waves below 2&nbsp;Hz.</span></li>
+              <li data-stage="REM"><b>REM</b><span>Dreaming sleep. Low-voltage, mixed-frequency activity that resembles wakefulness.</span></li>
+            </ul>
+          </div>
+          <div class="task-key tk-chb">
+            <p class="tk-h"><span class="tag tag-noul">Noul</span> What the number means</p>
+            <p><b>Model P(seizure overlap)</b> is the model’s probability that an annotated seizure overlaps this 5-second window. The <b>dataset label</b> is “seizure overlap” when the window and an annotated seizure interval share any time at all; otherwise no annotated seizure overlaps this 5-second window. Neither is the share of the window that is seizure.</p>
+            <p class="tk-note" id="tk-chb-thr">The marked threshold was fixed on development data.</p>
+          </div>
+          <div class="task-key tk-mi">
+            <p class="tk-h"><span class="tag tag-choice">Choice</span> What the options are</p>
+            <p id="tk-mi-text">The question lists the motor-imagery tasks of this experiment, and the model returns one probability for each. The label is the task the participant was cued to perform in the trial.</p>
+            <ul class="anchors anchors-wide" id="mi-options" aria-label="Options offered in the question"></ul>
+          </div>
+          <div class="task-key tk-pain">
+            <p class="tk-h"><span class="tag tag-score">Score</span> How to read the distribution</p>
+            <p>Each bar is the probability the model gives to one rating from 0 to 10. The teal marker is the expected value, the sum of each rating times its probability. The amber marker is the rating the participant reported for this laser stimulus.</p>
+            <ul class="anchors" id="pain-anchors" aria-label="Rating scale anchors"></ul>
+          </div>
+        </div>
+        <div class="gate" id="gate">
+          <span class="step"><i>4</i>Reference <span class="src-tag tag-ref">Dataset</span></span>
+          <div class="stamp" id="stamp"><svg viewBox="0 0 20 20" aria-hidden="true" class="i-auto"><path d="M4.5 10.5 8.5 14.5 15.5 6"/></svg><svg viewBox="0 0 20 20" aria-hidden="true" class="i-defer"><path d="M6 14 14 6M8 6h6v6"/></svg><span id="stamp-text">—</span></div>
+          <p class="gate-why mono" id="gate-why"></p>
+        </div>
+      </aside>
+      </div>
+    </div>
+    <p class="console-foot" id="console-foot"></p>
+    <div class="readout mono" id="hover-readout" aria-hidden="true"></div>
+    <p class="noscript-note" id="boot-note">Loading recorded material…</p>
+  </div>
+</section>
+
+<section class="how wrap" id="how" aria-labelledby="how-title" data-sec="how">
+  <p class="eyebrow-l mono">How it works</p>
+  <h2 id="how-title">EEG and a question in, a typed answer out</h2>
+  <p class="how-lede">A frozen REVE-L encoder turns the EEG window into features, and a trainable MLP connector maps them into the embedding space of Qwen3.5-2B, whose frozen base weights are adapted by LoRA. The EEG, the question and the answer specification pass through the model once. At a learned readout marker, the readout selected by the answer type returns probabilities; no text is generated.</p>
+  <ul class="how-types" aria-label="The three answer types">
+    <li><span class="ty ty-choice mono">Choice</span><b>Which of the listed candidates?</b><span>A probability for every candidate. Here: sleep stage, motor imagery.</span></li>
+    <li><span class="ty ty-noul mono">Noul</span><b>Does the proposition hold?</b><span>One probability. Here: does an annotated seizure overlap this 5-s window.</span></li>
+    <li><span class="ty ty-score mono">Score</span><b>What value on the specified scale?</b><span>A distribution over task-specified numerical values and their expected value. Pain example · 0–10.</span></li>
+  </ul>
+  <figure class="how-fig" id="how-fig" hidden>
+    <a class="fig-link" href="#how" title="Open the figure at full size"><img width="1600" height="900" loading="lazy" style="max-width:100%;height:auto" alt=""></a>
+    <figcaption><b id="fig-label">Model architecture</b> <span id="fig-caption"></span> <a class="fig-hint" href="#how">Open at full size ↗</a></figcaption>
+  </figure>
+</section>
+
+<section class="resrc wrap" id="resources" data-sec="resources" aria-labelledby="res-title">
+  <p class="eyebrow-l mono">The research</p>
+  <h2 class="res-title" id="res-title">EEG-Jev: A Unified Single-Pass Decision Model for EEG</h2>
+  
+  <div class="res-btns" id="res-btns" role="group" aria-label="Paper and code"></div>
+  <p class="res-note" id="res-note"></p>
+  <section class="res-abs" id="res-abs" aria-labelledby="abstract-title" hidden>
+    <h3 id="abstract-title">Abstract</h3>
+    <div class="res-abs-body" id="res-abs-body"></div>
+  </section>
+  <ul class="res-pills" id="res-pills" aria-label="Scope of the study">
+    <li><a id="res-bench" href="https://facebookresearch.github.io/neuroai/neuralbench/index.html" target="_blank" rel="noopener">Evaluated on selected <b>NeuralBench</b> datasets</a></li>
+    <li><b id="res-apps">4</b> Applications</li>
+    <li><b id="res-srcs">35</b> Data Sources</li>
+  </ul>
+  <p class="res-scope" id="res-scope"><span id="res-scope-text">EEG-Jev is evaluated on selected NeuralBench datasets, not on the whole benchmark.</span> <a href="methods.html">Data &amp; methods <span aria-hidden="true">↗</span></a></p>
+</section>
+
+<footer class="foot wrap">
+  <div class="footer-brand"><a class="sn-brand" href="#top"><svg class="jev-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M7 7.5A15 15 0 1 1 7 28.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 18h3c2.5 0 2.5-7 5-7s2.5 14 5 14 2.5-14 5-14 2.5 7 5 7h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>EEG-Jev</span></a><p>A unified single-pass decision model for EEG.</p><span class="footer-small">Recorded EEG · Saved model answers</span></div>
+  <div class="footer-links"><h3>About the data</h3><a href="methods.html">Data &amp; credits ↗</a><a href="NOTICE.txt">Attributions &amp; licences ↗</a><span id="omitted-note" hidden></span></div>
+  <div class="footer-links footer-contact">
+    <h3>Contact Us</h3>
+    <a class="contact-email" href="mailto:220254913@seu.edu.cn"><!-- Alibaba Iconfont / 千牛图标库 / mail #7008961: https://www.iconfont.cn/collections/detail?cid=4491 --><svg class="mail-icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><path d="M831.936 768L192 768.192V378.304l302.816 192.704a32.096 32.096 0 0 0 34.4 0L832 378.304 831.936 768zM192 255.776L192.096 256 832 255.776v46.656l-320 203.616L192 302.432V255.776zM831.936 192H192.096A64 64 0 0 0 128 255.776v512.416C128 803.36 156.768 832 192.096 832h639.84A64 64 0 0 0 896 768.192V255.776A64 64 0 0 0 831.936 192z" fill="currentColor" /></svg><span>220254913@seu.edu.cn</span></a>
+    <a class="contact-button" href="mailto:220254913@seu.edu.cn"><!-- Alibaba Iconfont / 千牛图标库 / mail_fill #7008962: https://www.iconfont.cn/collections/detail?cid=4491 --><svg class="mail-icon" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><path d="M512 576a32 32 0 0 1-17.184-4.992L128 337.568v430.656A64 64 0 0 0 192.064 832h639.872A64 64 0 0 0 896 768.224V337.888l-366.816 233.12A32.096 32.096 0 0 1 512 576" fill="currentColor" /><path d="M831.936 192H192.064A64 64 0 0 0 128 255.808v4.896l384 245.376 384-244.032v-6.24A64 64 0 0 0 831.936 192" fill="currentColor" /></svg><span>Send us a message</span></a>
+  </div>
+  <div class="footer-bottom"><span>© 2026 EEG-Jev · Demo &amp; results: CC BY 4.0</span></div>
+</footer>
+</body>
+</html>

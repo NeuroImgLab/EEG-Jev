@@ -1,0 +1,4461 @@
+{
+ "schema": "eegjev.demo.material.v3",
+ "encodings": {
+  "sleep/sc4222-n2-n3-w-n1/signal.i16": {
+   "bytes": 240000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006219717538718902,
+   "peak_uV": 203.80148459120227,
+   "max_rounding_error_uV": 0.003109858769359451
+  },
+  "windows/sleep.i16": {
+   "bytes": 120000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0047988735572834715,
+   "peak_uV": 157.2446898515075,
+   "max_rounding_error_uV": 0.0023994367786417357
+  },
+  "seizure/chb01-run25/signal.i16": {
+   "bytes": 2592000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.02240970022300054,
+   "peak_uV": 734.2986472070587,
+   "max_rounding_error_uV": 0.01120485011150027
+  },
+  "windows/seizure.i16": {
+   "bytes": 432000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.049028077395934996,
+   "peak_uV": 1606.503012032602,
+   "max_rounding_error_uV": 0.024514038697967498
+  },
+  "motor_imagery/subject46-session11/seg-1.i16": {
+   "bytes": 788398,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.003174670641364747,
+   "peak_uV": 104.02443290559866,
+   "max_rounding_error_uV": 0.0015873353206823735
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-00.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.010629360044904302,
+   "peak_uV": 348.29224059137925,
+   "max_rounding_error_uV": 0.005314680022452151
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-01.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.011219394269052739,
+   "peak_uV": 367.6258920140511,
+   "max_rounding_error_uV": 0.0056096971345263695
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-02.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.012204309754258251,
+   "peak_uV": 399.8986177177801,
+   "max_rounding_error_uV": 0.006102154877129126
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-03.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.012991737347325751,
+   "peak_uV": 425.7002576598229,
+   "max_rounding_error_uV": 0.006495868673662876
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-04.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.010269845095375572,
+   "peak_uV": 336.51201424017137,
+   "max_rounding_error_uV": 0.005134922547687786
+  },
+  "motor_imagery/subject46-session11/seg-1.rest-05.i16": {
+   "bytes": 30362,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006342230463454721,
+   "peak_uV": 207.81586559602084,
+   "max_rounding_error_uV": 0.0031711152317273603
+  },
+  "motor_imagery/subject46-session11/seg-2.i16": {
+   "bytes": 1051362,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008196343006308487,
+   "peak_uV": 268.5695712877102,
+   "max_rounding_error_uV": 0.004098171503154243
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-00.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.009044672989945842,
+   "peak_uV": 296.3667998615554,
+   "max_rounding_error_uV": 0.004522336494972921
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-01.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.012375865321636053,
+   "peak_uV": 405.51997899404853,
+   "max_rounding_error_uV": 0.006187932660818026
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-02.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.012966627800888732,
+   "peak_uV": 424.87749315172107,
+   "max_rounding_error_uV": 0.006483313900444366
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-03.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.009492006146482879,
+   "peak_uV": 311.02456540180447,
+   "max_rounding_error_uV": 0.004746003073241439
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-04.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.013784711517865141,
+   "peak_uV": 451.6836423058871,
+   "max_rounding_error_uV": 0.006892355758932571
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-05.i16": {
+   "bytes": 564000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.01059546529474739,
+   "peak_uV": 347.18161131298774,
+   "max_rounding_error_uV": 0.005297732647373695
+  },
+  "motor_imagery/subject46-session11/seg-2.rest-06.i16": {
+   "bytes": 417078,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.011219996031650886,
+   "peak_uV": 367.6456099691046,
+   "max_rounding_error_uV": 0.005609998015825443
+  },
+  "windows/motor_imagery.i16": {
+   "bytes": 1152000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.009794474205169953,
+   "peak_uV": 320.93553628080383,
+   "max_rounding_error_uV": 0.004897237102584977
+  },
+  "pain/sub-008/seg-1.i16": {
+   "bytes": 919800,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.002915873446696568,
+   "peak_uV": 95.54442522790644,
+   "max_rounding_error_uV": 0.001457936723348284
+  },
+  "pain/sub-008/seg-1.rest-00.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008857046202470286,
+   "peak_uV": 290.21883291634384,
+   "max_rounding_error_uV": 0.004428523101235143
+  },
+  "pain/sub-008/seg-1.rest-01.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008278612220056183,
+   "peak_uV": 271.26528661458093,
+   "max_rounding_error_uV": 0.004139306110028091
+  },
+  "pain/sub-008/seg-1.rest-02.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008754366561096518,
+   "peak_uV": 286.8543291074496,
+   "max_rounding_error_uV": 0.004377183280548259
+  },
+  "pain/sub-008/seg-1.rest-03.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.009051345772038229,
+   "peak_uV": 296.58544691237665,
+   "max_rounding_error_uV": 0.0045256728860191145
+  },
+  "pain/sub-008/seg-1.rest-04.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007250697351810088,
+   "peak_uV": 237.58360012676116,
+   "max_rounding_error_uV": 0.003625348675905044
+  },
+  "pain/sub-008/seg-1.rest-05.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008656945106998987,
+   "peak_uV": 283.6621203210358,
+   "max_rounding_error_uV": 0.0043284725534994935
+  },
+  "pain/sub-008/seg-1.rest-06.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008050608937313268,
+   "peak_uV": 263.79430304894385,
+   "max_rounding_error_uV": 0.004025304468656634
+  },
+  "pain/sub-008/seg-1.rest-07.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.008704064956924466,
+   "peak_uV": 285.20609644354397,
+   "max_rounding_error_uV": 0.004352032478462233
+  },
+  "pain/sub-008/seg-1.rest-08.i16": {
+   "bytes": 334800,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.00663223694964751,
+   "peak_uV": 217.31850812909994,
+   "max_rounding_error_uV": 0.003316118474823755
+  },
+  "pain/sub-008/seg-2.i16": {
+   "bytes": 887400,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0023922877486748295,
+   "peak_uV": 78.38809266082814,
+   "max_rounding_error_uV": 0.0011961438743374147
+  },
+  "pain/sub-008/seg-2.rest-00.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0072519796955823786,
+   "peak_uV": 237.6256186851478,
+   "max_rounding_error_uV": 0.0036259898477911893
+  },
+  "pain/sub-008/seg-2.rest-01.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007973937916073232,
+   "peak_uV": 261.2820236959716,
+   "max_rounding_error_uV": 0.003986968958036616
+  },
+  "pain/sub-008/seg-2.rest-02.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007332409835842012,
+   "peak_uV": 240.2610730910352,
+   "max_rounding_error_uV": 0.003666204917921006
+  },
+  "pain/sub-008/seg-2.rest-03.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006929360569525392,
+   "peak_uV": 227.05435778163852,
+   "max_rounding_error_uV": 0.003464680284762696
+  },
+  "pain/sub-008/seg-2.rest-04.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007854045103481458,
+   "peak_uV": 257.3534959057769,
+   "max_rounding_error_uV": 0.003927022551740729
+  },
+  "pain/sub-008/seg-2.rest-05.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006193159386143065,
+   "peak_uV": 202.93125360574982,
+   "max_rounding_error_uV": 0.0030965796930715324
+  },
+  "pain/sub-008/seg-2.rest-06.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007190065265810791,
+   "peak_uV": 235.5968685648222,
+   "max_rounding_error_uV": 0.0035950326329053954
+  },
+  "pain/sub-008/seg-2.rest-07.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006609914080179557,
+   "peak_uV": 216.58705466524356,
+   "max_rounding_error_uV": 0.0033049570400897786
+  },
+  "pain/sub-008/seg-2.rest-08.i16": {
+   "bytes": 140400,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.005034079591761856,
+   "peak_uV": 164.95168598326075,
+   "max_rounding_error_uV": 0.002517039795880928
+  },
+  "pain/sub-008/seg-3.i16": {
+   "bytes": 792000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0022027111450769214,
+   "peak_uV": 72.17623609073549,
+   "max_rounding_error_uV": 0.0011013555725384607
+  },
+  "pain/sub-008/seg-3.rest-00.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007923222619698843,
+   "peak_uV": 259.620235579672,
+   "max_rounding_error_uV": 0.003961611309849422
+  },
+  "pain/sub-008/seg-3.rest-01.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006127942325891361,
+   "peak_uV": 200.79428619248222,
+   "max_rounding_error_uV": 0.0030639711629456804
+  },
+  "pain/sub-008/seg-3.rest-02.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006668233559959637,
+   "peak_uV": 218.49800905919741,
+   "max_rounding_error_uV": 0.0033341167799798184
+  },
+  "pain/sub-008/seg-3.rest-03.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0067663690854471836,
+   "peak_uV": 221.71361582284786,
+   "max_rounding_error_uV": 0.0033831845427235918
+  },
+  "pain/sub-008/seg-3.rest-04.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006843482523812142,
+   "peak_uV": 224.24039185775246,
+   "max_rounding_error_uV": 0.003421741261906071
+  },
+  "pain/sub-008/seg-3.rest-05.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.0067852085283318896,
+   "peak_uV": 222.33092784785103,
+   "max_rounding_error_uV": 0.0033926042641659448
+  },
+  "pain/sub-008/seg-3.rest-06.i16": {
+   "bytes": 648000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.007918780163983659,
+   "peak_uV": 259.4746696332525,
+   "max_rounding_error_uV": 0.003959390081991829
+  },
+  "pain/sub-008/seg-3.rest-07.i16": {
+   "bytes": 216000,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.006547566747422229,
+   "peak_uV": 214.54411961278416,
+   "max_rounding_error_uV": 0.0032737833737111143
+  },
+  "windows/pain.i16": {
+   "bytes": 453600,
+   "dtype": "int16-le",
+   "scale_uV_per_count": 0.04130816203400333,
+   "peak_uV": 1353.544545368187,
+   "max_rounding_error_uV": 0.020654081017001665
+  }
+ },
+ "built": "2026-11-11T15:48:27+0800",
+ "data_status": {
+  "kind": "validation",
+  "split": "development (validation)",
+  "label": "Development (validation) split · curated examples",
+  "note": "Real recordings from the development (validation) split with the saved outputs of one EEG-Jev checkpoint (seed 8, update 13,400). The development split also guided training decisions, so the examples are illustrations, not held-out evidence. Held-out test results are reported in the paper, not on this page."
+ },
+ "model": {
+  "name": "EEG-Jev",
+  "sources": 35,
+  "applications": [
+   "sleep staging",
+   "motor imagery",
+   "seizure detection",
+   "pain rating"
+  ],
+  "encoder": "REVE-L (frozen)",
+  "connector": "MLP (trained)",
+  "language_model": "Qwen3.5-2B with LoRA r16",
+  "trainable_parameters": "27.7 M",
+  "seeds": 1,
+  "answer_types": [
+   "Choice",
+   "Noul",
+   "Score"
+  ],
+  "seed": 8,
+  "update": 13400
+ },
+ "formal": {
+  "probabilities_shown": "raw model output of the saved prediction files (7 decimals)",
+  "seizure_thresholds_dev": {
+   "spec99": 0.8124473,
+   "youden": 0.3088455,
+   "rule": "lowest raw p(yes) threshold with development window specificity >= 0.99 (primary); Youden J (secondary)",
+   "receipt_sha256_prefix": "1684dd78"
+  }
+ },
+ "overview": {
+  "applications": 4,
+  "sources": 35,
+  "neuralbench": 21,
+  "supplementary": 14,
+  "by_application": {
+   "motor-imagery": 17,
+   "pain-rating": 9,
+   "seizure-presence": 2,
+   "sleep-stage": 7
+  },
+  "statement": "Twenty-one sources follow NeuralBench processing and partitions; the other 14 follow fixed supplementary protocols.",
+  "list": [
+   {
+    "source": "cho2017",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "lee2019-mi",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "bnci2014-004",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "dreyer2023",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "grossewentrup2009beamforming",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "liu2022",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "shin2017opena",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "dornhege2004boosting",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official split, but train and dev share subjects"
+   },
+   {
+    "source": "faller2012",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "scherer2012brain",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "zhou2016",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official split, but train and dev share subjects"
+   },
+   {
+    "source": "wei2022beetlb",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official split, but train and dev share subjects"
+   },
+   {
+    "source": "bci-iv-2a",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "eegmmidb",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "stieger2021",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "wei2022beetla",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official split, but train and dev share subjects"
+   },
+   {
+    "source": "barachant2012",
+    "application": "motor-imagery",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official split, but train and dev share subjects"
+   },
+   {
+    "source": "sleep-edf-expanded",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "hmc",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "cinc2018",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "dan2023bids",
+    "application": "seizure-presence",
+    "answer_type": "noul",
+    "protocol": "NeuralBench",
+    "partition": "NB official subject-level split"
+   },
+   {
+    "source": "dod-h",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "supplementary",
+    "partition": "legacy project subject split, seed 20260930"
+   },
+   {
+    "source": "dod-o",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "supplementary",
+    "partition": "legacy project subject split, seed 20260930"
+   },
+   {
+    "source": "cap",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "supplementary",
+    "partition": "legacy project subject split, seed 20260930"
+   },
+   {
+    "source": "sleep-edf-telemetry",
+    "application": "sleep-stage",
+    "answer_type": "choice",
+    "protocol": "supplementary",
+    "partition": "EEG-Bench official test inherited"
+   },
+   {
+    "source": "siena",
+    "application": "seizure-presence",
+    "answer_type": "noul",
+    "protocol": "supplementary",
+    "partition": "legacy project subject split, seed 20260930"
+   },
+   {
+    "source": "ds005280",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "formal ds005280 chain split"
+   },
+   {
+    "source": "ds005284",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005285",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005286",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005291",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005292",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005293",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005289",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   },
+   {
+    "source": "ds005473",
+    "application": "pain-rating",
+    "answer_type": "score",
+    "protocol": "supplementary",
+    "partition": "project pain split: subject-level 60/20/20, sorted IDs, numpy default_rng(33).permutation, n=round(0.2N)"
+   }
+  ]
+ },
+ "tasks": {
+  "sleep": {
+   "answer_type": "choice",
+   "source": "sleep-edf-expanded",
+   "dataset": "Sleep-EDF Expanded",
+   "split": "val",
+   "question": "Which sleep stage is assigned to this 30-second EEG epoch under the dataset annotation protocol?",
+   "phrasing_id": "sleep-train-0",
+   "supervision_meaning": "The stage label assigned to this one 30-second epoch by the dataset annotation protocol (W, N1, N2, N3, REM).",
+   "candidates": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+   ],
+   "candidate_texts": {
+    "W": "Wakefulness",
+    "N1": "NREM stage N1",
+    "N2": "NREM stage N2",
+    "N3": "NREM stage N3",
+    "REM": "REM sleep"
+   },
+   "window_length_s": 30.0,
+   "stride_s": 30.0,
+   "cases": [
+    {
+     "case_id": "sc4222-n2-n3-w-n1",
+     "path": "sleep/sc4222-n2-n3-w-n1/",
+     "record_label": "SC4222E0",
+     "windows": 20,
+     "duration_s": 600.0
+    }
+   ],
+   "examples": {
+    "path": "windows/sleep",
+    "n": 10
+   },
+   "input_channels": {
+    "source": "sleep-edf-expanded",
+    "n_channels": 2,
+    "channels": [
+     {
+      "name": "Fpz-Cz",
+      "index": 0,
+      "bipolar": true,
+      "electrodes": [
+       "FPZ",
+       "CZ"
+      ],
+      "electrodes_with_position": [
+       "FPZ",
+       "CZ"
+      ],
+      "model_position_m": [
+       0.00011,
+       0.08825,
+       -0.00171
+      ],
+      "model_position_electrode": "FPZ",
+      "recorded": true
+     },
+     {
+      "name": "Pz-Oz",
+      "index": 1,
+      "bipolar": true,
+      "electrodes": [
+       "PZ",
+       "OZ"
+      ],
+      "electrodes_with_position": [
+       "PZ",
+       "OZ"
+      ],
+      "model_position_m": [
+       0.00032,
+       -0.08111,
+       0.08262
+      ],
+      "model_position_electrode": "PZ",
+      "recorded": true
+     }
+    ],
+    "electrodes": {
+     "FPZ": [
+      0.00011,
+      0.08825,
+      -0.00171
+     ],
+     "CZ": [
+      0.0004,
+      -0.00917,
+      0.10024
+     ],
+     "PZ": [
+      0.00032,
+      -0.08111,
+      0.08262
+     ],
+     "OZ": [
+      0.00011,
+      -0.11489,
+      0.01466
+     ]
+    },
+    "feature_dir": "data/features/reve-large/sleep-edf-expanded/neuralbench-sleep_stage--core",
+    "features_sha256": "13be0ef359dcd4a633a2f2b9d239f7051c7082db8ad453f3bdd0644acb9ef954",
+    "position_note": "Positions are those stored with the encoder features (REVE position bank, metres; x right, y front, z up). A bipolar lead enters the encoder at the position of its first electrode.",
+    "default_leads": [
+     "Fpz-Cz",
+     "Pz-Oz"
+    ],
+    "empty_slots": [],
+    "empty_slot_note": null
+   }
+  },
+  "seizure": {
+   "answer_type": "noul",
+   "source": "dan2023bids",
+   "dataset": "CHB-MIT",
+   "split": "val",
+   "question": "Does any annotated seizure interval overlap this 5-second EEG window with positive duration?",
+   "phrasing_id": "seizure-train-0",
+   "supervision_meaning": "Whether any annotated seizure interval overlaps this 5-second window with positive duration; not a seizure fraction and not a majority-of-window rule.",
+   "window_length_s": 5.0,
+   "stride_s": 5.0,
+   "cases": [
+    {
+     "case_id": "chb01-run25",
+     "path": "seizure/chb01-run25/",
+     "record_label": "sub-01 · ses-01 · run-25",
+     "windows": 72,
+     "duration_s": 360.0
+    }
+   ],
+   "examples": {
+    "path": "windows/seizure",
+    "n": 12
+   },
+   "input_channels": {
+    "source": "dan2023bids",
+    "n_channels": 24,
+    "channels": [
+     {
+      "name": "Fp1-F3",
+      "index": 0,
+      "bipolar": true,
+      "electrodes": [
+       "FP1",
+       "F3"
+      ],
+      "electrodes_with_position": [
+       "FP1",
+       "F3"
+      ],
+      "model_position_m": [
+       -0.02944,
+       0.08392,
+       -0.00699
+      ],
+      "model_position_electrode": "FP1",
+      "recorded": true
+     },
+     {
+      "name": "F3-C3",
+      "index": 1,
+      "bipolar": true,
+      "electrodes": [
+       "F3",
+       "C3"
+      ],
+      "electrodes_with_position": [
+       "F3",
+       "C3"
+      ],
+      "model_position_m": [
+       -0.05024,
+       0.05311,
+       0.04219
+      ],
+      "model_position_electrode": "F3",
+      "recorded": true
+     },
+     {
+      "name": "C3-P3",
+      "index": 2,
+      "bipolar": true,
+      "electrodes": [
+       "C3",
+       "P3"
+      ],
+      "electrodes_with_position": [
+       "C3",
+       "P3"
+      ],
+      "model_position_m": [
+       -0.06536,
+       -0.01163,
+       0.06436
+      ],
+      "model_position_electrode": "C3",
+      "recorded": true
+     },
+     {
+      "name": "P3-O1",
+      "index": 3,
+      "bipolar": true,
+      "electrodes": [
+       "P3",
+       "O1"
+      ],
+      "electrodes_with_position": [
+       "P3",
+       "O1"
+      ],
+      "model_position_m": [
+       -0.05301,
+       -0.07879,
+       0.05594
+      ],
+      "model_position_electrode": "P3",
+      "recorded": true
+     },
+     {
+      "name": "Fp1-F7",
+      "index": 4,
+      "bipolar": true,
+      "electrodes": [
+       "FP1",
+       "F7"
+      ],
+      "electrodes_with_position": [
+       "FP1",
+       "F7"
+      ],
+      "model_position_m": [
+       -0.02944,
+       0.08392,
+       -0.00699
+      ],
+      "model_position_electrode": "FP1",
+      "recorded": true
+     },
+     {
+      "name": "F7-T7",
+      "index": 5,
+      "bipolar": true,
+      "electrodes": [
+       "F7",
+       "T7"
+      ],
+      "electrodes_with_position": [
+       "F7",
+       "T7"
+      ],
+      "model_position_m": [
+       -0.07026,
+       0.04247,
+       -0.01142
+      ],
+      "model_position_electrode": "F7",
+      "recorded": true
+     },
+     {
+      "name": "T7-P7",
+      "index": 6,
+      "bipolar": true,
+      "electrodes": [
+       "T7",
+       "P7"
+      ],
+      "electrodes_with_position": [
+       "T7",
+       "P7"
+      ],
+      "model_position_m": [
+       -0.08416,
+       -0.01602,
+       -0.00935
+      ],
+      "model_position_electrode": "T7",
+      "recorded": true
+     },
+     {
+      "name": "P7-O1",
+      "index": 7,
+      "bipolar": true,
+      "electrodes": [
+       "P7",
+       "O1"
+      ],
+      "electrodes_with_position": [
+       "P7",
+       "O1"
+      ],
+      "model_position_m": [
+       -0.07243,
+       -0.07345,
+       -0.00249
+      ],
+      "model_position_electrode": "P7",
+      "recorded": true
+     },
+     {
+      "name": "Fz-Cz",
+      "index": 8,
+      "bipolar": true,
+      "electrodes": [
+       "FZ",
+       "CZ"
+      ],
+      "electrodes_with_position": [
+       "FZ",
+       "CZ"
+      ],
+      "model_position_m": [
+       0.00031,
+       0.05851,
+       0.06646
+      ],
+      "model_position_electrode": "FZ",
+      "recorded": true
+     },
+     {
+      "name": "Cz-Pz",
+      "index": 9,
+      "bipolar": true,
+      "electrodes": [
+       "CZ",
+       "PZ"
+      ],
+      "electrodes_with_position": [
+       "CZ",
+       "PZ"
+      ],
+      "model_position_m": [
+       0.0004,
+       -0.00917,
+       0.10024
+      ],
+      "model_position_electrode": "CZ",
+      "recorded": true
+     },
+     {
+      "name": "Fp2-F4",
+      "index": 10,
+      "bipolar": true,
+      "electrodes": [
+       "FP2",
+       "F4"
+      ],
+      "electrodes_with_position": [
+       "FP2",
+       "F4"
+      ],
+      "model_position_m": [
+       0.02987,
+       0.0849,
+       -0.00708
+      ],
+      "model_position_electrode": "FP2",
+      "recorded": true
+     },
+     {
+      "name": "F4-C4",
+      "index": 11,
+      "bipolar": true,
+      "electrodes": [
+       "F4",
+       "C4"
+      ],
+      "electrodes_with_position": [
+       "F4",
+       "C4"
+      ],
+      "model_position_m": [
+       0.05184,
+       0.0543,
+       0.04081
+      ],
+      "model_position_electrode": "F4",
+      "recorded": true
+     },
+     {
+      "name": "C4-P4",
+      "index": 12,
+      "bipolar": true,
+      "electrodes": [
+       "C4",
+       "P4"
+      ],
+      "electrodes_with_position": [
+       "C4",
+       "P4"
+      ],
+      "model_position_m": [
+       0.06712,
+       -0.0109,
+       0.06358
+      ],
+      "model_position_electrode": "C4",
+      "recorded": true
+     },
+     {
+      "name": "P4-O2",
+      "index": 13,
+      "bipolar": true,
+      "electrodes": [
+       "P4",
+       "O2"
+      ],
+      "electrodes_with_position": [
+       "P4",
+       "O2"
+      ],
+      "model_position_m": [
+       0.05567,
+       -0.07856,
+       0.05656
+      ],
+      "model_position_electrode": "P4",
+      "recorded": true
+     },
+     {
+      "name": "Fp2-F8",
+      "index": 14,
+      "bipolar": true,
+      "electrodes": [
+       "FP2",
+       "F8"
+      ],
+      "electrodes_with_position": [
+       "FP2",
+       "F8"
+      ],
+      "model_position_m": [
+       0.02987,
+       0.0849,
+       -0.00708
+      ],
+      "model_position_electrode": "FP2",
+      "recorded": true
+     },
+     {
+      "name": "F8-T8",
+      "index": 15,
+      "bipolar": true,
+      "electrodes": [
+       "F8",
+       "T8"
+      ],
+      "electrodes_with_position": [
+       "F8",
+       "T8"
+      ],
+      "model_position_m": [
+       0.07304,
+       0.04442,
+       -0.012
+      ],
+      "model_position_electrode": "F8",
+      "recorded": true
+     },
+     {
+      "name": "T8-P8",
+      "index": 16,
+      "bipolar": true,
+      "electrodes": [
+       "T8",
+       "P8"
+      ],
+      "electrodes_with_position": [
+       "T8",
+       "P8"
+      ],
+      "model_position_m": [
+       0.08508,
+       -0.01502,
+       -0.00949
+      ],
+      "model_position_electrode": "T8",
+      "recorded": true
+     },
+     {
+      "name": "P8-O2",
+      "index": 17,
+      "bipolar": true,
+      "electrodes": [
+       "P8",
+       "O2"
+      ],
+      "electrodes_with_position": [
+       "P8",
+       "O2"
+      ],
+      "model_position_m": [
+       0.07306,
+       -0.07307,
+       -0.00254
+      ],
+      "model_position_electrode": "P8",
+      "recorded": true
+     },
+     {
+      "name": "F7-T3",
+      "index": 18,
+      "bipolar": true,
+      "electrodes": [
+       "F7",
+       "T3"
+      ],
+      "electrodes_with_position": [
+       "F7",
+       "T3"
+      ],
+      "model_position_m": [
+       -0.07026,
+       0.04247,
+       -0.01142
+      ],
+      "model_position_electrode": "F7",
+      "recorded": false
+     },
+     {
+      "name": "T3-T5",
+      "index": 19,
+      "bipolar": true,
+      "electrodes": [
+       "T3",
+       "T5"
+      ],
+      "electrodes_with_position": [
+       "T3",
+       "T5"
+      ],
+      "model_position_m": [
+       -0.08416,
+       -0.01602,
+       -0.00935
+      ],
+      "model_position_electrode": "T3",
+      "recorded": false
+     },
+     {
+      "name": "T5-O1",
+      "index": 20,
+      "bipolar": true,
+      "electrodes": [
+       "T5",
+       "O1"
+      ],
+      "electrodes_with_position": [
+       "T5",
+       "O1"
+      ],
+      "model_position_m": [
+       -0.07243,
+       -0.07345,
+       -0.00249
+      ],
+      "model_position_electrode": "T5",
+      "recorded": false
+     },
+     {
+      "name": "F8-T4",
+      "index": 21,
+      "bipolar": true,
+      "electrodes": [
+       "F8",
+       "T4"
+      ],
+      "electrodes_with_position": [
+       "F8",
+       "T4"
+      ],
+      "model_position_m": [
+       0.07304,
+       0.04442,
+       -0.012
+      ],
+      "model_position_electrode": "F8",
+      "recorded": false
+     },
+     {
+      "name": "T4-T6",
+      "index": 22,
+      "bipolar": true,
+      "electrodes": [
+       "T4",
+       "T6"
+      ],
+      "electrodes_with_position": [
+       "T4",
+       "T6"
+      ],
+      "model_position_m": [
+       0.08508,
+       -0.01502,
+       -0.00949
+      ],
+      "model_position_electrode": "T4",
+      "recorded": false
+     },
+     {
+      "name": "T6-O2",
+      "index": 23,
+      "bipolar": true,
+      "electrodes": [
+       "T6",
+       "O2"
+      ],
+      "electrodes_with_position": [
+       "T6",
+       "O2"
+      ],
+      "model_position_m": [
+       0.07306,
+       -0.07307,
+       -0.00254
+      ],
+      "model_position_electrode": "T6",
+      "recorded": false
+     }
+    ],
+    "electrodes": {
+     "FP1": [
+      -0.02944,
+      0.08392,
+      -0.00699
+     ],
+     "F3": [
+      -0.05024,
+      0.05311,
+      0.04219
+     ],
+     "C3": [
+      -0.06536,
+      -0.01163,
+      0.06436
+     ],
+     "P3": [
+      -0.05301,
+      -0.07879,
+      0.05594
+     ],
+     "O1": [
+      -0.02941,
+      -0.11245,
+      0.00884
+     ],
+     "F7": [
+      -0.07026,
+      0.04247,
+      -0.01142
+     ],
+     "T7": [
+      -0.08416,
+      -0.01602,
+      -0.00935
+     ],
+     "P7": [
+      -0.07243,
+      -0.07345,
+      -0.00249
+     ],
+     "FZ": [
+      0.00031,
+      0.05851,
+      0.06646
+     ],
+     "CZ": [
+      0.0004,
+      -0.00917,
+      0.10024
+     ],
+     "PZ": [
+      0.00032,
+      -0.08111,
+      0.08262
+     ],
+     "FP2": [
+      0.02987,
+      0.0849,
+      -0.00708
+     ],
+     "F4": [
+      0.05184,
+      0.0543,
+      0.04081
+     ],
+     "C4": [
+      0.06712,
+      -0.0109,
+      0.06358
+     ],
+     "P4": [
+      0.05567,
+      -0.07856,
+      0.05656
+     ],
+     "O2": [
+      0.02984,
+      -0.11216,
+      0.0088
+     ],
+     "F8": [
+      0.07304,
+      0.04442,
+      -0.012
+     ],
+     "T8": [
+      0.08508,
+      -0.01502,
+      -0.00949
+     ],
+     "P8": [
+      0.07306,
+      -0.07307,
+      -0.00254
+     ],
+     "T3": [
+      -0.08416,
+      -0.01602,
+      -0.00935
+     ],
+     "T5": [
+      -0.07243,
+      -0.07345,
+      -0.00249
+     ],
+     "T4": [
+      0.08508,
+      -0.01502,
+      -0.00949
+     ],
+     "T6": [
+      0.07306,
+      -0.07307,
+      -0.00254
+     ]
+    },
+    "feature_dir": "data/features/reve-large/dan2023bids/neuralbench-seizure--core",
+    "features_sha256": "4b28fc8c942b6b3e48736237f0ec325a1e43b483e431f007cd1606333769ce1c",
+    "position_note": "Positions are those stored with the encoder features (REVE position bank, metres; x right, y front, z up). A bipolar lead enters the encoder at the position of its first electrode.",
+    "default_leads": [
+     "Fp1-F3",
+     "F3-C3",
+     "C3-P3",
+     "P3-O1",
+     "Fp1-F7",
+     "F7-T7",
+     "T7-P7",
+     "P7-O1",
+     "Fz-Cz",
+     "Cz-Pz",
+     "Fp2-F4",
+     "F4-C4",
+     "C4-P4",
+     "P4-O2",
+     "Fp2-F8",
+     "F8-T8",
+     "T8-P8",
+     "P8-O2"
+    ],
+    "empty_slots": [
+     "F7-T3",
+     "T3-T5",
+     "T5-O1",
+     "F8-T4",
+     "T4-T6",
+     "T6-O2"
+    ],
+    "empty_slot_note": "Input slots of this source that have no lead in the shown recordings; the model input is zero there (checked on 82 model-input windows)."
+   }
+  },
+  "motor_imagery": {
+   "answer_type": "choice",
+   "source": "stieger2021",
+   "dataset": "Stieger et al. 2021, continuous cursor-control BCI (figshare 13123148)",
+   "dataset_short": "Stieger 2021",
+   "split": "val",
+   "question": "Which condition was the participant cued to perform in this trial: imagining one of the listed movements, or resting?",
+   "phrasing_id": "mir2-train-0",
+   "supervision_meaning": "The condition the participant was cued to perform in this trial: one of the listed imagined movements or rest. The question does not presuppose that a movement was imagined.",
+   "candidates": [
+    "left_hand",
+    "right_hand",
+    "both_hands",
+    "rest"
+   ],
+   "candidate_texts": {
+    "left_hand": "Imagined movement of the left hand",
+    "right_hand": "Imagined movement of the right hand",
+    "both_hands": "Imagined movement of both hands",
+    "rest": "Rest, with no movement imagined"
+   },
+   "candidate_labels": {
+    "left_hand": "Left hand",
+    "right_hand": "Right hand",
+    "both_hands": "Both hands",
+    "rest": "Rest"
+   },
+   "candidate_short": {
+    "left_hand": "Left",
+    "right_hand": "Right",
+    "both_hands": "Both",
+    "rest": "Rest"
+   },
+   "window_length_s": 6.0,
+   "model_window_length_s": 4.0,
+   "window_note": "The display runs from 2 s before the target appears to 4 s after it. The model reads the 4 s after the target appears (lighter band): 2 s with the target on screen, then the first 2 s of cursor control.",
+   "protocol_note": "A cursor-control experiment: imagining the left or the right hand moves the cursor left or right, both hands move it up, and resting moves it down. The label is the cued target, not a measured movement.",
+   "licence_note": "The hosting record (figshare) states CC BY 4.0 and the licence file of the authors’ code repository states CC BY-NC 4.0 for code and data; shown here for non-commercial research use, with attribution.",
+   "trained_mi_sources": 17,
+   "cases": [
+    {
+     "case_id": "subject46-session11",
+     "path": "motor_imagery/subject46-session11/",
+     "record_label": "subject 46 · session 11",
+     "windows": 24,
+     "segments": 2
+    }
+   ],
+   "examples": {
+    "path": "windows/motor_imagery",
+    "n": 8
+   },
+   "input_channels": {
+    "source": "stieger2021",
+    "n_channels": 60,
+    "channels": [
+     {
+      "name": "Fp1",
+      "index": 0,
+      "bipolar": false,
+      "electrodes": [
+       "FP1"
+      ],
+      "electrodes_with_position": [
+       "FP1"
+      ],
+      "model_position_m": [
+       -0.02944,
+       0.08392,
+       -0.00699
+      ],
+      "model_position_electrode": "FP1",
+      "recorded": true
+     },
+     {
+      "name": "Fpz",
+      "index": 1,
+      "bipolar": false,
+      "electrodes": [
+       "FPZ"
+      ],
+      "electrodes_with_position": [
+       "FPZ"
+      ],
+      "model_position_m": [
+       0.00011,
+       0.08825,
+       -0.00171
+      ],
+      "model_position_electrode": "FPZ",
+      "recorded": true
+     },
+     {
+      "name": "Fp2",
+      "index": 2,
+      "bipolar": false,
+      "electrodes": [
+       "FP2"
+      ],
+      "electrodes_with_position": [
+       "FP2"
+      ],
+      "model_position_m": [
+       0.02987,
+       0.0849,
+       -0.00708
+      ],
+      "model_position_electrode": "FP2",
+      "recorded": true
+     },
+     {
+      "name": "AF3",
+      "index": 3,
+      "bipolar": false,
+      "electrodes": [
+       "AF3"
+      ],
+      "electrodes_with_position": [
+       "AF3"
+      ],
+      "model_position_m": [
+       -0.0337,
+       0.07684,
+       0.02123
+      ],
+      "model_position_electrode": "AF3",
+      "recorded": true
+     },
+     {
+      "name": "AF4",
+      "index": 4,
+      "bipolar": false,
+      "electrodes": [
+       "AF4"
+      ],
+      "electrodes_with_position": [
+       "AF4"
+      ],
+      "model_position_m": [
+       0.03571,
+       0.07773,
+       0.02196
+      ],
+      "model_position_electrode": "AF4",
+      "recorded": true
+     },
+     {
+      "name": "F7",
+      "index": 5,
+      "bipolar": false,
+      "electrodes": [
+       "F7"
+      ],
+      "electrodes_with_position": [
+       "F7"
+      ],
+      "model_position_m": [
+       -0.07026,
+       0.04247,
+       -0.01142
+      ],
+      "model_position_electrode": "F7",
+      "recorded": true
+     },
+     {
+      "name": "F5",
+      "index": 6,
+      "bipolar": false,
+      "electrodes": [
+       "F5"
+      ],
+      "electrodes_with_position": [
+       "F5"
+      ],
+      "model_position_m": [
+       -0.06447,
+       0.04804,
+       0.01692
+      ],
+      "model_position_electrode": "F5",
+      "recorded": true
+     },
+     {
+      "name": "F3",
+      "index": 7,
+      "bipolar": false,
+      "electrodes": [
+       "F3"
+      ],
+      "electrodes_with_position": [
+       "F3"
+      ],
+      "model_position_m": [
+       -0.05024,
+       0.05311,
+       0.04219
+      ],
+      "model_position_electrode": "F3",
+      "recorded": true
+     },
+     {
+      "name": "F1",
+      "index": 8,
+      "bipolar": false,
+      "electrodes": [
+       "F1"
+      ],
+      "electrodes_with_position": [
+       "F1"
+      ],
+      "model_position_m": [
+       -0.0275,
+       0.05693,
+       0.06034
+      ],
+      "model_position_electrode": "F1",
+      "recorded": true
+     },
+     {
+      "name": "Fz",
+      "index": 9,
+      "bipolar": false,
+      "electrodes": [
+       "FZ"
+      ],
+      "electrodes_with_position": [
+       "FZ"
+      ],
+      "model_position_m": [
+       0.00031,
+       0.05851,
+       0.06646
+      ],
+      "model_position_electrode": "FZ",
+      "recorded": true
+     },
+     {
+      "name": "F2",
+      "index": 10,
+      "bipolar": false,
+      "electrodes": [
+       "F2"
+      ],
+      "electrodes_with_position": [
+       "F2"
+      ],
+      "model_position_m": [
+       0.02951,
+       0.0576,
+       0.05954
+      ],
+      "model_position_electrode": "F2",
+      "recorded": true
+     },
+     {
+      "name": "F4",
+      "index": 11,
+      "bipolar": false,
+      "electrodes": [
+       "F4"
+      ],
+      "electrodes_with_position": [
+       "F4"
+      ],
+      "model_position_m": [
+       0.05184,
+       0.0543,
+       0.04081
+      ],
+      "model_position_electrode": "F4",
+      "recorded": true
+     },
+     {
+      "name": "F6",
+      "index": 12,
+      "bipolar": false,
+      "electrodes": [
+       "F6"
+      ],
+      "electrodes_with_position": [
+       "F6"
+      ],
+      "model_position_m": [
+       0.06791,
+       0.04983,
+       0.01637
+      ],
+      "model_position_electrode": "F6",
+      "recorded": true
+     },
+     {
+      "name": "F8",
+      "index": 13,
+      "bipolar": false,
+      "electrodes": [
+       "F8"
+      ],
+      "electrodes_with_position": [
+       "F8"
+      ],
+      "model_position_m": [
+       0.07304,
+       0.04442,
+       -0.012
+      ],
+      "model_position_electrode": "F8",
+      "recorded": true
+     },
+     {
+      "name": "FT7",
+      "index": 14,
+      "bipolar": false,
+      "electrodes": [
+       "FT7"
+      ],
+      "electrodes_with_position": [
+       "FT7"
+      ],
+      "model_position_m": [
+       -0.08078,
+       0.01412,
+       -0.01113
+      ],
+      "model_position_electrode": "FT7",
+      "recorded": true
+     },
+     {
+      "name": "FC5",
+      "index": 15,
+      "bipolar": false,
+      "electrodes": [
+       "FC5"
+      ],
+      "electrodes_with_position": [
+       "FC5"
+      ],
+      "model_position_m": [
+       -0.07721,
+       0.01864,
+       0.02446
+      ],
+      "model_position_electrode": "FC5",
+      "recorded": true
+     },
+     {
+      "name": "FC3",
+      "index": 16,
+      "bipolar": false,
+      "electrodes": [
+       "FC3"
+      ],
+      "electrodes_with_position": [
+       "FC3"
+      ],
+      "model_position_m": [
+       -0.06018,
+       0.02272,
+       0.05554
+      ],
+      "model_position_electrode": "FC3",
+      "recorded": true
+     },
+     {
+      "name": "FC1",
+      "index": 17,
+      "bipolar": false,
+      "electrodes": [
+       "FC1"
+      ],
+      "electrodes_with_position": [
+       "FC1"
+      ],
+      "model_position_m": [
+       -0.03406,
+       0.02601,
+       0.07999
+      ],
+      "model_position_electrode": "FC1",
+      "recorded": true
+     },
+     {
+      "name": "FCz",
+      "index": 18,
+      "bipolar": false,
+      "electrodes": [
+       "FCZ"
+      ],
+      "electrodes_with_position": [
+       "FCZ"
+      ],
+      "model_position_m": [
+       0.00038,
+       0.02739,
+       0.08867
+      ],
+      "model_position_electrode": "FCZ",
+      "recorded": true
+     },
+     {
+      "name": "FC2",
+      "index": 19,
+      "bipolar": false,
+      "electrodes": [
+       "FC2"
+      ],
+      "electrodes_with_position": [
+       "FC2"
+      ],
+      "model_position_m": [
+       0.03478,
+       0.02644,
+       0.07881
+      ],
+      "model_position_electrode": "FC2",
+      "recorded": true
+     },
+     {
+      "name": "FC4",
+      "index": 20,
+      "bipolar": false,
+      "electrodes": [
+       "FC4"
+      ],
+      "electrodes_with_position": [
+       "FC4"
+      ],
+      "model_position_m": [
+       0.06229,
+       0.02372,
+       0.05563
+      ],
+      "model_position_electrode": "FC4",
+      "recorded": true
+     },
+     {
+      "name": "FC6",
+      "index": 21,
+      "bipolar": false,
+      "electrodes": [
+       "FC6"
+      ],
+      "electrodes_with_position": [
+       "FC6"
+      ],
+      "model_position_m": [
+       0.07953,
+       0.01994,
+       0.02444
+      ],
+      "model_position_electrode": "FC6",
+      "recorded": true
+     },
+     {
+      "name": "FT8",
+      "index": 22,
+      "bipolar": false,
+      "electrodes": [
+       "FT8"
+      ],
+      "electrodes_with_position": [
+       "FT8"
+      ],
+      "model_position_m": [
+       0.08182,
+       0.01542,
+       -0.01133
+      ],
+      "model_position_electrode": "FT8",
+      "recorded": true
+     },
+     {
+      "name": "T7",
+      "index": 23,
+      "bipolar": false,
+      "electrodes": [
+       "T7"
+      ],
+      "electrodes_with_position": [
+       "T7"
+      ],
+      "model_position_m": [
+       -0.08416,
+       -0.01602,
+       -0.00935
+      ],
+      "model_position_electrode": "T7",
+      "recorded": true
+     },
+     {
+      "name": "C5",
+      "index": 24,
+      "bipolar": false,
+      "electrodes": [
+       "C5"
+      ],
+      "electrodes_with_position": [
+       "C5"
+      ],
+      "model_position_m": [
+       -0.08028,
+       -0.01376,
+       0.02916
+      ],
+      "model_position_electrode": "C5",
+      "recorded": true
+     },
+     {
+      "name": "C3",
+      "index": 25,
+      "bipolar": false,
+      "electrodes": [
+       "C3"
+      ],
+      "electrodes_with_position": [
+       "C3"
+      ],
+      "model_position_m": [
+       -0.06536,
+       -0.01163,
+       0.06436
+      ],
+      "model_position_electrode": "C3",
+      "recorded": true
+     },
+     {
+      "name": "C1",
+      "index": 26,
+      "bipolar": false,
+      "electrodes": [
+       "C1"
+      ],
+      "electrodes_with_position": [
+       "C1"
+      ],
+      "model_position_m": [
+       -0.03616,
+       -0.00998,
+       0.08975
+      ],
+      "model_position_electrode": "C1",
+      "recorded": true
+     },
+     {
+      "name": "Cz",
+      "index": 27,
+      "bipolar": false,
+      "electrodes": [
+       "CZ"
+      ],
+      "electrodes_with_position": [
+       "CZ"
+      ],
+      "model_position_m": [
+       0.0004,
+       -0.00917,
+       0.10024
+      ],
+      "model_position_electrode": "CZ",
+      "recorded": true
+     },
+     {
+      "name": "C2",
+      "index": 28,
+      "bipolar": false,
+      "electrodes": [
+       "C2"
+      ],
+      "electrodes_with_position": [
+       "C2"
+      ],
+      "model_position_m": [
+       0.03767,
+       -0.00962,
+       0.08841
+      ],
+      "model_position_electrode": "C2",
+      "recorded": true
+     },
+     {
+      "name": "C4",
+      "index": 29,
+      "bipolar": false,
+      "electrodes": [
+       "C4"
+      ],
+      "electrodes_with_position": [
+       "C4"
+      ],
+      "model_position_m": [
+       0.06712,
+       -0.0109,
+       0.06358
+      ],
+      "model_position_electrode": "C4",
+      "recorded": true
+     },
+     {
+      "name": "C6",
+      "index": 30,
+      "bipolar": false,
+      "electrodes": [
+       "C6"
+      ],
+      "electrodes_with_position": [
+       "C6"
+      ],
+      "model_position_m": [
+       0.08346,
+       -0.01278,
+       0.02921
+      ],
+      "model_position_electrode": "C6",
+      "recorded": true
+     },
+     {
+      "name": "T8",
+      "index": 31,
+      "bipolar": false,
+      "electrodes": [
+       "T8"
+      ],
+      "electrodes_with_position": [
+       "T8"
+      ],
+      "model_position_m": [
+       0.08508,
+       -0.01502,
+       -0.00949
+      ],
+      "model_position_electrode": "T8",
+      "recorded": true
+     },
+     {
+      "name": "TP7",
+      "index": 32,
+      "bipolar": false,
+      "electrodes": [
+       "TP7"
+      ],
+      "electrodes_with_position": [
+       "TP7"
+      ],
+      "model_position_m": [
+       -0.08483,
+       -0.04602,
+       -0.00706
+      ],
+      "model_position_electrode": "TP7",
+      "recorded": true
+     },
+     {
+      "name": "CP5",
+      "index": 33,
+      "bipolar": false,
+      "electrodes": [
+       "CP5"
+      ],
+      "electrodes_with_position": [
+       "CP5"
+      ],
+      "model_position_m": [
+       -0.07959,
+       -0.04655,
+       0.03095
+      ],
+      "model_position_electrode": "CP5",
+      "recorded": true
+     },
+     {
+      "name": "CP3",
+      "index": 34,
+      "bipolar": false,
+      "electrodes": [
+       "CP3"
+      ],
+      "electrodes_with_position": [
+       "CP3"
+      ],
+      "model_position_m": [
+       -0.06356,
+       -0.04701,
+       0.06562
+      ],
+      "model_position_electrode": "CP3",
+      "recorded": true
+     },
+     {
+      "name": "CP1",
+      "index": 35,
+      "bipolar": false,
+      "electrodes": [
+       "CP1"
+      ],
+      "electrodes_with_position": [
+       "CP1"
+      ],
+      "model_position_m": [
+       -0.03551,
+       -0.04729,
+       0.09132
+      ],
+      "model_position_electrode": "CP1",
+      "recorded": true
+     },
+     {
+      "name": "CPz",
+      "index": 36,
+      "bipolar": false,
+      "electrodes": [
+       "CPZ"
+      ],
+      "electrodes_with_position": [
+       "CPZ"
+      ],
+      "model_position_m": [
+       0.00039,
+       -0.04732,
+       0.09943
+      ],
+      "model_position_electrode": "CPZ",
+      "recorded": true
+     },
+     {
+      "name": "CP2",
+      "index": 37,
+      "bipolar": false,
+      "electrodes": [
+       "CP2"
+      ],
+      "electrodes_with_position": [
+       "CP2"
+      ],
+      "model_position_m": [
+       0.03838,
+       -0.04707,
+       0.0907
+      ],
+      "model_position_electrode": "CP2",
+      "recorded": true
+     },
+     {
+      "name": "CP4",
+      "index": 38,
+      "bipolar": false,
+      "electrodes": [
+       "CP4"
+      ],
+      "electrodes_with_position": [
+       "CP4"
+      ],
+      "model_position_m": [
+       0.06661,
+       -0.04664,
+       0.06558
+      ],
+      "model_position_electrode": "CP4",
+      "recorded": true
+     },
+     {
+      "name": "CP6",
+      "index": 39,
+      "bipolar": false,
+      "electrodes": [
+       "CP6"
+      ],
+      "electrodes_with_position": [
+       "CP6"
+      ],
+      "model_position_m": [
+       0.08332,
+       -0.0461,
+       0.03121
+      ],
+      "model_position_electrode": "CP6",
+      "recorded": true
+     },
+     {
+      "name": "TP8",
+      "index": 40,
+      "bipolar": false,
+      "electrodes": [
+       "TP8"
+      ],
+      "electrodes_with_position": [
+       "TP8"
+      ],
+      "model_position_m": [
+       0.08555,
+       -0.04555,
+       -0.00713
+      ],
+      "model_position_electrode": "TP8",
+      "recorded": true
+     },
+     {
+      "name": "P7",
+      "index": 41,
+      "bipolar": false,
+      "electrodes": [
+       "P7"
+      ],
+      "electrodes_with_position": [
+       "P7"
+      ],
+      "model_position_m": [
+       -0.07243,
+       -0.07345,
+       -0.00249
+      ],
+      "model_position_electrode": "P7",
+      "recorded": true
+     },
+     {
+      "name": "P5",
+      "index": 42,
+      "bipolar": false,
+      "electrodes": [
+       "P5"
+      ],
+      "electrodes_with_position": [
+       "P5"
+      ],
+      "model_position_m": [
+       -0.06727,
+       -0.07629,
+       0.02838
+      ],
+      "model_position_electrode": "P5",
+      "recorded": true
+     },
+     {
+      "name": "P3",
+      "index": 43,
+      "bipolar": false,
+      "electrodes": [
+       "P3"
+      ],
+      "electrodes_with_position": [
+       "P3"
+      ],
+      "model_position_m": [
+       -0.05301,
+       -0.07879,
+       0.05594
+      ],
+      "model_position_electrode": "P3",
+      "recorded": true
+     },
+     {
+      "name": "P1",
+      "index": 44,
+      "bipolar": false,
+      "electrodes": [
+       "P1"
+      ],
+      "electrodes_with_position": [
+       "P1"
+      ],
+      "model_position_m": [
+       -0.02862,
+       -0.08052,
+       0.07544
+      ],
+      "model_position_electrode": "P1",
+      "recorded": true
+     },
+     {
+      "name": "Pz",
+      "index": 45,
+      "bipolar": false,
+      "electrodes": [
+       "PZ"
+      ],
+      "electrodes_with_position": [
+       "PZ"
+      ],
+      "model_position_m": [
+       0.00032,
+       -0.08111,
+       0.08262
+      ],
+      "model_position_electrode": "PZ",
+      "recorded": true
+     },
+     {
+      "name": "P2",
+      "index": 46,
+      "bipolar": false,
+      "electrodes": [
+       "P2"
+      ],
+      "electrodes_with_position": [
+       "P2"
+      ],
+      "model_position_m": [
+       0.03192,
+       -0.08049,
+       0.07672
+      ],
+      "model_position_electrode": "P2",
+      "recorded": true
+     },
+     {
+      "name": "P4",
+      "index": 47,
+      "bipolar": false,
+      "electrodes": [
+       "P4"
+      ],
+      "electrodes_with_position": [
+       "P4"
+      ],
+      "model_position_m": [
+       0.05567,
+       -0.07856,
+       0.05656
+      ],
+      "model_position_electrode": "P4",
+      "recorded": true
+     },
+     {
+      "name": "P6",
+      "index": 48,
+      "bipolar": false,
+      "electrodes": [
+       "P6"
+      ],
+      "electrodes_with_position": [
+       "P6"
+      ],
+      "model_position_m": [
+       0.06789,
+       -0.0759,
+       0.02809
+      ],
+      "model_position_electrode": "P6",
+      "recorded": true
+     },
+     {
+      "name": "P8",
+      "index": 49,
+      "bipolar": false,
+      "electrodes": [
+       "P8"
+      ],
+      "electrodes_with_position": [
+       "P8"
+      ],
+      "model_position_m": [
+       0.07306,
+       -0.07307,
+       -0.00254
+      ],
+      "model_position_electrode": "P8",
+      "recorded": true
+     },
+     {
+      "name": "PO7",
+      "index": 50,
+      "bipolar": false,
+      "electrodes": [
+       "PO7"
+      ],
+      "electrodes_with_position": [
+       "PO7"
+      ],
+      "model_position_m": [
+       -0.05484,
+       -0.09753,
+       0.00279
+      ],
+      "model_position_electrode": "PO7",
+      "recorded": true
+     },
+     {
+      "name": "PO5",
+      "index": 51,
+      "bipolar": false,
+      "electrodes": [
+       "PO5"
+      ],
+      "electrodes_with_position": [
+       "PO5"
+      ],
+      "model_position_m": [
+       -0.04842,
+       -0.09934,
+       0.0216
+      ],
+      "model_position_electrode": "PO5",
+      "recorded": true
+     },
+     {
+      "name": "PO3",
+      "index": 52,
+      "bipolar": false,
+      "electrodes": [
+       "PO3"
+      ],
+      "electrodes_with_position": [
+       "PO3"
+      ],
+      "model_position_m": [
+       -0.03651,
+       -0.10085,
+       0.03717
+      ],
+      "model_position_electrode": "PO3",
+      "recorded": true
+     },
+     {
+      "name": "POz",
+      "index": 53,
+      "bipolar": false,
+      "electrodes": [
+       "POZ"
+      ],
+      "electrodes_with_position": [
+       "POZ"
+      ],
+      "model_position_m": [
+       0.00022,
+       -0.10218,
+       0.05061
+      ],
+      "model_position_electrode": "POZ",
+      "recorded": true
+     },
+     {
+      "name": "PO4",
+      "index": 54,
+      "bipolar": false,
+      "electrodes": [
+       "PO4"
+      ],
+      "electrodes_with_position": [
+       "PO4"
+      ],
+      "model_position_m": [
+       0.03678,
+       -0.10085,
+       0.0364
+      ],
+      "model_position_electrode": "PO4",
+      "recorded": true
+     },
+     {
+      "name": "PO6",
+      "index": 55,
+      "bipolar": false,
+      "electrodes": [
+       "PO6"
+      ],
+      "electrodes_with_position": [
+       "PO6"
+      ],
+      "model_position_m": [
+       0.04982,
+       -0.09945,
+       0.02173
+      ],
+      "model_position_electrode": "PO6",
+      "recorded": true
+     },
+     {
+      "name": "PO8",
+      "index": 56,
+      "bipolar": false,
+      "electrodes": [
+       "PO8"
+      ],
+      "electrodes_with_position": [
+       "PO8"
+      ],
+      "model_position_m": [
+       0.05567,
+       -0.09763,
+       0.00273
+      ],
+      "model_position_electrode": "PO8",
+      "recorded": true
+     },
+     {
+      "name": "O1",
+      "index": 57,
+      "bipolar": false,
+      "electrodes": [
+       "O1"
+      ],
+      "electrodes_with_position": [
+       "O1"
+      ],
+      "model_position_m": [
+       -0.02941,
+       -0.11245,
+       0.00884
+      ],
+      "model_position_electrode": "O1",
+      "recorded": true
+     },
+     {
+      "name": "Oz",
+      "index": 58,
+      "bipolar": false,
+      "electrodes": [
+       "OZ"
+      ],
+      "electrodes_with_position": [
+       "OZ"
+      ],
+      "model_position_m": [
+       0.00011,
+       -0.11489,
+       0.01466
+      ],
+      "model_position_electrode": "OZ",
+      "recorded": true
+     },
+     {
+      "name": "O2",
+      "index": 59,
+      "bipolar": false,
+      "electrodes": [
+       "O2"
+      ],
+      "electrodes_with_position": [
+       "O2"
+      ],
+      "model_position_m": [
+       0.02984,
+       -0.11216,
+       0.0088
+      ],
+      "model_position_electrode": "O2",
+      "recorded": true
+     }
+    ],
+    "electrodes": {
+     "FP1": [
+      -0.02944,
+      0.08392,
+      -0.00699
+     ],
+     "FPZ": [
+      0.00011,
+      0.08825,
+      -0.00171
+     ],
+     "FP2": [
+      0.02987,
+      0.0849,
+      -0.00708
+     ],
+     "AF3": [
+      -0.0337,
+      0.07684,
+      0.02123
+     ],
+     "AF4": [
+      0.03571,
+      0.07773,
+      0.02196
+     ],
+     "F7": [
+      -0.07026,
+      0.04247,
+      -0.01142
+     ],
+     "F5": [
+      -0.06447,
+      0.04804,
+      0.01692
+     ],
+     "F3": [
+      -0.05024,
+      0.05311,
+      0.04219
+     ],
+     "F1": [
+      -0.0275,
+      0.05693,
+      0.06034
+     ],
+     "FZ": [
+      0.00031,
+      0.05851,
+      0.06646
+     ],
+     "F2": [
+      0.02951,
+      0.0576,
+      0.05954
+     ],
+     "F4": [
+      0.05184,
+      0.0543,
+      0.04081
+     ],
+     "F6": [
+      0.06791,
+      0.04983,
+      0.01637
+     ],
+     "F8": [
+      0.07304,
+      0.04442,
+      -0.012
+     ],
+     "FT7": [
+      -0.08078,
+      0.01412,
+      -0.01113
+     ],
+     "FC5": [
+      -0.07721,
+      0.01864,
+      0.02446
+     ],
+     "FC3": [
+      -0.06018,
+      0.02272,
+      0.05554
+     ],
+     "FC1": [
+      -0.03406,
+      0.02601,
+      0.07999
+     ],
+     "FCZ": [
+      0.00038,
+      0.02739,
+      0.08867
+     ],
+     "FC2": [
+      0.03478,
+      0.02644,
+      0.07881
+     ],
+     "FC4": [
+      0.06229,
+      0.02372,
+      0.05563
+     ],
+     "FC6": [
+      0.07953,
+      0.01994,
+      0.02444
+     ],
+     "FT8": [
+      0.08182,
+      0.01542,
+      -0.01133
+     ],
+     "T7": [
+      -0.08416,
+      -0.01602,
+      -0.00935
+     ],
+     "C5": [
+      -0.08028,
+      -0.01376,
+      0.02916
+     ],
+     "C3": [
+      -0.06536,
+      -0.01163,
+      0.06436
+     ],
+     "C1": [
+      -0.03616,
+      -0.00998,
+      0.08975
+     ],
+     "CZ": [
+      0.0004,
+      -0.00917,
+      0.10024
+     ],
+     "C2": [
+      0.03767,
+      -0.00962,
+      0.08841
+     ],
+     "C4": [
+      0.06712,
+      -0.0109,
+      0.06358
+     ],
+     "C6": [
+      0.08346,
+      -0.01278,
+      0.02921
+     ],
+     "T8": [
+      0.08508,
+      -0.01502,
+      -0.00949
+     ],
+     "TP7": [
+      -0.08483,
+      -0.04602,
+      -0.00706
+     ],
+     "CP5": [
+      -0.07959,
+      -0.04655,
+      0.03095
+     ],
+     "CP3": [
+      -0.06356,
+      -0.04701,
+      0.06562
+     ],
+     "CP1": [
+      -0.03551,
+      -0.04729,
+      0.09132
+     ],
+     "CPZ": [
+      0.00039,
+      -0.04732,
+      0.09943
+     ],
+     "CP2": [
+      0.03838,
+      -0.04707,
+      0.0907
+     ],
+     "CP4": [
+      0.06661,
+      -0.04664,
+      0.06558
+     ],
+     "CP6": [
+      0.08332,
+      -0.0461,
+      0.03121
+     ],
+     "TP8": [
+      0.08555,
+      -0.04555,
+      -0.00713
+     ],
+     "P7": [
+      -0.07243,
+      -0.07345,
+      -0.00249
+     ],
+     "P5": [
+      -0.06727,
+      -0.07629,
+      0.02838
+     ],
+     "P3": [
+      -0.05301,
+      -0.07879,
+      0.05594
+     ],
+     "P1": [
+      -0.02862,
+      -0.08052,
+      0.07544
+     ],
+     "PZ": [
+      0.00032,
+      -0.08111,
+      0.08262
+     ],
+     "P2": [
+      0.03192,
+      -0.08049,
+      0.07672
+     ],
+     "P4": [
+      0.05567,
+      -0.07856,
+      0.05656
+     ],
+     "P6": [
+      0.06789,
+      -0.0759,
+      0.02809
+     ],
+     "P8": [
+      0.07306,
+      -0.07307,
+      -0.00254
+     ],
+     "PO7": [
+      -0.05484,
+      -0.09753,
+      0.00279
+     ],
+     "PO5": [
+      -0.04842,
+      -0.09934,
+      0.0216
+     ],
+     "PO3": [
+      -0.03651,
+      -0.10085,
+      0.03717
+     ],
+     "POZ": [
+      0.00022,
+      -0.10218,
+      0.05061
+     ],
+     "PO4": [
+      0.03678,
+      -0.10085,
+      0.0364
+     ],
+     "PO6": [
+      0.04982,
+      -0.09945,
+      0.02173
+     ],
+     "PO8": [
+      0.05567,
+      -0.09763,
+      0.00273
+     ],
+     "O1": [
+      -0.02941,
+      -0.11245,
+      0.00884
+     ],
+     "OZ": [
+      0.00011,
+      -0.11489,
+      0.01466
+     ],
+     "O2": [
+      0.02984,
+      -0.11216,
+      0.0088
+     ]
+    },
+    "feature_dir": "data/features/reve-large/stieger2021/neuralbench-motor_imagery--core",
+    "features_sha256": "e33de552b666242b73feecdbaf647349f75520d6ed038199e76c18568bd5c5c3",
+    "position_note": "Positions are those stored with the encoder features (REVE position bank, metres; x right, y front, z up). A bipolar lead enters the encoder at the position of its first electrode.",
+    "default_leads": [
+     "FC3",
+     "FCz",
+     "FC4",
+     "C5",
+     "C3",
+     "C1",
+     "Cz",
+     "C2",
+     "C4",
+     "C6",
+     "CP3",
+     "CPz",
+     "CP4"
+    ],
+    "empty_slots": [],
+    "empty_slot_note": null
+   }
+  },
+  "pain": {
+   "answer_type": "score",
+   "source": "ds005292",
+   "dataset": "OpenNeuro ds005292 (laser-evoked pain, single-trial ratings)",
+   "split": "val",
+   "question": "What pain intensity did the participant report for this laser-stimulation trial on the 0-to-10 rating scale?",
+   "phrasing_id": "pain-train-0",
+   "supervision_meaning": "The participant's own reported pain rating for this laser-stimulation trial on the 0-10 scale (11 ordered levels); not momentary pain and not laser energy.",
+   "support": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "scale": {
+    "name": "Numerical rating scale, 0–10",
+    "anchors": {
+     "0": "no sensation",
+     "4": "onset of pain",
+     "6": "moderate pain",
+     "8": "severe pain",
+     "10": "unbearable pain"
+    },
+    "source": "dataset README (OpenNeuro ds005292)",
+    "meaning": "the participant's own rating of one laser stimulus, given a few seconds after it"
+   },
+   "window_length_s": 3.0,
+   "window_start_rel_stimulus_s": -1.0,
+   "cases": [
+    {
+     "case_id": "sub-008",
+     "path": "pain/sub-008/",
+     "record_label": "sub-008",
+     "windows": 30,
+     "segments": 3
+    }
+   ],
+   "examples": {
+    "path": "windows/pain",
+    "n": 12
+   },
+   "input_channels": {
+    "source": "ds005292",
+    "n_channels": 63,
+    "channels": [
+     {
+      "name": "FP1",
+      "index": 0,
+      "bipolar": false,
+      "electrodes": [
+       "FP1"
+      ],
+      "electrodes_with_position": [
+       "FP1"
+      ],
+      "model_position_m": [
+       -0.02944,
+       0.08392,
+       -0.00699
+      ],
+      "model_position_electrode": "FP1",
+      "recorded": true
+     },
+     {
+      "name": "AF7",
+      "index": 1,
+      "bipolar": false,
+      "electrodes": [
+       "AF7"
+      ],
+      "electrodes_with_position": [
+       "AF7"
+      ],
+      "model_position_m": [
+       -0.05484,
+       0.06857,
+       -0.01059
+      ],
+      "model_position_electrode": "AF7",
+      "recorded": true
+     },
+     {
+      "name": "AF3",
+      "index": 2,
+      "bipolar": false,
+      "electrodes": [
+       "AF3"
+      ],
+      "electrodes_with_position": [
+       "AF3"
+      ],
+      "model_position_m": [
+       -0.0337,
+       0.07684,
+       0.02123
+      ],
+      "model_position_electrode": "AF3",
+      "recorded": true
+     },
+     {
+      "name": "F1",
+      "index": 3,
+      "bipolar": false,
+      "electrodes": [
+       "F1"
+      ],
+      "electrodes_with_position": [
+       "F1"
+      ],
+      "model_position_m": [
+       -0.0275,
+       0.05693,
+       0.06034
+      ],
+      "model_position_electrode": "F1",
+      "recorded": true
+     },
+     {
+      "name": "F3",
+      "index": 4,
+      "bipolar": false,
+      "electrodes": [
+       "F3"
+      ],
+      "electrodes_with_position": [
+       "F3"
+      ],
+      "model_position_m": [
+       -0.05024,
+       0.05311,
+       0.04219
+      ],
+      "model_position_electrode": "F3",
+      "recorded": true
+     },
+     {
+      "name": "F5",
+      "index": 5,
+      "bipolar": false,
+      "electrodes": [
+       "F5"
+      ],
+      "electrodes_with_position": [
+       "F5"
+      ],
+      "model_position_m": [
+       -0.06447,
+       0.04804,
+       0.01692
+      ],
+      "model_position_electrode": "F5",
+      "recorded": true
+     },
+     {
+      "name": "F7",
+      "index": 6,
+      "bipolar": false,
+      "electrodes": [
+       "F7"
+      ],
+      "electrodes_with_position": [
+       "F7"
+      ],
+      "model_position_m": [
+       -0.07026,
+       0.04247,
+       -0.01142
+      ],
+      "model_position_electrode": "F7",
+      "recorded": true
+     },
+     {
+      "name": "FT7",
+      "index": 7,
+      "bipolar": false,
+      "electrodes": [
+       "FT7"
+      ],
+      "electrodes_with_position": [
+       "FT7"
+      ],
+      "model_position_m": [
+       -0.08078,
+       0.01412,
+       -0.01113
+      ],
+      "model_position_electrode": "FT7",
+      "recorded": true
+     },
+     {
+      "name": "FC5",
+      "index": 8,
+      "bipolar": false,
+      "electrodes": [
+       "FC5"
+      ],
+      "electrodes_with_position": [
+       "FC5"
+      ],
+      "model_position_m": [
+       -0.07721,
+       0.01864,
+       0.02446
+      ],
+      "model_position_electrode": "FC5",
+      "recorded": true
+     },
+     {
+      "name": "FC3",
+      "index": 9,
+      "bipolar": false,
+      "electrodes": [
+       "FC3"
+      ],
+      "electrodes_with_position": [
+       "FC3"
+      ],
+      "model_position_m": [
+       -0.06018,
+       0.02272,
+       0.05554
+      ],
+      "model_position_electrode": "FC3",
+      "recorded": true
+     },
+     {
+      "name": "FC1",
+      "index": 10,
+      "bipolar": false,
+      "electrodes": [
+       "FC1"
+      ],
+      "electrodes_with_position": [
+       "FC1"
+      ],
+      "model_position_m": [
+       -0.03406,
+       0.02601,
+       0.07999
+      ],
+      "model_position_electrode": "FC1",
+      "recorded": true
+     },
+     {
+      "name": "C1",
+      "index": 11,
+      "bipolar": false,
+      "electrodes": [
+       "C1"
+      ],
+      "electrodes_with_position": [
+       "C1"
+      ],
+      "model_position_m": [
+       -0.03616,
+       -0.00998,
+       0.08975
+      ],
+      "model_position_electrode": "C1",
+      "recorded": true
+     },
+     {
+      "name": "C3",
+      "index": 12,
+      "bipolar": false,
+      "electrodes": [
+       "C3"
+      ],
+      "electrodes_with_position": [
+       "C3"
+      ],
+      "model_position_m": [
+       -0.06536,
+       -0.01163,
+       0.06436
+      ],
+      "model_position_electrode": "C3",
+      "recorded": true
+     },
+     {
+      "name": "C5",
+      "index": 13,
+      "bipolar": false,
+      "electrodes": [
+       "C5"
+      ],
+      "electrodes_with_position": [
+       "C5"
+      ],
+      "model_position_m": [
+       -0.08028,
+       -0.01376,
+       0.02916
+      ],
+      "model_position_electrode": "C5",
+      "recorded": true
+     },
+     {
+      "name": "T7",
+      "index": 14,
+      "bipolar": false,
+      "electrodes": [
+       "T7"
+      ],
+      "electrodes_with_position": [
+       "T7"
+      ],
+      "model_position_m": [
+       -0.08416,
+       -0.01602,
+       -0.00935
+      ],
+      "model_position_electrode": "T7",
+      "recorded": true
+     },
+     {
+      "name": "TP7",
+      "index": 15,
+      "bipolar": false,
+      "electrodes": [
+       "TP7"
+      ],
+      "electrodes_with_position": [
+       "TP7"
+      ],
+      "model_position_m": [
+       -0.08483,
+       -0.04602,
+       -0.00706
+      ],
+      "model_position_electrode": "TP7",
+      "recorded": true
+     },
+     {
+      "name": "CP5",
+      "index": 16,
+      "bipolar": false,
+      "electrodes": [
+       "CP5"
+      ],
+      "electrodes_with_position": [
+       "CP5"
+      ],
+      "model_position_m": [
+       -0.07959,
+       -0.04655,
+       0.03095
+      ],
+      "model_position_electrode": "CP5",
+      "recorded": true
+     },
+     {
+      "name": "CP3",
+      "index": 17,
+      "bipolar": false,
+      "electrodes": [
+       "CP3"
+      ],
+      "electrodes_with_position": [
+       "CP3"
+      ],
+      "model_position_m": [
+       -0.06356,
+       -0.04701,
+       0.06562
+      ],
+      "model_position_electrode": "CP3",
+      "recorded": true
+     },
+     {
+      "name": "CP1",
+      "index": 18,
+      "bipolar": false,
+      "electrodes": [
+       "CP1"
+      ],
+      "electrodes_with_position": [
+       "CP1"
+      ],
+      "model_position_m": [
+       -0.03551,
+       -0.04729,
+       0.09132
+      ],
+      "model_position_electrode": "CP1",
+      "recorded": true
+     },
+     {
+      "name": "P1",
+      "index": 19,
+      "bipolar": false,
+      "electrodes": [
+       "P1"
+      ],
+      "electrodes_with_position": [
+       "P1"
+      ],
+      "model_position_m": [
+       -0.02862,
+       -0.08052,
+       0.07544
+      ],
+      "model_position_electrode": "P1",
+      "recorded": true
+     },
+     {
+      "name": "P3",
+      "index": 20,
+      "bipolar": false,
+      "electrodes": [
+       "P3"
+      ],
+      "electrodes_with_position": [
+       "P3"
+      ],
+      "model_position_m": [
+       -0.05301,
+       -0.07879,
+       0.05594
+      ],
+      "model_position_electrode": "P3",
+      "recorded": true
+     },
+     {
+      "name": "P5",
+      "index": 21,
+      "bipolar": false,
+      "electrodes": [
+       "P5"
+      ],
+      "electrodes_with_position": [
+       "P5"
+      ],
+      "model_position_m": [
+       -0.06727,
+       -0.07629,
+       0.02838
+      ],
+      "model_position_electrode": "P5",
+      "recorded": true
+     },
+     {
+      "name": "P7",
+      "index": 22,
+      "bipolar": false,
+      "electrodes": [
+       "P7"
+      ],
+      "electrodes_with_position": [
+       "P7"
+      ],
+      "model_position_m": [
+       -0.07243,
+       -0.07345,
+       -0.00249
+      ],
+      "model_position_electrode": "P7",
+      "recorded": true
+     },
+     {
+      "name": "P9",
+      "index": 23,
+      "bipolar": false,
+      "electrodes": [
+       "P9"
+      ],
+      "electrodes_with_position": [
+       "P9"
+      ],
+      "model_position_m": [
+       -0.07301,
+       -0.07377,
+       -0.041
+      ],
+      "model_position_electrode": "P9",
+      "recorded": true
+     },
+     {
+      "name": "PO7",
+      "index": 24,
+      "bipolar": false,
+      "electrodes": [
+       "PO7"
+      ],
+      "electrodes_with_position": [
+       "PO7"
+      ],
+      "model_position_m": [
+       -0.05484,
+       -0.09753,
+       0.00279
+      ],
+      "model_position_electrode": "PO7",
+      "recorded": true
+     },
+     {
+      "name": "PO3",
+      "index": 25,
+      "bipolar": false,
+      "electrodes": [
+       "PO3"
+      ],
+      "electrodes_with_position": [
+       "PO3"
+      ],
+      "model_position_m": [
+       -0.03651,
+       -0.10085,
+       0.03717
+      ],
+      "model_position_electrode": "PO3",
+      "recorded": true
+     },
+     {
+      "name": "O1",
+      "index": 26,
+      "bipolar": false,
+      "electrodes": [
+       "O1"
+      ],
+      "electrodes_with_position": [
+       "O1"
+      ],
+      "model_position_m": [
+       -0.02941,
+       -0.11245,
+       0.00884
+      ],
+      "model_position_electrode": "O1",
+      "recorded": true
+     },
+     {
+      "name": "OZ",
+      "index": 27,
+      "bipolar": false,
+      "electrodes": [
+       "OZ"
+      ],
+      "electrodes_with_position": [
+       "OZ"
+      ],
+      "model_position_m": [
+       0.00011,
+       -0.11489,
+       0.01466
+      ],
+      "model_position_electrode": "OZ",
+      "recorded": true
+     },
+     {
+      "name": "POZ",
+      "index": 28,
+      "bipolar": false,
+      "electrodes": [
+       "POZ"
+      ],
+      "electrodes_with_position": [
+       "POZ"
+      ],
+      "model_position_m": [
+       0.00022,
+       -0.10218,
+       0.05061
+      ],
+      "model_position_electrode": "POZ",
+      "recorded": true
+     },
+     {
+      "name": "PZ",
+      "index": 29,
+      "bipolar": false,
+      "electrodes": [
+       "PZ"
+      ],
+      "electrodes_with_position": [
+       "PZ"
+      ],
+      "model_position_m": [
+       0.00032,
+       -0.08111,
+       0.08262
+      ],
+      "model_position_electrode": "PZ",
+      "recorded": true
+     },
+     {
+      "name": "CPZ",
+      "index": 30,
+      "bipolar": false,
+      "electrodes": [
+       "CPZ"
+      ],
+      "electrodes_with_position": [
+       "CPZ"
+      ],
+      "model_position_m": [
+       0.00039,
+       -0.04732,
+       0.09943
+      ],
+      "model_position_electrode": "CPZ",
+      "recorded": true
+     },
+     {
+      "name": "FPZ",
+      "index": 31,
+      "bipolar": false,
+      "electrodes": [
+       "FPZ"
+      ],
+      "electrodes_with_position": [
+       "FPZ"
+      ],
+      "model_position_m": [
+       0.00011,
+       0.08825,
+       -0.00171
+      ],
+      "model_position_electrode": "FPZ",
+      "recorded": true
+     },
+     {
+      "name": "FP2",
+      "index": 32,
+      "bipolar": false,
+      "electrodes": [
+       "FP2"
+      ],
+      "electrodes_with_position": [
+       "FP2"
+      ],
+      "model_position_m": [
+       0.02987,
+       0.0849,
+       -0.00708
+      ],
+      "model_position_electrode": "FP2",
+      "recorded": true
+     },
+     {
+      "name": "AF8",
+      "index": 33,
+      "bipolar": false,
+      "electrodes": [
+       "AF8"
+      ],
+      "electrodes_with_position": [
+       "AF8"
+      ],
+      "model_position_m": [
+       0.05574,
+       0.06966,
+       -0.01075
+      ],
+      "model_position_electrode": "AF8",
+      "recorded": true
+     },
+     {
+      "name": "AF4",
+      "index": 34,
+      "bipolar": false,
+      "electrodes": [
+       "AF4"
+      ],
+      "electrodes_with_position": [
+       "AF4"
+      ],
+      "model_position_m": [
+       0.03571,
+       0.07773,
+       0.02196
+      ],
+      "model_position_electrode": "AF4",
+      "recorded": true
+     },
+     {
+      "name": "AFZ",
+      "index": 35,
+      "bipolar": false,
+      "electrodes": [
+       "AFZ"
+      ],
+      "electrodes_with_position": [
+       "AFZ"
+      ],
+      "model_position_m": [
+       0.00023,
+       0.08077,
+       0.03542
+      ],
+      "model_position_electrode": "AFZ",
+      "recorded": true
+     },
+     {
+      "name": "FZ",
+      "index": 36,
+      "bipolar": false,
+      "electrodes": [
+       "FZ"
+      ],
+      "electrodes_with_position": [
+       "FZ"
+      ],
+      "model_position_m": [
+       0.00031,
+       0.05851,
+       0.06646
+      ],
+      "model_position_electrode": "FZ",
+      "recorded": true
+     },
+     {
+      "name": "F2",
+      "index": 37,
+      "bipolar": false,
+      "electrodes": [
+       "F2"
+      ],
+      "electrodes_with_position": [
+       "F2"
+      ],
+      "model_position_m": [
+       0.02951,
+       0.0576,
+       0.05954
+      ],
+      "model_position_electrode": "F2",
+      "recorded": true
+     },
+     {
+      "name": "F4",
+      "index": 38,
+      "bipolar": false,
+      "electrodes": [
+       "F4"
+      ],
+      "electrodes_with_position": [
+       "F4"
+      ],
+      "model_position_m": [
+       0.05184,
+       0.0543,
+       0.04081
+      ],
+      "model_position_electrode": "F4",
+      "recorded": true
+     },
+     {
+      "name": "F6",
+      "index": 39,
+      "bipolar": false,
+      "electrodes": [
+       "F6"
+      ],
+      "electrodes_with_position": [
+       "F6"
+      ],
+      "model_position_m": [
+       0.06791,
+       0.04983,
+       0.01637
+      ],
+      "model_position_electrode": "F6",
+      "recorded": true
+     },
+     {
+      "name": "F8",
+      "index": 40,
+      "bipolar": false,
+      "electrodes": [
+       "F8"
+      ],
+      "electrodes_with_position": [
+       "F8"
+      ],
+      "model_position_m": [
+       0.07304,
+       0.04442,
+       -0.012
+      ],
+      "model_position_electrode": "F8",
+      "recorded": true
+     },
+     {
+      "name": "FT8",
+      "index": 41,
+      "bipolar": false,
+      "electrodes": [
+       "FT8"
+      ],
+      "electrodes_with_position": [
+       "FT8"
+      ],
+      "model_position_m": [
+       0.08182,
+       0.01542,
+       -0.01133
+      ],
+      "model_position_electrode": "FT8",
+      "recorded": true
+     },
+     {
+      "name": "FC6",
+      "index": 42,
+      "bipolar": false,
+      "electrodes": [
+       "FC6"
+      ],
+      "electrodes_with_position": [
+       "FC6"
+      ],
+      "model_position_m": [
+       0.07953,
+       0.01994,
+       0.02444
+      ],
+      "model_position_electrode": "FC6",
+      "recorded": true
+     },
+     {
+      "name": "FC4",
+      "index": 43,
+      "bipolar": false,
+      "electrodes": [
+       "FC4"
+      ],
+      "electrodes_with_position": [
+       "FC4"
+      ],
+      "model_position_m": [
+       0.06229,
+       0.02372,
+       0.05563
+      ],
+      "model_position_electrode": "FC4",
+      "recorded": true
+     },
+     {
+      "name": "FC2",
+      "index": 44,
+      "bipolar": false,
+      "electrodes": [
+       "FC2"
+      ],
+      "electrodes_with_position": [
+       "FC2"
+      ],
+      "model_position_m": [
+       0.03478,
+       0.02644,
+       0.07881
+      ],
+      "model_position_electrode": "FC2",
+      "recorded": true
+     },
+     {
+      "name": "FCZ",
+      "index": 45,
+      "bipolar": false,
+      "electrodes": [
+       "FCZ"
+      ],
+      "electrodes_with_position": [
+       "FCZ"
+      ],
+      "model_position_m": [
+       0.00038,
+       0.02739,
+       0.08867
+      ],
+      "model_position_electrode": "FCZ",
+      "recorded": true
+     },
+     {
+      "name": "CZ",
+      "index": 46,
+      "bipolar": false,
+      "electrodes": [
+       "CZ"
+      ],
+      "electrodes_with_position": [
+       "CZ"
+      ],
+      "model_position_m": [
+       0.0004,
+       -0.00917,
+       0.10024
+      ],
+      "model_position_electrode": "CZ",
+      "recorded": true
+     },
+     {
+      "name": "C2",
+      "index": 47,
+      "bipolar": false,
+      "electrodes": [
+       "C2"
+      ],
+      "electrodes_with_position": [
+       "C2"
+      ],
+      "model_position_m": [
+       0.03767,
+       -0.00962,
+       0.08841
+      ],
+      "model_position_electrode": "C2",
+      "recorded": true
+     },
+     {
+      "name": "C4",
+      "index": 48,
+      "bipolar": false,
+      "electrodes": [
+       "C4"
+      ],
+      "electrodes_with_position": [
+       "C4"
+      ],
+      "model_position_m": [
+       0.06712,
+       -0.0109,
+       0.06358
+      ],
+      "model_position_electrode": "C4",
+      "recorded": true
+     },
+     {
+      "name": "C6",
+      "index": 49,
+      "bipolar": false,
+      "electrodes": [
+       "C6"
+      ],
+      "electrodes_with_position": [
+       "C6"
+      ],
+      "model_position_m": [
+       0.08346,
+       -0.01278,
+       0.02921
+      ],
+      "model_position_electrode": "C6",
+      "recorded": true
+     },
+     {
+      "name": "T8",
+      "index": 50,
+      "bipolar": false,
+      "electrodes": [
+       "T8"
+      ],
+      "electrodes_with_position": [
+       "T8"
+      ],
+      "model_position_m": [
+       0.08508,
+       -0.01502,
+       -0.00949
+      ],
+      "model_position_electrode": "T8",
+      "recorded": true
+     },
+     {
+      "name": "TP8",
+      "index": 51,
+      "bipolar": false,
+      "electrodes": [
+       "TP8"
+      ],
+      "electrodes_with_position": [
+       "TP8"
+      ],
+      "model_position_m": [
+       0.08555,
+       -0.04555,
+       -0.00713
+      ],
+      "model_position_electrode": "TP8",
+      "recorded": true
+     },
+     {
+      "name": "CP6",
+      "index": 52,
+      "bipolar": false,
+      "electrodes": [
+       "CP6"
+      ],
+      "electrodes_with_position": [
+       "CP6"
+      ],
+      "model_position_m": [
+       0.08332,
+       -0.0461,
+       0.03121
+      ],
+      "model_position_electrode": "CP6",
+      "recorded": true
+     },
+     {
+      "name": "CP4",
+      "index": 53,
+      "bipolar": false,
+      "electrodes": [
+       "CP4"
+      ],
+      "electrodes_with_position": [
+       "CP4"
+      ],
+      "model_position_m": [
+       0.06661,
+       -0.04664,
+       0.06558
+      ],
+      "model_position_electrode": "CP4",
+      "recorded": true
+     },
+     {
+      "name": "CP2",
+      "index": 54,
+      "bipolar": false,
+      "electrodes": [
+       "CP2"
+      ],
+      "electrodes_with_position": [
+       "CP2"
+      ],
+      "model_position_m": [
+       0.03838,
+       -0.04707,
+       0.0907
+      ],
+      "model_position_electrode": "CP2",
+      "recorded": true
+     },
+     {
+      "name": "P2",
+      "index": 55,
+      "bipolar": false,
+      "electrodes": [
+       "P2"
+      ],
+      "electrodes_with_position": [
+       "P2"
+      ],
+      "model_position_m": [
+       0.03192,
+       -0.08049,
+       0.07672
+      ],
+      "model_position_electrode": "P2",
+      "recorded": true
+     },
+     {
+      "name": "P4",
+      "index": 56,
+      "bipolar": false,
+      "electrodes": [
+       "P4"
+      ],
+      "electrodes_with_position": [
+       "P4"
+      ],
+      "model_position_m": [
+       0.05567,
+       -0.07856,
+       0.05656
+      ],
+      "model_position_electrode": "P4",
+      "recorded": true
+     },
+     {
+      "name": "P6",
+      "index": 57,
+      "bipolar": false,
+      "electrodes": [
+       "P6"
+      ],
+      "electrodes_with_position": [
+       "P6"
+      ],
+      "model_position_m": [
+       0.06789,
+       -0.0759,
+       0.02809
+      ],
+      "model_position_electrode": "P6",
+      "recorded": true
+     },
+     {
+      "name": "P8",
+      "index": 58,
+      "bipolar": false,
+      "electrodes": [
+       "P8"
+      ],
+      "electrodes_with_position": [
+       "P8"
+      ],
+      "model_position_m": [
+       0.07306,
+       -0.07307,
+       -0.00254
+      ],
+      "model_position_electrode": "P8",
+      "recorded": true
+     },
+     {
+      "name": "P10",
+      "index": 59,
+      "bipolar": false,
+      "electrodes": [
+       "P10"
+      ],
+      "electrodes_with_position": [
+       "P10"
+      ],
+      "model_position_m": [
+       0.07389,
+       -0.07439,
+       -0.04122
+      ],
+      "model_position_electrode": "P10",
+      "recorded": true
+     },
+     {
+      "name": "PO8",
+      "index": 60,
+      "bipolar": false,
+      "electrodes": [
+       "PO8"
+      ],
+      "electrodes_with_position": [
+       "PO8"
+      ],
+      "model_position_m": [
+       0.05567,
+       -0.09763,
+       0.00273
+      ],
+      "model_position_electrode": "PO8",
+      "recorded": true
+     },
+     {
+      "name": "PO4",
+      "index": 61,
+      "bipolar": false,
+      "electrodes": [
+       "PO4"
+      ],
+      "electrodes_with_position": [
+       "PO4"
+      ],
+      "model_position_m": [
+       0.03678,
+       -0.10085,
+       0.0364
+      ],
+      "model_position_electrode": "PO4",
+      "recorded": true
+     },
+     {
+      "name": "O2",
+      "index": 62,
+      "bipolar": false,
+      "electrodes": [
+       "O2"
+      ],
+      "electrodes_with_position": [
+       "O2"
+      ],
+      "model_position_m": [
+       0.02984,
+       -0.11216,
+       0.0088
+      ],
+      "model_position_electrode": "O2",
+      "recorded": true
+     }
+    ],
+    "electrodes": {
+     "FP1": [
+      -0.02944,
+      0.08392,
+      -0.00699
+     ],
+     "AF7": [
+      -0.05484,
+      0.06857,
+      -0.01059
+     ],
+     "AF3": [
+      -0.0337,
+      0.07684,
+      0.02123
+     ],
+     "F1": [
+      -0.0275,
+      0.05693,
+      0.06034
+     ],
+     "F3": [
+      -0.05024,
+      0.05311,
+      0.04219
+     ],
+     "F5": [
+      -0.06447,
+      0.04804,
+      0.01692
+     ],
+     "F7": [
+      -0.07026,
+      0.04247,
+      -0.01142
+     ],
+     "FT7": [
+      -0.08078,
+      0.01412,
+      -0.01113
+     ],
+     "FC5": [
+      -0.07721,
+      0.01864,
+      0.02446
+     ],
+     "FC3": [
+      -0.06018,
+      0.02272,
+      0.05554
+     ],
+     "FC1": [
+      -0.03406,
+      0.02601,
+      0.07999
+     ],
+     "C1": [
+      -0.03616,
+      -0.00998,
+      0.08975
+     ],
+     "C3": [
+      -0.06536,
+      -0.01163,
+      0.06436
+     ],
+     "C5": [
+      -0.08028,
+      -0.01376,
+      0.02916
+     ],
+     "T7": [
+      -0.08416,
+      -0.01602,
+      -0.00935
+     ],
+     "TP7": [
+      -0.08483,
+      -0.04602,
+      -0.00706
+     ],
+     "CP5": [
+      -0.07959,
+      -0.04655,
+      0.03095
+     ],
+     "CP3": [
+      -0.06356,
+      -0.04701,
+      0.06562
+     ],
+     "CP1": [
+      -0.03551,
+      -0.04729,
+      0.09132
+     ],
+     "P1": [
+      -0.02862,
+      -0.08052,
+      0.07544
+     ],
+     "P3": [
+      -0.05301,
+      -0.07879,
+      0.05594
+     ],
+     "P5": [
+      -0.06727,
+      -0.07629,
+      0.02838
+     ],
+     "P7": [
+      -0.07243,
+      -0.07345,
+      -0.00249
+     ],
+     "P9": [
+      -0.07301,
+      -0.07377,
+      -0.041
+     ],
+     "PO7": [
+      -0.05484,
+      -0.09753,
+      0.00279
+     ],
+     "PO3": [
+      -0.03651,
+      -0.10085,
+      0.03717
+     ],
+     "O1": [
+      -0.02941,
+      -0.11245,
+      0.00884
+     ],
+     "OZ": [
+      0.00011,
+      -0.11489,
+      0.01466
+     ],
+     "POZ": [
+      0.00022,
+      -0.10218,
+      0.05061
+     ],
+     "PZ": [
+      0.00032,
+      -0.08111,
+      0.08262
+     ],
+     "CPZ": [
+      0.00039,
+      -0.04732,
+      0.09943
+     ],
+     "FPZ": [
+      0.00011,
+      0.08825,
+      -0.00171
+     ],
+     "FP2": [
+      0.02987,
+      0.0849,
+      -0.00708
+     ],
+     "AF8": [
+      0.05574,
+      0.06966,
+      -0.01075
+     ],
+     "AF4": [
+      0.03571,
+      0.07773,
+      0.02196
+     ],
+     "AFZ": [
+      0.00023,
+      0.08077,
+      0.03542
+     ],
+     "FZ": [
+      0.00031,
+      0.05851,
+      0.06646
+     ],
+     "F2": [
+      0.02951,
+      0.0576,
+      0.05954
+     ],
+     "F4": [
+      0.05184,
+      0.0543,
+      0.04081
+     ],
+     "F6": [
+      0.06791,
+      0.04983,
+      0.01637
+     ],
+     "F8": [
+      0.07304,
+      0.04442,
+      -0.012
+     ],
+     "FT8": [
+      0.08182,
+      0.01542,
+      -0.01133
+     ],
+     "FC6": [
+      0.07953,
+      0.01994,
+      0.02444
+     ],
+     "FC4": [
+      0.06229,
+      0.02372,
+      0.05563
+     ],
+     "FC2": [
+      0.03478,
+      0.02644,
+      0.07881
+     ],
+     "FCZ": [
+      0.00038,
+      0.02739,
+      0.08867
+     ],
+     "CZ": [
+      0.0004,
+      -0.00917,
+      0.10024
+     ],
+     "C2": [
+      0.03767,
+      -0.00962,
+      0.08841
+     ],
+     "C4": [
+      0.06712,
+      -0.0109,
+      0.06358
+     ],
+     "C6": [
+      0.08346,
+      -0.01278,
+      0.02921
+     ],
+     "T8": [
+      0.08508,
+      -0.01502,
+      -0.00949
+     ],
+     "TP8": [
+      0.08555,
+      -0.04555,
+      -0.00713
+     ],
+     "CP6": [
+      0.08332,
+      -0.0461,
+      0.03121
+     ],
+     "CP4": [
+      0.06661,
+      -0.04664,
+      0.06558
+     ],
+     "CP2": [
+      0.03838,
+      -0.04707,
+      0.0907
+     ],
+     "P2": [
+      0.03192,
+      -0.08049,
+      0.07672
+     ],
+     "P4": [
+      0.05567,
+      -0.07856,
+      0.05656
+     ],
+     "P6": [
+      0.06789,
+      -0.0759,
+      0.02809
+     ],
+     "P8": [
+      0.07306,
+      -0.07307,
+      -0.00254
+     ],
+     "P10": [
+      0.07389,
+      -0.07439,
+      -0.04122
+     ],
+     "PO8": [
+      0.05567,
+      -0.09763,
+      0.00273
+     ],
+     "PO4": [
+      0.03678,
+      -0.10085,
+      0.0364
+     ],
+     "O2": [
+      0.02984,
+      -0.11216,
+      0.0088
+     ]
+    },
+    "feature_dir": "data/features/reve-large/ds005292/supplemental-pain_rating-subject60-20-20-seed33",
+    "features_sha256": "c7aa58b5b680a633e94b0bd31af2702bae822e1fa7b8556baeb2121e6ea9a5a0",
+    "position_note": "Positions are those stored with the encoder features (REVE position bank, metres; x right, y front, z up). A bipolar lead enters the encoder at the position of its first electrode.",
+    "default_leads": [
+     "C3",
+     "T7",
+     "PZ",
+     "CPZ",
+     "FZ",
+     "FCZ",
+     "CZ",
+     "C4",
+     "T8"
+    ],
+    "empty_slots": [],
+    "empty_slot_note": null
+   },
+   "ratings_note": "The ratings are the per-trial ratings published by the dataset authors in their supplementary repository (github.com/XiangyueZhao/Supplement-Data); the OpenNeuro record itself holds no rating column."
+  }
+ },
+ "inputs": {
+  "sleep.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "df764d7f87ccecf4e52f692318f22aea1f28e0dace10f90dd7798f73786a1c5e"
+  },
+  "sleep.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "8e9369d03925c2fc840011ae35cbb97c1270503149d3e04dc2f156f48bf7b221"
+  },
+  "seizure.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "8fc343df5d78c3ab749d4e51961fb2aa790817a3ee9823f0de0c0bc429184e82"
+  },
+  "seizure.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "4ae37a83912f2205a495c4247ca212086f1d6639b90ff89edcf21f208d45c07d"
+  },
+  "motor_imagery.registry": {
+   "role": "source registry of the training run",
+   "sha256": "2ebdbace122b139d8053ad42dab43ff15fbdcd4fe481de6eb1271899127cdfe8"
+  },
+  "motor_imagery.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "5f8e014df6726f6fb8d1229dfefc9885edf3f1ec54cc2274517fac8543696722"
+  },
+  "motor_imagery.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "875d34b5aeb0374529231a0bf86ec7e8d09ba50fc2e7d28585ed6cef918f771d"
+  },
+  "pain.manifest": {
+   "role": "split list of the source (validation split)",
+   "sha256": "b05ef2dda0bd7fe4f6eab3eedc88938dee38a6acf59c2ce00c9c0dfc82a10c58"
+  },
+  "pain.predictions": {
+   "role": "saved model outputs for the validation split of the source",
+   "sha256": "f9839d7229b321728e370290c917ab48827b5e740e1786fabc0f872f23efe9d7"
+  },
+  "source.registry": {
+   "role": "source registry of the training run",
+   "sha256": "2ebdbace122b139d8053ad42dab43ff15fbdcd4fe481de6eb1271899127cdfe8"
+  }
+ },
+ "builder_sha256": "93d8f7567174e2649d6f854ff5a122fd85fa9e2bd8888c5e7f7db031f5431102",
+ "credits_html": "EEG excerpts. Sleep staging: <a href=\"https://physionet.org/content/sleep-edfx/1.0.0/\" target=\"_blank\" rel=\"noopener\">Sleep-EDF Database Expanded</a>, version 1.0.0 (Kemp et al., 2000; PhysioNet, doi:10.13026/C2X676). Contains information from the Sleep-EDF Database Expanded, which is made available under the <a href=\"https://opendatacommons.org/licenses/by/1-0/\" target=\"_blank\" rel=\"noopener\">ODC Attribution License v1.0</a>. Seizure detection: <a href=\"https://physionet.org/content/chbmit/1.0.0/\" target=\"_blank\" rel=\"noopener\">CHB-MIT Scalp EEG Database</a>, version 1.0.0 (Shoeb, 2009; Guttag, 2010; PhysioNet, doi:10.13026/C2K01R), in the <a href=\"https://doi.org/10.5281/zenodo.10259996\" target=\"_blank\" rel=\"noopener\">BIDS conversion</a> by Dan and Shoeb (Zenodo, doi:10.5281/zenodo.10259996; <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>). Contains information from the CHB-MIT Scalp EEG Database, which is made available under the <a href=\"https://opendatacommons.org/licenses/by/1-0/\" target=\"_blank\" rel=\"noopener\">ODC Attribution License v1.0</a>. Motor imagery: Human EEG Dataset for Brain-Computer Interface and Meditation (Stieger, Engel and He, 2021; figshare, doi:10.6084/m9.figshare.13123148; <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener\">CC BY 4.0</a>), described in Stieger et al., Scientific Data 8:98 (2021) and Stieger et al., Cerebral Cortex 31:426-438 (2021). Shown for non-commercial research use. Pain rating: <a href=\"https://openneuro.org/datasets/ds005292/versions/1.0.0\" target=\"_blank\" rel=\"noopener\">OpenNeuro ds005292</a>, version 1.0.0 (Zhao et al., 2024; doi:10.18112/openneuro.ds005292.v1.0.0; <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\" target=\"_blank\" rel=\"noopener\">CC0</a>); the per-trial pain ratings are those published by the dataset authors in their supplementary repository (github.com/XiangyueZhao/Supplement-Data). PhysioNet: Pollard et al., 2026. The excerpts were filtered, resampled and cut for display by the EEG-Jev authors and are not the original recordings; the dataset authors and hosts do not endorse this demonstration.",
+ "publication": {
+  "derived_from_manifest_sha256": "b839c1e77c513ece85c165494e274356e635abe0c21230d4a2283be55dc4721e",
+  "note": "Waveform files and the per-window data of the case and example files are unchanged from the material build. Descriptive fields were rewritten for publication: model name and checkpoint naming, the name of the split as in the manuscript, input roles instead of build-server paths, schema names; result and timing blocks of earlier drafts were removed because the paper carries the results."
+ }
+}

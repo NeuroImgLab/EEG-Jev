@@ -1,0 +1,321 @@
+{
+ "schema": "eegjev.demo.case.v1",
+ "task": "sleep",
+ "kind": "continuous",
+ "case_id": "sc4222-n2-n3-w-n1",
+ "source": "sleep-edf-expanded",
+ "dataset": "Sleep-EDF Expanded (sleep cassette)",
+ "split": "val",
+ "subject_id": "SC422",
+ "record_id": "Kemp2000Analysis:hypno_suffix=EC,session=2,subject=22,suffix=E0",
+ "record_label": "SC4222E0",
+ "channels": [
+  "FPZ-CZ",
+  "PZ-OZ"
+ ],
+ "sample_rate_hz": 100,
+ "n_samples": 60000,
+ "amplitude_unit": "uV",
+ "dtype": "int16-le (see manifest.encodings)",
+ "layout": "channel-major",
+ "t0_record_s": 42540.0,
+ "t1_record_s": 43140.0,
+ "window_length_s": 30.0,
+ "stride_s": 30.0,
+ "display_conversion": "raw EDF in µV at the native 100 Hz, 0.5 Hz zero-phase FIR high-pass; the model input is the same signal resampled to 200 Hz, standardised per record and lead and clipped at ±15 SD",
+ "windows": [
+  {
+   "window_id": "sleep_stage--core:shard-00046-r645",
+   "start_s": 42540.0,
+   "end_s": 42570.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 0.0026051,
+    "N1": 0.0694622,
+    "N2": 0.5470043,
+    "N3": 0.3762124,
+    "REM": 0.004716
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r646",
+   "start_s": 42570.0,
+   "end_s": 42600.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 0.0004079,
+    "N1": 0.0558412,
+    "N2": 0.7678238,
+    "N3": 0.174462,
+    "REM": 0.0014652
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r647",
+   "start_s": 42600.0,
+   "end_s": 42630.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 0.0037474,
+    "N1": 0.1237595,
+    "N2": 0.6289083,
+    "N3": 0.2389017,
+    "REM": 0.004683
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r648",
+   "start_s": 42630.0,
+   "end_s": 42660.0,
+   "label": "N2",
+   "probabilities": {
+    "W": 0.0023543,
+    "N1": 0.1349462,
+    "N2": 0.637813,
+    "N3": 0.2129902,
+    "REM": 0.0118963
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r649",
+   "start_s": 42660.0,
+   "end_s": 42690.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0004255,
+    "N1": 0.0082604,
+    "N2": 0.1197633,
+    "N3": 0.8712823,
+    "REM": 0.0002684
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r650",
+   "start_s": 42690.0,
+   "end_s": 42720.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 8.2e-05,
+    "N1": 0.0032174,
+    "N2": 0.0892257,
+    "N3": 0.9073733,
+    "REM": 0.0001015
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r651",
+   "start_s": 42720.0,
+   "end_s": 42750.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0005368,
+    "N1": 0.0097589,
+    "N2": 0.1212567,
+    "N3": 0.8678682,
+    "REM": 0.0005794
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r652",
+   "start_s": 42750.0,
+   "end_s": 42780.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0006394,
+    "N1": 0.0134184,
+    "N2": 0.2115367,
+    "N3": 0.7738135,
+    "REM": 0.0005919
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r653",
+   "start_s": 42780.0,
+   "end_s": 42810.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0005657,
+    "N1": 0.0242263,
+    "N2": 0.3010474,
+    "N3": 0.6731873,
+    "REM": 0.0009733
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r654",
+   "start_s": 42810.0,
+   "end_s": 42840.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0010971,
+    "N1": 0.0134951,
+    "N2": 0.1181547,
+    "N3": 0.8666621,
+    "REM": 0.000591
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r655",
+   "start_s": 42840.0,
+   "end_s": 42870.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.000236,
+    "N1": 0.0074929,
+    "N2": 0.1135938,
+    "N3": 0.8783841,
+    "REM": 0.0002932
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r656",
+   "start_s": 42870.0,
+   "end_s": 42900.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0005527,
+    "N1": 0.0070891,
+    "N2": 0.0842866,
+    "N3": 0.9077694,
+    "REM": 0.000302
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r657",
+   "start_s": 42900.0,
+   "end_s": 42930.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0003289,
+    "N1": 0.0074406,
+    "N2": 0.1202849,
+    "N3": 0.8716916,
+    "REM": 0.000254
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r658",
+   "start_s": 42930.0,
+   "end_s": 42960.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0002117,
+    "N1": 0.0050981,
+    "N2": 0.0934449,
+    "N3": 0.9010609,
+    "REM": 0.0001844
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r659",
+   "start_s": 42960.0,
+   "end_s": 42990.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 0.0006168,
+    "N1": 0.0135807,
+    "N2": 0.179569,
+    "N3": 0.805798,
+    "REM": 0.0004356
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r660",
+   "start_s": 42990.0,
+   "end_s": 43020.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 8.26e-05,
+    "N1": 0.0018778,
+    "N2": 0.050201,
+    "N3": 0.9477707,
+    "REM": 6.8e-05
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r661",
+   "start_s": 43020.0,
+   "end_s": 43050.0,
+   "label": "N3",
+   "probabilities": {
+    "W": 9.35e-05,
+    "N1": 0.001273,
+    "N2": 0.0281739,
+    "N3": 0.9704043,
+    "REM": 5.51e-05
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r662",
+   "start_s": 43050.0,
+   "end_s": 43080.0,
+   "label": "W",
+   "probabilities": {
+    "W": 0.3185123,
+    "N1": 0.5626761,
+    "N2": 0.0603168,
+    "N3": 0.0085868,
+    "REM": 0.0499082
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r663",
+   "start_s": 43080.0,
+   "end_s": 43110.0,
+   "label": "N1",
+   "probabilities": {
+    "W": 0.0044062,
+    "N1": 0.6837233,
+    "N2": 0.2429247,
+    "N3": 0.0019812,
+    "REM": 0.0669645
+   },
+   "phrasing_id": "sleep-train-0"
+  },
+  {
+   "window_id": "sleep_stage--core:shard-00046-r664",
+   "start_s": 43110.0,
+   "end_s": 43140.0,
+   "label": "N1",
+   "probabilities": {
+    "W": 0.0024423,
+    "N1": 0.7449762,
+    "N2": 0.1712223,
+    "N3": 0.0007014,
+    "REM": 0.0806578
+   },
+   "phrasing_id": "sleep-train-0"
+  }
+ ],
+ "gaps": [],
+ "data_sha256": "77d385ff9add0c83fe43c25c6c8c07820a7f3e46fed883f994becffa229f7eaa",
+ "provenance": {
+  "psg_file": "SC4222E0-PSG.edf",
+  "psg_sha256": "1057fe3cacf499d1b8918e2532296fb282cb0c81a5fafd907ef2a3fcee3cc6ee",
+  "hypnogram_file": "SC4222EC-Hypnogram.edf",
+  "hypnogram_sha256": "6764feef6441e068db6d6f1b1fc3f818cbed5dcecf24ffc5d1c827568444df5b",
+  "alignment": {
+   "n_lead_windows": 39,
+   "min_corr": 0.99542
+  },
+  "selection_note": "Development (validation) split. Among all 10-minute runs of 20 consecutive epochs with at least three stages, ranked by the number of saved top answers that equal the hypnogram; this one has four stages (N2, N3, W, N1) and 19 of 20 matches. The one mismatch is kept."
+ }
+}

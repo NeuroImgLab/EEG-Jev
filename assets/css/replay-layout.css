@@ -1,0 +1,154 @@
+/* Page frame: one frame for the whole page, a section bar, one continuous replay with the
+   all-leads view opened in place, an aligned analysis grid, and side-head layouts for
+   the method, paper and footer. */
+:root {
+  --frame: min(1280px, calc(100% - 2 * var(--gutter)));
+  --col-gap: clamp(20px, 2.6vw, 40px);
+  --sec-gap: clamp(64px, 8vw, 120px);
+  --ctl-h: 40px;
+  --nav-h: 56px;
+}
+@media (pointer: coarse) { :root { --ctl-h: 44px; } }
+html { scroll-padding-top: calc(var(--nav-h) + 12px); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* ── Section bar ─────────────────────────────────── */
+.site-nav { position: sticky; top: 0; z-index: 40; background: rgba(244, 242, 236, .88); -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid transparent; transition: border-color .25s var(--ease), box-shadow .25s var(--ease); }
+.site-nav.is-scrolled { border-bottom-color: var(--rule); box-shadow: 0 10px 24px -22px rgba(9, 13, 18, .5); }
+.sn-in { width: var(--frame); margin: 0 auto; height: var(--nav-h); display: flex; align-items: center; gap: clamp(12px, 3vw, 40px); }
+.sn-brand { flex: none; font: 500 21px/1 var(--serif); letter-spacing: -.02em; color: var(--ink); text-decoration: none; font-variation-settings: "opsz" 24; }
+.sn-links { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; scroll-behavior: auto; }
+.sn-links::-webkit-scrollbar { display: none; }
+.sn-links a { display: inline-flex; align-items: center; gap: 8px; min-height: var(--ctl-h); padding: 0 14px; border-radius: 999px; font: 500 14px/1 var(--sans); color: var(--ink-2); text-decoration: none; white-space: nowrap; transition: background-color .2s var(--ease), color .2s var(--ease); }
+.sn-links a:hover { background: var(--paper-2); color: var(--ink); }
+.sn-n { font-size: 11px; letter-spacing: .06em; color: var(--ink-3); transition: color .2s; }
+.sn-links a[aria-current] { background: var(--ink); color: var(--paper); }
+.sn-links a[aria-current] .sn-n { color: var(--teal); }
+@media (max-width: 760px) {
+  .sn-in { gap: 10px; }
+  .sn-brand { font-size: 18px; }
+  .sn-links { margin-left: 0; flex: 1; mask-image: linear-gradient(90deg, #000 88%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); padding-right: 24px; }
+  .sn-links a { padding: 0 11px; font-size: 13.5px; }
+}
+@media (max-width: 420px) { .sn-n { display: none; } .sn-links a { padding: 0 7px; font-size: 13px; } }
+
+/* ── One frame ───────────────────────────────────── */
+.hero.hero-stage { width: var(--frame); max-width: none; padding-left: 0; padding-right: 0; padding-top: clamp(28px, 4.5vw, 64px); }
+.primer.wrap, .how.wrap, .paper.wrap, .foot.wrap { width: var(--frame); max-width: none; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
+.console-wrap { padding: 0; }
+.console { width: var(--frame); max-width: none; }
+.hero.hero-stage { padding-bottom: 0; }
+.primer.wrap { padding-top: var(--sec-gap); padding-bottom: 32px; }
+.primer-title, .how > h2 { margin: 0 0 24px; font: 500 clamp(32px, 3.6vw, 48px)/1.04 var(--serif); letter-spacing: -.02em; text-transform: none; color: var(--ink); font-variation-settings: "opsz" 48; }
+.console-title h2 { font: 500 clamp(24px, 2.4vw, 32px)/1.1 var(--serif); letter-spacing: -.01em; font-variation-settings: "opsz" 32; }
+.console-title p { max-width: 70ch; margin-top: 8px; }
+.stage .stage-note { max-width: 64ch; }
+.paper > .eyebrow-l { margin-bottom: 0; }
+.eyebrow-l { margin: 0 0 14px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+
+/* Hero entries: two buttons, not text links. */
+.hero-entries { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.hero-entries .hero-cta { margin-top: 0; }
+.hero-cta2 { display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--ink-3); color: var(--ink); text-decoration: none; font: 500 14.5px/1 var(--sans); transition: border-color .2s, background-color .2s; }
+.hero-cta2:hover { border-color: var(--ink); background: var(--paper-2); }
+.hero-replay .hero-copy .hero-entries { grid-area: cta; }
+
+/* Constellation key: what is recorded, what is a saved output, what is vision. */
+.src-key { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; font-size: 12.5px; line-height: 1.4; color: var(--ink-3); text-align: left; }
+.src-key li { display: inline-flex; align-items: baseline; gap: 8px; }
+.src-key b { font-weight: 600; color: var(--ink-2); }
+.src-key i { flex: none; display: inline-block; width: 16px; height: 10px; border-radius: 3px; transform: translateY(1px); }
+.k-rec i { background: var(--scr); box-shadow: inset 0 -3px 0 -1px var(--teal); }
+.k-out i { width: 10px; border-radius: 50%; background: var(--accent-ink); }
+.k-vis i { border: 1px dashed #a8a091; }
+.hero-replay .qcard.live.has-out .qc-a::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--accent-ink); vertical-align: 1px; }
+.state figcaption b { letter-spacing: .06em; }
+
+/* ── Stage: one player, every lead opened in place ── */
+.stage-tabs button { min-height: 34px; }
+.stage-foot { grid-template-columns: auto minmax(0, 1fr) auto; }
+.st-nav .st-btn { width: var(--ctl-h); height: var(--ctl-h); }
+.st-acts { display: inline-flex; flex-wrap: wrap; gap: 8px; justify-self: end; }
+.st-more, .st-acts .st-open { display: inline-flex; align-items: center; gap: 6px; min-height: var(--ctl-h); padding: 0 14px; border-radius: 999px; border: 1px solid var(--scr-line-2); background: transparent; color: var(--scr-text); font: 500 12.5px/1 var(--sans); text-decoration: none; white-space: nowrap; transition: border-color .2s, color .2s, background-color .2s; }
+.st-more svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s var(--ease); }
+.st-more[aria-expanded="true"] { border-color: var(--teal); color: var(--teal); background: rgba(61, 214, 198, .06); }
+.st-more[aria-expanded="true"] svg { transform: rotate(180deg); }
+.st-more:hover, .st-acts .st-open:hover { border-color: var(--teal); color: var(--teal); }
+.st-acts .st-open { padding: 0 14px; }
+#continuous.stage-more { max-width: none; margin: 0; padding: 14px 0 0; background: transparent; border: 0; border-top: 1px solid var(--scr-line); border-radius: 0; box-shadow: none; display: grid; gap: 12px; }
+#continuous.stage-more[hidden] { display: none; }
+#cv-over-st:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+@media (max-width: 900px) { .stage-foot { grid-template-columns: auto minmax(0, 1fr); } .st-acts { grid-column: 1 / -1; justify-self: start; } }
+@media (max-width: 560px) { .stage-foot { grid-template-columns: minmax(0, 1fr); } }
+
+/* ── Single windows: aligned analysis grid ─────────── */
+/* Label, reading guide and plot sit on shared rows in both columns; the colour key
+   moves beside the spectrogram label; the footnote spans both columns. */
+@media (min-width: 761px) {
+  #analysis-details > .detail-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto auto; column-gap: 24px; row-gap: 0; align-items: start; }
+  #analysis-details .track-spec, #analysis-details .track-feat { display: contents; }
+  .track-spec > .track-label { grid-column: 1; grid-row: 1; align-self: center; }
+  .track-spec > .color-key { grid-column: 1; grid-row: 1; justify-self: end; width: min(56%, 260px); margin: 0 !important; align-self: center; }
+  .track-spec > .read-guide { grid-column: 1; grid-row: 2; }
+  .track-spec > canvas { grid-column: 1; grid-row: 3; }
+  .track-feat > .track-label { grid-column: 2; grid-row: 1; align-self: center; }
+  .track-feat > .read-guide { grid-column: 2; grid-row: 2; }
+  .track-feat > canvas { grid-column: 2; grid-row: 3; }
+  #analysis-details .an-foot { grid-column: 1 / -1; grid-row: 4; margin: 10px 0 0 !important; }
+  #analysis-details .features { grid-column: 1 / -1; grid-row: 5; margin-top: 16px; }
+  #analysis-details #cv-spec, #analysis-details #cv-feat { height: 140px; }
+  .console[data-task="chb"] #analysis-details #cv-spec, .console[data-task="chb"] #analysis-details #cv-feat { height: 118px; }
+}
+#analysis-details .an-foot { margin: 10px 0 0; }
+
+/* ── Method, paper, footer: same frame, side heads, text measure from the grid ── */
+.how.wrap { padding-top: var(--sec-gap); }
+.paper.wrap { padding-top: var(--sec-gap); }
+.foot.wrap { margin-top: var(--sec-gap); }
+.how figcaption, .paper .abstract, .paper .cite, .foot p { margin-inline: 0; }
+@media (min-width: 900px) {
+  .how.wrap, .paper.wrap, .foot.wrap { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); }
+  .how.wrap > *, .paper.wrap > *, .foot.wrap > * { grid-column: 1 / -1; min-width: 0; }
+  .how figure { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); align-items: start; }
+  .how figure > .fig-link { grid-column: 1 / -1; }
+  .how figure > .fig-hint { display: block; grid-column: 1 / 4; grid-row: 2; margin-top: 22px; align-self: start; text-decoration: none; }
+  .how figure > .fig-hint::before { content: "Figure 1"; display: block; margin-bottom: 8px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+  .how figure > figcaption { grid-column: 4 / 11; grid-row: 2; width: auto; max-width: none; margin: 18px 0 0; }
+  .how .vision-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); max-width: none; margin: 40px 0 0; }
+  .how .vision-row > .vision-k { grid-column: 1 / 4; margin: 0; }
+  .how .vision-row > ul { grid-column: 4 / -1; }
+  .how .cue-method { grid-column: 4 / 11; width: auto; max-width: none; margin: 16px 0 0; }
+  .how .vision-row + .cue-method { margin-top: 40px; }
+  .paper .abstract { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); width: auto; max-width: none; padding-block: 28px; }
+  .paper .abstract > h3 { grid-column: 1 / 4; margin: 0; }
+  .paper .abstract > p { grid-column: 4 / 11; }
+  .paper .cite { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--col-gap); width: auto; max-width: none; margin-top: 40px; }
+  .paper .cite > .cite-head { grid-column: 1 / 4; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 16px; margin: 0; }
+  .paper .cite > pre { grid-column: 4 / 11; }
+  .foot.wrap > p { grid-column: 4 / 11; max-width: none; margin-inline: 0; }
+  .foot.wrap::before { content: "EEG-Jev"; grid-column: 1 / 4; grid-row: 1 / span 2; font: 500 18px/1.2 var(--serif); color: var(--ink-2); }
+}
+@media (min-width: 1181px) {
+  .how figure > figcaption, .how .cue-method, .paper .abstract > p, .paper .cite > pre, .foot.wrap > p { grid-column: 4 / 10; }
+}
+@media (max-width: 899px) {
+  .how figcaption, .paper .abstract p, .foot p { max-width: 68ch; }
+  .how .vision-row, .how .cue-method, .paper .abstract, .paper .cite { max-width: none; width: auto; }
+}
+
+/* Phones: the key stays, shortened to the two kinds of real content; the tag row says Vision. */
+@media (max-width: 560px) {
+  .hero-replay .constellation { gap: 8px; }
+  .vision-tags .vt { padding: 5px 8px; }
+  .hero-replay .constellation > .vision-tags { gap: 5px; }
+  .hero-replay .constellation > .vision-note.src-key { display: flex; order: 7; justify-content: flex-start; gap: 4px 16px; font-size: 12px; }
+  .src-key .k-vis, .src-key .k-more { display: none; }
+  .hero-replay .state canvas { height: 80px; }
+}
+
+/* Motion: the all-leads view settles in when opened; nothing moves under reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  #continuous.stage-more:not([hidden]) { animation: panel-in .28s var(--ease); }
+  @keyframes panel-in { from { opacity: 0; transform: translateY(-4px); } }
+}
+@media (prefers-reduced-motion: reduce) { .site-nav, .sn-links a, .st-more svg, .hero-cta2 { transition: none; } }

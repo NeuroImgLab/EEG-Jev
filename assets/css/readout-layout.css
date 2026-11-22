@@ -1,0 +1,160 @@
+/* ── Readout layout ──────────────────────────────────────────────────────────────
+   Layout of the answer card, touch targets and small-screen fixes. */
+
+/* Tall cards keep native page scrolling; app.js fits a bottom-visible sticky offset.
+   The existing rail releases them before the next full-width section. */
+
+/* Phone and small-tablet bars use the short names without numbers, aligned
+   from the left edge so an overflowing first link can never be cut off. */
+@media (max-width: 700px) {
+  .sn-n { display: none; }
+  .sn-l { display: none; } .sn-s { display: inline; }
+  .sn-links { justify-content: flex-start; mask-image: none; -webkit-mask-image: none; padding-right: 0; }
+  .sn-links li:first-child { margin-left: auto; }
+  .sn-links a { padding: 0 10px; }
+}
+
+/* The record line wraps instead of cutting off its source. */
+.src { white-space: normal; }
+
+/* No answer yet, so no split is drawn. */
+.split.pending .no, .split.pending .yes { background: var(--scr-line-2); }
+
+/* On phones the decision follows the answer; the reference label comes after it. */
+@media (max-width: 759px) {
+  .decide .gate { order: 3; }
+  .monitor > #expert-comparison { order: 4; }
+}
+
+/* The method figure scrolls sideways on phones at a readable size; small
+   stand-alone links get a usable hit area. */
+@media (max-width: 760px) {
+  .how figure .fig-link { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .how figure .fig-link img { width: 900px; max-width: none; height: auto; }
+}
+.fig-hint, .stage .stage-note a, .methods-back { display: inline-flex; align-items: center; min-height: 32px; }
+@media (pointer: coarse) { .fig-hint, .stage .stage-note a, .methods-back { min-height: 44px; } }
+
+/* Nothing below 11 px. */
+.scope > .scalp .scalp-cap, #lead-list li, .types .t2, .src-tag, .qc-live, .qc-vis, .st-k, .st-k small, .color-key #spec-low, .color-key #spec-high { font-size: 11px; }
+@media (max-width: 1180px) { .scope > .scalp .scalp-cap, .types .t2 { font-size: 11px; } }
+
+/* Tablet card: question across, then answer beside decision. */
+@media (min-width: 760px) and (max-width: 1180px) {
+  #monitor .decide { grid-template-areas: "q q" "w w" "ans gate" "probe probe"; }
+  #monitor .decide .q { border-right: 0; }
+  #monitor .decide .ans { border-right: 1px solid var(--scr-line); }
+}
+
+/* The eyebrow stays on one line on phones. */
+@media (max-width: 420px) { .eyebrow { letter-spacing: .08em; } }
+
+/* Paper head: the manuscript title, its status and (once delivered) the downloads. */
+.paper-head { margin: 18px 0 clamp(36px, 4.5vw, 56px); }
+.paper-title { margin: 0; max-width: 24ch; font: 500 clamp(30px, 3.6vw, 52px)/1.08 var(--serif); letter-spacing: -.018em; color: var(--ink); font-variation-settings: "opsz" 60; text-wrap: balance; }
+.paper-meta { margin: 16px 0 0; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+/* Resource links stay typographic, with a shared rule instead of button fills. */
+.paper-links { list-style:none; margin:22px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px 28px; }
+.paper-links li { display:inline-flex; align-items:center; gap:8px; }
+.paper-links small { font-size:12.5px; color:var(--ink-3); }
+.paper-link { display:inline-flex; align-items:center; gap:10px; min-height:44px; padding:6px 0; border:0; border-bottom:1px solid var(--rule); border-radius:0; background:transparent; font:500 16px/1.3 var(--sans); color:var(--ink); text-decoration:none; }
+.paper-link::after { content:"↗"; color:var(--ink-3); font-size:15px; }
+.paper-link:hover { color:var(--accent-ink); border-bottom-color:currentColor; }
+.paper-link:focus-visible { outline:2px solid var(--accent-ink); outline-offset:4px; }
+@media (min-width: 900px) { .paper > .paper-head { grid-column: 1 / 11; } }
+.cite[hidden] { display: none !important; }
+
+/* More air between the dark replay stage and the dark console (both stay open). */
+.console-wrap { padding-top: clamp(88px, 9vw, 136px); }
+
+/* Every label, tag and caption is at least 11 px. */
+.tag, .vision-row .tag, .qcard.vision .tag, .qc-live, .qc-vis, .qcard.vision .qc-vis, .m-st b, .st-time, .hero-replay .state figcaption,
+.types-legend i, .step i, .wordings .wl, .pill, .q-gloss span, .types .t2, .ts-k, .contin-badge, .transport .gain > span,
+.scope > .scalp .scalp-cap, #lead-list, .src-tag, .ts-range b::after { font-size: 11px; }
+
+
+/* ── Visual details ── */
+/* The console head on the paper, between the stage and the console. */
+.console-wrap > .console-title { width: var(--frame); max-width: none; margin: 0 auto clamp(24px, 3vw, 36px); padding: 0; border: 0; }
+.console-wrap > .console-title .eyebrow-l { margin: 0 0 14px; color: var(--accent-ink); }
+.console-wrap > .console-title h2 { margin: 0; font: 500 clamp(32px, 3.6vw, 48px)/1.04 var(--serif); letter-spacing: -.02em; color: var(--ink); font-variation-settings: "opsz" 48; }
+.console-wrap > .console-title p { margin: 14px 0 0; max-width: 62ch; font: 400 17px/1.55 var(--sans); color: var(--ink-2); }
+@media (max-width: 760px) { .console-wrap > .console-title { width: auto; padding-inline: 12px; } }
+
+/* P1: section head rhythm as in 03. */
+@media (min-width: 900px) { .paper.wrap { row-gap: 0; } }
+.paper > .eyebrow-l { margin-bottom: 14px; }
+@media (max-width: 899px) { .paper > .eyebrow-l { margin-bottom: 14px; } }
+.paper-head { margin: 0 0 clamp(48px, 5vw, 72px); }
+.stats { margin-bottom: clamp(48px, 5vw, 72px); }
+
+/* Key figures retain the paper's display rhythm. */
+.stats dd b { font-size: clamp(32px, 3.2vw, 46px); }
+
+/* Approved flow polish: one left-aligned reading column, title above the full abstract.
+   Block layout replaces the older side-label grid at every breakpoint. */
+.paper .abstract { display: block; grid-template: none; width: 100%; max-width: none; margin-inline: 0; padding-block: clamp(28px, 3.5vw, 48px); border-bottom: 0; font: 400 clamp(17.5px, 1.3vw, 19px)/1.65 var(--serif); }
+@media (min-width: 1181px) { .paper .abstract { width: 80%; } }
+.paper .abstract > h3, .paper .abstract > p:not(.abs-tag) { grid-area: auto; }
+.paper .abstract h3 { margin: 0 0 clamp(20px, 2.4vw, 30px); font: 500 clamp(32px, 3.2vw, 44px)/1.08 var(--serif); letter-spacing: -.02em; text-transform: none; color: var(--ink); font-variation-settings: "opsz" 40; }
+.paper .abstract > p { max-width: none; margin: 0; font-size: inherit; line-height: inherit; }
+
+/* P5: footer links in the palette. */
+.foot a { color: var(--accent-ink); text-underline-offset: 3px; }
+
+/* P6: on wide screens the status and (later) the downloads sit beside the title. */
+@media (min-width: 1181px) {
+  .paper-head { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); column-gap: var(--col-gap); align-items: end; }
+  .paper-title { grid-column: 1; }
+  .paper-side { grid-column: 2; align-self: end; padding-bottom: 6px; }
+  .paper > .paper-head { grid-column: 1 / -1; }
+}
+
+/* N3: phones show the four steps as a two-by-two grid. */
+@media (max-width: 560px) {
+  .reading-flow { grid-template-columns: 1fr 1fr; }
+  .reading-flow li { padding: 14px 12px 14px 0; border-right: 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .reading-flow li:nth-child(even) { padding-left: 12px; border-left: 1px solid var(--rule); }
+  .reading-flow li:nth-last-child(-n+2) { border-bottom: 0; }
+}
+
+/* S1: "Continuous replay" is a label, not a control; it carries the 01 of the section bar. */
+.stage-mode { border: 0; padding: 0; }
+.stage-mode .sm-on { min-height: 0; padding: 0; background: none; color: var(--teal); font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+.stage-mode .sm-on::before { content: "01 · "; }
+
+/* S2: explanatory text back to a readable size. */
+.lane-q { -webkit-line-clamp: 1; line-clamp: 1; min-height: 1.4em; }
+.st-context, .st-agree, .sr-sub, .stage-mode-note { font-size: 13.5px; }
+.budget-note, .log .log-note, .batch-note { font-size: 13px; }
+
+/* S4: the title keeps "Natural-Language" together on phones. */
+@media (max-width: 420px) { .paper-title { font-size: 28px; } }
+
+/* A quiet text link from the hero to the paper's figures and abstract. */
+.hero-cta3 { display: inline-flex; align-items: center; gap: 6px; min-height: 46px; padding: 0 6px; color: var(--accent-ink); font: 500 14px/1 var(--sans); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.hero-cta3:hover { text-decoration-thickness: 2px; }
+
+/* ── Interaction details ── */
+/* I-1: the clock line sits under the scrubber, so the scrubber keeps its width at every size. */
+@media (min-width: 561px) {
+  .stage-transport { grid-template-columns: auto minmax(160px, 1fr) auto; row-gap: 6px; }
+  .stage-transport .st-time { grid-column: 2 / -1; grid-row: 2; white-space: normal; }
+  .stage-transport .st-speed { grid-column: 3; grid-row: 1; }
+}
+/* I-2: the readout can never be wider than the console, and the console never scrolls sideways. */
+.readout { max-width: calc(100% - 16px); }
+.console { overflow-x: clip; }
+/* I-9: keyboard focus never lands under the section bar. */
+a, button, summary, input, select, [tabindex] { scroll-margin-top: 84px; scroll-margin-bottom: 24px; }
+/* I-11: two-column key figures on large phones keep "3.6% → 1.8%" inside its cell. */
+@media (min-width: 421px) and (max-width: 560px) { .stats dd b { font-size: 28px; } }
+
+/* ── Status line and figure on phones ── */
+/* Status (and later the downloads) under the title at every width. */
+@media (min-width: 1181px) { .paper-head { display: block; } .paper-side { padding-bottom: 0; } }
+/* On phones the figure fades at the right edge, so it reads as a sideways scroll, not a cut. */
+@media (max-width: 760px) { .how figure .fig-link { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); } }
+
+/* Label-only seizure replay: suppress the heuristic cue card. */
+#stage .sr-cue[hidden] { display: none !important; }

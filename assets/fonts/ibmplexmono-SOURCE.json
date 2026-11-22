@@ -1,0 +1,80 @@
+{
+  "repository": "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+  "files": [
+    {
+      "name": "IBMPlexMono-Bold.ttf",
+      "sha": "17b406d221e7f27179344707bd543fb8470728ac",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Bold.ttf"
+    },
+    {
+      "name": "IBMPlexMono-BoldItalic.ttf",
+      "sha": "f0291778c969fca0c255fe7e06c90eb97b34770d",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-BoldItalic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-ExtraLight.ttf",
+      "sha": "26877b8175e03ac26581afb2bf0eb4f7b9190594",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-ExtraLight.ttf"
+    },
+    {
+      "name": "IBMPlexMono-ExtraLightItalic.ttf",
+      "sha": "bd50df2f9d7397e9772c75836277023d6e8e95b1",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-ExtraLightItalic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-Italic.ttf",
+      "sha": "d7f69134614ebdcaa10ebd36b0be1a44a035e157",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Italic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-Light.ttf",
+      "sha": "61d43577842179cdffeb38b6c1928786981db0da",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Light.ttf"
+    },
+    {
+      "name": "IBMPlexMono-LightItalic.ttf",
+      "sha": "ecb1f6f52575afd8296df722ed4e7b395f9847b0",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-LightItalic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-Medium.ttf",
+      "sha": "33c546f68b6007a45a3f10e845523abb2db25399",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Medium.ttf"
+    },
+    {
+      "name": "IBMPlexMono-MediumItalic.ttf",
+      "sha": "d08961658e199bcabdb2fcb4f59abf06ab599fb3",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-MediumItalic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-Regular.ttf",
+      "sha": "0c9770d5183ba60dc4350d3e011b782a320761ae",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf"
+    },
+    {
+      "name": "IBMPlexMono-SemiBold.ttf",
+      "sha": "8f8998a139d8f61d3b96bdd3b512fca501a1f6b9",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-SemiBold.ttf"
+    },
+    {
+      "name": "IBMPlexMono-SemiBoldItalic.ttf",
+      "sha": "50e47fa895a99c816061ad3b2bf433850a5f713b",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-SemiBoldItalic.ttf"
+    },
+    {
+      "name": "IBMPlexMono-Thin.ttf",
+      "sha": "44475c9d3e39e6f7e211ff7ce8a6fa711ab307ea",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-Thin.ttf"
+    },
+    {
+      "name": "IBMPlexMono-ThinItalic.ttf",
+      "sha": "89eac6d51d5fb51874f1404980d64bd3f482f4a5",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/IBMPlexMono-ThinItalic.ttf"
+    },
+    {
+      "name": "OFL.txt",
+      "sha": "c35c4c618fab33da8695177b3a6cefe0810b7b28",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt"
+    }
+  ]
+}

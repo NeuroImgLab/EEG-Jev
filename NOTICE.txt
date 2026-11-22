@@ -1,0 +1,15 @@
+EEG-Jev demo: sources of the EEG excerpts in this build
+
+EEG excerpts.
+Sleep staging: Sleep-EDF Database Expanded, version 1.0.0 (Kemp et al., 2000; PhysioNet, doi:10.13026/C2X676).
+Contains information from the Sleep-EDF Database Expanded, which is made available under the ODC Attribution License v1.0.
+Seizure detection: CHB-MIT Scalp EEG Database, version 1.0.0 (Shoeb, 2009; Guttag, 2010; PhysioNet, doi:10.13026/C2K01R), in the BIDS conversion by Dan and Shoeb (Zenodo, doi:10.5281/zenodo.10259996; CC BY 4.0).
+Contains information from the CHB-MIT Scalp EEG Database, which is made available under the ODC Attribution License v1.0.
+Motor imagery: Human EEG Dataset for Brain-Computer Interface and Meditation (Stieger, Engel and He, 2021; figshare, doi:10.6084/m9.figshare.13123148; CC BY 4.0 on the hosting record, CC BY-NC 4.0 in the authors’ code repository), described in Stieger et al., Scientific Data 8:98 (2021).
+Shown for non-commercial academic research use, with attribution.
+Pain rating: OpenNeuro ds005292, version 1.0.0 (Zhao et al., 2024; doi:10.18112/openneuro.ds005292.v1.0.0; CC0); the per-trial pain ratings are those published by the dataset authors in their supplementary repository (github.com/XiangyueZhao/Supplement-Data).
+PhysioNet: Pollard et al., 2026.
+The excerpts were filtered, resampled and cut for display by the EEG-Jev authors and are not the original recordings; the dataset authors and hosts do not endorse this demonstration.
+
+Licence texts: ODC Attribution License v1.0 https://opendatacommons.org/licenses/by/1-0/ ; CC BY 4.0 https://creativecommons.org/licenses/by/4.0/ ; CC0 1.0 https://creativecommons.org/publicdomain/zero/1.0/
+Fonts: Newsreader and IBM Plex Mono, SIL Open Font License 1.1 (assets/fonts/).

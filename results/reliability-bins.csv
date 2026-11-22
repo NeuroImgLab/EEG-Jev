@@ -1,0 +1,736 @@
+source,application,stage,bin,n,mean_confidence,observed_frequency,n_total,binning,T,prior_source,confidence_semantics
+cho2017,MI,raw,0,220,0.5183992190909091,0.4681818181818182,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,1,220,0.5603700063636363,0.6090909090909091,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,2,220,0.6030697695454545,0.5772727272727273,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,3,220,0.6461441968181819,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,4,220,0.7013765568181818,0.6272727272727273,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,5,220,0.7721807531818182,0.7045454545454546,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,6,220,0.8588475845454545,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,7,220,0.9368382559090908,0.9136363636363637,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,8,220,0.969363860909091,0.95,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,raw,9,220,0.9900246709090907,0.9727272727272728,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+cho2017,MI,prior,0,220,0.5183987467987037,0.4681818181818182,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,1,220,0.5603666464266149,0.6090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,2,220,0.6030669951951593,0.5772727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,3,220,0.6461376192941024,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,4,220,0.701364650672839,0.6272727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,5,220,0.7721710513293092,0.7045454545454546,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,6,220,0.8588405810462136,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,7,220,0.9368385050634861,0.9136363636363637,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,8,220,0.9693654134810952,0.95,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior,9,220,0.9900241738716635,0.9727272727272728,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,0,220,0.5183987467987037,0.4681818181818182,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,1,220,0.5603666464266149,0.6090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,2,220,0.6030669951951593,0.5772727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,3,220,0.6461376192941024,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,4,220,0.701364650672839,0.6272727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,5,220,0.7721710513293092,0.7045454545454546,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,6,220,0.8588405810462136,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,7,220,0.9368385050634861,0.9136363636363637,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,8,220,0.9693654134810952,0.95,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cho2017,MI,prior_temperature,9,220,0.9900241738716635,0.9727272727272728,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,raw,0,220,0.566855655,0.4954545454545455,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,1,220,0.6826427668181818,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,2,220,0.7979153140909091,0.6954545454545454,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,3,220,0.88100767,0.7727272727272727,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,4,220,0.9299378204545454,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,5,220,0.9588233563636364,0.8909090909090909,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,6,220,0.9770311381818183,0.9363636363636364,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,7,220,0.988551523181818,0.95,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,8,220,0.994815691818182,0.9772727272727273,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,raw,9,220,0.9981277090909091,0.9681818181818181,2200,10 quantile edges; merge bins below 30,1.0,none,max probability
+lee2019-mi,MI,prior,0,220,0.5668630235009594,0.4954545454545455,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,1,220,0.6826468488505958,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,2,220,0.7979156614642764,0.6954545454545454,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,3,220,0.8810107310907824,0.7727272727272727,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,4,220,0.9299399913259939,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,5,220,0.9588243672352521,0.8909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,6,220,0.9770318362985212,0.9363636363636364,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,7,220,0.9885514469589107,0.95,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,8,220,0.9948156030670783,0.9772727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior,9,220,0.9981276499470645,0.9681818181818181,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,0,220,0.5668630235009594,0.4954545454545455,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,1,220,0.6826468488505958,0.5909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,2,220,0.7979156614642764,0.6954545454545454,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,3,220,0.8810107310907824,0.7727272727272727,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,4,220,0.9299399913259939,0.8090909090909091,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,5,220,0.9588243672352521,0.8909090909090909,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,6,220,0.9770318362985212,0.9363636363636364,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,7,220,0.9885514469589107,0.95,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,8,220,0.9948156030670783,0.9772727272727273,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+lee2019-mi,MI,prior_temperature,9,220,0.9981276499470645,0.9681818181818181,2200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,raw,0,144,0.5604340194444445,0.5486111111111112,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,1,144,0.6646542743055556,0.625,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,2,144,0.7576924104166667,0.6458333333333334,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,3,144,0.8409165347222223,0.7083333333333334,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,4,144,0.9095783256944444,0.7916666666666666,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,5,144,0.9588582937500001,0.8333333333333334,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,6,144,0.9792175159722222,0.8541666666666666,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,7,144,0.9885757111111112,0.875,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,8,144,0.9930544798611112,0.9236111111111112,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,raw,9,144,0.9957500659722223,0.9444444444444444,1440,10 quantile edges; merge bins below 30,1.0,none,max probability
+bnci2014-004,MI,prior,0,144,0.560434015518791,0.5486111111111112,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,1,144,0.6646542751457891,0.625,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,2,144,0.7576924118460084,0.6458333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,3,144,0.8409165353928807,0.7083333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,4,144,0.909578330857093,0.7916666666666666,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,5,144,0.9588582884522727,0.8333333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,6,144,0.9792175139000463,0.8541666666666666,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,7,144,0.9885757056151188,0.875,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,8,144,0.9930544833058961,0.9236111111111112,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior,9,144,0.9957500597529039,0.9444444444444444,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,0,144,0.560434015518791,0.5486111111111112,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,1,144,0.6646542751457891,0.625,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,2,144,0.7576924118460084,0.6458333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,3,144,0.8409165353928807,0.7083333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,4,144,0.909578330857093,0.7916666666666666,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,5,144,0.9588582884522727,0.8333333333333334,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,6,144,0.9792175139000463,0.8541666666666666,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,7,144,0.9885757056151188,0.875,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,8,144,0.9930544833058961,0.9236111111111112,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bnci2014-004,MI,prior_temperature,9,144,0.9957500597529039,0.9444444444444444,1440,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,raw,0,504,0.5265712521825398,0.5257936507936508,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,1,504,0.583553705952381,0.5734126984126984,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,2,504,0.6383972380952381,0.6547619047619048,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,3,504,0.694571532936508,0.7123015873015873,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,4,504,0.7504591626984127,0.7341269841269841,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,5,504,0.8089093101190477,0.7876984126984127,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,6,504,0.8688388952380951,0.8353174603174603,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,7,504,0.9259367214285714,0.8829365079365079,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,8,504,0.9678617642857144,0.9503968253968254,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,raw,9,504,0.9895749162698412,0.9781746031746031,5040,10 quantile edges; merge bins below 30,1.0,none,max probability
+dreyer2023,MI,prior,0,504,0.5265988184024157,0.5337301587301587,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,1,504,0.5835817033534921,0.5714285714285714,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,2,504,0.6384036719471378,0.6547619047619048,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,3,504,0.6945812183228119,0.7123015873015873,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,4,504,0.7504807971362923,0.7341269841269841,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,5,504,0.8089184994352205,0.7876984126984127,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,6,504,0.868840481487139,0.8353174603174603,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,7,504,0.9259388554784436,0.8829365079365079,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,8,504,0.9678610146353087,0.9503968253968254,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior,9,504,0.989573695587185,0.9781746031746031,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,0,504,0.5265988184024157,0.5337301587301587,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,1,504,0.5835817033534921,0.5714285714285714,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,2,504,0.6384036719471378,0.6547619047619048,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,3,504,0.6945812183228119,0.7123015873015873,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,4,504,0.7504807971362923,0.7341269841269841,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,5,504,0.8089184994352205,0.7876984126984127,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,6,504,0.868840481487139,0.8353174603174603,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,7,504,0.9259388554784436,0.8829365079365079,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,8,504,0.9678610146353087,0.9503968253968254,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dreyer2023,MI,prior_temperature,9,504,0.989573695587185,0.9781746031746031,5040,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,raw,0,60,0.5076092433333333,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,1,60,0.5253291933333334,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,2,60,0.53979767,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,3,60,0.5600160533333334,0.45,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,4,60,0.5815242466666668,0.4666666666666667,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,5,60,0.6029940666666666,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,6,60,0.6307332300000001,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,7,60,0.6639525916666665,0.65,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,8,60,0.7109872533333335,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,raw,9,60,0.7965974333333334,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+grossewentrup2009beamforming,MI,prior,0,60,0.5076020157951657,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,1,60,0.5253353839548377,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,2,60,0.5397915367852586,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,3,60,0.5599977629346048,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,4,60,0.5814683655029664,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,5,60,0.6029961097915596,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,6,60,0.6306816893878773,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,7,60,0.6639030319380784,0.65,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,8,60,0.710917094749482,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior,9,60,0.7965039239484429,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,0,60,0.5076020157951657,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,1,60,0.5253353839548377,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,2,60,0.5397915367852586,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,3,60,0.5599977629346048,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,4,60,0.5814683655029664,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,5,60,0.6029961097915596,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,6,60,0.6306816893878773,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,7,60,0.6639030319380784,0.65,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,8,60,0.710917094749482,0.5833333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+grossewentrup2009beamforming,MI,prior_temperature,9,60,0.7965039239484429,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,raw,0,40,0.511457335,0.475,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,1,40,0.53711574,0.475,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,2,40,0.5626080575,0.475,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,3,40,0.582150505,0.475,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,4,40,0.609728745,0.525,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,5,40,0.6423702575,0.5,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,6,40,0.6726541724999999,0.575,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,7,40,0.7141777525,0.625,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,8,40,0.7769695525,0.525,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,raw,9,40,0.9124027425000001,0.525,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+liu2022,MI,prior,0,40,0.5114573323642551,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,1,40,0.5371157359233367,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,2,40,0.5626080531377695,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,3,40,0.5821505079169111,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,4,40,0.6097287496315398,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,5,40,0.6423702591067515,0.5,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,6,40,0.6726541843902242,0.575,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,7,40,0.7141777489471467,0.625,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,8,40,0.7769695621193842,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior,9,40,0.9124027402453418,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,0,40,0.5114573323642551,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,1,40,0.5371157359233367,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,2,40,0.5626080531377695,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,3,40,0.5821505079169111,0.475,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,4,40,0.6097287496315398,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,5,40,0.6423702591067515,0.5,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,6,40,0.6726541843902242,0.575,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,7,40,0.7141777489471467,0.625,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,8,40,0.7769695621193842,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+liu2022,MI,prior_temperature,9,40,0.9124027402453418,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,raw,0,36,0.5105688416666667,0.4166666666666667,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,1,36,0.5298924333333334,0.5555555555555556,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,2,36,0.5492854333333334,0.5833333333333334,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,3,36,0.5685575416666666,0.4444444444444444,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,4,36,0.5905123361111111,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,5,36,0.612605275,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,6,36,0.6376762138888888,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,7,36,0.6664118388888889,0.7777777777777778,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,8,36,0.7046230194444445,0.6388888888888888,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,raw,9,36,0.8129123055555557,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,none,max probability
+shin2017opena,MI,prior,0,36,0.5106581514682426,0.3888888888888889,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,1,36,0.5298785731694076,0.5555555555555556,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,2,36,0.5493128585928829,0.5833333333333334,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,3,36,0.5686122945108304,0.4444444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,4,36,0.590512240607638,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,5,36,0.6127765483856198,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,6,36,0.6378045232524152,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,7,36,0.6665229283113719,0.7777777777777778,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,8,36,0.7047276453779753,0.6388888888888888,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior,9,36,0.8129802904618739,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,0,36,0.5106581514682426,0.3888888888888889,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,1,36,0.5298785731694076,0.5555555555555556,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,2,36,0.5493128585928829,0.5833333333333334,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,3,36,0.5686122945108304,0.4444444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,4,36,0.590512240607638,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,5,36,0.6127765483856198,0.6111111111111112,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,6,36,0.6378045232524152,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,7,36,0.6665229283113719,0.7777777777777778,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,8,36,0.7047276453779753,0.6388888888888888,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+shin2017opena,MI,prior_temperature,9,36,0.8129802904618739,0.6944444444444444,360,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,raw,0,34,0.5664005529411764,0.5294117647058824,112,10 quantile edges; merge bins below 30,1.0,none,max probability
+dornhege2004boosting,MI,raw,1,33,0.6867325878787879,0.7272727272727273,112,10 quantile edges; merge bins below 30,1.0,none,max probability
+dornhege2004boosting,MI,raw,2,45,0.8206182244444445,0.7111111111111111,112,10 quantile edges; merge bins below 30,1.0,none,max probability
+dornhege2004boosting,MI,prior,0,34,0.5663797648455684,0.5294117647058824,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,prior,1,33,0.6869436655388665,0.7272727272727273,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,prior,2,45,0.8201341740056617,0.7111111111111111,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,prior_temperature,0,34,0.5663797648455684,0.5294117647058824,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,prior_temperature,1,33,0.6869436655388665,0.7272727272727273,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dornhege2004boosting,MI,prior_temperature,2,45,0.8201341740056617,0.7111111111111111,112,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,raw,0,120,0.5296061025000001,0.475,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,1,120,0.5821663233333335,0.5666666666666667,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,2,120,0.6285001575,0.5583333333333333,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,3,120,0.6768961366666666,0.6083333333333333,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,4,120,0.7253916341666666,0.49166666666666664,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,5,120,0.7784186016666667,0.65,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,6,120,0.8415708066666667,0.65,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,7,120,0.8993562083333334,0.7416666666666667,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,8,120,0.9506863541666667,0.85,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,raw,9,120,0.9811015366666667,0.975,1200,10 quantile edges; merge bins below 30,1.0,none,max probability
+faller2012,MI,prior,0,120,0.5296172309074192,0.475,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,1,120,0.5821627424602258,0.5666666666666667,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,2,120,0.6284999991096275,0.5583333333333333,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,3,120,0.6768993841322611,0.6083333333333333,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,4,120,0.7254038935282544,0.49166666666666664,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,5,120,0.7784249700218697,0.65,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,6,120,0.8415879428566981,0.65,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,7,120,0.8993780344568422,0.7416666666666667,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,8,120,0.9507037977882279,0.85,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior,9,120,0.9811096149372038,0.975,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,0,120,0.5296172309074192,0.475,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,1,120,0.5821627424602258,0.5666666666666667,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,2,120,0.6284999991096275,0.5583333333333333,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,3,120,0.6768993841322611,0.6083333333333333,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,4,120,0.7254038935282544,0.49166666666666664,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,5,120,0.7784249700218697,0.65,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,6,120,0.8415879428566981,0.65,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,7,120,0.8993780344568422,0.7416666666666667,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,8,120,0.9507037977882279,0.85,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+faller2012,MI,prior_temperature,9,120,0.9811096149372038,0.975,1200,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,raw,0,48,0.5169049854166666,0.5416666666666666,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,1,48,0.5479149729166667,0.5833333333333334,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,2,48,0.5814710958333333,0.4583333333333333,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,3,48,0.6172221291666666,0.4166666666666667,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,4,48,0.6597958479166667,0.5833333333333334,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,5,48,0.7003919958333333,0.6875,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,6,48,0.7404994270833334,0.6875,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,7,48,0.7821849562500001,0.5,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,8,48,0.8352225833333334,0.6666666666666666,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,raw,9,48,0.8960075416666666,0.7083333333333334,480,10 quantile edges; merge bins below 30,1.0,none,max probability
+scherer2012brain,MI,prior,0,48,0.5169980861176898,0.5,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,1,48,0.5479228041282377,0.6041666666666666,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,2,48,0.5814310052449451,0.4583333333333333,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,3,48,0.6172060991212546,0.4166666666666667,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,4,48,0.6598699952010014,0.5833333333333334,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,5,48,0.7002353778760458,0.6875,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,6,48,0.7403570055883436,0.6875,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,7,48,0.7820434882201043,0.5,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,8,48,0.8350505223091873,0.6666666666666666,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior,9,48,0.8959806865047018,0.7083333333333334,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,0,48,0.5169980861176898,0.5,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,1,48,0.5479228041282377,0.6041666666666666,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,2,48,0.5814310052449451,0.4583333333333333,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,3,48,0.6172060991212546,0.4166666666666667,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,4,48,0.6598699952010014,0.5833333333333334,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,5,48,0.7002353778760458,0.6875,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,6,48,0.7403570055883436,0.6875,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,7,48,0.7820434882201043,0.5,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,8,48,0.8350505223091873,0.6666666666666666,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+scherer2012brain,MI,prior_temperature,9,48,0.8959806865047018,0.7083333333333334,480,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,raw,0,60,0.41348129,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,1,60,0.4913211,0.5666666666666667,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,2,60,0.5467650466666666,0.55,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,3,60,0.6082517366666667,0.6,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,4,60,0.6625427233333333,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,5,60,0.7183414016666666,0.7,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,6,60,0.7720921983333332,0.8,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,7,60,0.8157516783333333,0.8333333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,8,60,0.8592068516666667,0.9,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,raw,9,60,0.9169839566666667,0.9333333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+zhou2016,MI,prior,0,60,0.41335859410760734,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,1,60,0.4913619875602255,0.5666666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,2,60,0.5466492802132571,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,3,60,0.6082873310537468,0.6,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,4,60,0.6625645424890542,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,5,60,0.7182870055373504,0.7,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,6,60,0.7720973395847418,0.8,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,7,60,0.8156936107944968,0.8166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,8,60,0.8591701214021922,0.9166666666666666,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior,9,60,0.9168199121461894,0.9333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,0,60,0.41335859410760734,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,1,60,0.4913619875602255,0.5666666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,2,60,0.5466492802132571,0.55,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,3,60,0.6082873310537468,0.6,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,4,60,0.6625645424890542,0.6833333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,5,60,0.7182870055373504,0.7,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,6,60,0.7720973395847418,0.8,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,7,60,0.8156936107944968,0.8166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,8,60,0.8591701214021922,0.9166666666666666,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+zhou2016,MI,prior_temperature,9,60,0.9168199121461894,0.9333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,raw,0,40,0.4221271875,0.4,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,1,40,0.48884660750000003,0.375,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,2,40,0.53794285,0.5,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,3,40,0.5880197949999999,0.6,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,4,40,0.63460611,0.6,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,5,40,0.68283377,0.525,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,6,40,0.73137336,0.675,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,7,40,0.7830758400000001,0.675,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,8,40,0.8380939025,0.65,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,raw,9,40,0.907967975,0.75,400,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetlb,MI,prior,0,40,0.41862760434114304,0.375,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,1,40,0.4837385479524805,0.35,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,2,40,0.5352094682872321,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,3,40,0.5890374137075154,0.6,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,4,40,0.6348520311377825,0.575,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,5,40,0.6847832592403751,0.55,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,6,40,0.7364405710300804,0.6,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,7,40,0.7844992642607094,0.775,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,8,40,0.841303198415471,0.625,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior,9,40,0.9123764107591729,0.75,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,0,40,0.41862760434114304,0.375,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,1,40,0.4837385479524805,0.35,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,2,40,0.5352094682872321,0.525,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,3,40,0.5890374137075154,0.6,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,4,40,0.6348520311377825,0.575,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,5,40,0.6847832592403751,0.55,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,6,40,0.7364405710300804,0.6,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,7,40,0.7844992642607094,0.775,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,8,40,0.841303198415471,0.625,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetlb,MI,prior_temperature,9,40,0.9123764107591729,0.75,400,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,raw,0,116,0.32077542931034486,0.33620689655172414,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,1,115,0.364832152173913,0.3217391304347826,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,2,115,0.3941360339130435,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,3,115,0.4256456208695652,0.391304347826087,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,4,115,0.46368299565217397,0.3739130434782609,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,5,115,0.5079329634782609,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,6,115,0.5484732269565217,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,7,115,0.584910096521739,0.4260869565217391,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,8,115,0.6281343356521739,0.391304347826087,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,raw,9,116,0.7917600603448276,0.7672413793103449,1152,10 quantile edges; merge bins below 30,1.0,none,max probability
+bci-iv-2a,MI,prior,0,116,0.3208033013104294,0.3275862068965517,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,1,115,0.3648420774834645,0.3217391304347826,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,2,115,0.394124248703774,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,3,115,0.4256337192732527,0.391304347826087,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,4,115,0.46365305390505174,0.3652173913043478,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,5,115,0.5079068417534831,0.4782608695652174,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,6,115,0.5484584275806417,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,7,115,0.5849063222697751,0.41739130434782606,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,8,115,0.6281131060886994,0.4,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior,9,116,0.7916522546858291,0.7672413793103449,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,0,116,0.3208033013104294,0.3275862068965517,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,1,115,0.3648420774834645,0.3217391304347826,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,2,115,0.394124248703774,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,3,115,0.4256337192732527,0.391304347826087,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,4,115,0.46365305390505174,0.3652173913043478,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,5,115,0.5079068417534831,0.4782608695652174,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,6,115,0.5484584275806417,0.46956521739130436,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,7,115,0.5849063222697751,0.41739130434782606,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,8,115,0.6281131060886994,0.4,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+bci-iv-2a,MI,prior_temperature,9,116,0.7916522546858291,0.7672413793103449,1152,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,raw,0,198,0.34053610858585864,0.3333333333333333,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,1,198,0.3713200727272728,0.37373737373737376,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,2,198,0.393527995959596,0.42424242424242425,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,3,198,0.41362094141414135,0.494949494949495,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,4,198,0.4357739585858586,0.46464646464646464,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,5,198,0.47810853030303035,0.5555555555555556,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,6,198,0.5740377757575759,0.6111111111111112,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,7,198,0.8076622186868688,0.7929292929292929,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,8,198,0.9386145101010102,0.9191919191919192,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,raw,9,198,0.9769751207070707,0.9393939393939394,1980,10 quantile edges; merge bins below 30,1.0,none,max probability
+eegmmidb,MI,prior,0,198,0.3404487349180026,0.32323232323232326,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,1,198,0.37122313663573636,0.3686868686868687,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,2,198,0.39346629426542157,0.41919191919191917,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,3,198,0.4135186440012229,0.5202020202020202,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,4,198,0.4357775245739558,0.46464646464646464,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,5,198,0.4782225649137098,0.5454545454545454,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,6,198,0.5739733587265805,0.6111111111111112,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,7,198,0.8077305324659096,0.7929292929292929,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,8,198,0.9386145867768853,0.9191919191919192,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior,9,198,0.9770018831532566,0.9393939393939394,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,0,198,0.3404487349180026,0.32323232323232326,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,1,198,0.37122313663573636,0.3686868686868687,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,2,198,0.39346629426542157,0.41919191919191917,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,3,198,0.4135186440012229,0.5202020202020202,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,4,198,0.4357775245739558,0.46464646464646464,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,5,198,0.4782225649137098,0.5454545454545454,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,6,198,0.5739733587265805,0.6111111111111112,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,7,198,0.8077305324659096,0.7929292929292929,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,8,198,0.9386145867768853,0.9191919191919192,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+eegmmidb,MI,prior_temperature,9,198,0.9770018831532566,0.9393939393939394,1980,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,raw,0,2534,0.33614664976322023,0.31728492501973166,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,1,2534,0.38678719356748226,0.3626677190213102,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,2,2534,0.42569104159431725,0.398973954222573,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,3,2534,0.4637596155485398,0.414759273875296,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,4,2534,0.5047033051696922,0.46882399368587213,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,5,2534,0.5533739979479085,0.5059194948697711,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,6,2534,0.6133756039068666,0.5670876085240726,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,7,2534,0.6911003063930544,0.6728492501973165,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,8,2534,0.798001658445146,0.7865035516969219,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,raw,9,2534,0.9178606780584057,0.920678768745067,25340,10 quantile edges; merge bins below 30,1.0,none,max probability
+stieger2021,MI,prior,0,2534,0.3387088494895734,0.31767955801104975,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,1,2534,0.3884944652841011,0.36029992107340175,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,2,2534,0.4267497116753503,0.4127861089187056,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,3,2534,0.4645773574167322,0.4230465666929755,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,4,2534,0.5056008633834728,0.4510655090765588,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,5,2534,0.5557554160953582,0.5035516969218626,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,6,2534,0.615915212225865,0.5686661404893449,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,7,2534,0.6955247694379514,0.6803472770323599,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,8,2534,0.8018620030271262,0.7975532754538279,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior,9,2534,0.9209755300184823,0.9262036306235202,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,0,2534,0.3387088494895734,0.31767955801104975,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,1,2534,0.3884944652841011,0.36029992107340175,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,2,2534,0.4267497116753503,0.4127861089187056,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,3,2534,0.4645773574167322,0.4230465666929755,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,4,2534,0.5056008633834728,0.4510655090765588,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,5,2534,0.5557554160953582,0.5035516969218626,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,6,2534,0.615915212225865,0.5686661404893449,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,7,2534,0.6955247694379514,0.6803472770323599,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,8,2534,0.8018620030271262,0.7975532754538279,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+stieger2021,MI,prior_temperature,9,2534,0.9209755300184823,0.9262036306235202,25340,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,raw,0,60,0.37912493999999997,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,1,60,0.415937895,0.38333333333333336,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,2,60,0.4434357866666667,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,3,60,0.46775460499999993,0.3333333333333333,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,4,60,0.48994032833333334,0.45,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,5,60,0.5131638500000001,0.48333333333333334,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,6,60,0.542630885,0.6,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,7,60,0.5791776233333333,0.4666666666666667,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,8,60,0.643231335,0.4166666666666667,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,raw,9,60,0.7858940416666668,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,none,max probability
+wei2022beetla,MI,prior,0,60,0.3800346212824755,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,1,60,0.4204867994625547,0.35,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,2,60,0.44732355810916336,0.31666666666666665,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,3,60,0.4722638707369571,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,4,60,0.4969612904610122,0.4166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,5,60,0.5202520029588998,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,6,60,0.5470735856234011,0.65,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,7,60,0.5833622725870454,0.4166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,8,60,0.6468657041629221,0.5,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior,9,60,0.7836352105792981,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,0,60,0.3800346212824755,0.5333333333333333,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,1,60,0.4204867994625547,0.35,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,2,60,0.44732355810916336,0.31666666666666665,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,3,60,0.4722638707369571,0.45,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,4,60,0.4969612904610122,0.4166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,5,60,0.5202520029588998,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,6,60,0.5470735856234011,0.65,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,7,60,0.5833622725870454,0.4166666666666667,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,8,60,0.6468657041629221,0.5,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+wei2022beetla,MI,prior_temperature,9,60,0.7836352105792981,0.43333333333333335,600,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+barachant2012,MI,raw,0,38,0.3698495894736842,0.3684210526315789,96,10 quantile edges; merge bins below 30,1.0,none,max probability
+barachant2012,MI,raw,1,58,0.4586039913793104,0.3275862068965517,96,10 quantile edges; merge bins below 30,1.0,none,max probability
+barachant2012,MI,prior,0,38,0.3700159698161151,0.3684210526315789,96,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+barachant2012,MI,prior,1,58,0.45786476874780585,0.3275862068965517,96,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+barachant2012,MI,prior_temperature,0,38,0.3700159698161151,0.3684210526315789,96,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+barachant2012,MI,prior_temperature,1,58,0.45786476874780585,0.3275862068965517,96,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,raw,0,2877,0.4451314635731664,0.4337851929092805,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,1,2876,0.5264912073365786,0.5076495132127955,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,2,2877,0.5899441224191866,0.6138338547097671,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,3,2876,0.6528665428025034,0.6585535465924895,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,4,2877,0.7156086815085158,0.7257559958289885,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,5,2876,0.7757057351182198,0.7673852573018081,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,6,2877,0.8346699411887384,0.8408063955509211,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,7,2876,0.8955727291724618,0.9033379694019471,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,8,2877,0.9560702741397288,0.9596802224539451,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,raw,9,2877,0.9904024711505041,0.9947862356621481,28766,10 quantile edges; merge bins below 30,1.0,none,max probability
+hmc,sleep,prior,0,2877,0.4425305868827884,0.4386513729579423,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,1,2876,0.5457690884236167,0.5340751043115438,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,2,2877,0.629323676049752,0.6326034063260341,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,3,2876,0.7120359379059756,0.6700278164116829,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,4,2877,0.7849010677828745,0.7612095933263816,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,5,2876,0.8437936933681399,0.8271905424200278,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,6,2877,0.8919958356221387,0.8901633646159194,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,7,2876,0.9305952110524722,0.93115438108484,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,8,2877,0.9645348298705243,0.9767118526242614,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior,9,2877,0.9907922090847632,0.9933958985053876,28766,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,0,2877,0.4316416408716314,0.43899895724713245,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,1,2876,0.5317588070401834,0.5333796940194715,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,2,2877,0.6101594691109969,0.6326034063260341,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,3,2876,0.6890126819868885,0.6686369958275382,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,4,2877,0.7603849849859282,0.7612095933263816,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,5,2876,0.8199366063444266,0.8282336578581363,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,6,2877,0.8708403698661593,0.8915537017726799,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,7,2876,0.9136480793737106,0.9297635605006954,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,8,2877,0.9537669427850624,0.9767118526242614,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+hmc,sleep,prior_temperature,9,2877,0.9869620179860589,0.9940910670837678,28766,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,raw,0,4166,0.45476176862698037,0.42078732597215557,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,1,4165,0.5501567881392557,0.4765906362545018,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,2,4166,0.6274138887181948,0.5458473355736918,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,3,4165,0.7007785357983193,0.5783913565426171,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,4,4166,0.7709570694671148,0.5900144023043687,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,5,4165,0.8392604930612245,0.6573829531812725,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,6,4166,0.9109359613538166,0.771003360537686,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,7,4165,0.9730780154621849,0.9097238895558223,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,8,4166,0.9929041235957755,0.9935189630340855,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,raw,9,4166,0.9960997758761403,0.9983197311569851,41656,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-expanded,sleep,prior,0,4166,0.4521590485938889,0.38478156505040806,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,1,4165,0.5596886533116795,0.44849939975990394,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,2,4166,0.6561413730015678,0.5456072971675469,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,3,4165,0.7565788886916992,0.6665066026410564,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,4,4166,0.8477636829261869,0.771003360537686,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,5,4165,0.9121937575195437,0.8429771908763506,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,6,4166,0.9571840377883177,0.9251080172827653,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,7,4165,0.9883473931717639,0.9759903961584634,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,8,4166,0.9982662928559304,0.9978396543446951,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior,9,4166,0.9991643461316978,0.9990398463754201,41656,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,0,4166,0.4421011353161577,0.3845415266442631,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,1,4165,0.5443317556777572,0.44801920768307324,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,2,4166,0.6351682604808906,0.5465674507921268,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,3,4165,0.732943026472294,0.6660264105642257,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,4,4166,0.8247569605530466,0.771723475756121,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,5,4166,0.8934468044278758,0.8437349975996159,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,6,4165,0.9448686857635445,0.9238895558223289,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,7,4165,0.9835851986759288,0.9759903961584634,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,8,4166,0.9971953645591671,0.9978396543446951,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-expanded,sleep,prior_temperature,9,4166,0.9985741067979882,0.9990398463754201,41656,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,raw,0,17404,0.4555917454895426,0.45455067800505633,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,1,17403,0.5354785038211801,0.5231856576452336,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,2,17403,0.5975997960524049,0.5630063782106534,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,3,17403,0.659391174981325,0.619720737803827,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,4,17403,0.7195087483192554,0.6760328678963398,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,5,17404,0.777487201390485,0.7293150999770168,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,6,17403,0.8334340614032063,0.7772223179911509,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,7,17403,0.8903489387864162,0.8294546917198184,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,8,17403,0.9463557200540136,0.8894443486755157,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,raw,9,17404,0.9860910662548841,0.9501264077223627,174033,10 quantile edges; merge bins below 30,1.0,none,max probability
+cinc2018,sleep,prior,0,17404,0.45734848820423946,0.45702137439669044,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,1,17403,0.5489391494427954,0.536861460667701,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,2,17403,0.6224129613650639,0.6085157731425617,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,3,17403,0.6951051761607987,0.6697121186002414,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,4,17403,0.7651140731948342,0.7348732977072918,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,5,17404,0.8309213313496958,0.8068834750632039,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,6,17403,0.8852862250877604,0.8616330517726829,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,7,17403,0.9265500767619079,0.9161064184336034,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,8,17403,0.957807159713928,0.9457564787680285,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior,9,17404,0.984118768653072,0.9742013330268904,174033,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,0,17404,0.44740805939012995,0.45587221328430244,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,1,17403,0.5356297112931293,0.5376659196690226,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,2,17403,0.6041621645787821,0.6094351548583578,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,3,17403,0.6734030703829915,0.6682755846693099,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,4,17403,0.7417840714626982,0.7355053726369016,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,5,17404,0.8081049462985342,0.8074580556193979,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,6,17403,0.8647232214130994,0.862552433488479,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,7,17403,0.9096360514224211,0.9152444980750445,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,8,17403,0.9455529444649037,0.9454691719818422,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cinc2018,sleep,prior_temperature,9,17404,0.97804569555817,0.9740864169156516,174033,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dan2023bids,seizure,raw,0,12165,0.002916173119605425,0.0004932182490752158,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,1,12165,0.007099675339087546,0.0011508425811755036,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,2,12165,0.012597571475544595,0.0006576243321002877,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,3,12164,0.020888353962512332,0.0005754685958566261,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,4,12166,0.03412293084004603,0.0014795331251027453,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,5,12165,0.056062824438964244,0.002137279079325935,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,6,12165,0.09350660439786274,0.002301685162351007,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,7,12165,0.15714571807644884,0.0033703247020139744,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,8,12165,0.27224052882038635,0.004521167283189478,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,raw,9,12165,0.5574371140073983,0.02153719687628442,121650,10 quantile edges; merge bins below 30,1.0,none,p_yes
+dan2023bids,seizure,prior,0,12165,1.1131284381574996e-05,0.0004932182490752158,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,1,12165,2.720639048275461e-05,0.0011508425811755036,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,2,12165,4.8544836807483524e-05,0.0006576243321002877,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,3,12164,8.118403454545387e-05,0.0005754685958566261,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,4,12166,0.0001344705293252954,0.0014795331251027453,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,5,12165,0.00022616903444778127,0.002137279079325935,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,6,12165,0.00039323403184593286,0.002301685162351007,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,7,12165,0.000712357427583209,0.0033703247020139744,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,8,12165,0.0014409844163602349,0.004521167283189478,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior,9,12165,0.013691038737673527,0.02153719687628442,121650,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,0,12165,0.00010866127136438586,0.0004932182490752158,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,1,12165,0.00022492201644028686,0.0011508425811755036,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,2,12165,0.0003574774335435079,0.0006576243321002877,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,3,12164,0.0005390829382967692,0.0005754685958566261,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,4,12166,0.0008064876841668341,0.0014795331251027453,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,5,12165,0.001221141943663501,0.002137279079325935,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,6,12165,0.0018978207416276301,0.002301685162351007,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,7,12165,0.003046454475083308,0.0033703247020139744,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,8,12165,0.0053303717674579205,0.004521167283189478,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dan2023bids,seizure,prior_temperature,9,12165,0.024185729072486964,0.02153719687628442,121650,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dod-h,sleep,raw,0,591,0.42039076649746193,0.4077834179357022,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,1,590,0.5114401406779661,0.46440677966101696,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,2,590,0.5672464067796611,0.49491525423728816,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,3,590,0.6256440159322034,0.5372881355932203,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,4,590,0.683133686101695,0.588135593220339,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,5,591,0.7460223045685279,0.649746192893401,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,6,590,0.8133997215254236,0.6983050847457627,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,7,590,0.8843630457627117,0.8016949152542373,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,8,590,0.9539180676271186,0.9050847457627119,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,raw,9,591,0.9908358492385785,0.9966159052453468,5903,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-h,sleep,prior,0,591,0.45661801717548633,0.47715736040609136,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,1,590,0.5708417829298983,0.6152542372881356,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,2,590,0.6595434924503498,0.6474576271186441,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,3,590,0.740935342513092,0.7423728813559322,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,4,590,0.811268488502976,0.8220338983050848,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,5,591,0.8694971112000296,0.8629441624365483,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,6,590,0.9133911695453953,0.888135593220339,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,7,590,0.9447077262371241,0.9457627118644067,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,8,590,0.9692321819340196,0.964406779661017,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior,9,591,0.9910360096925585,0.9864636209813875,5903,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,0,591,0.44562096528865897,0.47884940778341795,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,1,590,0.5554932948824063,0.6237288135593221,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,2,590,0.6389299240530382,0.6423728813559322,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,3,590,0.7172053465273266,0.7423728813559322,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,4,590,0.7871646845934431,0.8135593220338984,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,5,591,0.8473079088856605,0.8629441624365483,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,6,590,0.8944996836024888,0.8932203389830509,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,7,590,0.9300768956122927,0.940677966101695,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,8,590,0.9592512922396671,0.9677966101694915,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-h,sleep,prior_temperature,9,591,0.9871850210213602,0.9864636209813875,5903,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,raw,0,1030,0.4691760359223301,0.441747572815534,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,1,1029,0.5632418109815356,0.5228377065111759,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,2,1030,0.6373925975728155,0.5359223300970873,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,3,1029,0.7046336659863945,0.6394557823129252,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,4,1030,0.7675948529126213,0.6679611650485436,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,5,1029,0.8236032550048591,0.7094266277939747,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,6,1030,0.8743865750485437,0.7757281553398059,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,7,1029,0.9214102581146745,0.8678328474246841,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,8,1030,0.9636252013592232,0.958252427184466,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,raw,9,1030,0.9909528009708739,0.9776699029126213,10296,10 quantile edges; merge bins below 30,1.0,none,max probability
+sleep-edf-telemetry,sleep,prior,0,1030,0.47422755463602845,0.4553398058252427,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,1,1029,0.5802968953235531,0.5578231292517006,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,2,1030,0.676067250117009,0.6776699029126214,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,3,1029,0.7669332086350319,0.7764820213799806,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,4,1030,0.8502080352427085,0.8485436893203884,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,5,1029,0.9043399099889128,0.9222546161321672,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,6,1030,0.938776882415446,0.9388349514563107,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,7,1029,0.9623153253908624,0.9630709426627794,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,8,1030,0.979965636394055,0.9825242718446602,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior,9,1030,0.9928975075413611,0.9844660194174757,10296,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,0,1030,0.4640114310836387,0.45436893203883494,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,1,1029,0.5648884039905266,0.5568513119533528,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,2,1030,0.654933428473558,0.6776699029126214,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,3,1029,0.7442209367264797,0.7803692905733722,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,4,1030,0.8283448473677991,0.8475728155339806,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,5,1029,0.8851821394064548,0.9203109815354713,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,6,1030,0.923326008324104,0.9398058252427185,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,7,1029,0.95074465524938,0.9620991253644315,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,8,1030,0.9724316897789903,0.983495145631068,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+sleep-edf-telemetry,sleep,prior_temperature,9,1030,0.9894776554017735,0.9844660194174757,10296,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+siena,seizure,raw,0,3411,0.009606907329228967,0.001465845793022574,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,1,3410,0.024866446334310854,0.0011730205278592375,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,2,3410,0.04667344862170088,0.001466275659824047,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,3,3410,0.07914232310850439,0.0026392961876832845,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,4,3410,0.12384079000000002,0.0017595307917888563,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,5,3411,0.18221447390794487,0.0023453532688361184,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,6,3410,0.255427064340176,0.002346041055718475,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,7,3410,0.34791235633431083,0.0032258064516129032,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,8,3410,0.4779493418181818,0.00498533724340176,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,raw,9,3411,0.7388740848724715,0.029023746701846966,34103,10 quantile edges; merge bins below 30,1.0,none,p_yes
+siena,seizure,prior,0,3411,6.464671620313008e-05,0.001465845793022574,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,1,3410,0.00016984382309860328,0.0011730205278592375,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,2,3410,0.0003261338689598064,0.001466275659824047,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,3,3410,0.0005725597410554024,0.0026392961876832845,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,4,3410,0.0009417751382094794,0.0017595307917888563,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,5,3411,0.0014848432315078262,0.0023453532688361184,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,6,3410,0.002286346840350738,0.002346041055718475,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,7,3410,0.0035601303625470934,0.0032258064516129032,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,8,3410,0.0061595933641529245,0.00498533724340176,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior,9,3411,0.04384945776558572,0.029023746701846966,34103,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,0,3411,0.00044335804461988865,0.001465845793022574,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,1,3410,0.0009698605137699419,0.0011730205278592375,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,2,3410,0.0016342393258708243,0.001466275659824047,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,3,3410,0.002561711490272846,0.0026392961876832845,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,4,3410,0.0038096500648246456,0.0017595307917888563,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,5,3411,0.005474675496081855,0.0023453532688361184,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,6,3410,0.007716701147946697,0.002346041055718475,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,7,3410,0.010963604548688059,0.0032258064516129032,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,8,3410,0.016894102341114377,0.00498533724340176,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+siena,seizure,prior_temperature,9,3411,0.06697981160001348,0.029023746701846966,34103,10 quantile edges; merge bins below 30,1.2519219375276878,train_prior / draw_prior,p_yes
+dod-o,sleep,raw,0,1135,0.426053828370044,0.3233480176211454,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,1,1135,0.5090777616740088,0.3700440528634361,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,2,1135,0.5616791045814977,0.4370044052863436,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,3,1135,0.6202821886343611,0.49162995594713654,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,4,1134,0.6800494532627865,0.5246913580246914,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,5,1135,0.7433592582378854,0.5823788546255506,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,6,1135,0.8118654931277534,0.654625550660793,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,7,1135,0.8805223370925109,0.7515418502202643,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,8,1134,0.9402507212522045,0.8333333333333334,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,raw,9,1136,0.9849819872359155,0.9357394366197183,11349,10 quantile edges; merge bins below 30,1.0,none,max probability
+dod-o,sleep,prior,0,1135,0.447898484039344,0.44052863436123346,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,1,1135,0.5660812957287041,0.5321585903083701,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,2,1135,0.6575774778225022,0.6229074889867842,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,3,1135,0.7444940712769744,0.66784140969163,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,4,1134,0.814733862074978,0.7037037037037037,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,5,1135,0.8736184639801262,0.7788546255506608,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,6,1135,0.9171852996462655,0.824669603524229,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,7,1135,0.9493209068993469,0.9013215859030838,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,8,1135,0.9735076730655498,0.9638766519823788,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior,9,1135,0.9921219357196355,0.9682819383259912,11349,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,0,1135,0.4371061044850778,0.4422907488986784,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,1,1135,0.5504973398253702,0.5312775330396475,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,2,1135,0.6369900616307835,0.6202643171806167,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,3,1135,0.7204938566799373,0.6651982378854625,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,4,1134,0.7906819125578181,0.7054673721340388,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,5,1135,0.851509130956095,0.7788546255506608,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,6,1135,0.8986117493745642,0.8229074889867841,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,7,1135,0.9351596597588198,0.905726872246696,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,8,1135,0.9643143380166307,0.9629955947136564,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+dod-o,sleep,prior_temperature,9,1135,0.988429031960045,0.9691629955947136,11349,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,raw,0,2168,0.4101515588560885,0.39206642066420666,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,1,2168,0.5069065541974169,0.48293357933579334,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,2,2168,0.5695136563653136,0.540590405904059,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,3,2167,0.6354404377941855,0.5939086294416244,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,4,2168,0.7040005038745388,0.6785055350553506,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,5,2168,0.7742170748616236,0.7084870848708487,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,6,2167,0.8440190955699124,0.7844946931241348,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,7,2168,0.9100285229243542,0.8939114391143912,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,8,2168,0.9623884801660518,0.9603321033210332,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,raw,9,2168,0.9932928637453875,0.9935424354243543,21678,10 quantile edges; merge bins below 30,1.0,none,max probability
+cap,sleep,prior,0,2168,0.4368000741780191,0.4294280442804428,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,1,2168,0.5425418359396597,0.5161439114391144,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,2,2168,0.6215356592748146,0.6079335793357934,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,3,2167,0.6993046317753223,0.687586525149977,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,4,2168,0.7714868272736776,0.7652214022140221,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,5,2168,0.8353016382985249,0.8210332103321033,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,6,2167,0.892499190427337,0.8906322104291647,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,7,2168,0.940121854073048,0.933579335793358,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,8,2168,0.9761194795151678,0.974169741697417,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior,9,2168,0.9951936532192245,0.996309963099631,21678,10 quantile edges; merge bins below 30,1.0,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,0,2168,0.42514986426303214,0.42988929889298894,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,1,2168,0.5292363776279575,0.5156826568265682,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,2,2168,0.6031950470462342,0.6033210332103321,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,3,2167,0.6773369186268033,0.6912782648823258,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,4,2168,0.7473761681186403,0.7629151291512916,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,5,2168,0.8119152298289612,0.8256457564575646,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,6,2167,0.8722600570408401,0.8924780802953391,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,7,2168,0.9253044825798311,0.9303505535055351,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,8,2168,0.9679549427279688,0.974169741697417,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability
+cap,sleep,prior_temperature,9,2168,0.9928445726027776,0.996309963099631,21678,10 quantile edges; merge bins below 30,1.0777691541520111,train_prior / draw_prior,max probability

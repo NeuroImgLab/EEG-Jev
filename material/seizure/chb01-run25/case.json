@@ -1,0 +1,715 @@
+{
+ "schema": "eegjev.demo.case.v1",
+ "task": "seizure",
+ "kind": "continuous",
+ "case_id": "chb01-run25",
+ "source": "dan2023bids",
+ "dataset": "CHB-MIT (BIDS conversion, Dan et al. 2023)",
+ "split": "val",
+ "subject_id": "chb01",
+ "record_id": "Dan2023Bids:run=25,session=01,subject=01,task=szMonitoring",
+ "record_label": "sub-01 · ses-01 · run-25",
+ "channels": [
+  "FP1-F7",
+  "F7-T7",
+  "T7-P7",
+  "P7-O1",
+  "FP1-F3",
+  "F3-C3",
+  "C3-P3",
+  "P3-O1",
+  "FP2-F4",
+  "F4-C4",
+  "C4-P4",
+  "P4-O2",
+  "FP2-F8",
+  "F8-T8",
+  "T8-P8",
+  "P8-O2",
+  "FZ-CZ",
+  "CZ-PZ"
+ ],
+ "sample_rate_hz": 200,
+ "n_samples": 72000,
+ "amplitude_unit": "uV",
+ "dtype": "int16-le (see manifest.encodings)",
+ "layout": "channel-major",
+ "t0_record_s": 1740.0,
+ "t1_record_s": 2100.0,
+ "window_length_s": 5.0,
+ "stride_s": 5.0,
+ "display_conversion": "raw EDF in µV, 0.5 Hz zero-phase FIR high-pass, polyphase resampling 256 Hz to 200 Hz; the model input is the same band at 200 Hz, then standardised per record and lead and clipped at ±15 SD",
+ "annotations": {
+  "seizures": [
+   {
+    "onset_s": 1862.0,
+    "offset_s": 1963.0,
+    "event_type": "sz"
+   }
+  ],
+  "source": "BIDS_CHB-MIT/sub-01/ses-01/eeg/sub-01_ses-01_task-szMonitoring_run-25_events.tsv"
+ },
+ "windows": [
+  {
+   "window_id": "seizure--core:shard-00017-r752",
+   "start_s": 1740.0,
+   "end_s": 1745.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0069523,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r753",
+   "start_s": 1745.0,
+   "end_s": 1750.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0137014,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r754",
+   "start_s": 1750.0,
+   "end_s": 1755.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0126667,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r755",
+   "start_s": 1755.0,
+   "end_s": 1760.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0087962,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r756",
+   "start_s": 1760.0,
+   "end_s": 1765.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0166372,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r757",
+   "start_s": 1765.0,
+   "end_s": 1770.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0032472,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r758",
+   "start_s": 1770.0,
+   "end_s": 1775.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0072225,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r759",
+   "start_s": 1775.0,
+   "end_s": 1780.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0089222,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r760",
+   "start_s": 1780.0,
+   "end_s": 1785.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2664488,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r761",
+   "start_s": 1785.0,
+   "end_s": 1790.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0169878,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r762",
+   "start_s": 1790.0,
+   "end_s": 1795.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0113018,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r763",
+   "start_s": 1795.0,
+   "end_s": 1800.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0152565,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r764",
+   "start_s": 1800.0,
+   "end_s": 1805.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0214578,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r765",
+   "start_s": 1805.0,
+   "end_s": 1810.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0674423,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r766",
+   "start_s": 1810.0,
+   "end_s": 1815.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0199375,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r767",
+   "start_s": 1815.0,
+   "end_s": 1820.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0041992,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r768",
+   "start_s": 1820.0,
+   "end_s": 1825.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0057917,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r769",
+   "start_s": 1825.0,
+   "end_s": 1830.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0247171,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r770",
+   "start_s": 1830.0,
+   "end_s": 1835.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.012437,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r771",
+   "start_s": 1835.0,
+   "end_s": 1840.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0025332,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r772",
+   "start_s": 1840.0,
+   "end_s": 1845.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0080998,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r773",
+   "start_s": 1845.0,
+   "end_s": 1850.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0094375,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r774",
+   "start_s": 1850.0,
+   "end_s": 1855.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0026729,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r775",
+   "start_s": 1855.0,
+   "end_s": 1860.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0213622,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r776",
+   "start_s": 1860.0,
+   "end_s": 1865.0,
+   "label": "yes",
+   "annotated_overlap_s": 3.0,
+   "p_yes": 0.112844,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r777",
+   "start_s": 1865.0,
+   "end_s": 1870.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9889036,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r778",
+   "start_s": 1870.0,
+   "end_s": 1875.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9628288,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r779",
+   "start_s": 1875.0,
+   "end_s": 1880.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9912969,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r780",
+   "start_s": 1880.0,
+   "end_s": 1885.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9063106,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r781",
+   "start_s": 1885.0,
+   "end_s": 1890.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9949664,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r782",
+   "start_s": 1890.0,
+   "end_s": 1895.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9995201,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r783",
+   "start_s": 1895.0,
+   "end_s": 1900.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.999145,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r784",
+   "start_s": 1900.0,
+   "end_s": 1905.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9914979,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r785",
+   "start_s": 1905.0,
+   "end_s": 1910.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9972104,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r786",
+   "start_s": 1910.0,
+   "end_s": 1915.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9931699,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r787",
+   "start_s": 1915.0,
+   "end_s": 1920.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9959544,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r788",
+   "start_s": 1920.0,
+   "end_s": 1925.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9917848,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r789",
+   "start_s": 1925.0,
+   "end_s": 1930.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9965843,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r790",
+   "start_s": 1930.0,
+   "end_s": 1935.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9972059,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r791",
+   "start_s": 1935.0,
+   "end_s": 1940.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9899356,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r792",
+   "start_s": 1940.0,
+   "end_s": 1945.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9789404,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r793",
+   "start_s": 1945.0,
+   "end_s": 1950.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9799271,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r794",
+   "start_s": 1950.0,
+   "end_s": 1955.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.8598006,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r795",
+   "start_s": 1955.0,
+   "end_s": 1960.0,
+   "label": "yes",
+   "annotated_overlap_s": 5.0,
+   "p_yes": 0.9970029,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r796",
+   "start_s": 1960.0,
+   "end_s": 1965.0,
+   "label": "yes",
+   "annotated_overlap_s": 3.0,
+   "p_yes": 0.0918387,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r797",
+   "start_s": 1965.0,
+   "end_s": 1970.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.4593563,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r798",
+   "start_s": 1970.0,
+   "end_s": 1975.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.3884373,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r799",
+   "start_s": 1975.0,
+   "end_s": 1980.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2223589,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r800",
+   "start_s": 1980.0,
+   "end_s": 1985.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.1561027,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r801",
+   "start_s": 1985.0,
+   "end_s": 1990.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2867016,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r802",
+   "start_s": 1990.0,
+   "end_s": 1995.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2591869,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r803",
+   "start_s": 1995.0,
+   "end_s": 2000.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.144611,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r804",
+   "start_s": 2000.0,
+   "end_s": 2005.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0182072,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r805",
+   "start_s": 2005.0,
+   "end_s": 2010.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0546183,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r806",
+   "start_s": 2010.0,
+   "end_s": 2015.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0446946,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r807",
+   "start_s": 2015.0,
+   "end_s": 2020.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0456823,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r808",
+   "start_s": 2020.0,
+   "end_s": 2025.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.4247021,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r809",
+   "start_s": 2025.0,
+   "end_s": 2030.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.1457046,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r810",
+   "start_s": 2030.0,
+   "end_s": 2035.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.1766701,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r811",
+   "start_s": 2035.0,
+   "end_s": 2040.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.082199,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r812",
+   "start_s": 2040.0,
+   "end_s": 2045.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.3171118,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r813",
+   "start_s": 2045.0,
+   "end_s": 2050.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2813823,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r814",
+   "start_s": 2050.0,
+   "end_s": 2055.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0314354,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r815",
+   "start_s": 2055.0,
+   "end_s": 2060.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.1098872,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r816",
+   "start_s": 2060.0,
+   "end_s": 2065.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0300092,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r817",
+   "start_s": 2065.0,
+   "end_s": 2070.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.017503,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r818",
+   "start_s": 2070.0,
+   "end_s": 2075.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0842287,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r819",
+   "start_s": 2075.0,
+   "end_s": 2080.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.2425391,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r820",
+   "start_s": 2080.0,
+   "end_s": 2085.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0483893,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r821",
+   "start_s": 2085.0,
+   "end_s": 2090.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0432614,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r822",
+   "start_s": 2090.0,
+   "end_s": 2095.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.0862845,
+   "phrasing_id": "seizure-train-0"
+  },
+  {
+   "window_id": "seizure--core:shard-00017-r823",
+   "start_s": 2095.0,
+   "end_s": 2100.0,
+   "label": "no",
+   "annotated_overlap_s": 0.0,
+   "p_yes": 0.5090119,
+   "phrasing_id": "seizure-train-0"
+  }
+ ],
+ "gaps": [],
+ "data_sha256": "0bce5f7ea7d9f80485847b81caa13fd4d645e8e0eca6cba26882640a8aaaa448",
+ "provenance": {
+  "raw_member": "BIDS_CHB-MIT/sub-01/ses-01/eeg/sub-01_ses-01_task-szMonitoring_run-25_eeg.edf",
+  "raw_crc32": "dfad184b",
+  "raw_bytes": 21697370,
+  "alignment": {
+   "n_lead_windows": 1296,
+   "min_corr": 0.98553,
+   "median_corr": 0.99982
+  },
+  "selection_note": "Development (validation) split. Among the 37 annotated seizures, chosen for a complete event with two minutes of background on either side: 19 of its 21 seizure-overlapping windows exceed the development threshold and no background window in the excerpt does. The two missed windows are kept."
+ }
+}

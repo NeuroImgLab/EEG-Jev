@@ -1,0 +1,4283 @@
+{
+ "meta": {
+  "description": "Numbers quoted in the EEG-Jev paper, demo and release. value: unrounded; display: as printed.",
+  "generator": "tables/build_tables.py",
+  "inputs_sha256": {
+   "02_source_results_paired_ci.csv": "40565277903993e108c1da359ba0b4668d55311e184cf9b37ba408cb3635108c",
+   "05_probability_quality_long.csv": "aa236208af2208e41b5e8dacdc23f511ba2f68361bcc1b4081a115ef5cd541ae",
+   "core-nb-reference.csv": "1ed65d4f926be4f450b67c2ee299fc6b3fefae7fc63a4e3da81b2590fa7313f6",
+   "seizure-raw-ba.json": "83f06639823cb73972ca2ff8fe8fe758ff6be2d26d1ad02230d990f310995051",
+   "recommended-paired-table.csv": "d41061a4087f82dc15089f71ab228dbb2470a72f74f4f16240dee4103b7f5d7b",
+   "batch-summary.csv": "21bd4c906b03902a951c9ec03602f3c420931839ad44be97c56ea11635644d0e",
+   "quality.csv": "2e3d6a0d6258f26ed0d62bc7d065ab8cba4fcb862c24802d650cc8261e8e1050",
+   "consistency-summary.csv": "40c002e4d1f828ae09104887f97665754b72384ad2182feaf0bc43c570890444",
+   "reliability-bins.csv": "634964b37f6fceefb3be7ea2e28348ef098d24d8803a01dc3108d802652d6631",
+   "08_reliability_plot_input.json": "a5a1ce725db0f2329ab57ea3d92650bfb401e99cc49c683bb0e74b602ca53e19",
+   "supplementary-metrics.csv": "605b1f9272aab9373abefcba66512183e71f8593fe1cd635832f91cfbefca835",
+   "data-source-registry-public.csv": "c04c898744daa449fc06e86b760418e5dc602da79c296653d2bfcec257f43449"
+  },
+  "input_labels": {
+   "source-results": "per-source test metrics with paired intervals",
+   "probability-quality": "per-source probability metrics by post-processing stage",
+   "neuralbench-reference": "best reported NeuralBench entry per core task",
+   "seizure-ba": "seizure balanced accuracy at raw p(yes) >= 0.5",
+   "inference-benchmark": "timing of the recommended configuration with its checks, and of the reference execution on the same panel"
+  }
+ },
+ "facts": {
+  "training.updates_total": {
+   "value": 13400,
+   "display": "13,400",
+   "unit": "updates",
+   "source": "training configuration: sum of stage updates"
+  },
+  "training.stage_boundary.warm_up": {
+   "value": 600,
+   "display": "600",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.stage_boundary.mixed_training": {
+   "value": 3600,
+   "display": "3,600",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.stage_boundary.hard_task_strengthening": {
+   "value": 11000,
+   "display": "11,000",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.stage_boundary.final_stage": {
+   "value": 13400,
+   "display": "13,400",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.stage_updates.warm_up": {
+   "value": 600,
+   "display": "600",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.stage_updates.mixed_training": {
+   "value": 3000,
+   "display": "3,000",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.stage_updates.hard_task_strengthening": {
+   "value": 7400,
+   "display": "7,400",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.stage_updates.final_stage": {
+   "value": 2400,
+   "display": "2,400",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.first_update.mixed_training": {
+   "value": 601,
+   "display": "601",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.first_update.hard_task_strengthening": {
+   "value": 3601,
+   "display": "3,601",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.first_update.final_stage": {
+   "value": 11001,
+   "display": "11,001",
+   "unit": "update",
+   "source": "training configuration: stages"
+  },
+  "training.questions_per_update": {
+   "value": 32,
+   "display": "32",
+   "unit": "questions",
+   "source": "training configuration: 4 physical batches of 8"
+  },
+  "training.questions_total": {
+   "value": 428800,
+   "display": "428,800",
+   "unit": "questions",
+   "source": "training draw log: 13,400 updates x 32"
+  },
+  "training.lr_peak.warm_up.connector_markers_heads": {
+   "value": 0.001,
+   "display": "1e-3",
+   "unit": "",
+   "source": "training configuration: stages"
+  },
+  "training.lr_peak.mixed_training.connector_markers_heads": {
+   "value": 0.0003,
+   "display": "3e-4",
+   "unit": "",
+   "source": "training configuration: stages"
+  },
+  "training.lr_peak.mixed_training.lora": {
+   "value": 2.5e-05,
+   "display": "2.5e-5",
+   "unit": "",
+   "source": "training configuration: stages"
+  },
+  "training.lr_peak.final_stage.connector_markers_heads": {
+   "value": 3e-05,
+   "display": "3e-5",
+   "unit": "",
+   "source": "training configuration: stages"
+  },
+  "training.lr_peak.final_stage.lora": {
+   "value": 2.5e-06,
+   "display": "2.5e-6",
+   "unit": "",
+   "source": "training configuration: stages"
+  },
+  "training.lr_final_fraction": {
+   "value": 0.1,
+   "display": "0.1",
+   "unit": "of the stage peak",
+   "source": "training configuration: cosine decay"
+  },
+  "training.lr_ramp_updates.warm_up": {
+   "value": 10,
+   "display": "10",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.lr_ramp_updates.mixed_training": {
+   "value": 100,
+   "display": "100",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.lr_ramp_updates.hard_task_strengthening": {
+   "value": 100,
+   "display": "100",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.lr_ramp_updates.final_stage": {
+   "value": 0,
+   "display": "0",
+   "unit": "updates",
+   "source": "training configuration: stages"
+  },
+  "training.weight_decay": {
+   "value": 0.01,
+   "display": "0.01",
+   "unit": "",
+   "source": "training configuration: optimizer"
+  },
+  "training.grad_clip_norm": {
+   "value": 1.0,
+   "display": "1.0",
+   "unit": "",
+   "source": "training configuration: optimizer"
+  },
+  "training.adam_beta2": {
+   "value": 0.999,
+   "display": "0.999",
+   "unit": "",
+   "source": "training configuration: optimizer"
+  },
+  "training.adam_beta1": {
+   "value": 0.9,
+   "display": "0.9",
+   "unit": "",
+   "source": "training configuration: optimizer"
+  },
+  "training.score.levels": {
+   "value": 11,
+   "display": "11",
+   "unit": "levels",
+   "source": "Score support 0..10"
+  },
+  "training.score.gaussian_sigma": {
+   "value": 1.0,
+   "display": "1",
+   "unit": "rating points",
+   "source": "Score target code: discretized Gaussian"
+  },
+  "training.score.crps_weight": {
+   "value": 0.2,
+   "display": "0.2",
+   "unit": "",
+   "source": "Score loss code: weight of CRPS/range"
+  },
+  "training.score.range": {
+   "value": 10,
+   "display": "10",
+   "unit": "rating points",
+   "source": "Score support 0..10"
+  },
+  "training.phrasings_per_family": {
+   "value": 5,
+   "display": "5",
+   "unit": "phrasings",
+   "source": "question templates: training phrasings per family"
+  },
+  "training.question_families": {
+   "value": 7,
+   "display": "7",
+   "unit": "families",
+   "source": "question templates"
+  },
+  "training.choice_questions": {
+   "value": 368071,
+   "display": "368,071",
+   "unit": "questions",
+   "source": "training draw log: Choice draws"
+  },
+  "training.seed": {
+   "value": 8,
+   "display": "8",
+   "unit": "",
+   "source": "training configuration"
+  },
+  "training.loss_mean.first_500_updates": {
+   "value": 1.286,
+   "display": "1.286",
+   "unit": "",
+   "source": "training log: mean loss per question, updates 1-500"
+  },
+  "training.loss_mean.final_stage_first_500_updates": {
+   "value": 0.635,
+   "display": "0.635",
+   "unit": "",
+   "source": "training log: mean loss per question, updates 11,001-11,500"
+  },
+  "training.loss_mean.last_400_updates": {
+   "value": 0.615,
+   "display": "0.615",
+   "unit": "",
+   "source": "training log: mean loss per question, updates 13,001-13,400"
+  },
+  "training.adam_eps": {
+   "value": 1e-08,
+   "display": "1e-8",
+   "unit": "",
+   "source": "training configuration: optimizer"
+  },
+  "training.wall_time_hours": {
+   "value": 10.37,
+   "display": "10.4",
+   "unit": "hours",
+   "source": "training record: sum of stage wall times"
+  },
+  "training.development_subset_windows": {
+   "value": 16717,
+   "display": "16,717",
+   "unit": "windows",
+   "source": "training record: fixed development subset used at update 3,600"
+  },
+  "training.motor_imagery_loss_leaves_chance_update": {
+   "value": 6000,
+   "display": "6,000",
+   "unit": "update",
+   "source": "training log: two-class MI loss leaves ln 2 (approximate)"
+  },
+  "model.lora_rank": {
+   "value": 16,
+   "display": "16",
+   "unit": "",
+   "source": "model configuration"
+  },
+  "model.lora_alpha": {
+   "value": 32,
+   "display": "32",
+   "unit": "",
+   "source": "model configuration"
+  },
+  "model.reve_l_blocks": {
+   "value": 22,
+   "display": "22",
+   "unit": "blocks",
+   "source": "baseline definition: REVE-L depth"
+  },
+  "model.reve_l_width": {
+   "value": 1216,
+   "display": "1216",
+   "unit": "",
+   "source": "model code: REVE-L token width"
+  },
+  "model.language_model_width": {
+   "value": 2048,
+   "display": "2048",
+   "unit": "",
+   "source": "model code: hidden width of the language model"
+  },
+  "model.trainable_parameters.connector": {
+   "value": 6690817,
+   "display": "6,690,817",
+   "unit": "parameters",
+   "source": "model code (audited in the previous revision)"
+  },
+  "model.trainable_parameters.markers": {
+   "value": 6144,
+   "display": "6,144",
+   "unit": "parameters",
+   "source": "model code (audited in the previous revision)"
+  },
+  "model.trainable_parameters.lora": {
+   "value": 16819200,
+   "display": "16,819,200",
+   "unit": "parameters",
+   "source": "model code (audited in the previous revision)"
+  },
+  "model.trainable_parameters.readouts": {
+   "value": 4218892,
+   "display": "4,218,892",
+   "unit": "parameters",
+   "source": "model code: Choice projection + Noul head + Score head (parameters in use)"
+  },
+  "model.trainable_parameters.choice_projection": {
+   "value": 4194304,
+   "display": "4,194,304",
+   "unit": "parameters",
+   "source": "model code: 2048 x 2048, no bias"
+  },
+  "model.trainable_parameters.noul_head": {
+   "value": 2049,
+   "display": "2,049",
+   "unit": "parameters",
+   "source": "model code: linear 2048 -> 1"
+  },
+  "model.trainable_parameters.score_head": {
+   "value": 22539,
+   "display": "22,539",
+   "unit": "parameters",
+   "source": "model code: linear 2048 -> 11"
+  },
+  "model.trainable_parameters.total": {
+   "value": 27735053,
+   "display": "27,735,053",
+   "unit": "parameters",
+   "source": "connector + markers + LoRA + readouts in use"
+  },
+  "model.trainable_parameters.total_million": {
+   "value": 27.735053,
+   "display": "27.7",
+   "unit": "million",
+   "source": "connector + markers + LoRA + readouts in use"
+  },
+  "model.unused_linear_layer_parameters": {
+   "value": 22539,
+   "display": "22,539",
+   "unit": "parameters",
+   "source": "model code: 11-way linear layer of the head module that is never called"
+  },
+  "model.trainable_parameters.readouts_including_unused_layer": {
+   "value": 4241431,
+   "display": "4,241,431",
+   "unit": "parameters",
+   "source": "head module as stored, including the layer that is never called"
+  },
+  "model.trainable_parameters.total_including_unused_layer": {
+   "value": 27757592,
+   "display": "27,757,592",
+   "unit": "parameters",
+   "source": "all parameters with gradients enabled, including the layer that is never called"
+  },
+  "model.trainable_parameters.total_including_unused_layer_million": {
+   "value": 27.757592,
+   "display": "27.8",
+   "unit": "million",
+   "source": "all parameters with gradients enabled, including the layer that is never called"
+  },
+  "training.updates_planned_before_training": {
+   "value": 8000,
+   "display": "8,000",
+   "unit": "updates",
+   "source": "training record: budget fixed before the run (stages of 600, 3,000, 2,600 and 1,800 updates)"
+  },
+  "training.updates_added_at_plan_regeneration": {
+   "value": 5400,
+   "display": "5,400",
+   "unit": "updates",
+   "source": "training record: 13,400 - 8,000, decided when the plan was regenerated at update 3,600"
+  },
+  "training.stage_updates_planned_before_training.hard_task_strengthening": {
+   "value": 2600,
+   "display": "2,600",
+   "unit": "updates",
+   "source": "training record: original plan"
+  },
+  "training.stage_updates_planned_before_training.final_stage": {
+   "value": 1800,
+   "display": "1,800",
+   "unit": "updates",
+   "source": "training record: original plan"
+  },
+  "baseline.b1.sources_reusing_earlier_readouts": {
+   "value": 7,
+   "display": "7",
+   "unit": "sources",
+   "source": "baseline record: Lee2019, Cho2017, ds005280, ds005284, ds005285, ds005286, ds005291"
+  },
+  "baseline.b1.max_epochs": {
+   "value": 25,
+   "display": "25",
+   "unit": "epochs",
+   "source": "baseline record"
+  },
+  "baseline.b2.max_epochs": {
+   "value": 10,
+   "display": "10",
+   "unit": "epochs",
+   "source": "baseline record"
+  },
+  "baseline.learning_rates_tried": {
+   "value": 2,
+   "display": "2",
+   "unit": "values",
+   "source": "baseline record: B1 1e-3 or 3e-4; B2 encoder 1e-5 or 3e-5"
+  },
+  "baseline.b2.seed7_code_paths": {
+   "value": 3,
+   "display": "3",
+   "unit": "code paths",
+   "source": "baseline record: per-source runs (6 sources), one unified run (24), per-source runs added later (5)"
+  },
+  "baseline.b2.seed7_sources.per_source_runs": {
+   "value": 6,
+   "display": "6",
+   "unit": "sources",
+   "source": "baseline record"
+  },
+  "baseline.b2.seed7_sources.unified_run": {
+   "value": 24,
+   "display": "24",
+   "unit": "sources",
+   "source": "baseline record"
+  },
+  "baseline.b2.seed7_sources.later_per_source_runs": {
+   "value": 5,
+   "display": "5",
+   "unit": "sources",
+   "source": "baseline record"
+  },
+  "baseline.b2.seed8_runs_at_epoch_limit": {
+   "value": 10,
+   "display": "10",
+   "unit": "sources",
+   "source": "baseline record: seed-8 runs that reached the epoch limit without continuation"
+  },
+  "baseline.b1.mlp_hidden_width": {
+   "value": 256,
+   "display": "256",
+   "unit": "",
+   "source": "baseline definition"
+  },
+  "baseline.b1.parameters_million": {
+   "value": 0.38,
+   "display": "0.38",
+   "unit": "million",
+   "source": "baseline definition"
+  },
+  "baseline.b2.trainable_parameters_million": {
+   "value": 71.2,
+   "display": "71.2",
+   "unit": "million",
+   "source": "baseline definition"
+  },
+  "baseline.b2.unfrozen_blocks": {
+   "value": 4,
+   "display": "4",
+   "unit": "blocks",
+   "source": "baseline definition"
+  },
+  "baseline.seeds": {
+   "value": "7, 8",
+   "display": "7 and 8",
+   "unit": "",
+   "source": "baseline definition"
+  },
+  "statistics.bootstrap_resamples": {
+   "value": 2000,
+   "display": "2,000",
+   "unit": "resamples",
+   "source": "source-results: valid_bootstrap_draws"
+  },
+  "statistics.min_units_for_interval": {
+   "value": 5,
+   "display": "5",
+   "unit": "units",
+   "source": "interval rule of the test results"
+  },
+  "efficiency.ar_adaptation.updates": {
+   "value": 50,
+   "display": "50",
+   "unit": "updates",
+   "source": "adaptation plan"
+  },
+  "efficiency.ar_adaptation.questions_per_update": {
+   "value": 16,
+   "display": "16",
+   "unit": "questions",
+   "source": "adaptation plan"
+  },
+  "efficiency.ar_adaptation.questions_total": {
+   "value": 800,
+   "display": "800",
+   "unit": "questions",
+   "source": "adaptation plan"
+  },
+  "efficiency.ar_adaptation.questions_per_source": {
+   "value": 200,
+   "display": "200",
+   "unit": "questions",
+   "source": "adaptation plan"
+  },
+  "efficiency.ar_adaptation.learning_rate": {
+   "value": 2e-05,
+   "display": "2e-5",
+   "unit": "",
+   "source": "adaptation script"
+  },
+  "efficiency.ar_adaptation.lora_tensors": {
+   "value": 372,
+   "display": "372",
+   "unit": "tensors",
+   "source": "adaptation receipt"
+  },
+  "efficiency.ar_adaptation.lora_target_modules": {
+   "value": 186,
+   "display": "186",
+   "unit": "modules",
+   "source": "adaptation receipt"
+  },
+  "efficiency.ar.max_new_tokens": {
+   "value": 32,
+   "display": "32",
+   "unit": "tokens",
+   "source": "request contract"
+  },
+  "efficiency.panel.windows_total": {
+   "value": 128,
+   "display": "128",
+   "unit": "windows",
+   "source": "timing panel"
+  },
+  "efficiency.panel.windows_per_source": {
+   "value": 32,
+   "display": "32",
+   "unit": "windows",
+   "source": "timing panel"
+  },
+  "efficiency.panel.repeats_small_batches": {
+   "value": 3,
+   "display": "3",
+   "unit": "passes",
+   "source": "timing script: batch 1-8"
+  },
+  "efficiency.panel.repeats_large_batches": {
+   "value": 13,
+   "display": "13",
+   "unit": "passes",
+   "source": "timing script: batch 16 and 32"
+  },
+  "efficiency.panel.subjects.lee2019": {
+   "value": 11,
+   "display": "11",
+   "unit": "subjects",
+   "source": "timing records"
+  },
+  "efficiency.panel.subjects.sleep_edf_sc": {
+   "value": 16,
+   "display": "16",
+   "unit": "subjects",
+   "source": "timing records"
+  },
+  "efficiency.panel.subjects.chb_mit": {
+   "value": 5,
+   "display": "5",
+   "unit": "patients",
+   "source": "timing records"
+  },
+  "efficiency.panel.subjects.ds005292": {
+   "value": 25,
+   "display": "25",
+   "unit": "subjects",
+   "source": "timing records"
+  },
+  "efficiency.panel.prefill_tokens.lee2019": {
+   "value": 333,
+   "display": "333",
+   "unit": "positions",
+   "source": "timing records: AR prompt incl. EEG tokens"
+  },
+  "efficiency.panel.prefill_tokens.sleep_edf_sc": {
+   "value": 184,
+   "display": "184",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.panel.prefill_tokens.chb_mit": {
+   "value": 197,
+   "display": "197",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.panel.prefill_tokens.ds005292": {
+   "value": 454,
+   "display": "454",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.panel.sequence_length.lee2019": {
+   "value": 345,
+   "display": "345",
+   "unit": "positions",
+   "source": "timing records: EEG-Jev row"
+  },
+  "efficiency.panel.sequence_length.sleep_edf_sc": {
+   "value": 196,
+   "display": "196",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.panel.sequence_length.chb_mit": {
+   "value": 213,
+   "display": "213",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.panel.sequence_length.ds005292": {
+   "value": 464,
+   "display": "464",
+   "unit": "positions",
+   "source": "timing records"
+  },
+  "efficiency.environment.gpu": {
+   "value": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+   "display": "NVIDIA RTX PRO 6000 Blackwell",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.gpu_memory_mib": {
+   "value": 97887,
+   "display": "97,887",
+   "unit": "MiB",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.pytorch": {
+   "value": "2.8.0+cu128",
+   "display": "2.8.0",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.cuda": {
+   "value": "12.8",
+   "display": "12.8",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.transformers": {
+   "value": "5.13.1",
+   "display": "5.13.1",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.triton": {
+   "value": "3.4.0",
+   "display": "3.4.0",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.python": {
+   "value": "3.12.3",
+   "display": "3.12.3",
+   "unit": "",
+   "source": "environment receipt"
+  },
+  "efficiency.environment.gated_delta_layers": {
+   "value": 18,
+   "display": "18",
+   "unit": "layers",
+   "source": "environment receipt"
+  },
+  "neuralbench.entries_per_task": {
+   "value": 17,
+   "display": "17",
+   "unit": "entries",
+   "source": "NeuralBench results data"
+  },
+  "neuralbench.seeds": {
+   "value": 3,
+   "display": "3",
+   "unit": "seeds",
+   "source": "NeuralBench protocol"
+  },
+  "neuralbench.code_release": {
+   "value": "0.4.0",
+   "display": "0.4.0",
+   "unit": "",
+   "source": "NeuralBench code package release whose configurations and split rules are used"
+  },
+  "neuralbench.results_commit": {
+   "value": "7aaccf3",
+   "display": "7aaccf3",
+   "unit": "",
+   "source": "commit of the NeuralBench repository whose results file is quoted"
+  },
+  "neuralbench.results_commit_date": {
+   "value": "2026-10-10",
+   "display": "10 October 2026",
+   "unit": "",
+   "source": "date of that commit"
+  },
+  "statistics.interval_level_percent": {
+   "value": 95,
+   "display": "95",
+   "unit": "%",
+   "source": "interval rule of the test results"
+  },
+  "statistics.ece_bins": {
+   "value": 10,
+   "display": "10",
+   "unit": "bins",
+   "source": "probability-quality: ece_definition"
+  },
+  "statistics.ece_min_bin_size": {
+   "value": 30,
+   "display": "30",
+   "unit": "windows",
+   "source": "probability-quality: ece_definition"
+  },
+  "calibration.nominal_coverage_percent": {
+   "value": 80,
+   "display": "80",
+   "unit": "%",
+   "source": "central predictive interval of the Score distribution"
+  },
+  "seizure.decision_threshold": {
+   "value": 0.5,
+   "display": "0.5",
+   "unit": "",
+   "source": "seizure-ba: definition"
+  },
+  "protocol.split_fraction.train": {
+   "value": 0.6,
+   "display": "0.6",
+   "unit": "",
+   "source": "data protocol: subject split"
+  },
+  "protocol.split_fraction.development": {
+   "value": 0.2,
+   "display": "0.2",
+   "unit": "",
+   "source": "data protocol: subject split"
+  },
+  "protocol.split_fraction.test": {
+   "value": 0.2,
+   "display": "0.2",
+   "unit": "",
+   "source": "data protocol: subject split"
+  },
+  "protocol.split_random_state": {
+   "value": 33,
+   "display": "33",
+   "unit": "",
+   "source": "data protocol: NeuralBench subject split"
+  },
+  "protocol.sampling_rate_hz": {
+   "value": 200,
+   "display": "200",
+   "unit": "Hz",
+   "source": "data protocol: signal processing"
+  },
+  "protocol.band_low_hz": {
+   "value": 0.5,
+   "display": "0.5",
+   "unit": "Hz",
+   "source": "data protocol: signal processing"
+  },
+  "protocol.band_high_hz": {
+   "value": 99.5,
+   "display": "99.5",
+   "unit": "Hz",
+   "source": "data protocol: signal processing"
+  },
+  "protocol.clip": {
+   "value": 15,
+   "display": "15",
+   "unit": "s.d.",
+   "source": "data protocol: signal processing"
+  },
+  "protocol.window_seconds.motor_imagery": {
+   "value": 4,
+   "display": "4",
+   "unit": "s",
+   "source": "data protocol: windows"
+  },
+  "protocol.window_seconds.sleep_staging": {
+   "value": 30,
+   "display": "30",
+   "unit": "s",
+   "source": "data protocol: windows"
+  },
+  "protocol.window_seconds.seizure_detection": {
+   "value": 5,
+   "display": "5",
+   "unit": "s",
+   "source": "data protocol: windows"
+  },
+  "protocol.window_seconds.pain_rating": {
+   "value": 3,
+   "display": "3",
+   "unit": "s",
+   "source": "data protocol: windows"
+  },
+  "scope.motor_imagery.sources": {
+   "value": 17,
+   "display": "17",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.nb_core": {
+   "value": 1,
+   "display": "1",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.nb_full": {
+   "value": 16,
+   "display": "16",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.supplementary": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.within_subject": {
+   "value": 5,
+   "display": "5",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.test_units": {
+   "value": 128,
+   "display": "128",
+   "unit": "subjects",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.test_windows": {
+   "value": 44200,
+   "display": "44,200",
+   "unit": "windows",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.k_min": {
+   "value": 2,
+   "display": "2",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.motor_imagery.k_max": {
+   "value": 4,
+   "display": "4",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.sources": {
+   "value": 7,
+   "display": "7",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.nb_core": {
+   "value": 1,
+   "display": "1",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.nb_full": {
+   "value": 2,
+   "display": "2",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.supplementary": {
+   "value": 4,
+   "display": "4",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.within_subject": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.test_units": {
+   "value": 291,
+   "display": "291",
+   "unit": "subjects",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.test_windows": {
+   "value": 293681,
+   "display": "293,681",
+   "unit": "windows",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.k_min": {
+   "value": 5,
+   "display": "5",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sleep_staging.k_max": {
+   "value": 5,
+   "display": "5",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.sources": {
+   "value": 2,
+   "display": "2",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.nb_core": {
+   "value": 1,
+   "display": "1",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.nb_full": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.supplementary": {
+   "value": 1,
+   "display": "1",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.within_subject": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.test_units": {
+   "value": 9,
+   "display": "9",
+   "unit": "subjects",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.seizure_detection.test_windows": {
+   "value": 155753,
+   "display": "155,753",
+   "unit": "windows",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.sources": {
+   "value": 9,
+   "display": "9",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.nb_core": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.nb_full": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.supplementary": {
+   "value": 9,
+   "display": "9",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.within_subject": {
+   "value": 0,
+   "display": "0",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.test_units": {
+   "value": 109,
+   "display": "109",
+   "unit": "subjects",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.test_windows": {
+   "value": 5080,
+   "display": "5,080",
+   "unit": "windows",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.k_min": {
+   "value": 11,
+   "display": "11",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.pain_rating.k_max": {
+   "value": 11,
+   "display": "11",
+   "unit": "classes",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.total.sources": {
+   "value": 35,
+   "display": "35",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.total.nb": {
+   "value": 21,
+   "display": "21",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.total.supplementary": {
+   "value": 14,
+   "display": "14",
+   "unit": "sources",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.total.test_units": {
+   "value": 537,
+   "display": "537",
+   "unit": "subjects",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.total.test_windows": {
+   "value": 498714,
+   "display": "498,714",
+   "unit": "windows",
+   "source": "source registry and source-results: independent_units, test_windows"
+  },
+  "scope.sources_with_interval": {
+   "value": 26,
+   "display": "26",
+   "unit": "sources",
+   "source": "source-results: independent_units >= 5"
+  },
+  "scope.sources_without_interval": {
+   "value": 9,
+   "display": "9",
+   "unit": "sources",
+   "source": "source-results: independent_units < 5"
+  },
+  "scope.evaluation_slots": {
+   "value": 175,
+   "display": "175",
+   "unit": "slots",
+   "source": "35 sources x (EEG-Jev + two seeds each of B1 and B2)"
+  },
+  "scope.motor_imagery_two_class_sources": {
+   "value": 10,
+   "display": "10",
+   "unit": "sources",
+   "source": "source registry"
+  },
+  "scope.motor_imagery_three_class_sources": {
+   "value": 4,
+   "display": "4",
+   "unit": "sources",
+   "source": "source registry"
+  },
+  "scope.motor_imagery_four_class_sources": {
+   "value": 3,
+   "display": "3",
+   "unit": "sources",
+   "source": "source registry"
+  },
+  "scope.motor_imagery_cross_subject_sources": {
+   "value": 12,
+   "display": "12",
+   "unit": "sources",
+   "source": "source registry"
+  },
+  "core.stieger2021.ba_percent.eeg_jev": {
+   "value": 54.08033313202333,
+   "display": "54.08",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b1": {
+   "value": 61.9515776626552,
+   "display": "61.95",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b2": {
+   "value": 65.18798458151345,
+   "display": "65.19",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b1_seed7": {
+   "value": 62.20771497486935,
+   "display": "62.21",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b1_seed8": {
+   "value": 61.69544035044107,
+   "display": "61.70",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b2_seed7": {
+   "value": 65.32059702949617,
+   "display": "65.32",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_percent.b2_seed8": {
+   "value": 65.05537213353072,
+   "display": "65.06",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b1": {
+   "value": -7.871244530631872,
+   "display": "-7.87",
+   "unit": "points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100); paired difference"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b1.ci95_low": {
+   "value": -10.655213409845542,
+   "display": "-10.66",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b1.ci95_high": {
+   "value": -5.515075316370726,
+   "display": "-5.52",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b1.interval_excludes_zero": {
+   "value": true,
+   "display": "yes",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b2": {
+   "value": -11.107651449490119,
+   "display": "-11.11",
+   "unit": "points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100); paired difference"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b2.ci95_low": {
+   "value": -13.908550954635842,
+   "display": "-13.91",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b2.ci95_high": {
+   "value": -8.387895638020906,
+   "display": "-8.39",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.ba_points.eeg_jev_advantage_over_b2.interval_excludes_zero": {
+   "value": true,
+   "display": "yes",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.stieger2021.test_subjects": {
+   "value": 13,
+   "display": "13",
+   "unit": "subjects",
+   "source": "source-results: independent_units"
+  },
+  "core.stieger2021.test_windows": {
+   "value": 25340,
+   "display": "25,340",
+   "unit": "windows",
+   "source": "source-results: test_windows"
+  },
+  "core.stieger2021.best_in_row": {
+   "value": "b2",
+   "display": "",
+   "unit": "",
+   "source": "bold rule of Table 2"
+  },
+  "neuralbench.stieger2021.best_ba_percent": {
+   "value": 68.041,
+   "display": "68.04",
+   "unit": "%",
+   "source": "neuralbench-reference: nb_mean (x100)"
+  },
+  "neuralbench.stieger2021.best_ba_sd": {
+   "value": 0.731,
+   "display": "0.73",
+   "unit": "points",
+   "source": "neuralbench-reference: nb_std (x100)"
+  },
+  "neuralbench.stieger2021.best_model": {
+   "value": "REVE-Base",
+   "display": "REVE-Base",
+   "unit": "",
+   "source": "neuralbench-reference: nb_model"
+  },
+  "neuralbench.stieger2021.gap_points.eeg_jev": {
+   "value": -13.96066686797667,
+   "display": "-13.96",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.stieger2021.gap_points.b1": {
+   "value": -6.0894223373448,
+   "display": "-6.09",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.stieger2021.gap_points.b2": {
+   "value": -2.8530154184865495,
+   "display": "-2.85",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "core.sleep_edf_sc.ba_percent.eeg_jev": {
+   "value": 70.45387999272512,
+   "display": "70.45",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b1": {
+   "value": 68.16846430503347,
+   "display": "68.17",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b2": {
+   "value": 70.4817358856922,
+   "display": "70.48",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b1_seed7": {
+   "value": 67.59901916976861,
+   "display": "67.60",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b1_seed8": {
+   "value": 68.73790944029834,
+   "display": "68.74",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b2_seed7": {
+   "value": 70.57792456196606,
+   "display": "70.58",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_percent.b2_seed8": {
+   "value": 70.38554720941835,
+   "display": "70.39",
+   "unit": "%",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100)"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b1": {
+   "value": 2.28541568769165,
+   "display": "+2.29",
+   "unit": "points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100); paired difference"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b1.ci95_low": {
+   "value": 0.457915126502485,
+   "display": "+0.46",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b1.ci95_high": {
+   "value": 3.9389961985303117,
+   "display": "+3.94",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b1.interval_excludes_zero": {
+   "value": true,
+   "display": "yes",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b2": {
+   "value": -0.027855892967076912,
+   "display": "-0.03",
+   "unit": "points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean (x100); paired difference"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b2.ci95_low": {
+   "value": -1.9846083706522264,
+   "display": "-1.98",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b2.ci95_high": {
+   "value": 1.9318445614287638,
+   "display": "+1.93",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.ba_points.eeg_jev_advantage_over_b2.interval_excludes_zero": {
+   "value": false,
+   "display": "no",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.sleep_edf_sc.test_subjects": {
+   "value": 16,
+   "display": "16",
+   "unit": "subjects",
+   "source": "source-results: independent_units"
+  },
+  "core.sleep_edf_sc.test_windows": {
+   "value": 41656,
+   "display": "41,656",
+   "unit": "windows",
+   "source": "source-results: test_windows"
+  },
+  "core.sleep_edf_sc.best_in_row": {
+   "value": "b2",
+   "display": "",
+   "unit": "",
+   "source": "bold rule of Table 2"
+  },
+  "neuralbench.sleep_edf_sc.best_ba_percent": {
+   "value": 72.926,
+   "display": "72.93",
+   "unit": "%",
+   "source": "neuralbench-reference: nb_mean (x100)"
+  },
+  "neuralbench.sleep_edf_sc.best_ba_sd": {
+   "value": 0.527,
+   "display": "0.53",
+   "unit": "points",
+   "source": "neuralbench-reference: nb_std (x100)"
+  },
+  "neuralbench.sleep_edf_sc.best_model": {
+   "value": "CBraMod",
+   "display": "CBraMod",
+   "unit": "",
+   "source": "neuralbench-reference: nb_model"
+  },
+  "neuralbench.sleep_edf_sc.gap_points.eeg_jev": {
+   "value": -2.4721200072748815,
+   "display": "-2.47",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.sleep_edf_sc.gap_points.b1": {
+   "value": -4.757535694966535,
+   "display": "-4.76",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.sleep_edf_sc.gap_points.b2": {
+   "value": -2.444264114307799,
+   "display": "-2.44",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "core.chb_mit.ba_at_0p5_percent.eeg_jev": {
+   "value": 72.11122157937677,
+   "display": "72.11",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b1": {
+   "value": 68.80730208545452,
+   "display": "68.81",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b2": {
+   "value": 68.6517880553193,
+   "display": "68.65",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b1_seed7": {
+   "value": 70.42144308821356,
+   "display": "70.42",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b1_seed8": {
+   "value": 67.19316108269548,
+   "display": "67.19",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b2_seed7": {
+   "value": 72.46569161785433,
+   "display": "72.47",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_percent.b2_seed8": {
+   "value": 64.8378844927843,
+   "display": "64.84",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b1": {
+   "value": 3.303919493922247,
+   "display": "+3.30",
+   "unit": "points",
+   "source": "seizure-ba: slots.*.ba (x100); paired difference"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b1.ci95_low": {
+   "value": -0.457472536436776,
+   "display": "-0.46",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b1.ci95_high": {
+   "value": 6.530352142088169,
+   "display": "+6.53",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b1.interval_excludes_zero": {
+   "value": false,
+   "display": "no",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b2": {
+   "value": 3.4594335240574647,
+   "display": "+3.46",
+   "unit": "points",
+   "source": "seizure-ba: slots.*.ba (x100); paired difference"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b2.ci95_low": {
+   "value": -0.1528147989302342,
+   "display": "-0.15",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b2.ci95_high": {
+   "value": 6.729945319311481,
+   "display": "+6.73",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.ba_at_0p5_points.eeg_jev_advantage_over_b2.interval_excludes_zero": {
+   "value": false,
+   "display": "no",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.chb_mit.test_subjects": {
+   "value": 5,
+   "display": "5",
+   "unit": "patients",
+   "source": "source-results: independent_units"
+  },
+  "core.chb_mit.test_windows": {
+   "value": 121650,
+   "display": "121,650",
+   "unit": "windows",
+   "source": "source-results: test_windows"
+  },
+  "core.chb_mit.best_in_row": {
+   "value": "eeg_jev",
+   "display": "",
+   "unit": "",
+   "source": "bold rule of Table 2"
+  },
+  "neuralbench.chb_mit.best_ba_percent": {
+   "value": 85.541,
+   "display": "85.54",
+   "unit": "%",
+   "source": "neuralbench-reference: nb_mean (x100)"
+  },
+  "neuralbench.chb_mit.best_ba_sd": {
+   "value": 0.543,
+   "display": "0.54",
+   "unit": "points",
+   "source": "neuralbench-reference: nb_std (x100)"
+  },
+  "neuralbench.chb_mit.best_model": {
+   "value": "BDTCN",
+   "display": "BDTCN",
+   "unit": "",
+   "source": "neuralbench-reference: nb_model"
+  },
+  "neuralbench.chb_mit.gap_points.eeg_jev": {
+   "value": -13.429778420623222,
+   "display": "-13.43",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.chb_mit.gap_points.b1": {
+   "value": -16.733697914545473,
+   "display": "-16.73",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "neuralbench.chb_mit.gap_points.b2": {
+   "value": -16.889211944680696,
+   "display": "-16.89",
+   "unit": "points",
+   "source": "value minus reported NeuralBench best"
+  },
+  "core.ds005292.mae.eeg_jev": {
+   "value": 1.700051911681643,
+   "display": "1.700",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b1": {
+   "value": 1.70128065372746,
+   "display": "1.701",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b2": {
+   "value": 1.7174318581325627,
+   "display": "1.717",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b1_seed7": {
+   "value": 1.7190771787766226,
+   "display": "1.719",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b1_seed8": {
+   "value": 1.6834841286782976,
+   "display": "1.683",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b2_seed7": {
+   "value": 1.700471757901432,
+   "display": "1.700",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.b2_seed8": {
+   "value": 1.7343919583636938,
+   "display": "1.734",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b1": {
+   "value": 0.0012287420458170217,
+   "display": "+0.001",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean; paired difference"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b1.ci95_low": {
+   "value": -0.13121052576387524,
+   "display": "-0.131",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b1.ci95_high": {
+   "value": 0.13563659629627792,
+   "display": "+0.136",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b1.interval_excludes_zero": {
+   "value": false,
+   "display": "no",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b2": {
+   "value": 0.01737994645091967,
+   "display": "+0.017",
+   "unit": "rating points",
+   "source": "source-results: eeg_jev_seed8, b*_seed7, b*_seed8, b*_seed_mean; paired difference"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b2.ci95_low": {
+   "value": -0.07990389680903655,
+   "display": "-0.080",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b2.ci95_high": {
+   "value": 0.11286295872507594,
+   "display": "+0.113",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.mae.eeg_jev_advantage_over_b2.interval_excludes_zero": {
+   "value": false,
+   "display": "no",
+   "unit": "",
+   "source": "paired bootstrap interval"
+  },
+  "core.ds005292.test_subjects": {
+   "value": 26,
+   "display": "26",
+   "unit": "subjects",
+   "source": "source-results: independent_units"
+  },
+  "core.ds005292.test_windows": {
+   "value": 779,
+   "display": "779",
+   "unit": "windows",
+   "source": "source-results: test_windows"
+  },
+  "core.ds005292.best_in_row": {
+   "value": "eeg_jev",
+   "display": "",
+   "unit": "",
+   "source": "bold rule of Table 2"
+  },
+  "seizure.chb_mit.test_positive_windows": {
+   "value": 465,
+   "display": "465",
+   "unit": "windows",
+   "source": "seizure-ba: positives"
+  },
+  "seizure.chb_mit.test_prevalence_percent": {
+   "value": 0.38224414303329224,
+   "display": "0.38",
+   "unit": "%",
+   "source": "seizure-ba: positives / n"
+  },
+  "seizure.chb_mit.tpr_at_0p5.eeg_jev": {
+   "value": 0.4946236559139785,
+   "display": "0.495",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.chb_mit.tnr_at_0p5.eeg_jev": {
+   "value": 0.9476007756735569,
+   "display": "0.9476",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.chb_mit.tpr_at_0p5.b1_seed7": {
+   "value": 0.40860215053763443,
+   "display": "0.409",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.chb_mit.tnr_at_0p5.b1_seed7": {
+   "value": 0.9998267112266369,
+   "display": "0.9998",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.chb_mit.tpr_at_0p5.b1_seed8": {
+   "value": 0.34408602150537637,
+   "display": "0.344",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.chb_mit.tnr_at_0p5.b1_seed8": {
+   "value": 0.9997772001485332,
+   "display": "0.9998",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.chb_mit.tpr_at_0p5.b2_seed7": {
+   "value": 0.44946236559139785,
+   "display": "0.449",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.chb_mit.tnr_at_0p5.b2_seed7": {
+   "value": 0.9998514667656888,
+   "display": "0.9999",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.chb_mit.tpr_at_0p5.b2_seed8": {
+   "value": 0.2967741935483871,
+   "display": "0.297",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.chb_mit.tnr_at_0p5.b2_seed8": {
+   "value": 0.9999834963072988,
+   "display": "1.0000",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.chb_mit.auroc.eeg_jev": {
+   "value": 0.8246518940871086,
+   "display": "0.825",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.chb_mit.auroc.b1": {
+   "value": 0.8908106773568005,
+   "display": "0.891",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.chb_mit.auroc.b2": {
+   "value": 0.9292733051439614,
+   "display": "0.929",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b1": {
+   "value": -0.06615878326969193,
+   "display": "-0.066",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b1.ci95_low": {
+   "value": -0.1409826995611726,
+   "display": "-0.141",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b1.ci95_high": {
+   "value": -0.004834489733008596,
+   "display": "-0.005",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b2": {
+   "value": -0.10462141105685285,
+   "display": "-0.105",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b2.ci95_low": {
+   "value": -0.18531790062470554,
+   "display": "-0.185",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.auroc.eeg_jev_advantage_over_b2.ci95_high": {
+   "value": -0.04740334033284355,
+   "display": "-0.047",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.chb_mit.average_precision.eeg_jev": {
+   "value": 0.2848534122167513,
+   "display": "0.285",
+   "unit": "",
+   "source": "probability-quality: raw"
+  },
+  "seizure.chb_mit.average_precision.b1": {
+   "value": 0.47408167624619424,
+   "display": "0.474",
+   "unit": "",
+   "source": "probability-quality: raw, seed mean"
+  },
+  "seizure.chb_mit.average_precision.b2": {
+   "value": 0.5650706253862203,
+   "display": "0.565",
+   "unit": "",
+   "source": "probability-quality: raw, seed mean"
+  },
+  "seizure.siena.test_positive_windows": {
+   "value": 172,
+   "display": "172",
+   "unit": "windows",
+   "source": "seizure-ba: positives"
+  },
+  "seizure.siena.test_prevalence_percent": {
+   "value": 0.5043544556197402,
+   "display": "0.50",
+   "unit": "%",
+   "source": "seizure-ba: positives / n"
+  },
+  "seizure.siena.tpr_at_0p5.eeg_jev": {
+   "value": 0.622093023255814,
+   "display": "0.622",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.siena.tnr_at_0p5.eeg_jev": {
+   "value": 0.8685567769885945,
+   "display": "0.8686",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.siena.tpr_at_0p5.b1_seed7": {
+   "value": 0.5988372093023255,
+   "display": "0.599",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.siena.tnr_at_0p5.b1_seed7": {
+   "value": 0.968701187704459,
+   "display": "0.9687",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.siena.tpr_at_0p5.b1_seed8": {
+   "value": 0.4127906976744186,
+   "display": "0.413",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.siena.tnr_at_0p5.b1_seed8": {
+   "value": 0.9959034511213934,
+   "display": "0.9959",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.siena.tpr_at_0p5.b2_seed7": {
+   "value": 0.36046511627906974,
+   "display": "0.360",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.siena.tnr_at_0p5.b2_seed7": {
+   "value": 0.9980254044973623,
+   "display": "0.9980",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.siena.tpr_at_0p5.b2_seed8": {
+   "value": 0.45930232558139533,
+   "display": "0.459",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tpr"
+  },
+  "seizure.siena.tnr_at_0p5.b2_seed8": {
+   "value": 0.995608735374731,
+   "display": "0.9956",
+   "unit": "",
+   "source": "seizure-ba: slots.*.tnr"
+  },
+  "seizure.siena.ba_at_0p5_percent.eeg_jev": {
+   "value": 74.53249001222042,
+   "display": "74.53",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b1": {
+   "value": 74.40581364506491,
+   "display": "74.41",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b2": {
+   "value": 70.33503954331395,
+   "display": "70.34",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b1_seed7": {
+   "value": 78.37691985033923,
+   "display": "78.38",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b1_seed8": {
+   "value": 70.4347074397906,
+   "display": "70.43",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b2_seed7": {
+   "value": 67.9245260388216,
+   "display": "67.92",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.ba_at_0p5_percent.b2_seed8": {
+   "value": 72.74555304780633,
+   "display": "72.75",
+   "unit": "%",
+   "source": "seizure-ba: slots.*.ba (x100)"
+  },
+  "seizure.siena.test_patients": {
+   "value": 4,
+   "display": "4",
+   "unit": "patients",
+   "source": "seizure-ba: patients"
+  },
+  "seizure.siena.test_windows": {
+   "value": 34103,
+   "display": "34,103",
+   "unit": "windows",
+   "source": "seizure-ba: n"
+  },
+  "seizure.siena.auroc.eeg_jev": {
+   "value": 0.8040498398596878,
+   "display": "0.804",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.siena.auroc.b1": {
+   "value": 0.8654255506900803,
+   "display": "0.865",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.siena.auroc.b2": {
+   "value": 0.8377692622442399,
+   "display": "0.838",
+   "unit": "",
+   "source": "source-results: registered seizure metric"
+  },
+  "seizure.siena.auroc.eeg_jev_advantage_over_b1": {
+   "value": -0.061375710830392505,
+   "display": "-0.061",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.siena.auroc.eeg_jev_advantage_over_b2": {
+   "value": -0.033719422384552056,
+   "display": "-0.034",
+   "unit": "",
+   "source": "source-results"
+  },
+  "seizure.siena.average_precision.eeg_jev": {
+   "value": 0.2298736948916905,
+   "display": "0.230",
+   "unit": "",
+   "source": "probability-quality: raw"
+  },
+  "seizure.siena.average_precision.b1": {
+   "value": 0.3128618889435183,
+   "display": "0.313",
+   "unit": "",
+   "source": "probability-quality: raw, seed mean"
+  },
+  "seizure.siena.average_precision.b2": {
+   "value": 0.36917768920797445,
+   "display": "0.369",
+   "unit": "",
+   "source": "probability-quality: raw, seed mean"
+  },
+  "seizure.two_source_mean.ba_at_0p5_percent.eeg_jev": {
+   "value": 73.3218557957986,
+   "display": "73.32",
+   "unit": "%",
+   "source": "seizure-ba: source-equal mean"
+  },
+  "seizure.two_source_mean.ba_at_0p5_percent.b1": {
+   "value": 71.60655786525972,
+   "display": "71.61",
+   "unit": "%",
+   "source": "seizure-ba: source-equal mean"
+  },
+  "seizure.two_source_mean.ba_at_0p5_percent.b2": {
+   "value": 69.49341379931664,
+   "display": "69.49",
+   "unit": "%",
+   "source": "seizure-ba: source-equal mean"
+  },
+  "summary.against_b1.sources_point_estimate_favours_eeg_jev": {
+   "value": 26,
+   "display": "26",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b1.sources_interval_above_zero": {
+   "value": 6,
+   "display": "6",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b1.sources_interval_below_zero": {
+   "value": 2,
+   "display": "2",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b1.sources_interval_includes_zero": {
+   "value": 18,
+   "display": "18",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b1.sources_without_interval": {
+   "value": 9,
+   "display": "9",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b2.sources_point_estimate_favours_eeg_jev": {
+   "value": 19,
+   "display": "19",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b2.sources_interval_above_zero": {
+   "value": 2,
+   "display": "2",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b2.sources_interval_below_zero": {
+   "value": 6,
+   "display": "6",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b2.sources_interval_includes_zero": {
+   "value": 18,
+   "display": "18",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "summary.against_b2.sources_without_interval": {
+   "value": 9,
+   "display": "9",
+   "unit": "sources",
+   "source": "source-results and seizure-ba: 35 sources on the display metric"
+  },
+  "application.motor_imagery.source_equal_nll.raw": {
+   "value": 0.7869795128428374,
+   "display": "0.787",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.motor_imagery.source_equal_nll.final": {
+   "value": 0.7859698629175774,
+   "display": "0.786",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.motor_imagery.source_equal_ece.raw": {
+   "value": 0.07220222047238317,
+   "display": "0.072",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.motor_imagery.source_equal_ece.final": {
+   "value": 0.07433661788661462,
+   "display": "0.074",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.motor_imagery.source_equal_ba_percent.raw": {
+   "value": 59.98290535125507,
+   "display": "59.98",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.motor_imagery.source_equal_ba_percent.final": {
+   "value": 59.92402759735312,
+   "display": "59.92",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.sleep_staging.source_equal_nll.raw": {
+   "value": 0.7841501771703386,
+   "display": "0.784",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.sleep_staging.source_equal_nll.prior_corrected": {
+   "value": 0.6048592801267297,
+   "display": "0.605",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.sleep_staging.source_equal_nll.final": {
+   "value": 0.602014922914306,
+   "display": "0.602",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_temperature"
+  },
+  "application.sleep_staging.source_equal_ece.raw": {
+   "value": 0.059830483892507134,
+   "display": "0.060",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.sleep_staging.source_equal_ece.prior_corrected": {
+   "value": 0.024132750913024744,
+   "display": "0.024",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.sleep_staging.source_equal_ece.final": {
+   "value": 0.02076970183393173,
+   "display": "0.021",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_temperature"
+  },
+  "application.sleep_staging.source_equal_ba_percent.raw": {
+   "value": 71.85863810022367,
+   "display": "71.86",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.sleep_staging.source_equal_ba_percent.prior_corrected": {
+   "value": 69.8581839668418,
+   "display": "69.86",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.sleep_staging.source_equal_ba_percent.final": {
+   "value": 69.8581839668418,
+   "display": "69.86",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_temperature"
+  },
+  "application.seizure_detection.source_equal_nll.raw": {
+   "value": 0.251919941714115,
+   "display": "0.252",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.seizure_detection.source_equal_nll.prior_corrected": {
+   "value": 0.022900596659239457,
+   "display": "0.023",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.seizure_detection.source_equal_nll.final": {
+   "value": 0.023129713961562055,
+   "display": "0.023",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_temperature"
+  },
+  "application.seizure_detection.source_equal_ece.raw": {
+   "value": 0.1705968862557722,
+   "display": "0.171",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.seizure_detection.source_equal_ece.prior_corrected": {
+   "value": 0.002257226067182985,
+   "display": "0.002",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_corrected"
+  },
+  "application.seizure_detection.source_equal_ece.final": {
+   "value": 0.003852593234048526,
+   "display": "0.004",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage prior_temperature"
+  },
+  "application.pain_rating.source_equal_crps_over_range.raw": {
+   "value": 0.11915360303545963,
+   "display": "0.119",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.pain_rating.source_equal_crps_over_range.final": {
+   "value": 0.1183957284762635,
+   "display": "0.118",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage temperature"
+  },
+  "application.pain_rating.source_equal_mae.raw": {
+   "value": 1.6871374710775582,
+   "display": "1.687",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.pain_rating.source_equal_mae.final": {
+   "value": 1.6785466054906182,
+   "display": "1.679",
+   "unit": "",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage temperature"
+  },
+  "application.pain_rating.source_equal_coverage_80_percent.raw": {
+   "value": 82.82390031500012,
+   "display": "82.82",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage raw"
+  },
+  "application.pain_rating.source_equal_coverage_80_percent.final": {
+   "value": 87.85766411997734,
+   "display": "87.86",
+   "unit": "%",
+   "source": "probability-quality: mean over the sources of the application, EEG-Jev, stage temperature"
+  },
+  "application.motor_imagery.source_equal_ba_percent.eeg_jev": {
+   "value": 59.98290535125507,
+   "display": "59.98",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.motor_imagery.source_equal_ba_percent.b1": {
+   "value": 56.48809943131179,
+   "display": "56.49",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.motor_imagery.source_equal_ba_percent.b2": {
+   "value": 60.48130858942742,
+   "display": "60.48",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.sleep_staging.source_equal_ba_percent.eeg_jev": {
+   "value": 71.85863810022367,
+   "display": "71.86",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.sleep_staging.source_equal_ba_percent.b1": {
+   "value": 70.3753203912424,
+   "display": "70.38",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.sleep_staging.source_equal_ba_percent.b2": {
+   "value": 70.89771049174239,
+   "display": "70.90",
+   "unit": "%",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.seizure_detection.source_equal_auroc.eeg_jev": {
+   "value": 0.8143508669733982,
+   "display": "0.814",
+   "unit": "",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.seizure_detection.source_equal_auroc.b1": {
+   "value": 0.8781181140234404,
+   "display": "0.878",
+   "unit": "",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.seizure_detection.source_equal_auroc.b2": {
+   "value": 0.8835212836941007,
+   "display": "0.884",
+   "unit": "",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.pain_rating.source_equal_mae.eeg_jev": {
+   "value": 1.6871374710775582,
+   "display": "1.687",
+   "unit": "rating points",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.pain_rating.source_equal_mae.b1": {
+   "value": 1.7118552889696348,
+   "display": "1.712",
+   "unit": "rating points",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "application.pain_rating.source_equal_mae.b2": {
+   "value": 1.6905930181051847,
+   "display": "1.691",
+   "unit": "rating points",
+   "source": "source-results: mean over the sources of the application"
+  },
+  "calibration.stieger2021.nll.raw": {
+   "value": 1.0929271033646117,
+   "display": "1.093",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage raw"
+  },
+  "calibration.stieger2021.nll.final": {
+   "value": 1.0818133650851347,
+   "display": "1.082",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.stieger2021.nll.change": {
+   "value": -0.011113738279477037,
+   "display": "-0.011",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.stieger2021.ece.raw": {
+   "value": 0.028088769191002384,
+   "display": "0.028",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage raw"
+  },
+  "calibration.stieger2021.ece.final": {
+   "value": 0.028342069497048157,
+   "display": "0.028",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.stieger2021.ece.change": {
+   "value": 0.0002533003060457735,
+   "display": "0.000",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.stieger2021.ba_percent.raw": {
+   "value": 54.08033313202333,
+   "display": "54.08",
+   "unit": "%",
+   "source": "probability-quality: balanced_accuracy of EEG-Jev at stage raw"
+  },
+  "calibration.stieger2021.ba_percent.final": {
+   "value": 54.031586754298246,
+   "display": "54.03",
+   "unit": "%",
+   "source": "probability-quality: balanced_accuracy of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.stieger2021.ba_percent.change": {
+   "value": -0.048746377725084056,
+   "display": "-0.05",
+   "unit": "%",
+   "source": "final minus raw"
+  },
+  "calibration.stieger2021.brier.raw": {
+   "value": 0.5816822435530473,
+   "display": "0.582",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage raw"
+  },
+  "calibration.stieger2021.brier.final": {
+   "value": 0.5774590096631406,
+   "display": "0.577",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.stieger2021.brier.change": {
+   "value": -0.004223233889906752,
+   "display": "-0.004",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.sleep_edf_sc.nll.raw": {
+   "value": 0.7656995794978173,
+   "display": "0.766",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage raw"
+  },
+  "calibration.sleep_edf_sc.nll.prior_corrected": {
+   "value": 0.6144308464587069,
+   "display": "0.614",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.sleep_edf_sc.nll.final": {
+   "value": 0.6056057970448064,
+   "display": "0.606",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.sleep_edf_sc.nll.change": {
+   "value": -0.16009378245301087,
+   "display": "-0.160",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.sleep_edf_sc.nll.share_from_prior_correction_percent": {
+   "value": 94.48757517082792,
+   "display": "94.5",
+   "unit": "%",
+   "source": "(prior_corrected - raw) / (final - raw)"
+  },
+  "calibration.sleep_edf_sc.nll.share_from_temperature_percent": {
+   "value": 5.512424829172075,
+   "display": "5.5",
+   "unit": "%",
+   "source": "(final - prior_corrected) / (final - raw)"
+  },
+  "calibration.sleep_edf_sc.ece.raw": {
+   "value": 0.08804146874159782,
+   "display": "0.088",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage raw"
+  },
+  "calibration.sleep_edf_sc.ece.prior_corrected": {
+   "value": 0.05701209928843686,
+   "display": "0.057",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.sleep_edf_sc.ece.final": {
+   "value": 0.04418152166488588,
+   "display": "0.044",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.sleep_edf_sc.ece.change": {
+   "value": -0.043859947076711946,
+   "display": "-0.044",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.sleep_edf_sc.ece.share_from_prior_correction_percent": {
+   "value": 70.74648174766367,
+   "display": "70.7",
+   "unit": "%",
+   "source": "(prior_corrected - raw) / (final - raw)"
+  },
+  "calibration.sleep_edf_sc.ece.share_from_temperature_percent": {
+   "value": 29.253518252336335,
+   "display": "29.3",
+   "unit": "%",
+   "source": "(final - prior_corrected) / (final - raw)"
+  },
+  "calibration.sleep_edf_sc.ba_percent.raw": {
+   "value": 70.45387999272512,
+   "display": "70.45",
+   "unit": "%",
+   "source": "probability-quality: balanced_accuracy of EEG-Jev at stage raw"
+  },
+  "calibration.sleep_edf_sc.ba_percent.prior_corrected": {
+   "value": 66.79238511663927,
+   "display": "66.79",
+   "unit": "%",
+   "source": "probability-quality: balanced_accuracy of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.sleep_edf_sc.ba_percent.final": {
+   "value": 66.79238511663927,
+   "display": "66.79",
+   "unit": "%",
+   "source": "probability-quality: balanced_accuracy of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.sleep_edf_sc.ba_percent.change": {
+   "value": -3.661494876085858,
+   "display": "-3.66",
+   "unit": "%",
+   "source": "final minus raw"
+  },
+  "calibration.sleep_edf_sc.brier.raw": {
+   "value": 0.4210800818927399,
+   "display": "0.421",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage raw"
+  },
+  "calibration.sleep_edf_sc.brier.prior_corrected": {
+   "value": 0.3317159012118827,
+   "display": "0.332",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.sleep_edf_sc.brier.final": {
+   "value": 0.3288715487337906,
+   "display": "0.329",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.sleep_edf_sc.brier.change": {
+   "value": -0.09220853315894928,
+   "display": "-0.092",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.chb_mit.nll.raw": {
+   "value": 0.1656814455551481,
+   "display": "0.166",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage raw"
+  },
+  "calibration.chb_mit.nll.prior_corrected": {
+   "value": 0.020528124281679633,
+   "display": "0.021",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.chb_mit.nll.final": {
+   "value": 0.018861417255078176,
+   "display": "0.019",
+   "unit": "",
+   "source": "probability-quality: nll of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.chb_mit.nll.change": {
+   "value": -0.14682002830006993,
+   "display": "-0.147",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.chb_mit.nll.share_from_prior_correction_percent": {
+   "value": 98.86479586886125,
+   "display": "98.9",
+   "unit": "%",
+   "source": "(prior_corrected - raw) / (final - raw)"
+  },
+  "calibration.chb_mit.nll.share_from_temperature_percent": {
+   "value": 1.1352041311387373,
+   "display": "1.1",
+   "unit": "%",
+   "source": "(final - prior_corrected) / (final - raw)"
+  },
+  "calibration.chb_mit.ece.raw": {
+   "value": 0.11757941680969997,
+   "display": "0.118",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage raw"
+  },
+  "calibration.chb_mit.ece.prior_corrected": {
+   "value": 0.0021458089199564035,
+   "display": "0.002",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.chb_mit.ece.final": {
+   "value": 0.0007421716338656659,
+   "display": "0.001",
+   "unit": "",
+   "source": "probability-quality: ece_equal_mass of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.chb_mit.ece.change": {
+   "value": -0.1168372451758343,
+   "display": "-0.117",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.chb_mit.ece.share_from_prior_correction_percent": {
+   "value": 98.79863883817328,
+   "display": "98.8",
+   "unit": "%",
+   "source": "(prior_corrected - raw) / (final - raw)"
+  },
+  "calibration.chb_mit.ece.share_from_temperature_percent": {
+   "value": 1.201361161826721,
+   "display": "1.2",
+   "unit": "%",
+   "source": "(final - prior_corrected) / (final - raw)"
+  },
+  "calibration.chb_mit.auroc.raw": {
+   "value": 0.8246518940871086,
+   "display": "0.825",
+   "unit": "",
+   "source": "probability-quality: auroc of EEG-Jev at stage raw"
+  },
+  "calibration.chb_mit.auroc.prior_corrected": {
+   "value": 0.8246518940871084,
+   "display": "0.825",
+   "unit": "",
+   "source": "probability-quality: auroc of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.chb_mit.auroc.final": {
+   "value": 0.8246518940871084,
+   "display": "0.825",
+   "unit": "",
+   "source": "probability-quality: auroc of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.chb_mit.auroc.change": {
+   "value": -2.220446049250313e-16,
+   "display": "0.000",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.chb_mit.brier.raw": {
+   "value": 0.044995488356495535,
+   "display": "0.0450",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage raw"
+  },
+  "calibration.chb_mit.brier.prior_corrected": {
+   "value": 0.0031394057892947876,
+   "display": "0.0031",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage prior_corrected"
+  },
+  "calibration.chb_mit.brier.final": {
+   "value": 0.0031250655472530543,
+   "display": "0.0031",
+   "unit": "",
+   "source": "probability-quality: brier of EEG-Jev at stage prior_temperature"
+  },
+  "calibration.chb_mit.brier.change": {
+   "value": -0.04187042280924248,
+   "display": "-0.0419",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.crps_over_range.raw": {
+   "value": 0.12090828144338484,
+   "display": "0.121",
+   "unit": "",
+   "source": "probability-quality: crps_over_range of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.crps_over_range.final": {
+   "value": 0.1197306746038662,
+   "display": "0.120",
+   "unit": "",
+   "source": "probability-quality: crps_over_range of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.crps_over_range.change": {
+   "value": -0.0011776068395186329,
+   "display": "-0.001",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.coverage_80_percent.raw": {
+   "value": 82.67008985879333,
+   "display": "82.7",
+   "unit": "%",
+   "source": "probability-quality: cover80 of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.coverage_80_percent.final": {
+   "value": 85.62259306803594,
+   "display": "85.6",
+   "unit": "%",
+   "source": "probability-quality: cover80 of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.coverage_80_percent.change": {
+   "value": 2.9525032092426184,
+   "display": "+3.0",
+   "unit": "%",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.mae.raw": {
+   "value": 1.700051911681643,
+   "display": "1.700",
+   "unit": "",
+   "source": "probability-quality: mae of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.mae.final": {
+   "value": 1.6866718734539567,
+   "display": "1.687",
+   "unit": "",
+   "source": "probability-quality: mae of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.mae.change": {
+   "value": -0.013380038227686297,
+   "display": "-0.013",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.coverage_50_percent.raw": {
+   "value": 58.40821566110398,
+   "display": "58.4",
+   "unit": "%",
+   "source": "probability-quality: cover50 of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.coverage_50_percent.final": {
+   "value": 63.02952503209242,
+   "display": "63.0",
+   "unit": "%",
+   "source": "probability-quality: cover50 of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.coverage_50_percent.change": {
+   "value": 4.621309370988447,
+   "display": "+4.6",
+   "unit": "%",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.coverage_90_percent.raw": {
+   "value": 90.2439024390244,
+   "display": "90.2",
+   "unit": "%",
+   "source": "probability-quality: cover90 of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.coverage_90_percent.final": {
+   "value": 93.58151476251605,
+   "display": "93.6",
+   "unit": "%",
+   "source": "probability-quality: cover90 of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.coverage_90_percent.change": {
+   "value": 3.3376123234916566,
+   "display": "+3.3",
+   "unit": "%",
+   "source": "final minus raw"
+  },
+  "calibration.ds005292.interpolated_cross_entropy.raw": {
+   "value": 2.182707353835747,
+   "display": "2.183",
+   "unit": "",
+   "source": "probability-quality: interp_ce of EEG-Jev at stage raw"
+  },
+  "calibration.ds005292.interpolated_cross_entropy.final": {
+   "value": 2.159602828050525,
+   "display": "2.160",
+   "unit": "",
+   "source": "probability-quality: interp_ce of EEG-Jev at stage temperature"
+  },
+  "calibration.ds005292.interpolated_cross_entropy.change": {
+   "value": -0.02310452578522204,
+   "display": "-0.023",
+   "unit": "",
+   "source": "final minus raw"
+  },
+  "calibration.temperature.motor_imagery": {
+   "value": 1.0,
+   "display": "1",
+   "unit": "",
+   "source": "frozen temperature (development fit); 1 = not applied"
+  },
+  "calibration.temperature.sleep_staging": {
+   "value": 1.0777691541520111,
+   "display": "1.078",
+   "unit": "",
+   "source": "frozen temperature (development fit); 1 = not applied"
+  },
+  "calibration.temperature.seizure_detection": {
+   "value": 1.2519219375276878,
+   "display": "1.252",
+   "unit": "",
+   "source": "frozen temperature (development fit); 1 = not applied"
+  },
+  "calibration.temperature.pain_rating": {
+   "value": 1.3094613960562453,
+   "display": "1.309",
+   "unit": "",
+   "source": "frozen temperature (development fit); 1 = not applied"
+  },
+  "calibration.sleep_edf_sc.nll.temperature_only_not_adopted": {
+   "value": 0.7322118167700711,
+   "display": "0.732",
+   "unit": "",
+   "source": "probability-quality: stage temperature (not adopted)"
+  },
+  "calibration.sleep_edf_sc.ece.temperature_only_not_adopted": {
+   "value": 0.05081231625723161,
+   "display": "0.051",
+   "unit": "",
+   "source": "probability-quality: stage temperature (not adopted)"
+  },
+  "calibration.chb_mit.nll.temperature_only_not_adopted": {
+   "value": 0.14395907295903937,
+   "display": "0.144",
+   "unit": "",
+   "source": "probability-quality: stage temperature (not adopted)"
+  },
+  "calibration.chb_mit.ece.temperature_only_not_adopted": {
+   "value": 0.08472067424351871,
+   "display": "0.085",
+   "unit": "",
+   "source": "probability-quality: stage temperature (not adopted)"
+  },
+  "calibration.ds005292.pearson_r.raw": {
+   "value": 0.37144346959201285,
+   "display": "0.37",
+   "unit": "",
+   "source": "probability-quality: raw"
+  },
+  "calibration.ds005292.train_constant_mae": {
+   "value": 1.7705076016517933,
+   "display": "1.771",
+   "unit": "rating points",
+   "source": "probability-quality: constant prediction at the training mean"
+  },
+  "core.ds005292.mae.constant_prediction": {
+   "value": 1.7705076016517933,
+   "display": "1.771",
+   "unit": "rating points",
+   "source": "probability-quality: train_constant_mae (training-mean rating as a constant prediction, test windows)"
+  },
+  "core.ds005292.mae.margin_below_constant_prediction.eeg_jev": {
+   "value": 0.07045568997015028,
+   "display": "0.070",
+   "unit": "rating points",
+   "source": "constant-prediction MAE minus model MAE"
+  },
+  "core.ds005292.mae.margin_below_constant_prediction.b1": {
+   "value": 0.06922694792433326,
+   "display": "0.069",
+   "unit": "rating points",
+   "source": "constant-prediction MAE minus model MAE"
+  },
+  "core.ds005292.mae.margin_below_constant_prediction.b2": {
+   "value": 0.05307574351923061,
+   "display": "0.053",
+   "unit": "rating points",
+   "source": "constant-prediction MAE minus model MAE"
+  },
+  "core.ds005292.mae.percent_below_constant_prediction.eeg_jev": {
+   "value": 3.9794062394546414,
+   "display": "4.0",
+   "unit": "%",
+   "source": "1 - EEG-Jev MAE / constant-prediction MAE"
+  },
+  "efficiency.batch1.mean_request_ms.eeg_jev": {
+   "value": 63.108562344192855,
+   "display": "63.11",
+   "unit": "ms",
+   "source": "inference-benchmark: equal-weight mean of the four per-source mean request times, batch 1"
+  },
+  "efficiency.batch1.mean_request_ms.ar": {
+   "value": 122.43197548953808,
+   "display": "122.43",
+   "unit": "ms",
+   "source": "inference-benchmark: equal-weight mean of the four per-source mean request times, batch 1"
+  },
+  "efficiency.batch1.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.9400216221341962,
+   "display": "1.94",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 1"
+  },
+  "efficiency.batch1.mean_of_source_ratios_not_used": {
+   "value": 1.9554536090521504,
+   "display": "1.955",
+   "unit": "",
+   "source": "different estimand: mean of per-source ratios"
+  },
+  "efficiency.batch2.ms_per_window.eeg_jev": {
+   "value": 38.26703027516487,
+   "display": "38.27",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 2"
+  },
+  "efficiency.batch2.ms_per_window.ar": {
+   "value": 68.94295817346574,
+   "display": "68.94",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 2"
+  },
+  "efficiency.batch2.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.8016281294294585,
+   "display": "1.80",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 2"
+  },
+  "efficiency.batch4.ms_per_window.eeg_jev": {
+   "value": 28.681966133566068,
+   "display": "28.68",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 4"
+  },
+  "efficiency.batch4.ms_per_window.ar": {
+   "value": 44.01458952421914,
+   "display": "44.01",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 4"
+  },
+  "efficiency.batch4.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.5345736522821403,
+   "display": "1.53",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 4"
+  },
+  "efficiency.batch8.ms_per_window.eeg_jev": {
+   "value": 28.272505105026845,
+   "display": "28.27",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 8"
+  },
+  "efficiency.batch8.ms_per_window.ar": {
+   "value": 35.52275592331474,
+   "display": "35.52",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 8"
+  },
+  "efficiency.batch8.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.256441754678428,
+   "display": "1.26",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 8"
+  },
+  "efficiency.batch16.ms_per_window.eeg_jev": {
+   "value": 29.092921230935296,
+   "display": "29.09",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 16"
+  },
+  "efficiency.batch16.ms_per_window.ar": {
+   "value": 32.1154862246588,
+   "display": "32.12",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 16"
+  },
+  "efficiency.batch16.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.103893485625965,
+   "display": "1.10",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 16"
+  },
+  "efficiency.batch32.ms_per_window.eeg_jev": {
+   "value": 29.497679500799187,
+   "display": "29.50",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 32"
+  },
+  "efficiency.batch32.ms_per_window.ar": {
+   "value": 30.81051118288787,
+   "display": "30.81",
+   "unit": "ms/window",
+   "source": "inference-benchmark: equal-weight mean of the four per-source amortized times, batch 32"
+  },
+  "efficiency.batch32.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.0445062697915988,
+   "display": "1.04",
+   "unit": "",
+   "source": "ratio of the two source-equal means, batch 32"
+  },
+  "efficiency.ar.mean_generated_tokens": {
+   "value": 2.4375,
+   "display": "2.44",
+   "unit": "tokens",
+   "source": "inference-benchmark: equal-weight mean over sources, end-of-sequence token included"
+  },
+  "efficiency.lee2019.batch1.eeg_jev.mean_ms": {
+   "value": 61.15597445265545,
+   "display": "61.16",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_mean_ms"
+  },
+  "efficiency.lee2019.batch1.eeg_jev.p50_ms": {
+   "value": 56.297161034308374,
+   "display": "56.30",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p50_ms"
+  },
+  "efficiency.lee2019.batch1.eeg_jev.p95_ms": {
+   "value": 77.74223579326645,
+   "display": "77.74",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p95_ms"
+  },
+  "efficiency.lee2019.batch1.ar.mean_ms": {
+   "value": 143.29808434922597,
+   "display": "143.30",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_mean_ms"
+  },
+  "efficiency.lee2019.batch1.ar.p50_ms": {
+   "value": 144.2249725223519,
+   "display": "144.22",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p50_ms"
+  },
+  "efficiency.lee2019.batch1.ar.p95_ms": {
+   "value": 172.02717973850667,
+   "display": "172.03",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p95_ms"
+  },
+  "efficiency.lee2019.batch1.ratio_ar_over_eeg_jev": {
+   "value": 2.343157567706843,
+   "display": "2.34",
+   "unit": "",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.ar.mean_generated_tokens": {
+   "value": 3.0,
+   "display": "3.00",
+   "unit": "tokens",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.panel_ba.eeg_jev": {
+   "value": 0.78125,
+   "display": "0.781",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.lee2019.panel_ba.ar": {
+   "value": 0.71875,
+   "display": "0.719",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.lee2019.batch1.eeg_jev.windows_per_s": {
+   "value": 16.351632182300694,
+   "display": "16.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch1.ar.windows_per_s": {
+   "value": 6.978460350962825,
+   "display": "7.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch2.eeg_jev.ms_per_window": {
+   "value": 40.30165485892212,
+   "display": "40.30",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch2.eeg_jev.windows_per_s": {
+   "value": 24.812876878146767,
+   "display": "24.8",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch2.ar.ms_per_window": {
+   "value": 80.85630067337964,
+   "display": "80.86",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch2.ar.windows_per_s": {
+   "value": 12.367619983500315,
+   "display": "12.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch4.eeg_jev.ms_per_window": {
+   "value": 32.08566793061133,
+   "display": "32.09",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch4.eeg_jev.windows_per_s": {
+   "value": 31.16656328185551,
+   "display": "31.2",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch4.ar.ms_per_window": {
+   "value": 53.60872180487301,
+   "display": "53.61",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch4.ar.windows_per_s": {
+   "value": 18.653681086444042,
+   "display": "18.7",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch8.eeg_jev.ms_per_window": {
+   "value": 32.3700601766177,
+   "display": "32.37",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch8.eeg_jev.windows_per_s": {
+   "value": 30.892744546775464,
+   "display": "30.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch8.ar.ms_per_window": {
+   "value": 42.39622769576575,
+   "display": "42.40",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch8.ar.windows_per_s": {
+   "value": 23.58700418291869,
+   "display": "23.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch16.eeg_jev.ms_per_window": {
+   "value": 33.76565589160936,
+   "display": "33.77",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch16.eeg_jev.windows_per_s": {
+   "value": 29.615891461136886,
+   "display": "29.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch16.ar.ms_per_window": {
+   "value": 38.630757182545494,
+   "display": "38.63",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch16.ar.windows_per_s": {
+   "value": 25.886109228317927,
+   "display": "25.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch32.eeg_jev.ms_per_window": {
+   "value": 34.456299296345186,
+   "display": "34.46",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch32.eeg_jev.windows_per_s": {
+   "value": 29.022269379523035,
+   "display": "29.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch32.ar.ms_per_window": {
+   "value": 36.14257173551148,
+   "display": "36.14",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.lee2019.batch32.ar.windows_per_s": {
+   "value": 27.668202675723297,
+   "display": "27.7",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch1.eeg_jev.mean_ms": {
+   "value": 59.15779072408137,
+   "display": "59.16",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_mean_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.eeg_jev.p50_ms": {
+   "value": 55.93299597967416,
+   "display": "55.93",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p50_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.eeg_jev.p95_ms": {
+   "value": 78.08759555337019,
+   "display": "78.09",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p95_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.ar.mean_ms": {
+   "value": 128.77589995696326,
+   "display": "128.78",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_mean_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.ar.p50_ms": {
+   "value": 127.74668144993484,
+   "display": "127.75",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p50_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.ar.p95_ms": {
+   "value": 158.8880140625406,
+   "display": "158.89",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p95_ms"
+  },
+  "efficiency.sleep_edf_sc.batch1.ratio_ar_over_eeg_jev": {
+   "value": 2.176820641554865,
+   "display": "2.18",
+   "unit": "",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.ar.mean_generated_tokens": {
+   "value": 2.71875,
+   "display": "2.72",
+   "unit": "tokens",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.panel_ba.eeg_jev": {
+   "value": 0.6285714285714287,
+   "display": "0.629",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.sleep_edf_sc.panel_ba.ar": {
+   "value": 0.24761904761904763,
+   "display": "0.248",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.sleep_edf_sc.batch1.eeg_jev.windows_per_s": {
+   "value": 16.90394431164803,
+   "display": "16.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch1.ar.windows_per_s": {
+   "value": 7.765428161124859,
+   "display": "7.8",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch2.eeg_jev.ms_per_window": {
+   "value": 31.813659038258873,
+   "display": "31.81",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch2.eeg_jev.windows_per_s": {
+   "value": 31.433039462622247,
+   "display": "31.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch2.ar.ms_per_window": {
+   "value": 68.94465911803611,
+   "display": "68.94",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch2.ar.windows_per_s": {
+   "value": 14.504386747172953,
+   "display": "14.5",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch4.eeg_jev.ms_per_window": {
+   "value": 21.386687311557278,
+   "display": "21.39",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch4.eeg_jev.windows_per_s": {
+   "value": 46.75805960185354,
+   "display": "46.8",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch4.ar.ms_per_window": {
+   "value": 39.486849011154845,
+   "display": "39.49",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch4.ar.windows_per_s": {
+   "value": 25.32488727367192,
+   "display": "25.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch8.eeg_jev.ms_per_window": {
+   "value": 19.132383479397202,
+   "display": "19.13",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch8.eeg_jev.windows_per_s": {
+   "value": 52.26740312187736,
+   "display": "52.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch8.ar.ms_per_window": {
+   "value": 26.926805205827502,
+   "display": "26.93",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch8.ar.windows_per_s": {
+   "value": 37.137714346579074,
+   "display": "37.1",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch16.eeg_jev.ms_per_window": {
+   "value": 19.236388392108402,
+   "display": "19.24",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch16.eeg_jev.windows_per_s": {
+   "value": 51.98481022613596,
+   "display": "52.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch16.ar.ms_per_window": {
+   "value": 21.102328125450114,
+   "display": "21.10",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch16.ar.windows_per_s": {
+   "value": 47.3881362309956,
+   "display": "47.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch32.eeg_jev.ms_per_window": {
+   "value": 19.40540523299625,
+   "display": "19.41",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch32.eeg_jev.windows_per_s": {
+   "value": 51.53203388402506,
+   "display": "51.5",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch32.ar.ms_per_window": {
+   "value": 19.102673557286973,
+   "display": "19.10",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.sleep_edf_sc.batch32.ar.windows_per_s": {
+   "value": 52.34869333871522,
+   "display": "52.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch1.eeg_jev.mean_ms": {
+   "value": 59.924681600629505,
+   "display": "59.92",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_mean_ms"
+  },
+  "efficiency.chb_mit.batch1.eeg_jev.p50_ms": {
+   "value": 58.607317507267,
+   "display": "58.61",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p50_ms"
+  },
+  "efficiency.chb_mit.batch1.eeg_jev.p95_ms": {
+   "value": 77.99722853815183,
+   "display": "78.00",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p95_ms"
+  },
+  "efficiency.chb_mit.batch1.ar.mean_ms": {
+   "value": 101.2072955442515,
+   "display": "101.21",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_mean_ms"
+  },
+  "efficiency.chb_mit.batch1.ar.p50_ms": {
+   "value": 95.86665901588276,
+   "display": "95.87",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p50_ms"
+  },
+  "efficiency.chb_mit.batch1.ar.p95_ms": {
+   "value": 130.41380196227692,
+   "display": "130.41",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p95_ms"
+  },
+  "efficiency.chb_mit.batch1.ratio_ar_over_eeg_jev": {
+   "value": 1.6889083569730359,
+   "display": "1.69",
+   "unit": "",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.ar.mean_generated_tokens": {
+   "value": 2.0,
+   "display": "2.00",
+   "unit": "tokens",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.panel_ba.eeg_jev": {
+   "value": 0.75,
+   "display": "0.750",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.chb_mit.panel_ba.ar": {
+   "value": 0.875,
+   "display": "0.875",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.chb_mit.batch1.eeg_jev.windows_per_s": {
+   "value": 16.687614740526133,
+   "display": "16.7",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch1.ar.windows_per_s": {
+   "value": 9.88071062093309,
+   "display": "9.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch2.eeg_jev.ms_per_window": {
+   "value": 30.950304573101068,
+   "display": "30.95",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch2.eeg_jev.windows_per_s": {
+   "value": 32.309859750753496,
+   "display": "32.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch2.ar.ms_per_window": {
+   "value": 53.130216560627254,
+   "display": "53.13",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch2.ar.windows_per_s": {
+   "value": 18.82168123404679,
+   "display": "18.8",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch4.eeg_jev.ms_per_window": {
+   "value": 21.44240531682347,
+   "display": "21.44",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch4.eeg_jev.windows_per_s": {
+   "value": 46.63655896922213,
+   "display": "46.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch4.ar.ms_per_window": {
+   "value": 31.49110729403522,
+   "display": "31.49",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch4.ar.windows_per_s": {
+   "value": 31.75499643956348,
+   "display": "31.8",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch8.eeg_jev.ms_per_window": {
+   "value": 20.420871283325443,
+   "display": "20.42",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch8.eeg_jev.windows_per_s": {
+   "value": 48.96950703648697,
+   "display": "49.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch8.ar.ms_per_window": {
+   "value": 25.053977292069856,
+   "display": "25.05",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch8.ar.windows_per_s": {
+   "value": 39.91382239803188,
+   "display": "39.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch16.eeg_jev.ms_per_window": {
+   "value": 20.70721466617005,
+   "display": "20.71",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch16.eeg_jev.windows_per_s": {
+   "value": 48.2923471901669,
+   "display": "48.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch16.ar.ms_per_window": {
+   "value": 22.3495847900407,
+   "display": "22.35",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch16.ar.windows_per_s": {
+   "value": 44.743560535657664,
+   "display": "44.7",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch32.eeg_jev.ms_per_window": {
+   "value": 20.716625360924247,
+   "display": "20.72",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch32.eeg_jev.windows_per_s": {
+   "value": 48.270410000569036,
+   "display": "48.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch32.ar.ms_per_window": {
+   "value": 21.47686840208525,
+   "display": "21.48",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.chb_mit.batch32.ar.windows_per_s": {
+   "value": 46.56172311894909,
+   "display": "46.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch1.eeg_jev.mean_ms": {
+   "value": 72.1958025994051,
+   "display": "72.20",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_mean_ms"
+  },
+  "efficiency.ds005292.batch1.eeg_jev.p50_ms": {
+   "value": 70.86651754798368,
+   "display": "70.87",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p50_ms"
+  },
+  "efficiency.ds005292.batch1.eeg_jev.p95_ms": {
+   "value": 80.07463332614861,
+   "display": "80.07",
+   "unit": "ms",
+   "source": "inference-benchmark: eeg_jev_batch_p95_ms"
+  },
+  "efficiency.ds005292.batch1.ar.mean_ms": {
+   "value": 116.44662210771155,
+   "display": "116.45",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_mean_ms"
+  },
+  "efficiency.ds005292.batch1.ar.p50_ms": {
+   "value": 114.82124449685216,
+   "display": "114.82",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p50_ms"
+  },
+  "efficiency.ds005292.batch1.ar.p95_ms": {
+   "value": 132.78570619877428,
+   "display": "132.79",
+   "unit": "ms",
+   "source": "inference-benchmark: ar_batch_p95_ms"
+  },
+  "efficiency.ds005292.batch1.ratio_ar_over_eeg_jev": {
+   "value": 1.6129278699738574,
+   "display": "1.61",
+   "unit": "",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.ar.mean_generated_tokens": {
+   "value": 2.03125,
+   "display": "2.03",
+   "unit": "tokens",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.panel_mae.eeg_jev": {
+   "value": 2.400495378868527,
+   "display": "2.400",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.ds005292.panel_mae.ar": {
+   "value": 2.65625,
+   "display": "2.656",
+   "unit": "",
+   "source": "inference-benchmark: 32 development windows; not a test result"
+  },
+  "efficiency.ds005292.batch1.eeg_jev.windows_per_s": {
+   "value": 13.851220763466381,
+   "display": "13.9",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch1.ar.windows_per_s": {
+   "value": 8.587625659720842,
+   "display": "8.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch2.eeg_jev.ms_per_window": {
+   "value": 50.00250263037742,
+   "display": "50.00",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch2.eeg_jev.windows_per_s": {
+   "value": 19.998998997951794,
+   "display": "20.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch2.ar.ms_per_window": {
+   "value": 72.84065634181995,
+   "display": "72.84",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch2.ar.windows_per_s": {
+   "value": 13.728596778525604,
+   "display": "13.7",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch4.eeg_jev.ms_per_window": {
+   "value": 39.81310397527219,
+   "display": "39.81",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch4.eeg_jev.windows_per_s": {
+   "value": 25.117358360732112,
+   "display": "25.1",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch4.ar.ms_per_window": {
+   "value": 51.47167998681349,
+   "display": "51.47",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch4.ar.windows_per_s": {
+   "value": 19.428159334534826,
+   "display": "19.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch8.eeg_jev.ms_per_window": {
+   "value": 41.16670548076703,
+   "display": "41.17",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch8.eeg_jev.windows_per_s": {
+   "value": 24.291475072427094,
+   "display": "24.3",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch8.ar.ms_per_window": {
+   "value": 47.71401349959584,
+   "display": "47.71",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch8.ar.windows_per_s": {
+   "value": 20.958203400945727,
+   "display": "21.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch16.eeg_jev.ms_per_window": {
+   "value": 42.66242597385337,
+   "display": "42.66",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch16.eeg_jev.windows_per_s": {
+   "value": 23.439829713689342,
+   "display": "23.4",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch16.ar.ms_per_window": {
+   "value": 46.37927480059891,
+   "display": "46.38",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch16.ar.windows_per_s": {
+   "value": 21.561354814178483,
+   "display": "21.6",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch32.eeg_jev.ms_per_window": {
+   "value": 43.41238811293106,
+   "display": "43.41",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch32.eeg_jev.windows_per_s": {
+   "value": 23.03489956366013,
+   "display": "23.0",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch32.ar.ms_per_window": {
+   "value": 46.51993103666777,
+   "display": "46.52",
+   "unit": "ms/window",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ds005292.batch32.ar.windows_per_s": {
+   "value": 21.496162563349106,
+   "display": "21.5",
+   "unit": "windows/s",
+   "source": "inference-benchmark"
+  },
+  "efficiency.ar.valid_rate": {
+   "value": 1.0,
+   "display": "1.0",
+   "unit": "",
+   "source": "inference-benchmark: minimum over sources and batch sizes"
+  },
+  "efficiency.ar.eos_rate": {
+   "value": 1.0,
+   "display": "1.0",
+   "unit": "",
+   "source": "inference-benchmark: minimum over sources and batch sizes"
+  },
+  "efficiency.ar.cap_rate": {
+   "value": 0.0,
+   "display": "0.0",
+   "unit": "",
+   "source": "inference-benchmark: maximum over sources and batch sizes"
+  },
+  "efficiency.check.max_probability_difference_vs_reference.batch1": {
+   "value": 0.005265355110168457,
+   "display": "0.00527",
+   "unit": "",
+   "source": "inference-benchmark: batch 1, 128 development windows"
+  },
+  "efficiency.check.max_probability_difference_vs_reference.all_batches": {
+   "value": 0.005352318286895752,
+   "display": "0.00535",
+   "unit": "",
+   "source": "inference-benchmark: all batch sizes"
+  },
+  "efficiency.check.max_score_expectation_difference_vs_reference": {
+   "value": 0.0048455530777573586,
+   "display": "0.00485",
+   "unit": "rating points",
+   "source": "inference-benchmark: ds005292, all batch sizes"
+  },
+  "efficiency.check.max_probability_difference_batch_vs_single": {
+   "value": 0.00011211633682250977,
+   "display": "0.00011",
+   "unit": "",
+   "source": "inference-benchmark: batch 2-32 against single windows"
+  },
+  "efficiency.check.decision_changes": {
+   "value": 0,
+   "display": "0",
+   "unit": "changes",
+   "source": "inference-benchmark"
+  },
+  "efficiency.check.ar_token_changes": {
+   "value": 0,
+   "display": "0",
+   "unit": "changes",
+   "source": "inference-benchmark"
+  },
+  "efficiency.peak_gpu_memory_gib": {
+   "value": 18.9506516456604,
+   "display": "18.95",
+   "unit": "GiB",
+   "source": "inference-benchmark: both models resident"
+  },
+  "efficiency.batch1.timed_requests_per_source": {
+   "value": 96,
+   "display": "96",
+   "unit": "requests",
+   "source": "inference-benchmark: 32 windows x 3 passes"
+  },
+  "efficiency.batch32.windows_timed_per_source": {
+   "value": 416,
+   "display": "416",
+   "unit": "windows",
+   "source": "inference-benchmark: 32 windows x 13 passes"
+  },
+  "calibration.sleep_edf_sc.accuracy_percent.raw": {
+   "value": 69.41617053965815,
+   "display": "69.42",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy, stage raw"
+  },
+  "calibration.sleep_edf_sc.accuracy_percent.final": {
+   "value": 75.57374687920108,
+   "display": "75.57",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy, stage prior+temperature"
+  },
+  "seizure.chb_mit.sensitivity_at_0p5_percent.eeg_jev.raw": {
+   "value": 49.46236559139785,
+   "display": "49.5",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.chb_mit.specificity_at_0p5_percent.eeg_jev.raw": {
+   "value": 94.7600775673557,
+   "display": "94.760",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.chb_mit.precision_at_0p5_percent.eeg_jev.raw": {
+   "value": 3.4954407294832825,
+   "display": "3.5",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.chb_mit.f1_at_0p5_percent.eeg_jev.raw": {
+   "value": 6.529453513129879,
+   "display": "6.5",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.chb_mit.accuracy_at_0p5_percent.eeg_jev.raw": {
+   "value": 94.58692971639951,
+   "display": "94.59",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.chb_mit.predicted_positive_windows_at_0p5.eeg_jev.raw": {
+   "value": 6580,
+   "display": "6,580",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "seizure.chb_mit.balanced_accuracy_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 56.880070060837404,
+   "display": "56.88",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, balanced_accuracy at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.sensitivity_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 13.763440860215054,
+   "display": "13.8",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.specificity_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 99.99669926145975,
+   "display": "99.997",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.precision_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 94.11764705882352,
+   "display": "94.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.f1_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 24.015009380863038,
+   "display": "24.0",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.accuracy_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 99.66707768187423,
+   "display": "99.67",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.chb_mit.predicted_positive_windows_at_0p5.eeg_jev.prior_corrected": {
+   "value": 68,
+   "display": "68",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "seizure.chb_mit.balanced_accuracy_at_0p5_percent.eeg_jev.final": {
+   "value": 56.880070060837404,
+   "display": "56.88",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, balanced_accuracy at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.sensitivity_at_0p5_percent.eeg_jev.final": {
+   "value": 13.763440860215054,
+   "display": "13.8",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.specificity_at_0p5_percent.eeg_jev.final": {
+   "value": 99.99669926145975,
+   "display": "99.997",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.precision_at_0p5_percent.eeg_jev.final": {
+   "value": 94.11764705882352,
+   "display": "94.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.f1_at_0p5_percent.eeg_jev.final": {
+   "value": 24.015009380863038,
+   "display": "24.0",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.accuracy_at_0p5_percent.eeg_jev.final": {
+   "value": 99.66707768187423,
+   "display": "99.67",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage final"
+  },
+  "seizure.chb_mit.predicted_positive_windows_at_0p5.eeg_jev.final": {
+   "value": 68,
+   "display": "68",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "seizure.siena.balanced_accuracy_at_0p5_percent.eeg_jev.raw": {
+   "value": 74.53249001222042,
+   "display": "74.53",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, balanced_accuracy at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.sensitivity_at_0p5_percent.eeg_jev.raw": {
+   "value": 62.2093023255814,
+   "display": "62.2",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.specificity_at_0p5_percent.eeg_jev.raw": {
+   "value": 86.85567769885945,
+   "display": "86.856",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.precision_at_0p5_percent.eeg_jev.raw": {
+   "value": 2.342894679220495,
+   "display": "2.3",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.f1_at_0p5_percent.eeg_jev.raw": {
+   "value": 4.5157206161637475,
+   "display": "4.5",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.accuracy_at_0p5_percent.eeg_jev.raw": {
+   "value": 86.73137260651555,
+   "display": "86.73",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage raw"
+  },
+  "seizure.siena.predicted_positive_windows_at_0p5.eeg_jev.raw": {
+   "value": 4567,
+   "display": "4,567",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "seizure.siena.balanced_accuracy_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 57.53161511768411,
+   "display": "57.53",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, balanced_accuracy at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.sensitivity_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 15.11627906976744,
+   "display": "15.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.specificity_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 99.94695116560078,
+   "display": "99.947",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.precision_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 59.09090909090909,
+   "display": "59.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.f1_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 24.074074074074073,
+   "display": "24.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.accuracy_at_0p5_percent.eeg_jev.prior_corrected": {
+   "value": 99.51910389115326,
+   "display": "99.52",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage prior_corrected"
+  },
+  "seizure.siena.predicted_positive_windows_at_0p5.eeg_jev.prior_corrected": {
+   "value": 44,
+   "display": "44",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "seizure.siena.balanced_accuracy_at_0p5_percent.eeg_jev.final": {
+   "value": 57.53161511768411,
+   "display": "57.53",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, balanced_accuracy at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.sensitivity_at_0p5_percent.eeg_jev.final": {
+   "value": 15.11627906976744,
+   "display": "15.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, sensitivity at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.specificity_at_0p5_percent.eeg_jev.final": {
+   "value": 99.94695116560078,
+   "display": "99.947",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, specificity at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.precision_at_0p5_percent.eeg_jev.final": {
+   "value": 59.09090909090909,
+   "display": "59.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, precision at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.f1_at_0p5_percent.eeg_jev.final": {
+   "value": 24.074074074074073,
+   "display": "24.1",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, f1 at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.accuracy_at_0p5_percent.eeg_jev.final": {
+   "value": 99.51910389115326,
+   "display": "99.52",
+   "unit": "%",
+   "source": "metrics-long: EEG-Jev, seed 8, accuracy at p(yes) >= 0.5, stage final"
+  },
+  "seizure.siena.predicted_positive_windows_at_0p5.eeg_jev.final": {
+   "value": 44,
+   "display": "44",
+   "unit": "windows",
+   "source": "from sensitivity, specificity and class counts"
+  },
+  "core.ds005292.rmse.eeg_jev.raw": {
+   "value": 2.135409685693202,
+   "display": "2.135",
+   "unit": "rating points",
+   "source": "metrics-long: EEG-Jev, rmse, stage raw"
+  },
+  "core.ds005292.rmse.b1.raw": {
+   "value": 2.136590507602026,
+   "display": "2.137",
+   "unit": "rating points",
+   "source": "metrics-long: B1, rmse, stage raw, mean of seeds 7 and 8"
+  },
+  "core.ds005292.rmse.b2.raw": {
+   "value": 2.188128366344407,
+   "display": "2.188",
+   "unit": "rating points",
+   "source": "metrics-long: B2, rmse, stage raw, mean of seeds 7 and 8"
+  },
+  "core.ds005292.rmse.eeg_jev.temperature": {
+   "value": 2.1167394387004803,
+   "display": "2.117",
+   "unit": "rating points",
+   "source": "metrics-long: EEG-Jev, rmse, stage temperature"
+  },
+  "core.ds005292.rmse.b1.temperature": {
+   "value": 2.1008843593176136,
+   "display": "2.101",
+   "unit": "rating points",
+   "source": "metrics-long: B1, rmse, stage temperature, mean of seeds 7 and 8"
+  },
+  "core.ds005292.rmse.b2.temperature": {
+   "value": 2.124236628717056,
+   "display": "2.124",
+   "unit": "rating points",
+   "source": "metrics-long: B2, rmse, stage temperature, mean of seeds 7 and 8"
+  },
+  "efficiency.reference_execution.batch1.mean_request_ms.eeg_jev": {
+   "value": 124.01705354780763,
+   "display": "124.02",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 1"
+  },
+  "efficiency.reference_execution.batch1.mean_request_ms.ar": {
+   "value": 180.84079390428087,
+   "display": "180.84",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 1"
+  },
+  "efficiency.reference_execution.batch1.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.4581929559757532,
+   "display": "1.46",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 1"
+  },
+  "efficiency.recommended_vs_reference.batch1.eeg_jev.change_percent": {
+   "value": -49.112996528445194,
+   "display": "-49.1",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 1"
+  },
+  "efficiency.recommended_vs_reference.batch1.ar.change_percent": {
+   "value": -32.29847489259454,
+   "display": "-32.3",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 1"
+  },
+  "efficiency.reference_execution.batch2.ms_per_window.eeg_jev": {
+   "value": 62.90783899900513,
+   "display": "62.91",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 2"
+  },
+  "efficiency.reference_execution.batch2.ms_per_window.ar": {
+   "value": 93.02934184567373,
+   "display": "93.03",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 2"
+  },
+  "efficiency.reference_execution.batch2.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.4788195450036832,
+   "display": "1.48",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 2"
+  },
+  "efficiency.recommended_vs_reference.batch2.eeg_jev.change_percent": {
+   "value": -39.16969509035264,
+   "display": "-39.2",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 2"
+  },
+  "efficiency.recommended_vs_reference.batch2.ar.change_percent": {
+   "value": -25.89116852203992,
+   "display": "-25.9",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 2"
+  },
+  "efficiency.reference_execution.batch4.ms_per_window.eeg_jev": {
+   "value": 34.548759050570276,
+   "display": "34.55",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 4"
+  },
+  "efficiency.reference_execution.batch4.ms_per_window.ar": {
+   "value": 50.0162243727876,
+   "display": "50.02",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 4"
+  },
+  "efficiency.reference_execution.batch4.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.4476995917444395,
+   "display": "1.45",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 4"
+  },
+  "efficiency.recommended_vs_reference.batch4.eeg_jev.change_percent": {
+   "value": -16.98119723610556,
+   "display": "-17.0",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 4"
+  },
+  "efficiency.recommended_vs_reference.batch4.ar.change_percent": {
+   "value": -11.999376050131794,
+   "display": "-12.0",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 4"
+  },
+  "efficiency.reference_execution.batch8.ms_per_window.eeg_jev": {
+   "value": 26.532996125448943,
+   "display": "26.53",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 8"
+  },
+  "efficiency.reference_execution.batch8.ms_per_window.ar": {
+   "value": 33.4319769499416,
+   "display": "33.43",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 8"
+  },
+  "efficiency.reference_execution.batch8.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.260015144609905,
+   "display": "1.26",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 8"
+  },
+  "efficiency.recommended_vs_reference.batch8.eeg_jev.change_percent": {
+   "value": 6.556021684673086,
+   "display": "+6.6",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 8"
+  },
+  "efficiency.recommended_vs_reference.batch8.ar.change_percent": {
+   "value": 6.253829908125708,
+   "display": "+6.3",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 8"
+  },
+  "efficiency.reference_execution.batch16.ms_per_window.eeg_jev": {
+   "value": 25.05325943072351,
+   "display": "25.05",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 16"
+  },
+  "efficiency.reference_execution.batch16.ms_per_window.ar": {
+   "value": 28.15891166574147,
+   "display": "28.16",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 16"
+  },
+  "efficiency.reference_execution.batch16.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.1239620035710567,
+   "display": "1.12",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 16"
+  },
+  "efficiency.recommended_vs_reference.batch16.eeg_jev.change_percent": {
+   "value": 16.12429636703412,
+   "display": "+16.1",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 16"
+  },
+  "efficiency.recommended_vs_reference.batch16.ar.change_percent": {
+   "value": 14.050878833257464,
+   "display": "+14.1",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 16"
+  },
+  "efficiency.reference_execution.batch32.ms_per_window.eeg_jev": {
+   "value": 25.242783936916496,
+   "display": "25.24",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 32"
+  },
+  "efficiency.reference_execution.batch32.ms_per_window.ar": {
+   "value": 26.65008148540857,
+   "display": "26.65",
+   "unit": "ms/window",
+   "source": "inference-benchmark, reference execution: equal-weight mean over the four sources, batch 32"
+  },
+  "efficiency.reference_execution.batch32.ratio_of_means_ar_over_eeg_jev": {
+   "value": 1.0557504890113947,
+   "display": "1.06",
+   "unit": "",
+   "source": "ratio of the two source-equal means, reference execution, batch 32"
+  },
+  "efficiency.recommended_vs_reference.batch32.eeg_jev.change_percent": {
+   "value": 16.8558886948285,
+   "display": "+16.9",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 32"
+  },
+  "efficiency.recommended_vs_reference.batch32.ar.change_percent": {
+   "value": 15.61132073745146,
+   "display": "+15.6",
+   "unit": "%",
+   "source": "recommended / reference - 1, source-equal amortized latency, batch 32"
+  },
+  "efficiency.reference_execution.lee2019.batch1.eeg_jev.mean_ms": {
+   "value": 125.17333177189964,
+   "display": "125.17",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.lee2019.batch1.ar.mean_ms": {
+   "value": 205.87878041139143,
+   "display": "205.88",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.sleep_edf_sc.batch1.eeg_jev.mean_ms": {
+   "value": 118.79917317128275,
+   "display": "118.80",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.sleep_edf_sc.batch1.ar.mean_ms": {
+   "value": 183.02471628218578,
+   "display": "183.02",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.chb_mit.batch1.eeg_jev.mean_ms": {
+   "value": 116.31144207785837,
+   "display": "116.31",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.chb_mit.batch1.ar.mean_ms": {
+   "value": 159.14736418562825,
+   "display": "159.15",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.ds005292.batch1.eeg_jev.mean_ms": {
+   "value": 135.7842671701898,
+   "display": "135.78",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.ds005292.batch1.ar.mean_ms": {
+   "value": 175.312314737918,
+   "display": "175.31",
+   "unit": "ms",
+   "source": "inference-benchmark, reference execution"
+  },
+  "efficiency.reference_execution.batch1.timed_requests_per_source": {
+   "value": 96,
+   "display": "96",
+   "unit": "requests",
+   "source": "inference-benchmark, reference execution: 32 windows x 3 passes"
+  }
+ }
+}

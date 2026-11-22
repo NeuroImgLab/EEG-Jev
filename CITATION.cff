@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use EEG-Jev or these aggregate results, please cite the preprint below."
+title: "EEG-Jev: A Unified Single-Pass Decision Model for EEG"
+type: dataset
+url: "https://neuroimglab.github.io/EEG-Jev/"
+authors:
+  - family-names: Zhu
+    given-names: Zhifei
+  - family-names: Zhang
+    given-names: Hongtao
+  - family-names: Ren
+    given-names: Yu
+  - family-names: Zhou
+    given-names: Wei
+  - family-names: Xie
+    given-names: Zeping
+  - family-names: He
+    given-names: Yi
+preferred-citation:
+  type: article
+  title: "EEG-Jev: A Unified Single-Pass Decision Model for EEG"
+  authors:
+    - family-names: Zhu
+      given-names: Zhifei
+    - family-names: Zhang
+      given-names: Hongtao
+    - family-names: Ren
+      given-names: Yu
+    - family-names: Zhou
+      given-names: Wei
+    - family-names: Xie
+      given-names: Zeping
+    - family-names: He
+      given-names: Yi
+  year: 2026
+  status: preprint

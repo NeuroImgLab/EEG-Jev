@@ -1,0 +1,36 @@
+/* Same-position, stacked comparison; chart scale is fixed for this recording. */
+#st-comparison[hidden], #st-cue[hidden], #stage[data-task="chb"] #cv-zoom[hidden] { display: none !important; }
+.wc-lead { margin: 0 0 8px; color: var(--scr-text); font: 500 12px var(--mono); }
+.wc-frame { margin: 0 0 9px; }
+.wc-frame figcaption { display: flex; flex-direction: column; gap: 3px; color: var(--scr-text); font-size: 12px; line-height: 1.4; }
+.wc-frame figcaption span { color: var(--scr-dim); font: 10px var(--mono); }
+.wc-frame canvas { display: block; width: 100%; height: 100px; margin-top: 4px; border: 1px solid var(--scr-line); border-radius: 7px; background: rgba(9,13,18,.45); }
+.wc-key { margin: 0 0 7px; color: var(--scr-dim); font-size: 10px; line-height: 1.5; }
+.wc-text { margin: 0 0 8px; color: var(--scr-text); font-size: 12px; line-height: 1.5; }
+.wc-method { color: var(--scr-dim); font-size: 11px; line-height: 1.5; }
+.wc-method summary { cursor: pointer; color: var(--scr-text); }
+.wc-method p { margin: 7px 0; }
+.wc-method a { color: inherit; text-underline-offset: 3px; }
+
+/* Keep the EEG frame stable when a seizure-only reading card appears or disappears. */
+#stage[data-mode="record"][data-task="chb"] .stage-body { align-items: start; }
+#stage[data-mode="record"][data-task="chb"] .stage-main { min-width: 0; }
+#stage[data-mode="record"][data-task="chb"] .stage-read { min-width: 0; align-content: start; }
+#stage[data-mode="record"][data-task="chb"] .stage-plot { height: 560px; flex: 0 0 560px; min-height: 0; }
+.st-leads { max-width: calc(100% - 16px); font-size: 11px; }
+@media (max-width: 760px) {
+  #stage[data-mode="record"][data-task="chb"] .stage-plot { height: 440px; flex-basis: 440px; }
+}
+
+/* Official event timing and a continuous, playback-limited onset detail. */
+.st-event[hidden] { display: none !important; }
+.st-event { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; margin-bottom:8px; border:1px solid rgba(242,184,75,.35); border-radius:10px; background:rgba(242,184,75,.035); color:var(--scr-text); font-size:12px; }
+.st-event > span { display:flex; flex-wrap:wrap; gap:4px 10px; }
+.st-event b { color:#f2b84b; font-weight:500; }
+.st-event .mono { color:var(--scr-dim); font-size:11px; }
+.st-event button { flex-shrink:0; padding:7px 10px; border:1px solid rgba(242,184,75,.5); border-radius:20px; background:transparent; color:#f2b84b; cursor:pointer; font:inherit; }
+.st-event button:hover, .st-event button:focus-visible { background:rgba(242,184,75,.12); }
+.wc-lead { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+.wc-lead select { min-width:110px; max-width:100%; padding:6px 8px; background:#0d141c; color:var(--scr-text); border:1px solid var(--scr-line); border-radius:6px; font:inherit; }
+#wc-onset { height:200px; }
+@media (max-width:480px) { .st-event { align-items:flex-start; } .st-event > span { flex-direction:column; } }

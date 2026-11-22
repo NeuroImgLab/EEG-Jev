@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EEG-Jev: A Unified Single-Pass Decision Model for EEG · Data &amp; methods</title>
+<meta name="description" content="How the EEG-Jev replay is assembled: the recordings, the saved answers of one checkpoint, how examples were chosen and what each number means.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<style>
+:root { --paper: #f4f2ec; --paper-2: #ebe8df; --ink: #15181c; --ink-2: #454c55; --ink-3: #5f666e; --rule: #d9d4c8; --accent-ink: #0d7a70;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif; --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --frame: min(1120px, calc(100% - 32px)); }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 3px; border-radius: 4px; }
+.top { width: var(--frame); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid var(--rule); font: 500 14px/1 var(--sans); }
+.top b, .top .brand { font: 500 18px/1 var(--serif); color: var(--ink); }
+.top a { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px; }
+main { width: var(--frame); margin: 0 auto; padding: clamp(40px, 7vw, 96px) 0 72px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: clamp(20px, 2.6vw, 40px); }
+main > * { grid-column: 1 / -1; min-width: 0; }
+.eyebrow { margin: 0 0 14px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent-ink); }
+h1 { margin: 0 0 16px; font: 500 clamp(36px, 4.6vw, 60px)/1.04 var(--serif); letter-spacing: -.02em; font-variation-settings: "opsz" 60; }
+.lede { margin: 0 0 48px; max-width: 46ch; font: 400 20px/1.45 var(--serif); color: var(--ink-2); }
+.ev-col h3 { margin: 0 0 10px; font: 500 26px/1.2 var(--serif); letter-spacing: -.01em; font-variation-settings: "opsz" 24; }
+.ev-col .ev-sum { margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); font: 400 18px/1.45 var(--serif); }
+.ev-col h4 { margin: 20px 0 4px; font: 600 14.5px/1.35 var(--sans); }
+.ev-col p, .ev-col li { font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+.ev-col p { margin: 0 0 8px; } .ev-col p, .prov p { overflow-wrap: break-word; } #cm-ckpt { overflow-wrap: anywhere; } .ev-col ul { margin: 0; padding-left: 18px; } .ev-col li { margin: 0 0 8px; } .ev-col li b { color: var(--ink); }
+.ev-col + .ev-col { margin-top: 56px; }
+.ev-limits { margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--rule); }
+.ev-limits h3 { margin: 0 0 14px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+.ev-limits ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.ev-limits li { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+.ev-limits li b { display: block; margin-bottom: 2px; color: var(--ink); }
+.foot p { margin: 0 0 8px; } .foot a { color: inherit; }
+.foot { width: var(--frame); margin: 0 auto; padding: 24px 0 48px; border-top: 1px solid var(--rule); font-size: 13.5px; color: var(--ink-2); }
+@media (min-width: 900px) {
+  .ev-col { grid-column: 1 / 7; } .ev-col + .ev-col { grid-column: 7 / -1; margin-top: 0; }
+  .ev-limits { grid-column: 1 / -1; } .ev-limits ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.prov { grid-column: 1 / -1; margin: 0 0 56px; }
+.prov h3 { margin: 0 0 6px; font: 500 26px/1.2 var(--serif); letter-spacing: -.01em; }
+.prov .state { display: inline-block; margin: 0 0 14px; font: 500 12px/1 var(--mono); letter-spacing: .04em; padding: 6px 10px; border-radius: 999px; border: 1px solid currentColor; color: #8a5a00; }
+.prov .state.is-test { color: var(--accent-ink); }
+.prov p { margin: 0 0 12px; max-width: 80ch; font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+.prov-table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+.prov-table th, .prov-table td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-top: 1px solid var(--rule); }
+.prov-table th { font: 500 11px/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
+.prov-table td b { color: var(--ink); } .prov-table code { font: 400 12.5px/1.5 var(--mono); overflow-wrap: anywhere; }
+.prov-wrap { overflow-x: auto; }
+.prov small { color: var(--ink-3); }
+.fold { margin: 0 0 4px; }
+.fold > summary { cursor: pointer; width: max-content; max-width: 100%; padding: 6px 0; font: 500 14.5px/1.4 var(--sans); color: var(--accent-ink); }
+.fold[open] > summary { margin-bottom: 8px; }
+@media (max-width: 700px) { .prov-table, .prov-table tbody, .prov-table tr, .prov-table td { display: block; } .prov-table thead { display: none; } .prov-table tr { border-top: 1px solid var(--rule); padding: 10px 0; } .prov-table td { border: 0; padding: 2px 0; } .prov-table td::before { content: attr(data-k) " · "; font: 500 10.5px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); } }
+</style>
+</head>
+<body>
+<header class="top"><a class="brand" href="index.html">EEG-Jev</a><a href="index.html">← Back to the replay</a></header>
+<main>
+  <p class="eyebrow">Data &amp; methods</p>
+  <h1>How the replay is assembled</h1>
+  <p class="lede">Recorded EEG and the answers one checkpoint already gave for it. The page itself runs no model.</p>
+
+  <section class="prov" id="material" aria-labelledby="pv-title">
+    <h3 id="pv-title">What is on the page</h3>
+    <p class="state" id="pv-state">Loading the material list…</p>
+    <p id="pv-note"></p>
+    <div class="prov-wrap"><table class="prov-table" aria-describedby="pv-title">
+      <thead><tr><th>Question</th><th>Recording played in the replay</th><th>Windows</th><th>Why this one</th><th>Sources</th></tr></thead>
+      <tbody id="pv-rows"><tr><td colspan="5">Loading…</td></tr></tbody>
+    </table></div>
+    <p><small id="pv-files">Every file is listed with its SHA-256 in <a href="material/SHA256SUMS">material/SHA256SUMS</a>; each replayed window with its identifier, label, question and saved output is in <a href="material/manifest.json">manifest.json</a> and the case files it names. The build checks are in <a href="material/BUILD_REPORT.json">BUILD_REPORT.json</a>.</small></p>
+  </section>
+
+  <section class="prov" id="sources" aria-labelledby="src-title">
+    <h3 id="src-title">Sources and protocols</h3>
+    <p id="src-note">Loading…</p>
+    <details class="fold" id="src-fold"><summary>All sources by application and protocol</summary>
+    <div class="prov-wrap"><table class="prov-table" aria-describedby="src-title">
+      <thead><tr><th>Application</th><th>Sources</th><th>Protocol</th></tr></thead>
+      <tbody id="src-rows"></tbody>
+    </table></div>
+    </details>
+  </section>
+  <section class="prov" id="channels" aria-labelledby="ch-title">
+    <h3 id="ch-title">Model-input channels of the four sources shown</h3>
+    <p id="ch-note">Names and order as the model reads them. The complete check of what the page holds is in <a href="material/CHANNEL_COVERAGE.json">CHANNEL_COVERAGE.json</a>.</p>
+    <details class="fold" id="ch-fold"><summary>Channel names in input order</summary>
+    <div class="prov-wrap"><table class="prov-table" aria-describedby="ch-title">
+      <thead><tr><th>Source</th><th>Input channels</th><th>Shown by default</th><th>In order</th></tr></thead>
+      <tbody id="ch-rows"></tbody>
+    </table></div>
+    </details>
+  </section>
+
+  <article class="ev-col" id="data-method" aria-labelledby="dm-title">
+    <h3 id="dm-title">Recordings, answers and labels</h3>
+    <p class="ev-sum">Real recordings with the answers one checkpoint gave for them, each bound to the question it was asked and to the dataset’s own label.</p>
+    <h4>The model</h4>
+    <p id="dm-model">One checkpoint answers all four questions: a frozen REVE-L encoder, a trainable MLP connector and Qwen3.5-2B with frozen base weights and LoRA, trained once on 35 public sources for sleep staging, motor imagery, seizure detection and pain rating. The EEG, the question and the answer specification are read in one forward pass; the readout selected by the answer type returns the probabilities, and no text is generated. <span id="dm-paper">The manuscript link will be added to the paper section of the main page once posted.</span></p>
+    <h4>Choice · sleep stage</h4>
+    <p>Sleep-EDF Expanded, leads Fpz–Cz and Pz–Oz, 30-second epochs. The model returns one probability for each of W, N1, N2, N3 and REM; the stage shown is the most probable one. The label is the hypnogram stage of the epoch, by one scorer (the dataset’s stages 3 and 4 are both N3).</p>
+    <h4>Noul · seizure activity</h4>
+    <p>CHB-MIT in its BIDS conversion, 18 longitudinal bipolar leads, 5-second windows that follow each other without overlap. The model input of this source has 24 channel slots: these 18 leads and six alternative lead names (F7–T3, T3–T5, T5–O1, F8–T4, T4–T6, T6–O2) that do not occur in the shown recordings and are zero in the model input. The number, Model P(seizure overlap), is the model’s probability that an annotated seizure overlaps the window. The dataset label is “yes” when the window and an annotated seizure interval share any time at all, and “no” otherwise; it is not the share of the window that is seizure. The amber colouring is the dataset’s time annotation. Where the page states how many of the 5&nbsp;s are covered, that is a separate statistic of the annotation, not what the model estimates.</p>
+    <p id="dm-thr">The marked threshold was fixed on development data before any test evaluation: the lowest value that keeps 99% of non-seizure development windows below it.</p>
+    <p>The threshold is a reading aid of this page. The balanced accuracy reported in the paper uses a threshold of 0.5 on the raw probability.</p>
+    <h4>Choice · motor imagery</h4>
+    <p>Stieger et al. 2021, a cursor-control experiment with 60 scalp leads: imagining the left or the right hand moves a cursor left or right, both hands move it up, and resting moves it down. Each trial has a 2-s pause, 2 s with the target on screen, then up to 6 s of cursor control with feedback. The model reads the 4 s after the target appears and returns a probability for each of the four options listed in the question: left hand, right hand, both hands, rest. The label is the cued target, not a measured movement. The benchmark split keeps only part of the trials of a session (177 of 450 in the replayed one; trials flagged as artefacts and trials that end early are among those left out), so the replay plays every trial of two runs end to end, 42 trials, and the model’s saved answer appears only for the 24 of them that the split kept; the others are played and marked as having no saved answer. The session file stores one array per trial, each with its own time vector counted from the appearance of the target, and no clock time between trials or runs. The time axis of the replay is therefore the trial arrays laid end to end in file order (the same axis the benchmark split lists use), not clock time; trial boundaries are drawn, the phases of each trial (pause, target shown, cursor control, the second after the result) are shown as a strip, and the two runs are separate segments because the time between them was not recorded. <span id="mi-licence"></span></p>
+    <h4>Score · pain rating</h4>
+    <p>OpenNeuro ds005292, 63 scalp leads. Each trial is one laser stimulus; the window runs from 1&nbsp;s before the stimulus to 2&nbsp;s after it. The model returns a probability for each rating from 0 to 10. The expected value shown is the sum over the eleven ratings of rating × probability; the error is that value minus the rating the participant reported for the stimulus a few seconds later (0 no sensation, 4 onset of pain, 6 moderate, 8 severe, 10 unbearable). The target is the reported rating, not the laser energy. The replay plays the three recorded blocks of one participant in full, on the time axis of each block’s recording, so the EEG between stimuli is shown as recorded. Each rated laser stimulus is marked at its real time with the 3-s window the model read; the answer appears when that window is complete and stays on the card until the next one, and the line under the answer says whether the playhead is inside a model window or between stimuli. The blocks are separate recordings and stay separate segments: the time between them was not recorded. Only stimuli of the benchmark split list are marked. <span id="pain-ratings"></span></p>
+    <h4>The numbers are raw outputs</h4>
+    <p>Probabilities are shown as saved, to seven decimals, without temperature scaling or prior correction. Training draws the classes more evenly than they occur, so raw seizure probabilities sit higher than the rate of seizures in a recording; the paper reports what prior correction and temperature scaling change. A window’s answer appears only after the whole window has been drawn. The drawing speed is a playback setting and says nothing about inference time.</p>
+    <h4>The waveform</h4>
+    <p>Exported from the original recording files in microvolts, with the 0.5&nbsp;Hz high-pass of the model’s preprocessing (the pain recording also gets a 40&nbsp;Hz display low-pass). Each model window inside the export was compared with the window the model actually read: the two agree lead by lead (correlations in BUILD_REPORT.json). The model’s own input is additionally standardised per recording and lead. The replays are stored at 100&nbsp;Hz (sleep, pain) or 200&nbsp;Hz (seizure, motor imagery); the pain and motor-imagery replays show 9 and 13 leads by default and can show every input lead (63 and 60). The leads outside the default set are stored in time chunks (60 s for pain, 30 s for motor imagery), with the same rate, unit and filters, and are fetched when they are on screen.</p>
+    <p id="dm-ch"><b>Channels.</b> “Input channels” are the channels the model reads for a source, in the order of its features. “Default” is a display subset chosen for readability; “All” shows every input channel; “Custom” is the viewer’s own choice. The scalp map uses the electrode positions stored with the encoder features (REVE position bank); a bipolar lead is drawn between its two electrodes and enters the encoder at the position of the first. The map, the lead list and the waveform rows share one selection: pointing at one highlights the others, a click pins it.</p>
+    <p id="dm-amp"><b>Amplitude.</b> Files hold 16-bit integers with one scale per file; the browser multiplies them back to microvolts, and the step is far below what a pixel can show (peak amplitude ÷ 32,767). The gain is stated in µV per row, and the bracket at the right edge of a plot spans one row. Every lead is drawn inside its own row only: where a trace would leave the display range of its row it is cut, and a thin grey line with a small outward arrow (▲▼) at the row edge marks the cut, so a cut cannot be mistaken for a flat signal and no lead runs into its neighbour. The mark says “outside display range” and nothing else: it depends on the gain, not on the recording. In the single windows the default gain is one value per task, widened for a window whose amplitude needs it (at most 5% of its samples outside their rows); the gain can be set by hand, and Fit amplitude chooses the value at which nothing is cut. The replay has the same controls: an automatic scale per recording, manual steps and Fit amplitude for the span on screen. Three limits are separate things: the display range (the gain, in the viewer only); the 16-bit encoding of the files, where only the peak sample of a file reaches full scale, so nothing is cut; and the ±15 clip of the model’s preprocessing, which exists only in the standardised model input (0.016% of the samples of the replayed sleep windows, 0.015% of the pain windows, none in the seizure and motor-imagery windows) and is not drawn. Each pixel column shows the minimum and maximum of its samples, so short peaks are kept. Gain changes the drawing only, never a saved probability.</p>
+  </article>
+  <article class="ev-col" id="cue-method" aria-labelledby="cm-title">
+    <h3 id="cm-title">Chosen examples, measurements and scope</h3>
+    <p class="ev-sum">The examples are curated, not sampled. Results for whole test sets are in the paper.</p>
+    <h4>How the examples were chosen</h4>
+    <ul id="cm-rules"><li>Loading…</li></ul>
+    <p>Choosing examples decides only what is displayed. The checkpoint, the threshold and every reported result were fixed by the evaluation protocol beforehand.</p>
+    <h4 id="results">Results and checkpoint</h4>
+    <p>Task results on held-out test data, probability quality and inference timing are reported in the paper, linked from the main page. This page shows examples only and quotes no result.</p>
+    <p id="cm-ckpt"></p>
+    <h4>Signal analysis</h4>
+    <ul>
+      <li>Computed in your browser from the display traces of the window on screen, on the whole window, and revealed as the window plays. These are measurements of the signal; they never read the model’s answer or the label, and they are not the model’s reasons.</li>
+      <li><b>Spectrogram.</b> Short-time Fourier transform with a Hann window, the mean removed per frame, one-sided power spectral density in µV²/Hz shown as 10·log10. Window and step: sleep 2 s and 0.5 s (100 Hz signal), seizure 1 s and 0.125 s (200 Hz), motor imagery 1 s and 0.1 s (200 Hz), pain 0.64 s and 0.08 s (100 Hz). Frames need a complete window; the edges are left empty. One colour scale per task.</li>
+      <li><b>Sleep, relative band power.</b> δ 1–4, θ 4–8, α 8–12, σ 11–16 Hz; each is the band power of a frame divided by the 1–25 Hz power of the same frame.</li>
+      <li><b>Seizure, line length.</b> Sum of absolute sample-to-sample changes within 0.5-s segments divided by 0.5 s, in µV/s, per lead and as the mean over leads; not normalised, one scale for all windows. The paired non-seizure window gives the comparison value.</li>
+      <li><b>Motor imagery, μ and β power.</b> Band power 8–13 Hz and 13–30 Hz at C3, Cz and C4, as the change (P − R) ÷ R relative to R, the mean of the frames that end before the target appears (the 2-s pause).</li>
+      <li><b>Pain, around the stimulus.</b> Root-mean-square amplitude at the chosen lead in the second before and after the stimulus, and the lowest and highest point between 0.15 and 0.6 s after it, relative to the pre-stimulus mean.</li>
+      <li>The same quantities were recomputed with an independent NumPy implementation for every example; the two agree to rounding error.</li>
+    </ul>
+    <h4>Sleep signal cues</h4>
+    <ul>
+      <li>Short sentences in the replay, from fixed rules on the two sleep traces.</li>
+      <li><b>Alpha.</b> 2-s frames where 8–12&nbsp;Hz carries at least 30% of 1–25&nbsp;Hz power on Pz–Oz; mentioned from 10&nbsp;s.</li>
+      <li><b>Spindle-like bursts.</b> 11–16&nbsp;Hz envelope on Fpz–Cz at least 3× its median for 0.5–3&nbsp;s; at most two are marked. “Spindle-like” because no one checked them by eye.</li>
+      <li><b>Slow deflections.</b> 0.5–2&nbsp;Hz cycles with at least 75&nbsp;µV peak to peak on Fpz–Cz; mentioned from 20% of the epoch. Eye movements also produce slow deflections at this frontal lead.</li>
+      <li><b>Theta.</b> 4–8&nbsp;Hz carrying at least 30% of power with little alpha; mentioned from 10&nbsp;s.</li>
+    </ul>
+    <h4>Seizure lead view</h4>
+    <p>The lead selector and the paired non-seizure window are for inspection. The non-seizure window is the last window of the same record that ends at least 300 s before the annotated onset, or the first one that starts at least 300 s after the offset. The dataset gives seizure start and end times, not onset channels or labels for individual waves.</p>
+  </article>
+  <div class="ev-limits" aria-labelledby="lim-title">
+    <h3 id="lim-title">Limits</h3>
+    <ul>
+      <li><b>Not a medical device</b> or clinical decision support. A threshold fitted on a few patients does not guarantee accuracy for an unseen patient.</li>
+      <li><b>Replay controls.</b> In the pain and motor-imagery replays the step buttons jump to the next or previous model window, and the recording is downloaded segment by segment; a segment that fails to arrive is reported in place and can be retried. Speed is one value per task between 1× and 16× (slider, number and the presets 1×, 4×, 8×, 16× are the same setting; defaults: sleep 10×, seizure 4×, motor imagery 2×, pain 4×), kept while the page is open. The replay clock advances by real elapsed time multiplied by the speed. A single window is drawn at the same speed, but never in less than 1.2 s, and the next example follows 4.5 s after the answer.</li>
+      <li><b>Trial phases (motor imagery).</b> Pause, target shown, cursor control and the second after the result are phases of the original BCI experiment, read from the time vector of each trial in the session file. The strip under the replay names them; the answers are saved EEG-Jev outputs for the 4 s after each target.</li>
+      <li><b>Curated examples.</b> <span id="lim-split">Their accuracy is specific to the examples; results for whole test sets are in the paper.</span> No model weights are included.</li>
+      <li><b>One checkpoint, one seed.</b> An empirical system report; it does not show that language modelling improves EEG decoding.</li>
+      <li><b>Vision cards</b> show where the interface is meant to go; those questions are not trained or evaluated.</li>
+    </ul>
+  </div>
+</main>
+<footer class="foot"><p data-credits>EEG excerpts from public datasets; the sources and their licences are listed with the material.</p><p><span id="omitted-note" hidden></span> Fonts: Newsreader and IBM Plex Mono (SIL OFL 1.1).</p></footer>
+<script src="data/site-config.js"></script>
+<script>
+(async function () {
+  const $ = (id) => document.getElementById(id), esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const get = async (p) => { const r = await fetch('material/' + p, { cache: 'no-cache' }); if (!r.ok) throw new Error(p + ': HTTP ' + r.status); return r.json(); };
+  const clock = (s) => { const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = Math.round(s % 60); return (h ? h + ':' : '') + String(m).padStart(2, '0') + ':' + String(x).padStart(2, '0'); };
+  try {
+    const m = await get('manifest.json'), test = m.data_status.kind === 'test';
+    const st = $('pv-state'); st.textContent = (test ? 'Curated test examples' : m.data_status.label) + ' · recorded replay'; st.classList.toggle('is-test', test);
+    const ck = 'seed ' + m.model.seed + ', update ' + Number(m.model.update).toLocaleString('en');
+    const sha = m.model.checkpoint_sha256;
+    $('pv-note').textContent = m.data_status.note + (sha ? ' Checkpoint sha256 ' + sha.slice(0, 16) + '…;' : '') + ' Material built ' + m.built.slice(0, 16).replace('T', ' ') + '.';
+    const names = { sleep: 'Sleep stage · Choice', seizure: 'Seizure activity · Noul', motor_imagery: 'Motor imagery · Choice', pain: 'Pain rating · Score' }, rows = [], rules = [];
+    const keys = ['sleep', 'seizure', 'motor_imagery', 'pain'].filter((k) => m.tasks[k]);
+    const loaded = await Promise.all(keys.map((k) => Promise.all([get(m.tasks[k].cases[0].path + 'case.json'), get(m.tasks[k].examples.path + '.json')])));
+    keys.forEach((k, n) => {
+      const t = m.tasks[k], c = loaded[n][0], w = loaded[n][1], inp = m.inputs;
+      const secs = c.sparse ? c.segments.reduce((a, g) => a + g.n_samples / c.sample_rate_hz, 0) : 0;
+      const where = c.sparse ? esc(c.record_label || c.subject_id) + ', ' + c.segments.length + ' ' + c.segment_word + 's played in full (' + (secs / 60).toFixed(1) + ' min)' : esc(c.record_label) + ', +' + clock(c.t0_record_s) + '–' + clock(c.t1_record_s);
+      const win = k === 'motor_imagery' ? c.windows.length + ' model windows of ' + c.window_length_s + ' s (from the target of each trial the split kept); ' + c.trials.length + ' trials played, the EEG between the windows as recorded'
+        : c.sparse ? c.windows.length + ' model windows of ' + c.window_length_s + ' s (−1 to +2 s around each rated stimulus); the EEG between them is played as recorded' : c.windows.length + ' windows of ' + c.window_length_s + ' s, a new one every ' + c.stride_s + ' s' + (c.gaps && c.gaps.length ? ', ' + c.gaps.length + ' gaps kept' : ', no gaps');
+      const src = 'saved outputs sha256 ' + inp[k + '.predictions'].sha256.slice(0, 12) + '… · split list sha256 ' + inp[k + '.manifest'].sha256.slice(0, 12) + '…';
+      rows.push('<tr><td data-k="Question"><b>' + names[k] + '</b><br>“' + esc(t.question) + '”</td><td data-k="Recording">' + esc(t.dataset) + '<br>' + where + '<br><small>' + esc(c.split === 'val' ? 'development (validation)' : c.split) + ' split</small></td><td data-k="Windows">' + win + '</td><td data-k="Why this one">' + esc(c.provenance.selection_note || '') + '</td><td data-k="Sources"><small>' + src + '</small></td></tr>');
+      rules.push('<li><b>' + names[k].split(' · ')[0] + ', ' + w.items.length + ' single windows.</b> ' + esc(w.selection_rule) + '</li>');
+    });
+    const mi = m.tasks.motor_imagery; if (mi && mi.licence_note) document.getElementById('mi-licence').textContent = 'Licence note: ' + mi.licence_note;
+    if (m.credits_html) document.querySelectorAll('[data-credits]').forEach((e) => { e.innerHTML = m.credits_html; });
+    const pr = m.tasks.pain && m.tasks.pain.ratings_note; if (pr) document.getElementById('pain-ratings').textContent = pr;
+    const om = m.omitted || {}, ok = Object.keys(om); if (ok.length) { const o = $('omitted-note'); o.hidden = false; o.textContent = ok.map((k) => om[k].note).join(' '); }
+    $('pv-rows').innerHTML = rows.join(''); $('cm-rules').innerHTML = rules.join('');
+    const thr = m.formal.seizure_thresholds_dev; if (thr) $('dm-thr').textContent = 'The marked threshold (' + (thr.spec99 * 100).toFixed(1) + '% on the raw probability) was fixed on development data before any test evaluation: the lowest value that keeps 99% of non-seizure development windows below it.';
+    const ov = m.overview;
+    if (ov) {
+      const nbHref = (window.EEGJevSite && window.EEGJevSite.benchmark && window.EEGJevSite.benchmark.href) || 'https://facebookresearch.github.io/neuroai/neuralbench/index.html';
+      $('src-note').innerHTML = ov.sources + ' sources in ' + ov.applications + ' applications. ' + ov.neuralbench + ' follow <a href="' + esc(nbHref) + '" target="_blank" rel="noopener">NeuralBench</a> windows, labels and partitions; the other ' + ov.supplementary + ' follow fixed supplementary protocols with their own subject-level partitions. EEG-Jev is evaluated on these selected datasets, not on the whole benchmark.';
+      const apps = { 'motor-imagery': 'Motor imagery', 'sleep-stage': 'Sleep staging', 'seizure-presence': 'Seizure detection', 'pain-rating': 'Pain rating' }, rowsS = [];
+      for (const a of Object.keys(apps)) for (const pr of ['NeuralBench', 'supplementary']) {
+        const xs = ov.list.filter((x) => x.application === a && x.protocol === pr); if (!xs.length) continue;
+        rowsS.push('<tr><td data-k="Application"><b>' + apps[a] + '</b></td><td data-k="Sources">' + xs.length + ': <code>' + xs.map((x) => esc(x.source)).join('</code>, <code>') + '</code></td><td data-k="Protocol">' + (pr === 'NeuralBench' ? 'NeuralBench processing and partitions' : 'supplementary: ' + esc([...new Set(xs.map((x) => x.partition))].join('; '))) + '</td></tr>');
+      }
+      $('src-rows').innerHTML = rowsS.join('');
+    }
+    $('ch-rows').innerHTML = keys.map((k) => { const ic = m.tasks[k].input_channels; if (!ic) return ''; const nm = (c) => esc(c.name) + (c.recorded === false ? ' (empty slot)' : '');
+      return '<tr><td data-k="Source"><b>' + esc(ic.source) + '</b><br><small>' + names[k].split(' · ')[0] + '</small></td><td data-k="Input channels">' + ic.n_channels + (ic.empty_slots.length ? ' (' + (ic.n_channels - ic.empty_slots.length) + ' recorded, ' + ic.empty_slots.length + ' empty slots)' : '') + '</td><td data-k="Shown by default">' + ic.default_leads.length + '</td><td data-k="In order"><small>' + ic.channels.map(nm).join(', ') + '</small></td></tr>'; }).join('');
+    $('cm-ckpt').textContent = 'Checkpoint: ' + ck + (sha ? ' (sha256 ' + sha + ')' : '') + '; ' + m.model.encoder + ', ' + m.model.connector + ', ' + m.model.language_model + '; ' + m.model.trainable_parameters + ' trainable parameters, one training run.';
+    const site = window.EEGJevSite; if (site && site.title) { const hasPaper = site.paper && (site.paper.arxiv || site.paper.pdf); $('dm-paper').textContent = 'The manuscript, “' + site.title + '”, ' + (hasPaper ? 'is linked from the paper section of the main page.' : 'will be linked from the paper section of the main page once posted.'); }
+    if (!test) $('lim-split').textContent = 'Shown from the development (validation) split, which also guided training decisions; they are not held-out evidence. Held-out test results are reported in the paper.';
+  } catch (e) {
+    $('pv-state').textContent = 'The material list could not be loaded'; $('pv-note').textContent = e.message + '. Open this page through the web server, not as a file.'; $('pv-rows').innerHTML = '';
+    for (const id of ['cm-rules', 'cm-ckpt']) $(id).textContent = 'Not available.';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1524 @@
+{
+ "schema": "eegjev.demo.case.v2",
+ "task": "pain",
+ "kind": "continuous",
+ "sparse": true,
+ "case_id": "sub-008",
+ "source": "ds005292",
+ "dataset": "OpenNeuro ds005292 (laser-evoked pain, single-trial ratings)",
+ "split": "val",
+ "subject_id": "sub-008",
+ "record_ids": [
+  "ds005292:subject=sub-008,session=ses-1",
+  "ds005292:subject=sub-008,session=ses-2",
+  "ds005292:subject=sub-008,session=ses-3"
+ ],
+ "record_label": "sub-008",
+ "segment_word": "block",
+ "segments": [
+  {
+   "name": "ses-1",
+   "label": "block 1",
+   "file": "seg-1",
+   "n_samples": 51100,
+   "t0_record_s": 117,
+   "t1_record_s": 628.0,
+   "recording_length_s": 632.0,
+   "data_sha256": "6b7f10d1c352cd9a0f5e926267f24ca667304a6e3b462e83b403bbe8ef10e172"
+  },
+  {
+   "name": "ses-2",
+   "label": "block 2",
+   "file": "seg-2",
+   "n_samples": 49300,
+   "t0_record_s": 29,
+   "t1_record_s": 522.0,
+   "recording_length_s": 540.0,
+   "data_sha256": "05a3489f0b96f8e149db85512508b18b8ff914139b9ab5a74795d245219638c5"
+  },
+  {
+   "name": "ses-3",
+   "label": "block 3",
+   "file": "seg-3",
+   "n_samples": 44000,
+   "t0_record_s": 70,
+   "t1_record_s": 510.0,
+   "recording_length_s": 541.0,
+   "data_sha256": "1fce6afddac1af2073d3066dd5240a3a155b6163d65aa286f9bc5c752ac87927"
+  }
+ ],
+ "rest": {
+  "channels": [
+   "FP1",
+   "AF7",
+   "AF3",
+   "F1",
+   "F3",
+   "F5",
+   "F7",
+   "FT7",
+   "FC5",
+   "FC3",
+   "FC1",
+   "C1",
+   "C5",
+   "TP7",
+   "CP5",
+   "CP3",
+   "CP1",
+   "P1",
+   "P3",
+   "P5",
+   "P7",
+   "P9",
+   "PO7",
+   "PO3",
+   "O1",
+   "OZ",
+   "POZ",
+   "FPZ",
+   "FP2",
+   "AF8",
+   "AF4",
+   "AFZ",
+   "F2",
+   "F4",
+   "F6",
+   "F8",
+   "FT8",
+   "FC6",
+   "FC4",
+   "FC2",
+   "C2",
+   "C6",
+   "TP8",
+   "CP6",
+   "CP4",
+   "CP2",
+   "P2",
+   "P4",
+   "P6",
+   "P8",
+   "P10",
+   "PO8",
+   "PO4",
+   "O2"
+  ],
+  "chunk_s": 60,
+  "chunks": [
+   {
+    "k": 0,
+    "s0": 0,
+    "n_samples": 6000,
+    "file": "seg-1.rest-00",
+    "data_sha256": "e19d4525205f6888b5bdb28eb43b34dca9d8dbe7e4e972fcae2ca12619b27f3a",
+    "seg": 0
+   },
+   {
+    "k": 1,
+    "s0": 6000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-01",
+    "data_sha256": "d55a9f9db355af002ee033010c435b89c44afab873045d4e3fe446c417e9f518",
+    "seg": 0
+   },
+   {
+    "k": 2,
+    "s0": 12000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-02",
+    "data_sha256": "826f0d27567ea69d679e867481688511e5c1b6e6ce2c090b0bcc9ca68dec27a9",
+    "seg": 0
+   },
+   {
+    "k": 3,
+    "s0": 18000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-03",
+    "data_sha256": "a42406f845b03e9690f09ed595d1a1173d3788f4aabc50294c68c42d8f232aa0",
+    "seg": 0
+   },
+   {
+    "k": 4,
+    "s0": 24000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-04",
+    "data_sha256": "f3daed1c07381e7ff1047c636c9ea816e8a0123149d3340727ecc68df0fb9736",
+    "seg": 0
+   },
+   {
+    "k": 5,
+    "s0": 30000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-05",
+    "data_sha256": "0b7e67098688f855a1c03b957525b24a5c8c7604ed1b663e00cb291bde7daa7c",
+    "seg": 0
+   },
+   {
+    "k": 6,
+    "s0": 36000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-06",
+    "data_sha256": "e20d291a7077ba23e13fb699ead52bfe4da7b3f73c646f1ff3e4900a88434547",
+    "seg": 0
+   },
+   {
+    "k": 7,
+    "s0": 42000,
+    "n_samples": 6000,
+    "file": "seg-1.rest-07",
+    "data_sha256": "ae61797d6780450c2962adc974179d9f4f5e29aa676ce08d2e7bb235a6f64dec",
+    "seg": 0
+   },
+   {
+    "k": 8,
+    "s0": 48000,
+    "n_samples": 3100,
+    "file": "seg-1.rest-08",
+    "data_sha256": "01b2e1d4c7b0e17f73736d6b48f94e2fbc85118c755bee55932ab7ea079a7c26",
+    "seg": 0
+   },
+   {
+    "k": 0,
+    "s0": 0,
+    "n_samples": 6000,
+    "file": "seg-2.rest-00",
+    "data_sha256": "e0b3e9167be1b3b514d8d0b6f5d727dd2dc1690a3b72fce4fd4fd730ec174aa9",
+    "seg": 1
+   },
+   {
+    "k": 1,
+    "s0": 6000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-01",
+    "data_sha256": "b7936869fee707bbc0f6facd82506e2004a499d1ce4c246f78d713de66ab5386",
+    "seg": 1
+   },
+   {
+    "k": 2,
+    "s0": 12000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-02",
+    "data_sha256": "118b3c455fb7e9e67061dd4e4d73676fa3e0fc82078ebceddabb81a525eb5d59",
+    "seg": 1
+   },
+   {
+    "k": 3,
+    "s0": 18000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-03",
+    "data_sha256": "21ce5ce05015d125d9b10b045bdec07d6e10e0c1e5e1eadf46e113e7c85dcd0a",
+    "seg": 1
+   },
+   {
+    "k": 4,
+    "s0": 24000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-04",
+    "data_sha256": "e6dede8c4f94040e5d0b7f9454b69074338183770f7fad3fe42d11d71401641c",
+    "seg": 1
+   },
+   {
+    "k": 5,
+    "s0": 30000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-05",
+    "data_sha256": "ebcd7e809cd590735927286dcdd4fd47ab7862b56c17f225bd6762d0de3dc65a",
+    "seg": 1
+   },
+   {
+    "k": 6,
+    "s0": 36000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-06",
+    "data_sha256": "4bf3bcb55557338da77633f44dea5d341cda9aab61588712381b1d7ceae2f378",
+    "seg": 1
+   },
+   {
+    "k": 7,
+    "s0": 42000,
+    "n_samples": 6000,
+    "file": "seg-2.rest-07",
+    "data_sha256": "a85f3334b35a8edcec87d86bded3c6b1133eec973125bd418c70f512f1fcd4a3",
+    "seg": 1
+   },
+   {
+    "k": 8,
+    "s0": 48000,
+    "n_samples": 1300,
+    "file": "seg-2.rest-08",
+    "data_sha256": "82296637b6ba193f4fd9ac57511cf3680a47278c8e46cff9ea1b1a7b510943a4",
+    "seg": 1
+   },
+   {
+    "k": 0,
+    "s0": 0,
+    "n_samples": 6000,
+    "file": "seg-3.rest-00",
+    "data_sha256": "c539732fbd4f0837011fccb8968bd60023649ecde630a5dd76ec2f38b953ece4",
+    "seg": 2
+   },
+   {
+    "k": 1,
+    "s0": 6000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-01",
+    "data_sha256": "0794ec4ddd2e6fb90bb6deeeefbc7b2b67e7cd9bad27daa4b9e44b5c76403853",
+    "seg": 2
+   },
+   {
+    "k": 2,
+    "s0": 12000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-02",
+    "data_sha256": "c062d6b6e77cdf0026a0530cd18be32120f45c512db9438f20c9eb5f47d50225",
+    "seg": 2
+   },
+   {
+    "k": 3,
+    "s0": 18000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-03",
+    "data_sha256": "f9c4ad7d5539710ff67b19a59fca887e83575b125baac9c6856c280a39a122af",
+    "seg": 2
+   },
+   {
+    "k": 4,
+    "s0": 24000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-04",
+    "data_sha256": "fb463d3df4fa3da9fe2add0b3d18dbae3d0395d6472951c0d986edadd0c411cc",
+    "seg": 2
+   },
+   {
+    "k": 5,
+    "s0": 30000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-05",
+    "data_sha256": "3703252faa07f8d1f9ba3fe49a833be2c4bd51c0e1c2f81a72374b9238fd0ed5",
+    "seg": 2
+   },
+   {
+    "k": 6,
+    "s0": 36000,
+    "n_samples": 6000,
+    "file": "seg-3.rest-06",
+    "data_sha256": "28cab20b998a903ae2c0a643e554493b41ebb09d18fb37e6dc81a59fe027bf36",
+    "seg": 2
+   },
+   {
+    "k": 7,
+    "s0": 42000,
+    "n_samples": 2000,
+    "file": "seg-3.rest-07",
+    "data_sha256": "67947bfaa44eac61f7e63c970b8e9db15fcb543e373495b70864fd6fac83b4c8",
+    "seg": 2
+   }
+  ],
+  "note": "The input leads outside the default subset, same rate, unit and filters, in time chunks per segment (channel-major within a chunk)."
+ },
+ "channels": [
+  "FZ",
+  "FCZ",
+  "CZ",
+  "CPZ",
+  "PZ",
+  "C3",
+  "C4",
+  "T7",
+  "T8"
+ ],
+ "channels_model_input": 63,
+ "sample_rate_hz": 100,
+ "amplitude_unit": "uV",
+ "dtype": "int16-le (see manifest.encodings)",
+ "layout": "per segment: channel-major",
+ "window_length_s": 3.0,
+ "window_start_rel_stimulus_s": -1.0,
+ "time_axis_note": "Seconds from the start of each block recording (BDF time). Blocks are separate recordings; the time between them is not recorded.",
+ "display_conversion": "raw BDF in µV (recording reference unchanged), 0.5 Hz zero-phase FIR high-pass and 40 Hz low-pass for display, stored at 100 Hz; the model input keeps 0.5–99.5 Hz at 200 Hz, is standardised per recording and lead and clipped at ±15 SD. The replay holds all 63 leads the model reads (9 shown by default); only rated stimuli of the split list are marked",
+ "windows": [
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r90",
+   "event_key": "ds005292/sub-008|ses-1|124.985",
+   "session": "ses-1",
+   "trial_num": 1,
+   "stimulus_time_s": 124.9853515625,
+   "start_s": 123.9853515625,
+   "end_s": 126.9853515625,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.0016619,
+    0.0044662,
+    0.0139547,
+    0.0345402,
+    0.0705329,
+    0.1298062,
+    0.2162214,
+    0.2457221,
+    0.1706643,
+    0.0807771,
+    0.031653
+   ],
+   "expected": 6.49338,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99597,
+    "min_corr": 0.9166,
+    "n_leads": 62
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r91",
+   "event_key": "ds005292/sub-008|ses-1|166.435",
+   "session": "ses-1",
+   "trial_num": 2,
+   "stimulus_time_s": 166.4345703125,
+   "start_s": 165.4345703125,
+   "end_s": 168.4345703125,
+   "rating": 4.0,
+   "rating_raw_text": "4",
+   "probabilities": [
+    0.0118576,
+    0.0290115,
+    0.0735983,
+    0.1520457,
+    0.2201256,
+    0.2038908,
+    0.154213,
+    0.0898573,
+    0.0427817,
+    0.0169657,
+    0.0056528
+   ],
+   "expected": 4.638054,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99456,
+    "min_corr": 0.9165,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r92",
+   "event_key": "ds005292/sub-008|ses-1|206.051",
+   "session": "ses-1",
+   "trial_num": 3,
+   "stimulus_time_s": 206.05078125,
+   "start_s": 205.05078125,
+   "end_s": 208.05078125,
+   "rating": 5.0,
+   "rating_raw_text": "5",
+   "probabilities": [
+    0.0140025,
+    0.0335781,
+    0.0792429,
+    0.1532766,
+    0.2132119,
+    0.2038337,
+    0.150718,
+    0.0898645,
+    0.0407587,
+    0.0161095,
+    0.0054038
+   ],
+   "expected": 4.582362,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99348,
+    "min_corr": 0.9274,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r93",
+   "event_key": "ds005292/sub-008|ses-1|296.384",
+   "session": "ses-1",
+   "trial_num": 4,
+   "stimulus_time_s": 296.3837890625,
+   "start_s": 295.3837890625,
+   "end_s": 298.3837890625,
+   "rating": 7.0,
+   "rating_raw_text": "7",
+   "probabilities": [
+    0.0029604,
+    0.0082837,
+    0.0220316,
+    0.0514703,
+    0.0871916,
+    0.1213473,
+    0.1556295,
+    0.1628719,
+    0.1601403,
+    0.137261,
+    0.0908125
+   ],
+   "expected": 6.660737,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.9943,
+    "min_corr": 0.9691,
+    "n_leads": 57
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r94",
+   "event_key": "ds005292/sub-008|ses-1|372.933",
+   "session": "ses-1",
+   "trial_num": 5,
+   "stimulus_time_s": 372.9326171875,
+   "start_s": 371.9326171875,
+   "end_s": 374.9326171875,
+   "rating": 7.0,
+   "rating_raw_text": "7",
+   "probabilities": [
+    0.0053242,
+    0.0170533,
+    0.0505022,
+    0.106936,
+    0.1610524,
+    0.1879344,
+    0.1779331,
+    0.1302216,
+    0.0861095,
+    0.0510121,
+    0.0259212
+   ],
+   "expected": 5.409094,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99557,
+    "min_corr": 0.9321,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r95",
+   "event_key": "ds005292/sub-008|ses-1|399.216",
+   "session": "ses-1",
+   "trial_num": 6,
+   "stimulus_time_s": 399.2158203125,
+   "start_s": 398.2158203125,
+   "end_s": 401.2158203125,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.0217368,
+    0.0498827,
+    0.1078884,
+    0.1968534,
+    0.2492048,
+    0.1939841,
+    0.1077967,
+    0.0480499,
+    0.0177907,
+    0.0054185,
+    0.001394
+   ],
+   "expected": 4.011121,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99306,
+    "min_corr": 0.9178,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r96",
+   "event_key": "ds005292/sub-008|ses-1|502.882",
+   "session": "ses-1",
+   "trial_num": 7,
+   "stimulus_time_s": 502.8818359375,
+   "start_s": 501.8818359375,
+   "end_s": 504.8818359375,
+   "rating": 4.0,
+   "rating_raw_text": "4",
+   "probabilities": [
+    0.0896358,
+    0.1411464,
+    0.1816401,
+    0.2262326,
+    0.2110016,
+    0.1079579,
+    0.0314566,
+    0.0081333,
+    0.0022079,
+    0.0004864,
+    0.0001016
+   ],
+   "expected": 2.83565,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99726,
+    "min_corr": 0.9636,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r97",
+   "event_key": "ds005292/sub-008|ses-1|528.898",
+   "session": "ses-1",
+   "trial_num": 8,
+   "stimulus_time_s": 528.8984375,
+   "start_s": 527.8984375,
+   "end_s": 530.8984375,
+   "rating": 5.0,
+   "rating_raw_text": "5",
+   "probabilities": [
+    0.0383733,
+    0.0720886,
+    0.1191652,
+    0.1758575,
+    0.2046615,
+    0.1715902,
+    0.1188645,
+    0.0609726,
+    0.0263098,
+    0.0093576,
+    0.0027591
+   ],
+   "expected": 3.976872,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99681,
+    "min_corr": 0.9717,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r98",
+   "event_key": "ds005292/sub-008|ses-1|567.364",
+   "session": "ses-1",
+   "trial_num": 9,
+   "stimulus_time_s": 567.3642578125,
+   "start_s": 566.3642578125,
+   "end_s": 569.3642578125,
+   "rating": 4.0,
+   "rating_raw_text": "4",
+   "probabilities": [
+    0.0477412,
+    0.0917214,
+    0.1630635,
+    0.2358864,
+    0.2284853,
+    0.1332428,
+    0.0620731,
+    0.0248238,
+    0.0092397,
+    0.0029605,
+    0.0007624
+   ],
+   "expected": 3.360054,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99148,
+    "min_corr": 0.8892,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r99",
+   "event_key": "ds005292/sub-008|ses-1|619.747",
+   "session": "ses-1",
+   "trial_num": 10,
+   "stimulus_time_s": 619.7470703125,
+   "start_s": 618.7470703125,
+   "end_s": 621.7470703125,
+   "rating": 6.0,
+   "rating_raw_text": "6",
+   "probabilities": [
+    0.0431382,
+    0.0776225,
+    0.1371802,
+    0.2137894,
+    0.2409743,
+    0.1648794,
+    0.0746774,
+    0.0303539,
+    0.0121926,
+    0.0040153,
+    0.0011768
+   ],
+   "expected": 3.587633,
+   "phrasing_id": "pain-train-0",
+   "seg": 0,
+   "alignment": {
+    "median_corr": 0.99105,
+    "min_corr": 0.9559,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r100",
+   "event_key": "ds005292/sub-008|ses-2|36.203",
+   "session": "ses-2",
+   "trial_num": 11,
+   "stimulus_time_s": 36.203125,
+   "start_s": 35.203125,
+   "end_s": 38.203125,
+   "rating": 4.0,
+   "rating_raw_text": "4",
+   "probabilities": [
+    0.0108302,
+    0.0240431,
+    0.0590927,
+    0.1227564,
+    0.1946587,
+    0.2091341,
+    0.1824906,
+    0.1187454,
+    0.0549323,
+    0.0182409,
+    0.0050754
+   ],
+   "expected": 4.915345,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.98797,
+    "min_corr": 0.8622,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r101",
+   "event_key": "ds005292/sub-008|ses-2|48.786",
+   "session": "ses-2",
+   "trial_num": 12,
+   "stimulus_time_s": 48.7861328125,
+   "start_s": 47.7861328125,
+   "end_s": 50.7861328125,
+   "rating": 6.0,
+   "rating_raw_text": "6",
+   "probabilities": [
+    0.0184483,
+    0.0417888,
+    0.0969941,
+    0.192712,
+    0.2450479,
+    0.1982687,
+    0.1133004,
+    0.0571046,
+    0.024711,
+    0.0087592,
+    0.0028648
+   ],
+   "expected": 4.170152,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99614,
+    "min_corr": 0.9579,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r102",
+   "event_key": "ds005292/sub-008|ses-2|126.386",
+   "session": "ses-2",
+   "trial_num": 13,
+   "stimulus_time_s": 126.3857421875,
+   "start_s": 125.3857421875,
+   "end_s": 128.3857421875,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.0362826,
+    0.0733108,
+    0.1338063,
+    0.207179,
+    0.2387214,
+    0.1758977,
+    0.0840841,
+    0.0337828,
+    0.0123286,
+    0.0036507,
+    0.0009558
+   ],
+   "expected": 3.678862,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99516,
+    "min_corr": 0.9431,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r103",
+   "event_key": "ds005292/sub-008|ses-2|153.219",
+   "session": "ses-2",
+   "trial_num": 14,
+   "stimulus_time_s": 153.21875,
+   "start_s": 152.21875,
+   "end_s": 155.21875,
+   "rating": 6.0,
+   "rating_raw_text": "6",
+   "probabilities": [
+    0.0243929,
+    0.0548542,
+    0.112446,
+    0.1811323,
+    0.2184149,
+    0.1656956,
+    0.1078276,
+    0.0645005,
+    0.0398349,
+    0.0209942,
+    0.0099069
+   ],
+   "expected": 4.230446,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99328,
+    "min_corr": 0.9676,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r104",
+   "event_key": "ds005292/sub-008|ses-2|272.435",
+   "session": "ses-2",
+   "trial_num": 15,
+   "stimulus_time_s": 272.4345703125,
+   "start_s": 271.4345703125,
+   "end_s": 274.4345703125,
+   "rating": 6.0,
+   "rating_raw_text": "6",
+   "probabilities": [
+    0.003378,
+    0.0084807,
+    0.0251746,
+    0.0605966,
+    0.1087665,
+    0.16709,
+    0.2177745,
+    0.1999988,
+    0.1278588,
+    0.0592159,
+    0.0216654
+   ],
+   "expected": 5.990242,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99343,
+    "min_corr": 0.9418,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r105",
+   "event_key": "ds005292/sub-008|ses-2|311.801",
+   "session": "ses-2",
+   "trial_num": 16,
+   "stimulus_time_s": 311.80078125,
+   "start_s": 310.80078125,
+   "end_s": 313.80078125,
+   "rating": 7.0,
+   "rating_raw_text": "7",
+   "probabilities": [
+    0.0042017,
+    0.0118912,
+    0.0336877,
+    0.0839725,
+    0.1398897,
+    0.1770212,
+    0.1961601,
+    0.161277,
+    0.1080972,
+    0.0584251,
+    0.0253765
+   ],
+   "expected": 5.726117,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99671,
+    "min_corr": 0.9818,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r106",
+   "event_key": "ds005292/sub-008|ses-2|364.950",
+   "session": "ses-2",
+   "trial_num": 17,
+   "stimulus_time_s": 364.9501953125,
+   "start_s": 363.9501953125,
+   "end_s": 366.9501953125,
+   "rating": 4.0,
+   "rating_raw_text": "4",
+   "probabilities": [
+    0.0115401,
+    0.0266541,
+    0.0671917,
+    0.1325857,
+    0.2041088,
+    0.2118951,
+    0.1740417,
+    0.1040183,
+    0.0476981,
+    0.0161282,
+    0.0041384
+   ],
+   "expected": 4.775206,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99351,
+    "min_corr": 0.894,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r107",
+   "event_key": "ds005292/sub-008|ses-2|432.434",
+   "session": "ses-2",
+   "trial_num": 18,
+   "stimulus_time_s": 432.43359375,
+   "start_s": 431.43359375,
+   "end_s": 434.43359375,
+   "rating": 5.0,
+   "rating_raw_text": "5",
+   "probabilities": [
+    0.0497776,
+    0.0886514,
+    0.1506125,
+    0.2419497,
+    0.2525803,
+    0.1436677,
+    0.0504715,
+    0.0160233,
+    0.0048545,
+    0.0011644,
+    0.0002469
+   ],
+   "expected": 3.311162,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99359,
+    "min_corr": 0.9585,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r108",
+   "event_key": "ds005292/sub-008|ses-2|500.116",
+   "session": "ses-2",
+   "trial_num": 19,
+   "stimulus_time_s": 500.1162109375,
+   "start_s": 499.1162109375,
+   "end_s": 502.1162109375,
+   "rating": 5.0,
+   "rating_raw_text": "5",
+   "probabilities": [
+    0.0299835,
+    0.060037,
+    0.122274,
+    0.2175364,
+    0.264536,
+    0.1793708,
+    0.0817267,
+    0.0323122,
+    0.0097139,
+    0.002169,
+    0.0003406
+   ],
+   "expected": 3.729376,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.99651,
+    "min_corr": 0.9762,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r109",
+   "event_key": "ds005292/sub-008|ses-2|513.482",
+   "session": "ses-2",
+   "trial_num": 20,
+   "stimulus_time_s": 513.482421875,
+   "start_s": 512.482421875,
+   "end_s": 515.482421875,
+   "rating": 6.0,
+   "rating_raw_text": "6",
+   "probabilities": [
+    0.027391,
+    0.0598021,
+    0.1165604,
+    0.1900301,
+    0.2311487,
+    0.1808883,
+    0.1068338,
+    0.0541133,
+    0.0230151,
+    0.0078962,
+    0.0023211
+   ],
+   "expected": 3.990243,
+   "phrasing_id": "pain-train-0",
+   "seg": 1,
+   "alignment": {
+    "median_corr": 0.9969,
+    "min_corr": 0.9573,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r110",
+   "event_key": "ds005292/sub-008|ses-3|77.884",
+   "session": "ses-3",
+   "trial_num": 21,
+   "stimulus_time_s": 77.8837890625,
+   "start_s": 76.8837890625,
+   "end_s": 79.8837890625,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.0208829,
+    0.0502252,
+    0.1127304,
+    0.1964565,
+    0.2307222,
+    0.1781963,
+    0.1097753,
+    0.0577673,
+    0.0277979,
+    0.0112188,
+    0.0042273
+   ],
+   "expected": 4.107574,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99668,
+    "min_corr": 0.9457,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r111",
+   "event_key": "ds005292/sub-008|ses-3|144.434",
+   "session": "ses-3",
+   "trial_num": 22,
+   "stimulus_time_s": 144.43359375,
+   "start_s": 143.43359375,
+   "end_s": 146.43359375,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.0522629,
+    0.09219,
+    0.1534524,
+    0.2307866,
+    0.2424524,
+    0.1443495,
+    0.0552465,
+    0.0196134,
+    0.0070493,
+    0.0020684,
+    0.0005288
+   ],
+   "expected": 3.332082,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.98657,
+    "min_corr": 0.9066,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r112",
+   "event_key": "ds005292/sub-008|ses-3|156.866",
+   "session": "ses-3",
+   "trial_num": 23,
+   "stimulus_time_s": 156.8662109375,
+   "start_s": 155.8662109375,
+   "end_s": 158.8662109375,
+   "rating": 3.0,
+   "rating_raw_text": "3",
+   "probabilities": [
+    0.1030722,
+    0.1622922,
+    0.1977671,
+    0.2361289,
+    0.1938909,
+    0.0815064,
+    0.0201284,
+    0.0041813,
+    0.000846,
+    0.0001559,
+    3.08e-05
+   ],
+   "expected": 2.607827,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99135,
+    "min_corr": 0.9338,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r113",
+   "event_key": "ds005292/sub-008|ses-3|183.699",
+   "session": "ses-3",
+   "trial_num": 24,
+   "stimulus_time_s": 183.69921875,
+   "start_s": 182.69921875,
+   "end_s": 185.69921875,
+   "rating": 2.0,
+   "rating_raw_text": "2",
+   "probabilities": [
+    0.040371,
+    0.0756221,
+    0.1384043,
+    0.2265291,
+    0.2552774,
+    0.161042,
+    0.0670499,
+    0.0241928,
+    0.0086026,
+    0.0023681,
+    0.0005407
+   ],
+   "expected": 3.525527,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99137,
+    "min_corr": 0.9124,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r114",
+   "event_key": "ds005292/sub-008|ses-3|249.315",
+   "session": "ses-3",
+   "trial_num": 25,
+   "stimulus_time_s": 249.3154296875,
+   "start_s": 248.3154296875,
+   "end_s": 251.3154296875,
+   "rating": 1.0,
+   "rating_raw_text": "1",
+   "probabilities": [
+    0.0306375,
+    0.0639523,
+    0.1235874,
+    0.2066467,
+    0.2352615,
+    0.1740965,
+    0.0974849,
+    0.0440959,
+    0.017367,
+    0.0053392,
+    0.0015312
+   ],
+   "expected": 3.838477,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99303,
+    "min_corr": 0.9592,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r115",
+   "event_key": "ds005292/sub-008|ses-3|315.082",
+   "session": "ses-3",
+   "trial_num": 26,
+   "stimulus_time_s": 315.08203125,
+   "start_s": 314.08203125,
+   "end_s": 317.08203125,
+   "rating": 7.0,
+   "rating_raw_text": "7",
+   "probabilities": [
+    0.0036226,
+    0.010849,
+    0.031621,
+    0.0755387,
+    0.1259185,
+    0.1619821,
+    0.1876457,
+    0.1673228,
+    0.1232367,
+    0.0744317,
+    0.0378312
+   ],
+   "expected": 5.945516,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99489,
+    "min_corr": 0.9349,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r116",
+   "event_key": "ds005292/sub-008|ses-3|328.682",
+   "session": "ses-3",
+   "trial_num": 27,
+   "stimulus_time_s": 328.681640625,
+   "start_s": 327.681640625,
+   "end_s": 330.681640625,
+   "rating": 2.0,
+   "rating_raw_text": "2",
+   "probabilities": [
+    0.0439669,
+    0.0775429,
+    0.1272883,
+    0.2034949,
+    0.2399793,
+    0.1685118,
+    0.0857525,
+    0.0359352,
+    0.0129111,
+    0.0037244,
+    0.0008929
+   ],
+   "expected": 3.656879,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99079,
+    "min_corr": 0.8474,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r117",
+   "event_key": "ds005292/sub-008|ses-3|395.881",
+   "session": "ses-3",
+   "trial_num": 28,
+   "stimulus_time_s": 395.880859375,
+   "start_s": 394.880859375,
+   "end_s": 397.880859375,
+   "rating": 8.0,
+   "rating_raw_text": "8",
+   "probabilities": [
+    0.0010544,
+    0.0029794,
+    0.0093707,
+    0.0256082,
+    0.0528116,
+    0.1014438,
+    0.1745842,
+    0.213146,
+    0.19937,
+    0.1420544,
+    0.0775773
+   ],
+   "expected": 7.005761,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99302,
+    "min_corr": 0.8882,
+    "n_leads": 62
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r118",
+   "event_key": "ds005292/sub-008|ses-3|474.097",
+   "session": "ses-3",
+   "trial_num": 29,
+   "stimulus_time_s": 474.0966796875,
+   "start_s": 473.0966796875,
+   "end_s": 476.0966796875,
+   "rating": 8.0,
+   "rating_raw_text": "8",
+   "probabilities": [
+    0.0008766,
+    0.0024596,
+    0.0083675,
+    0.0229585,
+    0.0461366,
+    0.0874617,
+    0.1566365,
+    0.203882,
+    0.2062123,
+    0.1682945,
+    0.0967141
+   ],
+   "expected": 7.208408,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99388,
+    "min_corr": 0.956,
+    "n_leads": 63
+   }
+  },
+  {
+   "window_id": "pain_rating--ds005292:shard-00000-r119",
+   "event_key": "ds005292/sub-008|ses-3|501.297",
+   "session": "ses-3",
+   "trial_num": 30,
+   "stimulus_time_s": 501.296875,
+   "start_s": 500.296875,
+   "end_s": 503.296875,
+   "rating": 8.0,
+   "rating_raw_text": "8",
+   "probabilities": [
+    0.0024214,
+    0.0064422,
+    0.0200348,
+    0.0485579,
+    0.0909018,
+    0.1467206,
+    0.2132822,
+    0.2144805,
+    0.1533373,
+    0.0758682,
+    0.0279531
+   ],
+   "expected": 6.259496,
+   "phrasing_id": "pain-train-0",
+   "seg": 2,
+   "alignment": {
+    "median_corr": 0.99314,
+    "min_corr": 0.9302,
+    "n_leads": 63
+   }
+  }
+ ],
+ "marks": [
+  {
+   "seg": 0,
+   "t_s": 124.9853515625,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 0,
+   "t_s": 166.4345703125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "4"
+  },
+  {
+   "seg": 0,
+   "t_s": 206.05078125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "5"
+  },
+  {
+   "seg": 0,
+   "t_s": 296.3837890625,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "7"
+  },
+  {
+   "seg": 0,
+   "t_s": 372.9326171875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "7"
+  },
+  {
+   "seg": 0,
+   "t_s": 399.2158203125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 0,
+   "t_s": 502.8818359375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "4"
+  },
+  {
+   "seg": 0,
+   "t_s": 528.8984375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "5"
+  },
+  {
+   "seg": 0,
+   "t_s": 567.3642578125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "4"
+  },
+  {
+   "seg": 0,
+   "t_s": 619.7470703125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "6"
+  },
+  {
+   "seg": 1,
+   "t_s": 36.203125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "4"
+  },
+  {
+   "seg": 1,
+   "t_s": 48.7861328125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "6"
+  },
+  {
+   "seg": 1,
+   "t_s": 126.3857421875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 1,
+   "t_s": 153.21875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "6"
+  },
+  {
+   "seg": 1,
+   "t_s": 272.4345703125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "6"
+  },
+  {
+   "seg": 1,
+   "t_s": 311.80078125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "7"
+  },
+  {
+   "seg": 1,
+   "t_s": 364.9501953125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "4"
+  },
+  {
+   "seg": 1,
+   "t_s": 432.43359375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "5"
+  },
+  {
+   "seg": 1,
+   "t_s": 500.1162109375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "5"
+  },
+  {
+   "seg": 1,
+   "t_s": 513.482421875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "6"
+  },
+  {
+   "seg": 2,
+   "t_s": 77.8837890625,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 2,
+   "t_s": 144.43359375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 2,
+   "t_s": 156.8662109375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "3"
+  },
+  {
+   "seg": 2,
+   "t_s": 183.69921875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "2"
+  },
+  {
+   "seg": 2,
+   "t_s": 249.3154296875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "1"
+  },
+  {
+   "seg": 2,
+   "t_s": 315.08203125,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "7"
+  },
+  {
+   "seg": 2,
+   "t_s": 328.681640625,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "2"
+  },
+  {
+   "seg": 2,
+   "t_s": 395.880859375,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "8"
+  },
+  {
+   "seg": 2,
+   "t_s": 474.0966796875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "8"
+  },
+  {
+   "seg": 2,
+   "t_s": 501.296875,
+   "kind": "stimulus",
+   "label": "Laser stimulus",
+   "value": "8"
+  }
+ ],
+ "phases": [],
+ "trials": [],
+ "provenance": {
+  "raw_files": {
+   "ds005292/sub-008/ses-1/eeg/sub-008_ses-1_task-142ByBiosemi_eeg.bdf": "2c715ec60c061c9763343ecf7a90f2da6ac7e4888002e72286af06b8ace61107",
+   "ds005292/sub-008/ses-2/eeg/sub-008_ses-2_task-142ByBiosemi_eeg.bdf": "3fcbf20f07950f9b6631af9aa17cc3ab273afd25ead928251389666a3a011e62",
+   "ds005292/sub-008/ses-3/eeg/sub-008_ses-3_task-142ByBiosemi_eeg.bdf": "f96508347d5d1cb5733a859d49bb653684c33c8185a977f227daa22960a5a28c"
+  },
+  "selection_note": "Development (validation) split. One participant, the three recorded blocks played on their real time axis, with every rated laser stimulus of the split list. Chosen among participants whose ratings span low to high values for a small mean absolute error of the expected value (1.25 rating points on this participant; 1.69 on the whole development split)."
+ }
+}

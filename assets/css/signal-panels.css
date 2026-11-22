@@ -1,0 +1,76 @@
+/* Signal panels: explanations always open, the lower page on the full 12-column frame, the two
+   signal pictures explained for newcomers, and the answer types beside their answers. */
+
+/* ── Replay: what the answer means, beside the question ── */
+.stage-sem { margin: 6px 0 0; font: 400 13.5px/1.5 var(--sans); color: var(--scr-muted); max-width: 88ch; }
+.stage-sem b { font-weight: 600; color: var(--scr-text); }
+.stage[data-task="chb"] .sem-sleep, .stage[data-task="sleep"] .sem-chb { display: none; }
+
+/* ── Window by window: the section head lives in the console ── */
+.console-wrap { padding-top: var(--sec-gap); }
+.anchor { position: relative; display: block; height: 0; }
+.console-title .eyebrow-l { margin: 0 0 10px; color: var(--teal); }
+.console-title p { max-width: 72ch; }
+
+/* Answer types next to the answer: five stages for Sleep, the time fraction for CHB. */
+.task-key { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--scr-line); }
+.console[data-task="chb"] .tk-sleep, .console[data-task="sleep"] .tk-chb { display: none; }
+.tk-h { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font: 600 13px/1.3 var(--sans); color: var(--scr-text); }
+.task-key p { margin: 0 0 8px; font-size: 13.5px; line-height: 1.55; color: var(--scr-muted); }
+.task-key .tk-note { font-size: 12.5px; color: var(--scr-dim); display: flex; gap: 8px; align-items: baseline; }
+.task-key .tk-note::before { content: ""; flex: none; width: 18px; height: 10px; border-radius: 3px; transform: translateY(1px); background: repeating-linear-gradient(135deg, rgba(242,184,75,.85) 0 2px, rgba(242,184,75,.18) 2px 5px); }
+.task-key .stages { gap: 2px; }
+.task-key .stages li { grid-template-columns: 50px 1fr; font-size: 13px; line-height: 1.45; color: var(--scr-muted); padding: 4px 6px 4px 4px; cursor: pointer; }
+.task-key .stages li b { color: var(--scr-text); font-size: 12px; }
+.task-key .stages li:hover { background: var(--scr-2); }
+.task-key .stages li.is-on, .task-key .stages li[aria-pressed="true"] { background: var(--scr-3); color: var(--scr-text); }
+
+/* The two signal pictures: what the axes and colours mean, and one worked reading. */
+.axis-key { list-style: none; margin: 6px 0 10px; padding: 0; display: grid; gap: 3px; font: 400 13px/1.5 var(--sans); color: var(--scr-muted); }
+.axis-key li { display: grid; grid-template-columns: 5.6em minmax(0, 1fr); column-gap: 8px; align-items: baseline; }
+.axis-key b { font: 600 11px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--scr-text); }
+.axis-key li[hidden], .axis-key span[hidden] { display: none; }
+.axis-key li > span { grid-column: 2; }
+.color-key .ck-w { font: 500 11px/1 var(--sans); color: var(--scr-text); letter-spacing: .02em; }
+.color-key #spec-low, .color-key #spec-high { font-size: 10.5px; color: var(--scr-dim); }
+.read-eg { margin: 10px 0 0; padding: 9px 12px; border-left: 2px solid var(--teal); background: rgba(61, 214, 198, .05); border-radius: 0 8px 8px 0; font: 400 13.5px/1.5 var(--sans); color: var(--scr-text); }
+.read-eg:empty { display: none; }
+.read-eg.is-wait { border-left-color: var(--scr-line-2); background: transparent; color: var(--scr-muted); }
+#an-fill[hidden] { display: none; }
+@media (min-width: 761px) {
+  #analysis-details > .detail-body { grid-template-rows: auto auto auto auto auto; }
+  .track-spec > .track-label { grid-row: 1; }
+  .track-spec > .axis-key { grid-column: 1; grid-row: 2; }
+  .track-spec > canvas { grid-column: 1; grid-row: 3; }
+  .track-spec > .color-key { grid-column: 1; grid-row: 4; justify-self: end; align-self: start; width: min(70%, 340px); margin: 8px 0 0 !important; }
+  .track-spec > .read-eg { grid-column: 1; grid-row: 5; align-self: start; }
+  .track-feat > .axis-key { grid-column: 2; grid-row: 2; }
+  .track-feat > canvas { grid-column: 2; grid-row: 3; }
+  .track-feat > .read-eg { grid-column: 2; grid-row: 5; align-self: start; }
+  #analysis-details .an-foot { grid-row: 6; }
+  #analysis-details .features { grid-row: 7; }
+}
+
+/* ── Lower page: one 12-column frame, side heads, no empty right third ── */
+.paper .abstract .abs-src { margin-top: 18px; max-width: 68ch; }
+.paper .abstract .abs-src p { margin: 0; font: 400 13.5px/1.55 var(--sans); color: var(--ink-2); }
+.paper .abstract .abs-src .abs-src-k { margin-bottom: 8px; font: 500 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+.paper .cite .cite-note { margin: 12px 0 0; max-width: 68ch; font-size: 13.5px; line-height: 1.55; color: var(--ink-2); }
+.foot.wrap p { color: var(--ink-2); }
+.how .types-legend { margin: 18px 0 0; }
+.how .types-legend dd { font-size: 14px; }
+
+@media (min-width: 900px) {
+  .how figure > .types-legend { grid-column: 1 / -1; grid-row: 3; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--col-gap); }
+  .paper .abstract > .abs-src { grid-column: 4 / -1; }
+  .paper .cite > .cite-note { grid-column: 4 / -1; }
+  .foot.wrap > p:first-of-type { grid-column: 4 / 9; }
+  .foot.wrap > p:last-of-type { grid-column: 9 / -1; grid-row: 1; }
+}
+@media (min-width: 1181px) {
+  .how figure > figcaption { grid-column: 4 / 10; }
+  .how figure > .types-legend { grid-column: 10 / -1; grid-row: 2; display: grid; grid-template-columns: 1fr; row-gap: 14px; margin-top: 22px; }
+  .how figure > .types-legend div { grid-template-columns: 70px 1fr; }
+  .paper .abstract > .abs-src { grid-column: 10 / -1; grid-row: 1; margin: 6px 0 0; padding-left: 18px; border-left: 1px solid var(--rule); }
+  .paper .cite > .cite-note { grid-column: 10 / -1; grid-row: 1; align-self: start; margin: 6px 0 0; padding-left: 18px; border-left: 1px solid var(--rule); }
+}
