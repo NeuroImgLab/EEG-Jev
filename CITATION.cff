@@ -34,3 +34,8 @@ preferred-citation:
       given-names: Yi
   year: 2026
   status: preprint
+  url: "https://arxiv.org/abs/2611.31875"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.31875"
+      description: "arXiv preprint"

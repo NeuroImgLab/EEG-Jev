@@ -5,7 +5,7 @@
 **Zhifei Zhu · Hongtao Zhang · Yu Ren · Wei Zhou · Zeping Xie · Yi He**
 
 [![Interactive Demo](https://img.shields.io/badge/Interactive%20Demo-GitHub%20Pages-0d7a70.svg)](https://neuroimglab.github.io/EEG-Jev/)
-[![Preprint PDF](https://img.shields.io/badge/Preprint-PDF-b31b1b.svg)](https://neuroimglab.github.io/EEG-Jev/paper/manuscript-en.pdf)
+[![arXiv Preprint](https://img.shields.io/badge/arXiv-2611.31875-b31b1b.svg)](https://arxiv.org/abs/2611.31875)
 [![Code](https://img.shields.io/badge/Code-Coming%20Soon-grey.svg)](https://neuroimglab.github.io/EEG-Jev/)
 [![Results & Docs](https://img.shields.io/badge/Docs%20%26%20Results-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 
@@ -24,7 +24,7 @@ This repository hosts the **project website, interactive four-application record
 ## Quick Links
 
 - **Interactive 4-Application Demo:** [https://neuroimglab.github.io/EEG-Jev/](https://neuroimglab.github.io/EEG-Jev/)
-- **Manuscript (English PDF):** [paper/manuscript-en.pdf](https://neuroimglab.github.io/EEG-Jev/paper/manuscript-en.pdf)
+- **Preprint (`arXiv:2611.31875`):** [https://arxiv.org/abs/2611.31875](https://arxiv.org/abs/2611.31875)
 - **Aggregate Results (`results/`):** [metrics-long.csv](results/metrics-long.csv), [table-core-results.csv](results/table-core-results.csv), [table-calibration.csv](results/table-calibration.csv), [paired-differences.csv](results/paired-differences.csv), [inference-benchmark.csv](results/inference-benchmark.csv), [data-source-registry.csv](results/data-source-registry.csv)
 
 ## Contents
@@ -45,9 +45,12 @@ This repository hosts the **project website, interactive four-application record
 @article{zhu2026eegjev,
   title   = {EEG-Jev: A Unified Single-Pass Decision Model for EEG},
   author  = {Zhu, Zhifei and Zhang, Hongtao and Ren, Yu and Zhou, Wei and Xie, Zeping and He, Yi},
-  journal = {arXiv preprint},
+  journal = {arXiv preprint arXiv:2611.31875},
   year    = {2026},
-  url     = {https://neuroimglab.github.io/EEG-Jev/}
+  eprint  = {2611.31875},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url     = {https://arxiv.org/abs/2611.31875}
 }
 ```
 
